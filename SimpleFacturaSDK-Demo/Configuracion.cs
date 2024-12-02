@@ -38,5 +38,10 @@ namespace SimpleFacturaSDK_Demo
         {
             this.Close();
         }
+
+        private void base_url_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

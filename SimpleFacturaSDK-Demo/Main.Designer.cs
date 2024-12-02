@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.Facturacion = new System.Windows.Forms.TabPage();
+            this.item_facturacion = new System.Windows.Forms.TabPage();
             this.otros = new System.Windows.Forms.GroupBox();
             this.conciliar_emitidos = new System.Windows.Forms.Button();
             this.envio_mail = new System.Windows.Forms.Button();
@@ -48,15 +48,15 @@
             this.obtener_xml = new System.Windows.Forms.Button();
             this.obtener_timbre = new System.Windows.Forms.Button();
             this.obtener_pdf = new System.Windows.Forms.Button();
-            this.Productos = new System.Windows.Forms.TabPage();
-            this.Proveedores = new System.Windows.Forms.TabPage();
-            this.Clientes = new System.Windows.Forms.TabPage();
-            this.Sucursales = new System.Windows.Forms.TabPage();
-            this.Folios = new System.Windows.Forms.TabPage();
-            this.Boletas_Honorario = new System.Windows.Forms.TabPage();
+            this.item_productos = new System.Windows.Forms.TabPage();
+            this.item_proveedores = new System.Windows.Forms.TabPage();
+            this.item_clientes = new System.Windows.Forms.TabPage();
+            this.item_otros = new System.Windows.Forms.TabPage();
+            this.item_folios = new System.Windows.Forms.TabPage();
+            this.item_bh = new System.Windows.Forms.TabPage();
             this.Configuracion = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
-            this.Facturacion.SuspendLayout();
+            this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
             this.emision_dte.SuspendLayout();
             this.obtenerdte.SuspendLayout();
@@ -64,31 +64,31 @@
             // 
             // tabControl2
             // 
-            this.tabControl2.Controls.Add(this.Facturacion);
-            this.tabControl2.Controls.Add(this.Productos);
-            this.tabControl2.Controls.Add(this.Proveedores);
-            this.tabControl2.Controls.Add(this.Clientes);
-            this.tabControl2.Controls.Add(this.Sucursales);
-            this.tabControl2.Controls.Add(this.Folios);
-            this.tabControl2.Controls.Add(this.Boletas_Honorario);
+            this.tabControl2.Controls.Add(this.item_facturacion);
+            this.tabControl2.Controls.Add(this.item_productos);
+            this.tabControl2.Controls.Add(this.item_proveedores);
+            this.tabControl2.Controls.Add(this.item_clientes);
+            this.tabControl2.Controls.Add(this.item_folios);
+            this.tabControl2.Controls.Add(this.item_bh);
+            this.tabControl2.Controls.Add(this.item_otros);
             this.tabControl2.Location = new System.Drawing.Point(13, 55);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(774, 297);
             this.tabControl2.TabIndex = 1;
             // 
-            // Facturacion
+            // item_facturacion
             // 
-            this.Facturacion.Controls.Add(this.otros);
-            this.Facturacion.Controls.Add(this.emision_dte);
-            this.Facturacion.Controls.Add(this.obtenerdte);
-            this.Facturacion.Location = new System.Drawing.Point(4, 25);
-            this.Facturacion.Name = "Facturacion";
-            this.Facturacion.Padding = new System.Windows.Forms.Padding(3);
-            this.Facturacion.Size = new System.Drawing.Size(766, 268);
-            this.Facturacion.TabIndex = 0;
-            this.Facturacion.Text = "Facturacion";
-            this.Facturacion.UseVisualStyleBackColor = true;
+            this.item_facturacion.Controls.Add(this.otros);
+            this.item_facturacion.Controls.Add(this.emision_dte);
+            this.item_facturacion.Controls.Add(this.obtenerdte);
+            this.item_facturacion.Location = new System.Drawing.Point(4, 25);
+            this.item_facturacion.Name = "item_facturacion";
+            this.item_facturacion.Padding = new System.Windows.Forms.Padding(3);
+            this.item_facturacion.Size = new System.Drawing.Size(766, 268);
+            this.item_facturacion.TabIndex = 0;
+            this.item_facturacion.Text = "Facturacion";
+            this.item_facturacion.UseVisualStyleBackColor = true;
             // 
             // otros
             // 
@@ -259,60 +259,60 @@
             this.obtener_pdf.UseVisualStyleBackColor = true;
             this.obtener_pdf.Click += new System.EventHandler(this.obtener_pdf_Click);
             // 
-            // Productos
+            // item_productos
             // 
-            this.Productos.Location = new System.Drawing.Point(4, 25);
-            this.Productos.Name = "Productos";
-            this.Productos.Padding = new System.Windows.Forms.Padding(3);
-            this.Productos.Size = new System.Drawing.Size(766, 268);
-            this.Productos.TabIndex = 1;
-            this.Productos.Text = "Productos";
-            this.Productos.UseVisualStyleBackColor = true;
+            this.item_productos.Location = new System.Drawing.Point(4, 25);
+            this.item_productos.Name = "item_productos";
+            this.item_productos.Padding = new System.Windows.Forms.Padding(3);
+            this.item_productos.Size = new System.Drawing.Size(766, 268);
+            this.item_productos.TabIndex = 1;
+            this.item_productos.Text = "Productos";
+            this.item_productos.UseVisualStyleBackColor = true;
             // 
-            // Proveedores
+            // item_proveedores
             // 
-            this.Proveedores.Location = new System.Drawing.Point(4, 25);
-            this.Proveedores.Name = "Proveedores";
-            this.Proveedores.Size = new System.Drawing.Size(766, 268);
-            this.Proveedores.TabIndex = 2;
-            this.Proveedores.Text = "Proveedores";
-            this.Proveedores.UseVisualStyleBackColor = true;
+            this.item_proveedores.Location = new System.Drawing.Point(4, 25);
+            this.item_proveedores.Name = "item_proveedores";
+            this.item_proveedores.Size = new System.Drawing.Size(766, 268);
+            this.item_proveedores.TabIndex = 2;
+            this.item_proveedores.Text = "Proveedores";
+            this.item_proveedores.UseVisualStyleBackColor = true;
             // 
-            // Clientes
+            // item_clientes
             // 
-            this.Clientes.Location = new System.Drawing.Point(4, 25);
-            this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(766, 268);
-            this.Clientes.TabIndex = 3;
-            this.Clientes.Text = "Clientes";
-            this.Clientes.UseVisualStyleBackColor = true;
+            this.item_clientes.Location = new System.Drawing.Point(4, 25);
+            this.item_clientes.Name = "item_clientes";
+            this.item_clientes.Size = new System.Drawing.Size(766, 268);
+            this.item_clientes.TabIndex = 3;
+            this.item_clientes.Text = "Clientes";
+            this.item_clientes.UseVisualStyleBackColor = true;
             // 
-            // Sucursales
+            // item_otros
             // 
-            this.Sucursales.Location = new System.Drawing.Point(4, 25);
-            this.Sucursales.Name = "Sucursales";
-            this.Sucursales.Size = new System.Drawing.Size(766, 268);
-            this.Sucursales.TabIndex = 4;
-            this.Sucursales.Text = "Sucursales";
-            this.Sucursales.UseVisualStyleBackColor = true;
+            this.item_otros.Location = new System.Drawing.Point(4, 25);
+            this.item_otros.Name = "item_otros";
+            this.item_otros.Size = new System.Drawing.Size(766, 268);
+            this.item_otros.TabIndex = 4;
+            this.item_otros.Text = "Otros";
+            this.item_otros.UseVisualStyleBackColor = true;
             // 
-            // Folios
+            // item_folios
             // 
-            this.Folios.Location = new System.Drawing.Point(4, 25);
-            this.Folios.Name = "Folios";
-            this.Folios.Size = new System.Drawing.Size(766, 268);
-            this.Folios.TabIndex = 5;
-            this.Folios.Text = "Folios";
-            this.Folios.UseVisualStyleBackColor = true;
+            this.item_folios.Location = new System.Drawing.Point(4, 25);
+            this.item_folios.Name = "item_folios";
+            this.item_folios.Size = new System.Drawing.Size(766, 268);
+            this.item_folios.TabIndex = 5;
+            this.item_folios.Text = "Folios";
+            this.item_folios.UseVisualStyleBackColor = true;
             // 
-            // Boletas_Honorario
+            // item_bh
             // 
-            this.Boletas_Honorario.Location = new System.Drawing.Point(4, 25);
-            this.Boletas_Honorario.Name = "Boletas_Honorario";
-            this.Boletas_Honorario.Size = new System.Drawing.Size(766, 268);
-            this.Boletas_Honorario.TabIndex = 6;
-            this.Boletas_Honorario.Text = "Boletas Honorario";
-            this.Boletas_Honorario.UseVisualStyleBackColor = true;
+            this.item_bh.Location = new System.Drawing.Point(4, 25);
+            this.item_bh.Name = "item_bh";
+            this.item_bh.Size = new System.Drawing.Size(766, 268);
+            this.item_bh.TabIndex = 6;
+            this.item_bh.Text = "Boletas de honorarios";
+            this.item_bh.UseVisualStyleBackColor = true;
             // 
             // Configuracion
             // 
@@ -341,7 +341,7 @@
             this.Text = "SimpleFactura-Demo";
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl2.ResumeLayout(false);
-            this.Facturacion.ResumeLayout(false);
+            this.item_facturacion.ResumeLayout(false);
             this.otros.ResumeLayout(false);
             this.emision_dte.ResumeLayout(false);
             this.obtenerdte.ResumeLayout(false);
@@ -379,13 +379,13 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button Configuracion;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage Facturacion;
-        private System.Windows.Forms.TabPage Productos;
-        private System.Windows.Forms.TabPage Proveedores;
-        private System.Windows.Forms.TabPage Clientes;
-        private System.Windows.Forms.TabPage Sucursales;
-        private System.Windows.Forms.TabPage Folios;
-        private System.Windows.Forms.TabPage Boletas_Honorario;
+        private System.Windows.Forms.TabPage item_facturacion;
+        private System.Windows.Forms.TabPage item_productos;
+        private System.Windows.Forms.TabPage item_proveedores;
+        private System.Windows.Forms.TabPage item_clientes;
+        private System.Windows.Forms.TabPage item_otros;
+        private System.Windows.Forms.TabPage item_folios;
+        private System.Windows.Forms.TabPage item_bh;
         private System.Windows.Forms.GroupBox otros;
         private System.Windows.Forms.Button conciliar_emitidos;
         private System.Windows.Forms.Button envio_mail;

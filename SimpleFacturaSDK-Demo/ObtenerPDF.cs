@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SDKSimpleFactura.Models.Facturacion;
+using System;
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
@@ -30,7 +24,7 @@ namespace SimpleFacturaSDK_Demo
         {
             try
             {
-
+                var request = new SolicitudDte();
             }
             catch (Exception ex)
             {

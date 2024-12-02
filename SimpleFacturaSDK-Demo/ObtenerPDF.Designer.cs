@@ -57,21 +57,21 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 162);
+            this.groupBox1.Size = new System.Drawing.Size(501, 118);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 115);
+            this.textBox2.Location = new System.Drawing.Point(124, 68);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(351, 22);
             this.textBox2.TabIndex = 3;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 51);
+            this.textBox1.Location = new System.Drawing.Point(124, 28);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(351, 22);
             this.textBox1.TabIndex = 2;
@@ -79,7 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 86);
+            this.label2.Location = new System.Drawing.Point(6, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 1;
@@ -105,17 +105,17 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(384, 13);
+            this.groupBox2.Location = new System.Drawing.Point(12, 137);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(404, 162);
+            this.groupBox2.Size = new System.Drawing.Size(501, 162);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "DteReferenciadoExterno";
+            this.groupBox2.Text = "Dte Referenciado Externo";
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(158, 116);
+            this.checkBox2.Location = new System.Drawing.Point(247, 93);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(97, 20);
             this.checkBox2.TabIndex = 13;
@@ -125,7 +125,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(9, 116);
+            this.checkBox1.Location = new System.Drawing.Point(124, 93);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(102, 20);
             this.checkBox1.TabIndex = 12;
@@ -134,9 +134,9 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(264, 55);
+            this.textBox6.Location = new System.Drawing.Point(124, 58);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(124, 22);
+            this.textBox6.Size = new System.Drawing.Size(144, 22);
             this.textBox6.TabIndex = 10;
             // 
             // textBox5
@@ -149,7 +149,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(260, 22);
+            this.label5.Location = new System.Drawing.Point(6, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 16);
             this.label5.TabIndex = 8;
@@ -166,7 +166,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 55);
+            this.textBox4.Location = new System.Drawing.Point(124, 22);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(144, 22);
             this.textBox4.TabIndex = 6;
@@ -185,7 +185,7 @@
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = ((System.Drawing.Image)(resources.GetObject("generarpdf.Image")));
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(384, 190);
+            this.generarpdf.Location = new System.Drawing.Point(328, 328);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Size = new System.Drawing.Size(185, 45);
             this.generarpdf.TabIndex = 2;
@@ -196,7 +196,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(215, 190);
+            this.button2.Location = new System.Drawing.Point(159, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 45);
             this.button2.TabIndex = 3;
@@ -207,11 +207,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 283);
+            this.ClientSize = new System.Drawing.Size(532, 394);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ObtenerPDF";
             this.Text = "ObtenerPDF";
             this.Load += new System.EventHandler(this.ObtenerPDF_Load);
