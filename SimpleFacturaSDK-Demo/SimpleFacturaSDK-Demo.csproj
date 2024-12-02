@@ -171,6 +171,12 @@
     <Compile Include="Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacturacionDTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturacionDTE.Designer.cs">
+      <DependentUpon>FacturacionDTE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     <Compile Include="SimpleFacturaClient.cs" />
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturacionDTE.resx">
+      <DependentUpon>FacturacionDTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
