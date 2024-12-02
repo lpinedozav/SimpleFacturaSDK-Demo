@@ -39,16 +39,10 @@ namespace SimpleFacturaSDK_Demo
             try
             {
 
-                if (string.IsNullOrWhiteSpace(textBoxRuta.Text))
-                {
-                    MessageBox.Show("Por favor, selecciona una carpeta para guardar el PDF.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                string rutaGuardado = textBoxRuta.Text;
+             
 
                 // Aquí puedes usar la variable rutaGuardado para guardar el PDF
-                MessageBox.Show($"El PDF se guardará en: {rutaGuardado}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show($"El PDF se guardará en: {rutaGuardado}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Continuar con el proceso de generación del PDF...
                 AmbienteEnum ambienteSeleccionado;
@@ -163,24 +157,8 @@ namespace SimpleFacturaSDK_Demo
             this.Close();
         }
 
-        private void textBoxRuta_TextChanged(object sender, EventArgs e)
-        {
+  
 
-        }
-
-        private void selectRuta_Click(object sender, EventArgs e)
-        {
-            using (var folderDialog = new FolderBrowserDialog())
-            {
-                folderDialog.Description = "Selecciona la carpeta donde deseas guardar el PDF";
-                folderDialog.ShowNewFolderButton = true;
-
-                if (folderDialog.ShowDialog() == DialogResult.OK)
-                {
-                    // Asignar la ruta seleccionada al TextBox
-                    textBoxRuta.Text = folderDialog.SelectedPath;
-                }
-            }
-        }
+       
     }
 }
