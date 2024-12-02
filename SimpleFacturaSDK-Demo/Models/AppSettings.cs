@@ -7,9 +7,10 @@ public class AppSettings
     private static AppSettings _current;
 
     public SDKSettings SDKSettings { get; set; }
+    [JsonIgnore]
     public Credenciales Credenciales { get; set; } = new Credenciales // Valores predeterminados
     {
-        EmailUsuario = "default@correo.com",
+        EmailUsuario = "test@correo.com",
         RutEmisor = "76269769-6",
         RutContribuyente = "10422710-4",
         NombreSucursal = "Casa Matriz"
@@ -44,18 +45,6 @@ public class AppSettings
 
         var json = File.ReadAllText("appsettings.json");
         var settings = JsonConvert.DeserializeObject<AppSettings>(json);
-
-        if (settings.Credenciales == null)
-        {
-            settings.Credenciales = new Credenciales
-            {
-                EmailUsuario = "default@correo.com",
-                RutEmisor = "76269769-6",
-                RutContribuyente = "10422710-4",
-                NombreSucursal = "Casa Matriz"
-            };
-        }
-
         return settings;
     }
 
