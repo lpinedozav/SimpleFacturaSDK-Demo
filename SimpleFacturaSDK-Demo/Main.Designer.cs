@@ -220,6 +220,7 @@
             this.obtener_sobre_xml.TabIndex = 4;
             this.obtener_sobre_xml.Text = "Obtener SobreXML";
             this.obtener_sobre_xml.UseVisualStyleBackColor = true;
+            this.obtener_sobre_xml.Click += new System.EventHandler(this.obtener_sobre_xml_Click);
             // 
             // obtener_dte
             // 
@@ -229,6 +230,7 @@
             this.obtener_dte.TabIndex = 3;
             this.obtener_dte.Text = "Obtener DTE";
             this.obtener_dte.UseVisualStyleBackColor = true;
+            this.obtener_dte.Click += new System.EventHandler(this.obtener_dte_Click);
             // 
             // obtener_xml
             // 
@@ -238,6 +240,7 @@
             this.obtener_xml.TabIndex = 2;
             this.obtener_xml.Text = "Obtener XML";
             this.obtener_xml.UseVisualStyleBackColor = true;
+            this.obtener_xml.Click += new System.EventHandler(this.obtener_xml_Click);
             // 
             // obtener_timbre
             // 
@@ -247,7 +250,7 @@
             this.obtener_timbre.TabIndex = 1;
             this.obtener_timbre.Text = "Obtener Timbre";
             this.obtener_timbre.UseVisualStyleBackColor = true;
-            this.obtener_timbre.Click += new System.EventHandler(this.button16_Click);
+            this.obtener_timbre.Click += new System.EventHandler(this.ObtenerTimbre_Click);
             // 
             // obtener_pdf
             // 
