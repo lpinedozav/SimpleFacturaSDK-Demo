@@ -66,15 +66,16 @@
             // 
             this.Configuracion.FlatAppearance.BorderSize = 0;
             this.Configuracion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Configuracion.Image = ((System.Drawing.Image)(resources.GetObject("Configuracion.Image")));
+            this.Configuracion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
             this.Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Configuracion.Location = new System.Drawing.Point(24, 16);
+            this.Configuracion.Location = new System.Drawing.Point(17, 18);
             this.Configuracion.Name = "Configuracion";
             this.Configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Configuracion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Configuracion.Size = new System.Drawing.Size(137, 48);
+            this.Configuracion.Size = new System.Drawing.Size(150, 31);
             this.Configuracion.TabIndex = 0;
-            this.Configuracion.Text = "Configuracion";
+            this.Configuracion.Text = "Configuración";
             this.Configuracion.UseVisualStyleBackColor = true;
             // 
             // tabControl2
@@ -86,10 +87,10 @@
             this.tabControl2.Controls.Add(this.Sucursales);
             this.tabControl2.Controls.Add(this.Folios);
             this.tabControl2.Controls.Add(this.Boletas_Honorario);
-            this.tabControl2.Location = new System.Drawing.Point(24, 70);
+            this.tabControl2.Location = new System.Drawing.Point(13, 55);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(774, 363);
+            this.tabControl2.Size = new System.Drawing.Size(774, 297);
             this.tabControl2.TabIndex = 1;
             // 
             // Facturacion
@@ -100,7 +101,7 @@
             this.Facturacion.Location = new System.Drawing.Point(4, 25);
             this.Facturacion.Name = "Facturacion";
             this.Facturacion.Padding = new System.Windows.Forms.Padding(3);
-            this.Facturacion.Size = new System.Drawing.Size(766, 334);
+            this.Facturacion.Size = new System.Drawing.Size(766, 268);
             this.Facturacion.TabIndex = 0;
             this.Facturacion.Text = "Facturacion";
             this.Facturacion.UseVisualStyleBackColor = true;
@@ -113,7 +114,7 @@
             this.groupBox6.Controls.Add(this.consolidado_ventas);
             this.groupBox6.Location = new System.Drawing.Point(512, 15);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(235, 258);
+            this.groupBox6.Size = new System.Drawing.Size(235, 246);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "LA WEA MALA";
@@ -163,7 +164,7 @@
             this.otros_dte.Controls.Add(this.facturacion_boleta);
             this.otros_dte.Location = new System.Drawing.Point(267, 15);
             this.otros_dte.Name = "otros_dte";
-            this.otros_dte.Size = new System.Drawing.Size(228, 258);
+            this.otros_dte.Size = new System.Drawing.Size(228, 246);
             this.otros_dte.TabIndex = 1;
             this.otros_dte.TabStop = false;
             this.otros_dte.Text = "Otros DTE";
@@ -222,7 +223,7 @@
             this.Obtener_documentos.Controls.Add(this.obtener_pdf);
             this.Obtener_documentos.Location = new System.Drawing.Point(18, 15);
             this.Obtener_documentos.Name = "Obtener_documentos";
-            this.Obtener_documentos.Size = new System.Drawing.Size(229, 258);
+            this.Obtener_documentos.Size = new System.Drawing.Size(229, 246);
             this.Obtener_documentos.TabIndex = 0;
             this.Obtener_documentos.TabStop = false;
             this.Obtener_documentos.Text = "Obtener documentos";
@@ -306,7 +307,7 @@
             // 
             this.Sucursales.Location = new System.Drawing.Point(4, 25);
             this.Sucursales.Name = "Sucursales";
-            this.Sucursales.Size = new System.Drawing.Size(766, 334);
+            this.Sucursales.Size = new System.Drawing.Size(766, 268);
             this.Sucursales.TabIndex = 4;
             this.Sucursales.Text = "Sucursales";
             this.Sucursales.UseVisualStyleBackColor = true;
@@ -331,12 +332,13 @@
             // 
             // Main
             // 
-            this.ClientSize = new System.Drawing.Size(823, 472);
+            this.ClientSize = new System.Drawing.Size(799, 364);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.Configuracion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "SimpleFactura-Demo";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl2.ResumeLayout(false);
             this.Facturacion.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);

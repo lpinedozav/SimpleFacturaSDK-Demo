@@ -9,6 +9,10 @@ namespace SimpleFacturaSDK_Demo
         {
             InitializeComponent();
         }
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void button16_Click(object sender, EventArgs e)
         {
@@ -22,5 +26,6 @@ namespace SimpleFacturaSDK_Demo
             ObtenerPDF formulario = new ObtenerPDF();
             formulario.Show();
         }
+
     }
 }

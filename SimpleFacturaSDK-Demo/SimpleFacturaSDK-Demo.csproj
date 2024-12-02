@@ -171,6 +171,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Configuracion.cs" />
+    <Compile Include="Models\LoadingHelper.cs" />
     <Compile Include="Models\SDKSettings.cs" />
     <Compile Include="ObtenerPDF.cs">
       <SubType>Form</SubType>
@@ -194,6 +195,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -211,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ConfiguracionEdit16.png" />
+    <None Include="Resources\ConfiguracionEdit161.png" />
     <Content Include="Resources\Guardar_32.png" />
     <Content Include="Resources\loader_16x16.gif" />
     <Content Include="Resources\View.png" />
