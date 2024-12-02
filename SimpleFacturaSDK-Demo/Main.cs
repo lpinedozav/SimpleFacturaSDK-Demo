@@ -51,5 +51,50 @@ namespace SimpleFacturaSDK_Demo
             ObtenerSobreXML formulario = new ObtenerSobreXML();
             formulario.Show();
         }
+
+        private void facturacion_dte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturacion_boleta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturacion_exportacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturacion_masiva_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emision_nc_nd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listado_dte_emitido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void envio_mail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consolidado_ventas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void conciliar_emitidos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

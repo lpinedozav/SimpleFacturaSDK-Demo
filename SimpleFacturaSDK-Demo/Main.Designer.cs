@@ -111,6 +111,7 @@
             this.conciliar_emitidos.TabIndex = 13;
             this.conciliar_emitidos.Text = "Conciliar Emitidos";
             this.conciliar_emitidos.UseVisualStyleBackColor = true;
+            this.conciliar_emitidos.Click += new System.EventHandler(this.conciliar_emitidos_Click);
             // 
             // envio_mail
             // 
@@ -120,6 +121,7 @@
             this.envio_mail.TabIndex = 11;
             this.envio_mail.Text = "Envio Mail";
             this.envio_mail.UseVisualStyleBackColor = true;
+            this.envio_mail.Click += new System.EventHandler(this.envio_mail_Click);
             // 
             // listado_dte_emitido
             // 
@@ -129,6 +131,7 @@
             this.listado_dte_emitido.TabIndex = 10;
             this.listado_dte_emitido.Text = "Listado DTE Emitido";
             this.listado_dte_emitido.UseVisualStyleBackColor = true;
+            this.listado_dte_emitido.Click += new System.EventHandler(this.listado_dte_emitido_Click);
             // 
             // consolidado_ventas
             // 
@@ -138,6 +141,7 @@
             this.consolidado_ventas.TabIndex = 12;
             this.consolidado_ventas.Text = "Consolidado de ventas";
             this.consolidado_ventas.UseVisualStyleBackColor = true;
+            this.consolidado_ventas.Click += new System.EventHandler(this.consolidado_ventas_Click);
             // 
             // emision_dte
             // 
@@ -161,6 +165,7 @@
             this.emision_nc_nd.TabIndex = 9;
             this.emision_nc_nd.Text = "Emision NC/ND";
             this.emision_nc_nd.UseVisualStyleBackColor = true;
+            this.emision_nc_nd.Click += new System.EventHandler(this.emision_nc_nd_Click);
             // 
             // facturacion_masiva
             // 
@@ -170,6 +175,7 @@
             this.facturacion_masiva.TabIndex = 8;
             this.facturacion_masiva.Text = "Facturacion Masiva";
             this.facturacion_masiva.UseVisualStyleBackColor = true;
+            this.facturacion_masiva.Click += new System.EventHandler(this.facturacion_masiva_Click);
             // 
             // facturacion_dte
             // 
@@ -179,6 +185,7 @@
             this.facturacion_dte.TabIndex = 5;
             this.facturacion_dte.Text = "Facturacion DTE";
             this.facturacion_dte.UseVisualStyleBackColor = true;
+            this.facturacion_dte.Click += new System.EventHandler(this.facturacion_dte_Click);
             // 
             // facturacion_exportacion
             // 
@@ -188,6 +195,7 @@
             this.facturacion_exportacion.TabIndex = 7;
             this.facturacion_exportacion.Text = "Facturacion Exportacion";
             this.facturacion_exportacion.UseVisualStyleBackColor = true;
+            this.facturacion_exportacion.Click += new System.EventHandler(this.facturacion_exportacion_Click);
             // 
             // facturacion_boleta
             // 
@@ -197,6 +205,7 @@
             this.facturacion_boleta.TabIndex = 6;
             this.facturacion_boleta.Text = "Facturacion Boleta";
             this.facturacion_boleta.UseVisualStyleBackColor = true;
+            this.facturacion_boleta.Click += new System.EventHandler(this.facturacion_boleta_Click);
             // 
             // obtenerdte
             // 
