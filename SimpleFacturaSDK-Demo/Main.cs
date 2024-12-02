@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleFacturaSDK_Demo.Models;
+using System;
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
@@ -27,5 +28,10 @@ namespace SimpleFacturaSDK_Demo
             formulario.Show();
         }
 
+        private void Configuracion_Click(object sender, EventArgs e)
+        {
+            Configuracion formulario = new Configuracion();
+            formulario.Show();
+        }
     }
 }

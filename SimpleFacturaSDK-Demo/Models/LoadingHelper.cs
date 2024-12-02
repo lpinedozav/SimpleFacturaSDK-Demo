@@ -12,7 +12,7 @@ namespace SimpleSDK_Demo
             var pic = new PictureBox();
             pic.Name = "loaderPictureBox";
             //pic.Image = ((System.Drawing.Image)(resources.GetObject("loader_16x16.gif")));
-            pic.Image = (Bitmap)SimpleFacturaSDK_Demo.Properties.Resources.ResourceManager.GetObject("loader_16x16");
+            pic.Image = (Bitmap)SimpleFacturaSDK_Demo.Properties.Resources.ResourceManager.GetObject("loader_20x20");
             //pic.Image = Image.FromFile("Resources/loader_16x16.gif");
             pic.Parent = control.Parent;
             pic.Size = control.Size;

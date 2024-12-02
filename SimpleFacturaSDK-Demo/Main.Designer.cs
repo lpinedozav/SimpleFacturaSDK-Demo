@@ -29,21 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.Configuracion = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Facturacion = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.otros = new System.Windows.Forms.GroupBox();
             this.conciliar_emitidos = new System.Windows.Forms.Button();
             this.envio_mail = new System.Windows.Forms.Button();
             this.listado_dte_emitido = new System.Windows.Forms.Button();
             this.consolidado_ventas = new System.Windows.Forms.Button();
-            this.otros_dte = new System.Windows.Forms.GroupBox();
+            this.emision_dte = new System.Windows.Forms.GroupBox();
             this.emision_nc_nd = new System.Windows.Forms.Button();
             this.facturacion_masiva = new System.Windows.Forms.Button();
             this.facturacion_dte = new System.Windows.Forms.Button();
             this.facturacion_exportacion = new System.Windows.Forms.Button();
             this.facturacion_boleta = new System.Windows.Forms.Button();
-            this.Obtener_documentos = new System.Windows.Forms.GroupBox();
+            this.obtenerdte = new System.Windows.Forms.GroupBox();
             this.obtener_sobre_xml = new System.Windows.Forms.Button();
             this.obtener_dte = new System.Windows.Forms.Button();
             this.obtener_xml = new System.Windows.Forms.Button();
@@ -55,28 +54,13 @@
             this.Sucursales = new System.Windows.Forms.TabPage();
             this.Folios = new System.Windows.Forms.TabPage();
             this.Boletas_Honorario = new System.Windows.Forms.TabPage();
+            this.Configuracion = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.Facturacion.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.otros_dte.SuspendLayout();
-            this.Obtener_documentos.SuspendLayout();
+            this.otros.SuspendLayout();
+            this.emision_dte.SuspendLayout();
+            this.obtenerdte.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Configuracion
-            // 
-            this.Configuracion.FlatAppearance.BorderSize = 0;
-            this.Configuracion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Configuracion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
-            this.Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Configuracion.Location = new System.Drawing.Point(17, 18);
-            this.Configuracion.Name = "Configuracion";
-            this.Configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Configuracion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Configuracion.Size = new System.Drawing.Size(150, 31);
-            this.Configuracion.TabIndex = 0;
-            this.Configuracion.Text = "Configuración";
-            this.Configuracion.UseVisualStyleBackColor = true;
             // 
             // tabControl2
             // 
@@ -95,9 +79,9 @@
             // 
             // Facturacion
             // 
-            this.Facturacion.Controls.Add(this.groupBox6);
-            this.Facturacion.Controls.Add(this.otros_dte);
-            this.Facturacion.Controls.Add(this.Obtener_documentos);
+            this.Facturacion.Controls.Add(this.otros);
+            this.Facturacion.Controls.Add(this.emision_dte);
+            this.Facturacion.Controls.Add(this.obtenerdte);
             this.Facturacion.Location = new System.Drawing.Point(4, 25);
             this.Facturacion.Name = "Facturacion";
             this.Facturacion.Padding = new System.Windows.Forms.Padding(3);
@@ -106,18 +90,18 @@
             this.Facturacion.Text = "Facturacion";
             this.Facturacion.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // otros
             // 
-            this.groupBox6.Controls.Add(this.conciliar_emitidos);
-            this.groupBox6.Controls.Add(this.envio_mail);
-            this.groupBox6.Controls.Add(this.listado_dte_emitido);
-            this.groupBox6.Controls.Add(this.consolidado_ventas);
-            this.groupBox6.Location = new System.Drawing.Point(512, 15);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(235, 246);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "LA WEA MALA";
+            this.otros.Controls.Add(this.conciliar_emitidos);
+            this.otros.Controls.Add(this.envio_mail);
+            this.otros.Controls.Add(this.listado_dte_emitido);
+            this.otros.Controls.Add(this.consolidado_ventas);
+            this.otros.Location = new System.Drawing.Point(512, 15);
+            this.otros.Name = "otros";
+            this.otros.Size = new System.Drawing.Size(235, 246);
+            this.otros.TabIndex = 2;
+            this.otros.TabStop = false;
+            this.otros.Text = "Otros";
             // 
             // conciliar_emitidos
             // 
@@ -155,19 +139,19 @@
             this.consolidado_ventas.Text = "Consolidado de ventas";
             this.consolidado_ventas.UseVisualStyleBackColor = true;
             // 
-            // otros_dte
+            // emision_dte
             // 
-            this.otros_dte.Controls.Add(this.emision_nc_nd);
-            this.otros_dte.Controls.Add(this.facturacion_masiva);
-            this.otros_dte.Controls.Add(this.facturacion_dte);
-            this.otros_dte.Controls.Add(this.facturacion_exportacion);
-            this.otros_dte.Controls.Add(this.facturacion_boleta);
-            this.otros_dte.Location = new System.Drawing.Point(267, 15);
-            this.otros_dte.Name = "otros_dte";
-            this.otros_dte.Size = new System.Drawing.Size(228, 246);
-            this.otros_dte.TabIndex = 1;
-            this.otros_dte.TabStop = false;
-            this.otros_dte.Text = "Otros DTE";
+            this.emision_dte.Controls.Add(this.emision_nc_nd);
+            this.emision_dte.Controls.Add(this.facturacion_masiva);
+            this.emision_dte.Controls.Add(this.facturacion_dte);
+            this.emision_dte.Controls.Add(this.facturacion_exportacion);
+            this.emision_dte.Controls.Add(this.facturacion_boleta);
+            this.emision_dte.Location = new System.Drawing.Point(267, 15);
+            this.emision_dte.Name = "emision_dte";
+            this.emision_dte.Size = new System.Drawing.Size(228, 246);
+            this.emision_dte.TabIndex = 1;
+            this.emision_dte.TabStop = false;
+            this.emision_dte.Text = "Emision DTE";
             // 
             // emision_nc_nd
             // 
@@ -214,19 +198,19 @@
             this.facturacion_boleta.Text = "Facturacion Boleta";
             this.facturacion_boleta.UseVisualStyleBackColor = true;
             // 
-            // Obtener_documentos
+            // obtenerdte
             // 
-            this.Obtener_documentos.Controls.Add(this.obtener_sobre_xml);
-            this.Obtener_documentos.Controls.Add(this.obtener_dte);
-            this.Obtener_documentos.Controls.Add(this.obtener_xml);
-            this.Obtener_documentos.Controls.Add(this.obtener_timbre);
-            this.Obtener_documentos.Controls.Add(this.obtener_pdf);
-            this.Obtener_documentos.Location = new System.Drawing.Point(18, 15);
-            this.Obtener_documentos.Name = "Obtener_documentos";
-            this.Obtener_documentos.Size = new System.Drawing.Size(229, 246);
-            this.Obtener_documentos.TabIndex = 0;
-            this.Obtener_documentos.TabStop = false;
-            this.Obtener_documentos.Text = "Obtener documentos";
+            this.obtenerdte.Controls.Add(this.obtener_sobre_xml);
+            this.obtenerdte.Controls.Add(this.obtener_dte);
+            this.obtenerdte.Controls.Add(this.obtener_xml);
+            this.obtenerdte.Controls.Add(this.obtener_timbre);
+            this.obtenerdte.Controls.Add(this.obtener_pdf);
+            this.obtenerdte.Location = new System.Drawing.Point(18, 15);
+            this.obtenerdte.Name = "obtenerdte";
+            this.obtenerdte.Size = new System.Drawing.Size(229, 246);
+            this.obtenerdte.TabIndex = 0;
+            this.obtenerdte.TabStop = false;
+            this.obtenerdte.Text = "Obtener DTE";
             // 
             // obtener_sobre_xml
             // 
@@ -280,7 +264,7 @@
             this.Productos.Location = new System.Drawing.Point(4, 25);
             this.Productos.Name = "Productos";
             this.Productos.Padding = new System.Windows.Forms.Padding(3);
-            this.Productos.Size = new System.Drawing.Size(766, 334);
+            this.Productos.Size = new System.Drawing.Size(766, 268);
             this.Productos.TabIndex = 1;
             this.Productos.Text = "Productos";
             this.Productos.UseVisualStyleBackColor = true;
@@ -289,7 +273,7 @@
             // 
             this.Proveedores.Location = new System.Drawing.Point(4, 25);
             this.Proveedores.Name = "Proveedores";
-            this.Proveedores.Size = new System.Drawing.Size(766, 334);
+            this.Proveedores.Size = new System.Drawing.Size(766, 268);
             this.Proveedores.TabIndex = 2;
             this.Proveedores.Text = "Proveedores";
             this.Proveedores.UseVisualStyleBackColor = true;
@@ -298,7 +282,7 @@
             // 
             this.Clientes.Location = new System.Drawing.Point(4, 25);
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(766, 334);
+            this.Clientes.Size = new System.Drawing.Size(766, 268);
             this.Clientes.TabIndex = 3;
             this.Clientes.Text = "Clientes";
             this.Clientes.UseVisualStyleBackColor = true;
@@ -316,7 +300,7 @@
             // 
             this.Folios.Location = new System.Drawing.Point(4, 25);
             this.Folios.Name = "Folios";
-            this.Folios.Size = new System.Drawing.Size(766, 334);
+            this.Folios.Size = new System.Drawing.Size(766, 268);
             this.Folios.TabIndex = 5;
             this.Folios.Text = "Folios";
             this.Folios.UseVisualStyleBackColor = true;
@@ -325,14 +309,31 @@
             // 
             this.Boletas_Honorario.Location = new System.Drawing.Point(4, 25);
             this.Boletas_Honorario.Name = "Boletas_Honorario";
-            this.Boletas_Honorario.Size = new System.Drawing.Size(766, 334);
+            this.Boletas_Honorario.Size = new System.Drawing.Size(766, 268);
             this.Boletas_Honorario.TabIndex = 6;
             this.Boletas_Honorario.Text = "Boletas Honorario";
             this.Boletas_Honorario.UseVisualStyleBackColor = true;
             // 
+            // Configuracion
+            // 
+            this.Configuracion.FlatAppearance.BorderSize = 0;
+            this.Configuracion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Configuracion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
+            this.Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Configuracion.Location = new System.Drawing.Point(17, 18);
+            this.Configuracion.Name = "Configuracion";
+            this.Configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.Configuracion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Configuracion.Size = new System.Drawing.Size(150, 31);
+            this.Configuracion.TabIndex = 0;
+            this.Configuracion.Text = "Configuración";
+            this.Configuracion.UseVisualStyleBackColor = true;
+            this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
+            // 
             // Main
             // 
-            this.ClientSize = new System.Drawing.Size(799, 364);
+            this.ClientSize = new System.Drawing.Size(802, 383);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.Configuracion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -341,9 +342,9 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl2.ResumeLayout(false);
             this.Facturacion.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.otros_dte.ResumeLayout(false);
-            this.Obtener_documentos.ResumeLayout(false);
+            this.otros.ResumeLayout(false);
+            this.emision_dte.ResumeLayout(false);
+            this.obtenerdte.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -385,18 +386,18 @@
         private System.Windows.Forms.TabPage Sucursales;
         private System.Windows.Forms.TabPage Folios;
         private System.Windows.Forms.TabPage Boletas_Honorario;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox otros;
         private System.Windows.Forms.Button conciliar_emitidos;
         private System.Windows.Forms.Button envio_mail;
         private System.Windows.Forms.Button listado_dte_emitido;
         private System.Windows.Forms.Button consolidado_ventas;
-        private System.Windows.Forms.GroupBox otros_dte;
+        private System.Windows.Forms.GroupBox emision_dte;
         private System.Windows.Forms.Button emision_nc_nd;
         private System.Windows.Forms.Button facturacion_masiva;
         private System.Windows.Forms.Button facturacion_dte;
         private System.Windows.Forms.Button facturacion_exportacion;
         private System.Windows.Forms.Button facturacion_boleta;
-        private System.Windows.Forms.GroupBox Obtener_documentos;
+        private System.Windows.Forms.GroupBox obtenerdte;
         private System.Windows.Forms.Button obtener_sobre_xml;
         private System.Windows.Forms.Button obtener_dte;
         private System.Windows.Forms.Button obtener_xml;

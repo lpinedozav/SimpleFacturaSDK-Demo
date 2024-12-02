@@ -16,10 +16,9 @@ namespace SimpleFacturaSDK_Demo
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void ObtenerPDF_Load(object sender, EventArgs e)
         {
-
+            var cliente = SimpleClientSingleton.Instance;
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -29,7 +28,15 @@ namespace SimpleFacturaSDK_Demo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
+
     }
 }
