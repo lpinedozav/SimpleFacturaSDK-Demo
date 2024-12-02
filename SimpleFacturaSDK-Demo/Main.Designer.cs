@@ -64,10 +64,14 @@
             // 
             // Configuracion
             // 
+            this.Configuracion.FlatAppearance.BorderSize = 0;
+            this.Configuracion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Configuracion.Image = ((System.Drawing.Image)(resources.GetObject("Configuracion.Image")));
             this.Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Configuracion.Location = new System.Drawing.Point(24, 16);
             this.Configuracion.Name = "Configuracion";
+            this.Configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.Configuracion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Configuracion.Size = new System.Drawing.Size(137, 48);
             this.Configuracion.TabIndex = 0;
             this.Configuracion.Text = "Configuracion";

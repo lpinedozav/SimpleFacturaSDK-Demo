@@ -170,6 +170,8 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Configuracion.cs" />
+    <Compile Include="Models\SDKSettings.cs" />
     <Compile Include="ObtenerPDF.cs">
       <SubType>Form</SubType>
     </Compile>
