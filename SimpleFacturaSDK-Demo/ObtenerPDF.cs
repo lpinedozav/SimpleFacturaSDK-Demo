@@ -34,7 +34,7 @@ namespace SimpleFacturaSDK_Demo
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void generarPdf_Click(object sender, EventArgs e)
         {
             try
             {
@@ -143,6 +143,11 @@ namespace SimpleFacturaSDK_Demo
         private void radioCertificacion_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cancelarpdf_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

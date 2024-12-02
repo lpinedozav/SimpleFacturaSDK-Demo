@@ -227,6 +227,7 @@
   <ItemGroup>
     <Content Include="Resources\ConfiguracionEdit16.png" />
     <None Include="Resources\ConfiguracionEdit161.png" />
+    <None Include="Resources\cruzar1.png" />
     <Content Include="Resources\Guardar_32.png" />
     <Content Include="Resources\loader_16x16.gif" />
     <Content Include="Resources\View.png" />

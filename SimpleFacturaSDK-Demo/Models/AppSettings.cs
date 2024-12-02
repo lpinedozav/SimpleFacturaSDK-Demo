@@ -10,9 +10,9 @@ public class AppSettings
     public Credenciales Credenciales { get; set; } = new Credenciales // Valores predeterminados
     {
         EmailUsuario = "default@correo.com",
-        RutEmisor = "11111111-1",
-        RutContribuyente = "22222222-2",
-        NombreSucursal = "Sucursal Principal"
+        RutEmisor = "76269769-6",
+        RutContribuyente = "10422710-4",
+        NombreSucursal = "Casa Matriz"
     };
 
     public static AppSettings Current
@@ -50,9 +50,9 @@ public class AppSettings
             settings.Credenciales = new Credenciales
             {
                 EmailUsuario = "default@correo.com",
-                RutEmisor = "11111111-1",
-                RutContribuyente = "22222222-2",
-                NombreSucursal = "Sucursal Principal"
+                RutEmisor = "76269769-6",
+                RutContribuyente = "10422710-4",
+                NombreSucursal = "Casa Matriz"
             };
         }
 

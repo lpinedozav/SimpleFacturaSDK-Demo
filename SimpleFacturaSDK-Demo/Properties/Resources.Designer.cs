@@ -73,6 +73,16 @@ namespace SimpleFacturaSDK_Demo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cruzar {
+            get {
+                object obj = ResourceManager.GetObject("cruzar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Guardar_32 {
             get {
                 object obj = ResourceManager.GetObject("Guardar_32", resourceCulture);

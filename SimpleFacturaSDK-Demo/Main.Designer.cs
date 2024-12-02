@@ -51,9 +51,9 @@
             this.item_productos = new System.Windows.Forms.TabPage();
             this.item_proveedores = new System.Windows.Forms.TabPage();
             this.item_clientes = new System.Windows.Forms.TabPage();
-            this.item_otros = new System.Windows.Forms.TabPage();
             this.item_folios = new System.Windows.Forms.TabPage();
             this.item_bh = new System.Windows.Forms.TabPage();
+            this.item_otros = new System.Windows.Forms.TabPage();
             this.Configuracion = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
@@ -287,15 +287,6 @@
             this.item_clientes.Text = "Clientes";
             this.item_clientes.UseVisualStyleBackColor = true;
             // 
-            // item_otros
-            // 
-            this.item_otros.Location = new System.Drawing.Point(4, 25);
-            this.item_otros.Name = "item_otros";
-            this.item_otros.Size = new System.Drawing.Size(766, 268);
-            this.item_otros.TabIndex = 4;
-            this.item_otros.Text = "Otros";
-            this.item_otros.UseVisualStyleBackColor = true;
-            // 
             // item_folios
             // 
             this.item_folios.Location = new System.Drawing.Point(4, 25);
@@ -313,6 +304,15 @@
             this.item_bh.TabIndex = 6;
             this.item_bh.Text = "Boletas de honorarios";
             this.item_bh.UseVisualStyleBackColor = true;
+            // 
+            // item_otros
+            // 
+            this.item_otros.Location = new System.Drawing.Point(4, 25);
+            this.item_otros.Name = "item_otros";
+            this.item_otros.Size = new System.Drawing.Size(766, 268);
+            this.item_otros.TabIndex = 4;
+            this.item_otros.Text = "Otros";
+            this.item_otros.UseVisualStyleBackColor = true;
             // 
             // Configuracion
             // 
@@ -333,11 +333,14 @@
             // 
             // Main
             // 
-            this.ClientSize = new System.Drawing.Size(802, 383);
+            this.ClientSize = new System.Drawing.Size(796, 356);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.Configuracion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SimpleFactura-Demo";
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl2.ResumeLayout(false);

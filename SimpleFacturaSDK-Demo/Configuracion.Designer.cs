@@ -55,9 +55,10 @@
             // 
             this.cancelar.Image = ((System.Drawing.Image)(resources.GetObject("cancelar.Image")));
             this.cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelar.Location = new System.Drawing.Point(524, 184);
+            this.cancelar.Location = new System.Drawing.Point(495, 184);
             this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(106, 41);
+            this.cancelar.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.cancelar.Size = new System.Drawing.Size(126, 41);
             this.cancelar.TabIndex = 0;
             this.cancelar.Text = "Cancelar";
             this.cancelar.UseVisualStyleBackColor = true;
@@ -67,12 +68,15 @@
             // 
             this.guardar.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guardar.Location = new System.Drawing.Point(639, 184);
+            this.guardar.Location = new System.Drawing.Point(627, 184);
             this.guardar.Name = "guardar";
-            this.guardar.Size = new System.Drawing.Size(110, 41);
+            this.guardar.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.guardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.guardar.Size = new System.Drawing.Size(122, 41);
             this.guardar.TabIndex = 1;
             this.guardar.Text = "Guardar";
             this.guardar.UseVisualStyleBackColor = true;
+            this.guardar.UseWaitCursor = true;
             this.guardar.Click += new System.EventHandler(this.guardar_Click);
             // 
             // username
@@ -229,8 +233,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guardar);
             this.Controls.Add(this.cancelar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Configuracion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuracion";
             this.Load += new System.EventHandler(this.Configuracion_Load);
             this.groupBox1.ResumeLayout(false);
