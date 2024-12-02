@@ -12,12 +12,15 @@ namespace SimpleFacturaSDK_Demo
 
         private void button16_Click(object sender, EventArgs e)
         {
+            
+
 
         }
 
         private void obtener_pdf_Click(object sender, EventArgs e)
         {
-
+            ObtenerPDF formulario = new ObtenerPDF();
+            formulario.Show();
         }
     }
 }
