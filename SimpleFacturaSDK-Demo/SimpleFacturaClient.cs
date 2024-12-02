@@ -15,9 +15,8 @@ namespace SimpleFacturaSDK_Demo
                 {
                     if (_instance == null)
                     {
-                        // Leer configuración desde el appsettings.json
-                        var settings = AppSettings.Load();
-                        _instance = new SimpleFacturaClient(); // El SDK usará automáticamente appsettings.json
+                        // El SDK leerá automáticamente las variables de entorno establecidas
+                        _instance = new SimpleFacturaClient();
                     }
                     return _instance;
                 }

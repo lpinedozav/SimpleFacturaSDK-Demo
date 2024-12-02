@@ -39,14 +39,14 @@
             this.base_url = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textEmail = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textRutEmisor = new System.Windows.Forms.TextBox();
-            this.textRutContribuyente = new System.Windows.Forms.TextBox();
             this.textNombreSucursal = new System.Windows.Forms.TextBox();
+            this.textRutContribuyente = new System.Windows.Forms.TextBox();
+            this.textRutEmisor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             // guardar
             // 
-            this.guardar.Image = ((System.Drawing.Image)(resources.GetObject("guardar.Image")));
+            this.guardar.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.guardar.Location = new System.Drawing.Point(639, 184);
             this.guardar.Name = "guardar";
@@ -156,39 +156,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Credenciales";
             // 
-            // label1
+            // textNombreSucursal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Email usuario:";
+            this.textNombreSucursal.Location = new System.Drawing.Point(133, 133);
+            this.textNombreSucursal.Name = "textNombreSucursal";
+            this.textNombreSucursal.Size = new System.Drawing.Size(218, 22);
+            this.textNombreSucursal.TabIndex = 14;
             // 
-            // textEmail
+            // textRutContribuyente
             // 
-            this.textEmail.Location = new System.Drawing.Point(133, 37);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(218, 22);
-            this.textEmail.TabIndex = 8;
+            this.textRutContribuyente.Location = new System.Drawing.Point(133, 99);
+            this.textRutContribuyente.Name = "textRutContribuyente";
+            this.textRutContribuyente.Size = new System.Drawing.Size(218, 22);
+            this.textRutContribuyente.TabIndex = 13;
             // 
-            // label2
+            // textRutEmisor
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Rut emisor:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Rut Contribuyente";
+            this.textRutEmisor.Location = new System.Drawing.Point(133, 65);
+            this.textRutEmisor.Name = "textRutEmisor";
+            this.textRutEmisor.Size = new System.Drawing.Size(218, 22);
+            this.textRutEmisor.TabIndex = 12;
             // 
             // label4
             // 
@@ -199,26 +186,39 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Nombre sucursal";
             // 
-            // textRutEmisor
+            // label3
             // 
-            this.textRutEmisor.Location = new System.Drawing.Point(133, 65);
-            this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(218, 22);
-            this.textRutEmisor.TabIndex = 12;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Rut Contribuyente";
             // 
-            // textRutContribuyente
+            // label2
             // 
-            this.textRutContribuyente.Location = new System.Drawing.Point(133, 99);
-            this.textRutContribuyente.Name = "textRutContribuyente";
-            this.textRutContribuyente.Size = new System.Drawing.Size(218, 22);
-            this.textRutContribuyente.TabIndex = 13;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Rut emisor:";
             // 
-            // textNombreSucursal
+            // textEmail
             // 
-            this.textNombreSucursal.Location = new System.Drawing.Point(133, 133);
-            this.textNombreSucursal.Name = "textNombreSucursal";
-            this.textNombreSucursal.Size = new System.Drawing.Size(218, 22);
-            this.textNombreSucursal.TabIndex = 14;
+            this.textEmail.Location = new System.Drawing.Point(133, 37);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(218, 22);
+            this.textEmail.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Email usuario:";
             // 
             // Configuracion
             // 

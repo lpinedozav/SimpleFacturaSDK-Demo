@@ -177,6 +177,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AppSettings.cs" />
+    <Compile Include="Models\Credenciales.cs" />
     <Compile Include="Models\LoadingHelper.cs" />
     <Compile Include="Models\SDKSettings.cs" />
     <Compile Include="ObtenerPDF.cs">
