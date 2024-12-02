@@ -47,9 +47,14 @@ namespace SimpleFacturaSDK_Demo
             this.label4 = new System.Windows.Forms.Label();
             this.generarpdf = new System.Windows.Forms.Button();
             this.cancelarpdf = new System.Windows.Forms.Button();
+            this.ruta = new System.Windows.Forms.GroupBox();
+            this.textBoxRuta = new System.Windows.Forms.TextBox();
+            this.selectRuta = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
+            this.ruta.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -197,7 +202,7 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(411, 343);
+            this.generarpdf.Location = new System.Drawing.Point(411, 384);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarpdf.Size = new System.Drawing.Size(102, 35);
@@ -212,7 +217,7 @@ namespace SimpleFacturaSDK_Demo
             this.cancelarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
             this.cancelarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarpdf.Location = new System.Drawing.Point(294, 343);
+            this.cancelarpdf.Location = new System.Drawing.Point(294, 384);
             this.cancelarpdf.Name = "cancelarpdf";
             this.cancelarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.cancelarpdf.Size = new System.Drawing.Size(102, 35);
@@ -222,11 +227,41 @@ namespace SimpleFacturaSDK_Demo
             this.cancelarpdf.UseVisualStyleBackColor = true;
             this.cancelarpdf.Click += new System.EventHandler(this.cancelarpdf_Click);
             // 
+            // ruta
+            // 
+            this.ruta.Controls.Add(this.selectRuta);
+            this.ruta.Controls.Add(this.textBoxRuta);
+            this.ruta.Location = new System.Drawing.Point(13, 306);
+            this.ruta.Name = "ruta";
+            this.ruta.Size = new System.Drawing.Size(500, 65);
+            this.ruta.TabIndex = 4;
+            this.ruta.TabStop = false;
+            this.ruta.Text = "Ruta";
+            // 
+            // textBoxRuta
+            // 
+            this.textBoxRuta.Location = new System.Drawing.Point(137, 23);
+            this.textBoxRuta.Name = "textBoxRuta";
+            this.textBoxRuta.Size = new System.Drawing.Size(317, 22);
+            this.textBoxRuta.TabIndex = 1;
+            this.textBoxRuta.TextChanged += new System.EventHandler(this.textBoxRuta_TextChanged);
+            // 
+            // selectRuta
+            // 
+            this.selectRuta.Location = new System.Drawing.Point(6, 23);
+            this.selectRuta.Name = "selectRuta";
+            this.selectRuta.Size = new System.Drawing.Size(125, 23);
+            this.selectRuta.TabIndex = 2;
+            this.selectRuta.Text = "Seleccionar Ruta";
+            this.selectRuta.UseVisualStyleBackColor = true;
+            this.selectRuta.Click += new System.EventHandler(this.selectRuta_Click);
+            // 
             // ObtenerPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 466);
+            this.Controls.Add(this.ruta);
             this.Controls.Add(this.cancelarpdf);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
@@ -243,6 +278,8 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
+            this.ruta.ResumeLayout(false);
+            this.ruta.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +304,9 @@ namespace SimpleFacturaSDK_Demo
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.Button cancelarpdf;
+        private System.Windows.Forms.GroupBox ruta;
+        private System.Windows.Forms.TextBox textBoxRuta;
+        private System.Windows.Forms.Button selectRuta;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
