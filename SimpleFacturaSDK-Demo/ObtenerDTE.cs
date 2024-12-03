@@ -88,6 +88,7 @@ namespace SimpleFacturaSDK_Demo
                         {
                             // Asignar el objeto DTEent como fuente de datos
                             dataGridView1.DataSource = new List<DteEnt> { response.Data };
+                            EliminarColumnasSinDatos(dataGridView1, new List<DteEnt> { response.Data });
 
                             // Agregar una columna de botón si no existe
                             if (!dataGridView1.Columns.Contains("Detalles"))
@@ -143,6 +144,35 @@ namespace SimpleFacturaSDK_Demo
             detallesForm.SetDetalles(detalles);
             detallesForm.ShowDialog();
         }
+        private void EliminarColumnasSinDatos(DataGridView grid, List<DteEnt> dteList)
+        {
+            // Iterar por las columnas del DataGridView
+            foreach (DataGridViewColumn column in grid.Columns)
+            {
+                if (column.Name == "Detalles") continue; // Excluir la columna de botones
+
+                bool hasData = false;
+
+                // Verificar si alguna fila tiene datos en esta columna
+                foreach (var dte in dteList)
+                {
+                    var value = dte.GetType().GetProperty(column.DataPropertyName)?.GetValue(dte, null);
+
+                    if (value != null && !string.IsNullOrWhiteSpace(value.ToString()))
+                    {
+                        hasData = true;
+                        break;
+                    }
+                }
+
+                // Si ninguna fila tiene datos, ocultar la columna
+                if (!hasData)
+                {
+                    column.Visible = false;
+                }
+            }
+        }
+
 
 
     }
