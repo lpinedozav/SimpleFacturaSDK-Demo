@@ -36,27 +36,31 @@
             this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cancelarSobre_Xml = new System.Windows.Forms.Button();
-            this.generarpdf = new System.Windows.Forms.Button();
+            this.generarSXML = new System.Windows.Forms.Button();
+            this.radioAlSII = new System.Windows.Forms.RadioButton();
+            this.radioAlReceptor = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioProduccion);
-            this.groupBox2.Controls.Add(this.radioCertificacion);
+            this.groupBox2.Controls.Add(this.groupBox4);
+            this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.tipodte_oSXML);
             this.groupBox2.Controls.Add(this.folio_oPDF);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 96);
             this.groupBox2.Name = "groupBox2";
@@ -68,7 +72,7 @@
             // radioProduccion
             // 
             this.radioProduccion.AutoSize = true;
-            this.radioProduccion.Location = new System.Drawing.Point(245, 93);
+            this.radioProduccion.Location = new System.Drawing.Point(129, 21);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(96, 20);
             this.radioProduccion.TabIndex = 17;
@@ -79,7 +83,7 @@
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
-            this.radioCertificacion.Location = new System.Drawing.Point(125, 93);
+            this.radioCertificacion.Location = new System.Drawing.Point(9, 21);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
             this.radioCertificacion.TabIndex = 16;
@@ -127,15 +131,6 @@
             this.label5.Size = new System.Drawing.Size(113, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Codigo TipoDTE:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Ambiente:";
             // 
             // label4
             // 
@@ -188,19 +183,64 @@
             this.cancelarSobre_Xml.UseVisualStyleBackColor = true;
             this.cancelarSobre_Xml.Click += new System.EventHandler(this.cancelarSobre_Xml_Click);
             // 
-            // generarpdf
+            // generarSXML
             // 
-            this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(411, 269);
-            this.generarpdf.Name = "generarpdf";
-            this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarpdf.Size = new System.Drawing.Size(102, 35);
-            this.generarpdf.TabIndex = 18;
-            this.generarpdf.Text = "Generar";
-            this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarpdf.UseVisualStyleBackColor = true;
+            this.generarSXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarSXML.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarSXML.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarSXML.Location = new System.Drawing.Point(411, 269);
+            this.generarSXML.Name = "generarSXML";
+            this.generarSXML.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarSXML.Size = new System.Drawing.Size(102, 35);
+            this.generarSXML.TabIndex = 18;
+            this.generarSXML.Text = "Generar";
+            this.generarSXML.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarSXML.UseVisualStyleBackColor = true;
+            this.generarSXML.Click += new System.EventHandler(this.generarSXML_Click);
+            // 
+            // radioAlSII
+            // 
+            this.radioAlSII.AutoSize = true;
+            this.radioAlSII.Location = new System.Drawing.Point(6, 21);
+            this.radioAlSII.Name = "radioAlSII";
+            this.radioAlSII.Size = new System.Drawing.Size(58, 20);
+            this.radioAlSII.TabIndex = 19;
+            this.radioAlSII.TabStop = true;
+            this.radioAlSII.Text = "Al SII";
+            this.radioAlSII.UseVisualStyleBackColor = true;
+            // 
+            // radioAlReceptor
+            // 
+            this.radioAlReceptor.AutoSize = true;
+            this.radioAlReceptor.Location = new System.Drawing.Point(104, 21);
+            this.radioAlReceptor.Name = "radioAlReceptor";
+            this.radioAlReceptor.Size = new System.Drawing.Size(99, 20);
+            this.radioAlReceptor.TabIndex = 20;
+            this.radioAlReceptor.TabStop = true;
+            this.radioAlReceptor.Text = "Al Receptor";
+            this.radioAlReceptor.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioProduccion);
+            this.groupBox3.Controls.Add(this.radioCertificacion);
+            this.groupBox3.Location = new System.Drawing.Point(9, 84);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(239, 53);
+            this.groupBox3.TabIndex = 21;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Ambiente";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioAlReceptor);
+            this.groupBox4.Controls.Add(this.radioAlSII);
+            this.groupBox4.Location = new System.Drawing.Point(272, 84);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(211, 53);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tipo sobre envio";
             // 
             // ObtenerSobreXML
             // 
@@ -208,7 +248,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 310);
             this.Controls.Add(this.cancelarSobre_Xml);
-            this.Controls.Add(this.generarpdf);
+            this.Controls.Add(this.generarSXML);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -224,6 +264,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -231,7 +275,7 @@
         #endregion
 
         private System.Windows.Forms.Button cancelarSobre_Xml;
-        private System.Windows.Forms.Button generarpdf;
+        private System.Windows.Forms.Button generarSXML;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.RadioButton radioCertificacion;
@@ -239,10 +283,13 @@
         private System.Windows.Forms.NumericUpDown folio_oPDF;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textRutEmisor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioAlReceptor;
+        private System.Windows.Forms.RadioButton radioAlSII;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -1,13 +1,12 @@
-﻿using SimpleFacturaSDK_Demo.Helpers;
+﻿using SDKSimpleFactura;
+using SDKSimpleFactura.Enum;
+using SDKSimpleFactura.Models.Facturacion;
+using SimpleFacturaSDK_Demo.Helpers;
+using SimpleFacturaSDK_Demo.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using static SDKSimpleFactura.Enum.Ambiente;
 using static SDKSimpleFactura.Enum.TipoDTE;
 
 namespace SimpleFacturaSDK_Demo
@@ -15,6 +14,7 @@ namespace SimpleFacturaSDK_Demo
     public partial class ObtenerSobreXML : Form
     {
         private AppSettings _appSettings;
+        private SimpleFacturaClient cliente;
         public ObtenerSobreXML()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace SimpleFacturaSDK_Demo
 
         private void ObtenerSobreXML_Load(object sender, EventArgs e)
         {
-            var cliente = SimpleClientSingleton.Instance;
+            cliente = SimpleClientSingleton.Instance;
             tipodte_oSXML.SelectedIndex = 0;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
@@ -32,6 +32,97 @@ namespace SimpleFacturaSDK_Demo
         private void cancelarSobre_Xml_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void generarSXML_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AmbienteEnum ambienteSeleccionado;
+
+                if (radioCertificacion.Checked)
+                {
+                    ambienteSeleccionado = AmbienteEnum.Certificacion;
+                }
+                else if (radioProduccion.Checked)
+                {
+                    ambienteSeleccionado = AmbienteEnum.Produccion;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona un ambiente (Certificación o Producción).", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                TipoSobreEnvio tipoSobreEnvioSeleccioando;
+                if (radioAlSII.Checked)
+                {
+                    tipoSobreEnvioSeleccioando = TipoSobreEnvio.AlSII;
+                }
+                else if (radioAlReceptor.Checked)
+                {
+                    tipoSobreEnvioSeleccioando = TipoSobreEnvio.AlReceptor;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona un tipo sobre envio (Al SII o Al Receptor).", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (tipodte_oSXML.SelectedItem is ComboBoxItem selectedItem)
+                {
+                    var tipoDte = (DTEType)selectedItem.Value;
+                    var request = new SolicitudDte
+                    {
+                        Credenciales = new SDKSimpleFactura.Models.Facturacion.Credenciales(),
+                        DteReferenciadoExterno = new DteReferenciadoExterno()
+                    };
+
+                    request.Credenciales.RutEmisor = textRutEmisor.Text;
+                    request.DteReferenciadoExterno.Folio = (int)folio_oPDF.Value;
+                    request.DteReferenciadoExterno.CodigoTipoDte = (int)tipoDte;
+                    request.DteReferenciadoExterno.Ambiente = (int)ambienteSeleccionado;
+
+                    string mensaje = $"Datos.\n" +
+                                     $"Rut Emisor: {request.Credenciales.RutEmisor}\n" +
+                                     $"Folio: {request.DteReferenciadoExterno.Folio}\n" +
+                                     $"Código Tipo DTE: {request.DteReferenciadoExterno.CodigoTipoDte}\n" +
+                                     $"Ambiente: {request.DteReferenciadoExterno.Ambiente}";
+                    MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var response = await cliente.Facturacion.ObtenerSobreXmlDteAsync(request, tipoSobreEnvioSeleccioando);
+                    if ((int)response.Status == 400 || (int)response.Status == 500)
+                    {
+                        MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                            string directoryPath = Path.Combine(projectDirectory, "Files");
+                            if (!Directory.Exists(directoryPath))
+                            {
+                                Directory.CreateDirectory(directoryPath);
+                            }
+                            string filePath = Path.Combine(directoryPath, $"SobreXML_{DateTime.Now:yyyyMMdd_HHmmss}.xml");
+                            File.WriteAllBytes(filePath, response.Data);
+                            MessageBox.Show($"El Sobre XML se ha guardado correctamente en: {filePath}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al guardar el Sobre XML: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    // Manejo en caso de que no se seleccione ningún valor
+                    MessageBox.Show("Por favor, selecciona un tipo de DTE válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
