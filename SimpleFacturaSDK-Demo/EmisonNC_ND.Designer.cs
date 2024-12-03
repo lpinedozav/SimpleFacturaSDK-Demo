@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.FchEmision = new System.Windows.Forms.Label();
@@ -80,10 +83,53 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.IVA = new System.Windows.Forms.Label();
             this.montoNeto = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkUnidad = new System.Windows.Forms.CheckBox();
+            this.numericPrecio = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.botonAgregarLinea = new System.Windows.Forms.Button();
+            this.numericCantidad = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.gridResultados = new System.Windows.Forms.DataGridView();
+            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridAfecto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.umedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridEliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label24 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.Receptor.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -108,7 +154,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(808, 26);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(188, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(110, 22);
             this.dateTimePicker1.TabIndex = 33;
             // 
             // FchEmision
@@ -125,7 +171,7 @@
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(1154, 24);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(188, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(109, 22);
             this.dateTimePicker2.TabIndex = 31;
             // 
             // label2
@@ -139,6 +185,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(450, 27);
             this.comboBox1.Name = "comboBox1";
@@ -528,7 +575,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(461, 135);
+            this.groupBox2.Size = new System.Drawing.Size(461, 163);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
@@ -605,11 +652,424 @@
             this.montoNeto.TabIndex = 3;
             this.montoNeto.Text = "Monto Neto:";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.numericUpDown1);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.checkUnidad);
+            this.groupBox4.Controls.Add(this.numericPrecio);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.botonAgregarLinea);
+            this.groupBox4.Controls.Add(this.numericCantidad);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.textNombre);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Location = new System.Drawing.Point(481, 359);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(915, 82);
+            this.groupBox4.TabIndex = 38;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Nuevo Producto";
+            // 
+            // checkUnidad
+            // 
+            this.checkUnidad.AutoSize = true;
+            this.checkUnidad.Location = new System.Drawing.Point(754, 29);
+            this.checkUnidad.Margin = new System.Windows.Forms.Padding(4);
+            this.checkUnidad.Name = "checkUnidad";
+            this.checkUnidad.Size = new System.Drawing.Size(73, 20);
+            this.checkUnidad.TabIndex = 16;
+            this.checkUnidad.Text = "Unidad";
+            this.checkUnidad.UseVisualStyleBackColor = true;
+            // 
+            // numericPrecio
+            // 
+            this.numericPrecio.Location = new System.Drawing.Point(654, 27);
+            this.numericPrecio.Margin = new System.Windows.Forms.Padding(4);
+            this.numericPrecio.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericPrecio.Name = "numericPrecio";
+            this.numericPrecio.Size = new System.Drawing.Size(73, 22);
+            this.numericPrecio.TabIndex = 9;
+            this.numericPrecio.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(593, 29);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 16);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Precio:";
+            // 
+            // botonAgregarLinea
+            // 
+            this.botonAgregarLinea.Location = new System.Drawing.Point(849, 18);
+            this.botonAgregarLinea.Margin = new System.Windows.Forms.Padding(4);
+            this.botonAgregarLinea.Name = "botonAgregarLinea";
+            this.botonAgregarLinea.Size = new System.Drawing.Size(52, 37);
+            this.botonAgregarLinea.TabIndex = 15;
+            this.botonAgregarLinea.Text = " + ";
+            this.botonAgregarLinea.UseVisualStyleBackColor = true;
+            // 
+            // numericCantidad
+            // 
+            this.numericCantidad.DecimalPlaces = 1;
+            this.numericCantidad.Location = new System.Drawing.Point(517, 27);
+            this.numericCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.numericCantidad.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericCantidad.Name = "numericCantidad";
+            this.numericCantidad.Size = new System.Drawing.Size(60, 22);
+            this.numericCantidad.TabIndex = 5;
+            this.numericCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(444, 30);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 16);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Cantidad:";
+            // 
+            // textNombre
+            // 
+            this.textNombre.Location = new System.Drawing.Point(66, 28);
+            this.textNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(197, 22);
+            this.textNombre.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 31);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 16);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Nombre:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.gridResultados);
+            this.groupBox5.Location = new System.Drawing.Point(30, 552);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Size = new System.Drawing.Size(680, 157);
+            this.groupBox5.TabIndex = 39;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Productos";
+            // 
+            // gridResultados
+            // 
+            this.gridResultados.AllowUserToAddRows = false;
+            this.gridResultados.AllowUserToDeleteRows = false;
+            this.gridResultados.AllowUserToResizeColumns = false;
+            this.gridResultados.AllowUserToResizeRows = false;
+            this.gridResultados.ColumnHeadersHeight = 29;
+            this.gridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridNombreProducto,
+            this.gridCantidadProducto,
+            this.gridPrecio,
+            this.gridTotal,
+            this.gridAfecto,
+            this.umedida,
+            this.gridEliminar});
+            this.gridResultados.Location = new System.Drawing.Point(8, 24);
+            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.gridResultados.Name = "gridResultados";
+            this.gridResultados.ReadOnly = true;
+            this.gridResultados.RowHeadersWidth = 25;
+            this.gridResultados.Size = new System.Drawing.Size(636, 120);
+            this.gridResultados.TabIndex = 0;
+            // 
+            // gridNombreProducto
+            // 
+            this.gridNombreProducto.DataPropertyName = "Nombre";
+            this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
+            this.gridNombreProducto.Name = "gridNombreProducto";
+            this.gridNombreProducto.ReadOnly = true;
+            this.gridNombreProducto.Width = 230;
+            // 
+            // gridCantidadProducto
+            // 
+            this.gridCantidadProducto.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle28.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle28;
+            this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
+            this.gridCantidadProducto.Name = "gridCantidadProducto";
+            this.gridCantidadProducto.ReadOnly = true;
+            this.gridCantidadProducto.Width = 55;
+            // 
+            // gridPrecio
+            // 
+            this.gridPrecio.DataPropertyName = "Precio";
+            dataGridViewCellStyle29.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle29;
+            this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
+            this.gridPrecio.Name = "gridPrecio";
+            this.gridPrecio.ReadOnly = true;
+            this.gridPrecio.Width = 65;
+            // 
+            // gridTotal
+            // 
+            this.gridTotal.DataPropertyName = "Total";
+            dataGridViewCellStyle30.Format = "N0";
+            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle30;
+            this.gridTotal.HeaderText = "Total";
+            this.gridTotal.MinimumWidth = 6;
+            this.gridTotal.Name = "gridTotal";
+            this.gridTotal.ReadOnly = true;
+            this.gridTotal.Width = 70;
+            // 
+            // gridAfecto
+            // 
+            this.gridAfecto.DataPropertyName = "Afecto";
+            this.gridAfecto.HeaderText = "Afecto";
+            this.gridAfecto.MinimumWidth = 6;
+            this.gridAfecto.Name = "gridAfecto";
+            this.gridAfecto.ReadOnly = true;
+            this.gridAfecto.Width = 45;
+            // 
+            // umedida
+            // 
+            this.umedida.DataPropertyName = "UnidadMedida";
+            this.umedida.HeaderText = "Unidad";
+            this.umedida.MinimumWidth = 6;
+            this.umedida.Name = "umedida";
+            this.umedida.ReadOnly = true;
+            this.umedida.Width = 45;
+            // 
+            // gridEliminar
+            // 
+            this.gridEliminar.HeaderText = "Elim.";
+            this.gridEliminar.MinimumWidth = 6;
+            this.gridEliminar.Name = "gridEliminar";
+            this.gridEliminar.ReadOnly = true;
+            this.gridEliminar.Width = 40;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(275, 31);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 16);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "NroLinDet:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(355, 28);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(73, 22);
+            this.numericUpDown1.TabIndex = 17;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.comboBox2);
+            this.groupBox6.Controls.Add(this.label19);
+            this.groupBox6.Controls.Add(this.dateTimePicker3);
+            this.groupBox6.Controls.Add(this.label24);
+            this.groupBox6.Controls.Add(this.folio_oPDF);
+            this.groupBox6.Controls.Add(this.numericUpDown2);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.checkBox1);
+            this.groupBox6.Controls.Add(this.button1);
+            this.groupBox6.Controls.Add(this.label23);
+            this.groupBox6.Location = new System.Drawing.Point(481, 447);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(915, 75);
+            this.groupBox6.TabIndex = 39;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Nueva Referencia";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(238, 28);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(73, 22);
+            this.numericUpDown2.TabIndex = 17;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(159, 31);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 16);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "NroLinDet:";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(754, 29);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 20);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Razon";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(849, 18);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 37);
+            this.button1.TabIndex = 15;
+            this.button1.Text = " + ";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(3, 31);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(40, 16);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Folio:";
+            // 
+            // folio_oPDF
+            // 
+            this.folio_oPDF.Location = new System.Drawing.Point(50, 27);
+            this.folio_oPDF.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.folio_oPDF.Name = "folio_oPDF";
+            this.folio_oPDF.Size = new System.Drawing.Size(92, 22);
+            this.folio_oPDF.TabIndex = 18;
+            this.folio_oPDF.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(390, 28);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(138, 24);
+            this.comboBox2.TabIndex = 27;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(319, 32);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(66, 16);
+            this.label19.TabIndex = 26;
+            this.label19.Text = "Tipo Doc:";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(614, 28);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(118, 22);
+            this.dateTimePicker3.TabIndex = 42;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(536, 32);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(72, 16);
+            this.label24.TabIndex = 41;
+            this.label24.Text = "Fecha Ref:";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(536, 524);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(73, 22);
+            this.numericUpDown3.TabIndex = 44;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(475, 526);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 16);
+            this.label16.TabIndex = 43;
+            this.label16.Text = "Precio:";
+            // 
             // EmisonNC_ND
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1403, 764);
+            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Receptor);
             this.Controls.Add(this.groupBox3);
@@ -624,7 +1084,20 @@
             this.Receptor.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -682,5 +1155,38 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label IVA;
         private System.Windows.Forms.Label montoNeto;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.CheckBox checkUnidad;
+        private System.Windows.Forms.NumericUpDown numericPrecio;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button botonAgregarLinea;
+        private System.Windows.Forms.NumericUpDown numericCantidad;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridView gridResultados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridTotal;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn gridAfecto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn umedida;
+        private System.Windows.Forms.DataGridViewImageColumn gridEliminar;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown folio_oPDF;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label16;
     }
 }

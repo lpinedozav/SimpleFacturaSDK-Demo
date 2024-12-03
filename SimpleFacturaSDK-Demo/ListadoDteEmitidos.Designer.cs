@@ -51,8 +51,6 @@
             this.hasta = new System.Windows.Forms.Label();
             this.ambiente = new System.Windows.Forms.Label();
             this.desde = new System.Windows.Forms.Label();
-            this.cancelarXml = new System.Windows.Forms.Button();
-            this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textRutContribuyente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,6 +58,8 @@
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cancelarXml = new System.Windows.Forms.Button();
+            this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -93,7 +93,7 @@
             this.gridEmitido,
             this.totalNeto,
             this.gridTotal});
-            this.gridResultados.Location = new System.Drawing.Point(8, 29);
+            this.gridResultados.Location = new System.Drawing.Point(8, 31);
             this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
@@ -280,34 +280,6 @@
             this.desde.TabIndex = 4;
             this.desde.Text = "Desde:";
             // 
-            // cancelarXml
-            // 
-            this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarXml.Location = new System.Drawing.Point(792, 386);
-            this.cancelarXml.Name = "cancelarXml";
-            this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarXml.Size = new System.Drawing.Size(102, 35);
-            this.cancelarXml.TabIndex = 22;
-            this.cancelarXml.Text = "Cancelar";
-            this.cancelarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarXml.UseVisualStyleBackColor = true;
-            // 
-            // generarpdf
-            // 
-            this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(900, 386);
-            this.generarpdf.Name = "generarpdf";
-            this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarpdf.Size = new System.Drawing.Size(102, 35);
-            this.generarpdf.TabIndex = 21;
-            this.generarpdf.Text = "Generar";
-            this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarpdf.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textRutContribuyente);
@@ -370,6 +342,34 @@
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut emisor:";
+            // 
+            // cancelarXml
+            // 
+            this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
+            this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancelarXml.Location = new System.Drawing.Point(792, 386);
+            this.cancelarXml.Name = "cancelarXml";
+            this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.cancelarXml.Size = new System.Drawing.Size(102, 35);
+            this.cancelarXml.TabIndex = 22;
+            this.cancelarXml.Text = "Cancelar";
+            this.cancelarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cancelarXml.UseVisualStyleBackColor = true;
+            // 
+            // generarpdf
+            // 
+            this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarpdf.Location = new System.Drawing.Point(900, 386);
+            this.generarpdf.Name = "generarpdf";
+            this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarpdf.Size = new System.Drawing.Size(102, 35);
+            this.generarpdf.TabIndex = 21;
+            this.generarpdf.Text = "Generar";
+            this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarpdf.UseVisualStyleBackColor = true;
             // 
             // ListadoDteEmitidos
             // 
