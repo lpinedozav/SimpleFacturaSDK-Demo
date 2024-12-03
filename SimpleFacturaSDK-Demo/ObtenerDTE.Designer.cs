@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerDTE));
             this.cancelarDte = new System.Windows.Forms.Button();
-            this.generarpdf = new System.Windows.Forms.Button();
+            this.consultarDTE = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
@@ -86,19 +86,20 @@
             this.cancelarDte.UseVisualStyleBackColor = true;
             this.cancelarDte.Click += new System.EventHandler(this.cancelarDte_Click);
             // 
-            // generarpdf
+            // consultarDTE
             // 
-            this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(834, 567);
-            this.generarpdf.Name = "generarpdf";
-            this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarpdf.Size = new System.Drawing.Size(102, 35);
-            this.generarpdf.TabIndex = 14;
-            this.generarpdf.Text = "Consultar";
-            this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarpdf.UseVisualStyleBackColor = true;
+            this.consultarDTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consultarDTE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.consultarDTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.consultarDTE.Location = new System.Drawing.Point(834, 567);
+            this.consultarDTE.Name = "consultarDTE";
+            this.consultarDTE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.consultarDTE.Size = new System.Drawing.Size(102, 35);
+            this.consultarDTE.TabIndex = 14;
+            this.consultarDTE.Text = "Consultar";
+            this.consultarDTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.consultarDTE.UseVisualStyleBackColor = true;
+            this.consultarDTE.Click += new System.EventHandler(this.consultarDTE_Click);
             // 
             // groupBox2
             // 
@@ -432,7 +433,7 @@
             this.ClientSize = new System.Drawing.Size(952, 612);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cancelarDte);
-            this.Controls.Add(this.generarpdf);
+            this.Controls.Add(this.consultarDTE);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -454,7 +455,7 @@
         #endregion
 
         private System.Windows.Forms.Button cancelarDte;
-        private System.Windows.Forms.Button generarpdf;
+        private System.Windows.Forms.Button consultarDTE;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.RadioButton radioCertificacion;

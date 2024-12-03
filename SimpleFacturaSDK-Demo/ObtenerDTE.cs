@@ -26,5 +26,10 @@ namespace SimpleFacturaSDK_Demo
         {
             this.Close();
         }
+
+        private void consultarDTE_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
