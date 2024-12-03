@@ -3,6 +3,7 @@ using SDKSimpleFactura.Models.Facturacion;
 using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
@@ -66,14 +67,6 @@ namespace SimpleFacturaSDK_Demo
                     request.DteReferenciadoExterno.CodigoTipoDte = (int)tipoDte;
                     request.DteReferenciadoExterno.Ambiente = (int)ambienteSeleccionado;
 
-                    // Crear un mensaje con los valores que deseas mostrar
-                    string mensaje = $"Datos.\n" +
-                                     $"Rut Emisor: {request.Credenciales.RutEmisor}\n" +
-                                     $"Nombre Sucursal: {request.Credenciales.NombreSucursal}\n" +
-                                     $"Folio: {request.DteReferenciadoExterno.Folio}\n" +
-                                     $"Código Tipo DTE: {request.DteReferenciadoExterno.CodigoTipoDte}\n" +
-                                     $"Ambiente: {request.DteReferenciadoExterno.Ambiente}";
-                    MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     var response = await cliente.Facturacion.ObtenerPdfDteAsync(request);
                     if ((int)response.Status == 400 || (int)response.Status == 500)
                     {
@@ -102,12 +95,23 @@ namespace SimpleFacturaSDK_Demo
                             File.WriteAllBytes(filePath, response.Data);
 
                             // Notificar al usuario
-                            MessageBox.Show($"El PDF se ha guardado correctamente en: {filePath}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            DialogResult result = MessageBox.Show($"El PDF se ha guardado correctamente en: {filePath}\n¿Desea visualizar el archivo ahora?",
+                                                                  "Éxito",
+                                                                  MessageBoxButtons.YesNo,
+                                                                  MessageBoxIcon.Information);
+
+                            if (result == DialogResult.Yes)
+                            {
+                                // Mostrar el visor de PDF
+                                DocumentoView viewerForm = new DocumentoView(filePath);
+                                viewerForm.ShowDialog();
+                            }
+
                             this.Close();
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show($"Error al guardar el PDF: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"Ocurrió un error al guardar el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
