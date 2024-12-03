@@ -3,10 +3,7 @@ using SDKSimpleFactura.Models.Facturacion;
 using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
-using System.ComponentModel;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
 using static SDKSimpleFactura.Enum.TipoDTE;
@@ -31,20 +28,10 @@ namespace SimpleFacturaSDK_Demo
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private async void generarPdf_Click(object sender, EventArgs e)
         {
             try
             {
-                // Aquí puedes usar la variable rutaGuardado para guardar el PDF
-               // MessageBox.Show($"El PDF se guardará en: {rutaGuardado}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Continuar con el proceso de generación del PDF...
                 AmbienteEnum ambienteSeleccionado;
 
                 if (radioCertificacion.Checked)
@@ -135,12 +122,6 @@ namespace SimpleFacturaSDK_Demo
                 // Manejo de errores si es necesario
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-        private void radioCertificacion_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cancelarpdf_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerXML));
             this.cancelarXml = new System.Windows.Forms.Button();
-            this.generarpdf = new System.Windows.Forms.Button();
+            this.generarXml = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
@@ -63,19 +63,20 @@
             this.cancelarXml.UseVisualStyleBackColor = true;
             this.cancelarXml.Click += new System.EventHandler(this.cancelarXml_Click);
             // 
-            // generarpdf
+            // generarXml
             // 
-            this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(411, 269);
-            this.generarpdf.Name = "generarpdf";
-            this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarpdf.Size = new System.Drawing.Size(102, 35);
-            this.generarpdf.TabIndex = 10;
-            this.generarpdf.Text = "Generar";
-            this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarpdf.UseVisualStyleBackColor = true;
+            this.generarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarXml.Location = new System.Drawing.Point(411, 269);
+            this.generarXml.Name = "generarXml";
+            this.generarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarXml.Size = new System.Drawing.Size(102, 35);
+            this.generarXml.TabIndex = 10;
+            this.generarXml.Text = "Generar";
+            this.generarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarXml.UseVisualStyleBackColor = true;
+            this.generarXml.Click += new System.EventHandler(this.generarXml_Click);
             // 
             // groupBox2
             // 
@@ -127,6 +128,11 @@
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(124, 22);
+            this.folio_oPDF.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.folio_oPDF.Name = "folio_oPDF";
             this.folio_oPDF.Size = new System.Drawing.Size(186, 22);
             this.folio_oPDF.TabIndex = 14;
@@ -203,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 314);
             this.Controls.Add(this.cancelarXml);
-            this.Controls.Add(this.generarpdf);
+            this.Controls.Add(this.generarXml);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -224,7 +230,7 @@
         #endregion
 
         private System.Windows.Forms.Button cancelarXml;
-        private System.Windows.Forms.Button generarpdf;
+        private System.Windows.Forms.Button generarXml;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.RadioButton radioCertificacion;

@@ -127,6 +127,11 @@
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(124, 22);
+            this.folio_oPDF.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.folio_oPDF.Name = "folio_oPDF";
             this.folio_oPDF.Size = new System.Drawing.Size(186, 22);
             this.folio_oPDF.TabIndex = 14;
