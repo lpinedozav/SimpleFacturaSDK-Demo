@@ -196,6 +196,12 @@
       <DependentUpon>FacturacionDTE.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="ListadoDteEmitidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoDteEmitidos.Designer.cs">
+      <DependentUpon>ListadoDteEmitidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacturacionDTE.resx">
       <DependentUpon>FacturacionDTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoDteEmitidos.resx">
+      <DependentUpon>ListadoDteEmitidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
