@@ -165,11 +165,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConciliarEmitidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConciliarEmitidos.Designer.cs">
+      <DependentUpon>ConciliarEmitidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsolidadoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsolidadoVenta.Designer.cs">
+      <DependentUpon>ConsolidadoVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FacturacionDTE.cs">
       <SubType>Form</SubType>
@@ -222,8 +234,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleFacturaClient.cs" />
+    <EmbeddedResource Include="ConciliarEmitidos.resx">
+      <DependentUpon>ConciliarEmitidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsolidadoVenta.resx">
+      <DependentUpon>ConsolidadoVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacturacionDTE.resx">
       <DependentUpon>FacturacionDTE.cs</DependentUpon>
