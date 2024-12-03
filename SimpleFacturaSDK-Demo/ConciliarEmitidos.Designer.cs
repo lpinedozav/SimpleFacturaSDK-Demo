@@ -36,8 +36,14 @@
             this.generarEmitidos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textRespuesta = new System.Windows.Forms.TextBox();
+            this.textMes = new System.Windows.Forms.NumericUpDown();
+            this.textAnio = new System.Windows.Forms.NumericUpDown();
+            this.labelMes = new System.Windows.Forms.Label();
+            this.labelAnio = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textMes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAnio)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -46,7 +52,7 @@
             this.groupBox1.Controls.Add(this.labelRutEmisor);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(320, 78);
+            this.groupBox1.Size = new System.Drawing.Size(320, 66);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
@@ -94,6 +100,7 @@
             this.generarEmitidos.Text = "Generar";
             this.generarEmitidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarEmitidos.UseVisualStyleBackColor = true;
+            this.generarEmitidos.Click += new System.EventHandler(this.generarEmitidos_Click);
             // 
             // groupBox3
             // 
@@ -116,11 +123,57 @@
             this.textRespuesta.Size = new System.Drawing.Size(453, 212);
             this.textRespuesta.TabIndex = 19;
             // 
+            // textMes
+            // 
+            this.textMes.Location = new System.Drawing.Point(109, 84);
+            this.textMes.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.textMes.Name = "textMes";
+            this.textMes.Size = new System.Drawing.Size(125, 22);
+            this.textMes.TabIndex = 3;
+            // 
+            // textAnio
+            // 
+            this.textAnio.Location = new System.Drawing.Point(109, 124);
+            this.textAnio.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.textAnio.Name = "textAnio";
+            this.textAnio.Size = new System.Drawing.Size(125, 22);
+            this.textAnio.TabIndex = 25;
+            // 
+            // labelMes
+            // 
+            this.labelMes.AutoSize = true;
+            this.labelMes.Location = new System.Drawing.Point(18, 84);
+            this.labelMes.Name = "labelMes";
+            this.labelMes.Size = new System.Drawing.Size(45, 20);
+            this.labelMes.TabIndex = 3;
+            this.labelMes.Text = "Mes:";
+            // 
+            // labelAnio
+            // 
+            this.labelAnio.AutoSize = true;
+            this.labelAnio.Location = new System.Drawing.Point(18, 124);
+            this.labelAnio.Name = "labelAnio";
+            this.labelAnio.Size = new System.Drawing.Size(46, 20);
+            this.labelAnio.TabIndex = 26;
+            this.labelAnio.Text = "Anio:";
+            // 
             // ConciliarEmitidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 316);
+            this.Controls.Add(this.labelAnio);
+            this.Controls.Add(this.labelMes);
+            this.Controls.Add(this.textAnio);
+            this.Controls.Add(this.textMes);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.cancelarEmitido);
             this.Controls.Add(this.generarEmitidos);
@@ -131,11 +184,15 @@
             this.Name = "ConciliarEmitidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conciliar Emitidos";
+            this.Load += new System.EventHandler(this.ConciliarEmitidos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textMes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAnio)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -148,5 +205,9 @@
         private System.Windows.Forms.Label labelRutEmisor;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textRespuesta;
+        private System.Windows.Forms.NumericUpDown textMes;
+        private System.Windows.Forms.NumericUpDown textAnio;
+        private System.Windows.Forms.Label labelMes;
+        private System.Windows.Forms.Label labelAnio;
     }
 }
