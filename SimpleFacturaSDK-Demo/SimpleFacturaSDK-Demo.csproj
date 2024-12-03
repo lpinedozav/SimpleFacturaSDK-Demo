@@ -183,6 +183,12 @@
     <Compile Include="ConsolidadoVenta.Designer.cs">
       <DependentUpon>ConsolidadoVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Detalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalles.Designer.cs">
+      <DependentUpon>Detalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnviaMail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsolidadoVenta.resx">
       <DependentUpon>ConsolidadoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalles.resx">
+      <DependentUpon>Detalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnviaMail.resx">
       <DependentUpon>EnviaMail.cs</DependentUpon>
