@@ -1,8 +1,10 @@
-﻿using SDKSimpleFactura.Models.Facturacion;
+﻿using SDKSimpleFactura;
+using SDKSimpleFactura.Models.Facturacion;
 using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
@@ -14,6 +16,7 @@ namespace SimpleFacturaSDK_Demo
     public partial class ObtenerPDF : Form
     {
         private AppSettings _appSettings;
+        private SimpleFacturaClient cliente;
 
         public ObtenerPDF()
         {
@@ -23,7 +26,7 @@ namespace SimpleFacturaSDK_Demo
         }
         private void ObtenerPDF_Load(object sender, EventArgs e)
         {
-            var cliente = SimpleClientSingleton.Instance;
+            cliente = SimpleClientSingleton.Instance;
             tipodte_oPDF.SelectedIndex = 0;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
@@ -34,7 +37,7 @@ namespace SimpleFacturaSDK_Demo
 
         }
 
-        private void generarPdf_Click(object sender, EventArgs e)
+        private async void generarPdf_Click(object sender, EventArgs e)
         {
             try
             {
@@ -83,10 +86,42 @@ namespace SimpleFacturaSDK_Demo
                                      $"Folio: {request.DteReferenciadoExterno.Folio}\n" +
                                      $"Código Tipo DTE: {request.DteReferenciadoExterno.CodigoTipoDte}\n" +
                                      $"Ambiente: {request.DteReferenciadoExterno.Ambiente}";
-
-
-                    // Mostrar el mensaje en una ventana emergente
                     MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var response = await cliente.Facturacion.ObtenerPdfDteAsync(request);
+                    if ((int)response.Status == 400 || (int)response.Status == 500)
+                    {
+                        MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            // Obtener el directorio del proyecto (dos niveles hacia arriba desde bin/Debug)
+                            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+
+                            // Construir la ruta de la carpeta "Files" dentro del directorio del proyecto
+                            string directoryPath = Path.Combine(projectDirectory, "Files");
+
+                            // Crear la carpeta si no existe
+                            if (!Directory.Exists(directoryPath))
+                            {
+                                Directory.CreateDirectory(directoryPath);
+                            }
+
+                            // Ruta completa para guardar el archivo
+                            string filePath = Path.Combine(directoryPath, $"DTE_{DateTime.Now:yyyyMMdd_HHmmss}.pdf");
+
+                            // Guardar los datos en el archivo
+                            File.WriteAllBytes(filePath, response.Data);
+
+                            // Notificar al usuario
+                            MessageBox.Show($"El PDF se ha guardado correctamente en: {filePath}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al guardar el PDF: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
                 else
                 {

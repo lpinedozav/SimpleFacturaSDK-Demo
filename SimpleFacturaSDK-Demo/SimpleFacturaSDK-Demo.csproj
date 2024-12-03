@@ -278,5 +278,8 @@
     <Content Include="Resources\loader_16x16.gif" />
     <Content Include="Resources\View.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
