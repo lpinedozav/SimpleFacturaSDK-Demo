@@ -34,7 +34,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
-            this.tipodte_oPDF = new System.Windows.Forms.ComboBox();
+            this.tipoDTE_oT = new System.Windows.Forms.ComboBox();
             this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioProduccion);
             this.groupBox2.Controls.Add(this.radioCertificacion);
-            this.groupBox2.Controls.Add(this.tipodte_oPDF);
+            this.groupBox2.Controls.Add(this.tipoDTE_oT);
             this.groupBox2.Controls.Add(this.folio_oPDF);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
@@ -115,13 +115,13 @@
             this.radioCertificacion.Text = "Certificacion";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
-            // tipodte_oPDF
+            // tipoDTE_oT
             // 
-            this.tipodte_oPDF.FormattingEnabled = true;
-            this.tipodte_oPDF.Location = new System.Drawing.Point(123, 54);
-            this.tipodte_oPDF.Name = "tipodte_oPDF";
-            this.tipodte_oPDF.Size = new System.Drawing.Size(187, 24);
-            this.tipodte_oPDF.TabIndex = 15;
+            this.tipoDTE_oT.FormattingEnabled = true;
+            this.tipoDTE_oT.Location = new System.Drawing.Point(123, 54);
+            this.tipoDTE_oT.Name = "tipoDTE_oT";
+            this.tipoDTE_oT.Size = new System.Drawing.Size(187, 24);
+            this.tipoDTE_oT.TabIndex = 15;
             // 
             // folio_oPDF
             // 
@@ -227,7 +227,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.RadioButton radioCertificacion;
-        private System.Windows.Forms.ComboBox tipodte_oPDF;
+        private System.Windows.Forms.ComboBox tipoDTE_oT;
         private System.Windows.Forms.NumericUpDown folio_oPDF;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;

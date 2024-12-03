@@ -1,5 +1,5 @@
-﻿using SDKSimpleFactura.Enum;
-using SDKSimpleFactura.Models.Facturacion;
+﻿using SDKSimpleFactura.Models.Facturacion;
+using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.ComponentModel;
@@ -19,7 +19,7 @@ namespace SimpleFacturaSDK_Demo
         {
             InitializeComponent();
             _appSettings = AppSettings.Current;
-            LlenarComboBox();
+            EnumHelper.LlenarComboBoxConEnum<DTEType>(tipodte_oPDF);
         }
         private void ObtenerPDF_Load(object sender, EventArgs e)
         {
@@ -38,9 +38,6 @@ namespace SimpleFacturaSDK_Demo
         {
             try
             {
-
-             
-
                 // Aquí puedes usar la variable rutaGuardado para guardar el PDF
                // MessageBox.Show($"El PDF se guardará en: {rutaGuardado}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -104,48 +101,6 @@ namespace SimpleFacturaSDK_Demo
             }
         }
 
-        private void LlenarComboBox()
-        {
-            // Obtener todas las opciones del enum
-            var enumValues = Enum.GetValues(typeof(DTEType)).Cast<DTEType>();
-
-            foreach (var value in enumValues)
-            {
-                // Obtener la descripción del atributo Description
-                string descripcion = ObtenerDescripcion(value);
-                if (!string.IsNullOrEmpty(descripcion))
-                {
-                    // Agregar al ComboBox (mostrar la descripción, pero almacenar el valor del enum)
-                    tipodte_oPDF.Items.Add(new ComboBoxItem { Text = descripcion, Value = value });
-                }
-            }
-
-            // Establecer el primer elemento como seleccionado por defecto (opcional)
-            if (tipodte_oPDF.Items.Count > 0)
-            {
-                tipodte_oPDF.SelectedIndex = 0;
-            }
-        }
-        private string ObtenerDescripcion(Enum value)
-        {
-            // Obtener el atributo Description del enum
-            FieldInfo field = value.GetType().GetField(value.ToString());
-            DescriptionAttribute attribute = field.GetCustomAttribute<DescriptionAttribute>();
-            return attribute?.Description ?? value.ToString();
-        }
-
-        private void comboBoxDTE_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Obtener el valor del enum seleccionado
-            if (tipodte_oPDF.SelectedItem is ComboBoxItem selectedItem)
-            {
-                var dteType = (DTEType)selectedItem.Value;
-                int valorDte = (int)dteType;
-
-                // Mostrar el valor asociado
-                MessageBox.Show($"Seleccionaste: {selectedItem.Text} (Valor: {valorDte})", "Información");
-            }
-        }
 
         private void radioCertificacion_CheckedChanged(object sender, EventArgs e)
         {

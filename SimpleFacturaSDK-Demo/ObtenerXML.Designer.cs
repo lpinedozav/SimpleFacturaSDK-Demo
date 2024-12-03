@@ -34,7 +34,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
-            this.tipodte_oPDF = new System.Windows.Forms.ComboBox();
+            this.tipodte_oXML = new System.Windows.Forms.ComboBox();
             this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioProduccion);
             this.groupBox2.Controls.Add(this.radioCertificacion);
-            this.groupBox2.Controls.Add(this.tipodte_oPDF);
+            this.groupBox2.Controls.Add(this.tipodte_oXML);
             this.groupBox2.Controls.Add(this.folio_oPDF);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
@@ -115,13 +115,13 @@
             this.radioCertificacion.Text = "Certificacion";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
-            // tipodte_oPDF
+            // tipodte_oXML
             // 
-            this.tipodte_oPDF.FormattingEnabled = true;
-            this.tipodte_oPDF.Location = new System.Drawing.Point(123, 54);
-            this.tipodte_oPDF.Name = "tipodte_oPDF";
-            this.tipodte_oPDF.Size = new System.Drawing.Size(187, 24);
-            this.tipodte_oPDF.TabIndex = 15;
+            this.tipodte_oXML.FormattingEnabled = true;
+            this.tipodte_oXML.Location = new System.Drawing.Point(123, 54);
+            this.tipodte_oXML.Name = "tipodte_oXML";
+            this.tipodte_oXML.Size = new System.Drawing.Size(187, 24);
+            this.tipodte_oXML.TabIndex = 15;
             // 
             // folio_oPDF
             // 
@@ -210,6 +210,7 @@
             this.Name = "ObtenerXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ObtenerXML";
+            this.Load += new System.EventHandler(this.ObtenerXML_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
@@ -226,7 +227,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.RadioButton radioCertificacion;
-        private System.Windows.Forms.ComboBox tipodte_oPDF;
+        private System.Windows.Forms.ComboBox tipodte_oXML;
         private System.Windows.Forms.NumericUpDown folio_oPDF;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;

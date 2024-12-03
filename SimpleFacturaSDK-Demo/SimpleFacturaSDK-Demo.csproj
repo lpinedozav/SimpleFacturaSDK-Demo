@@ -177,6 +177,7 @@
     <Compile Include="FacturacionDTE.Designer.cs">
       <DependentUpon>FacturacionDTE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
