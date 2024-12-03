@@ -116,6 +116,7 @@ namespace SimpleFacturaSDK_Demo
 
                             // Notificar al usuario
                             MessageBox.Show($"El PDF se ha guardado correctamente en: {filePath}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                         catch (Exception ex)
                         {
