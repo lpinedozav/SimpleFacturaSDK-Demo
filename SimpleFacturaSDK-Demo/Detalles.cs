@@ -12,10 +12,7 @@ namespace SimpleFacturaSDK_Demo
             InitializeComponent();
         }
 
-        private void Detalles_Load(object sender, EventArgs e)
-        {
-
-        }
+        // Método para asignar los detalles al DataGridView
         public void SetDetalles(List<DetalleDte> detalles)
         {
             if (detalles == null || detalles.Count == 0)
@@ -27,9 +24,19 @@ namespace SimpleFacturaSDK_Demo
             // Asignar la lista de detalles al DataGridView
             dataGridViewDetalles.DataSource = detalles;
 
-            // Eliminar columnas vacías
+            // Ajustar las columnas del DataGridView
+            dataGridViewDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewDetalles.RowHeadersVisible = false;
+
+            // Opcional: Eliminar columnas vacías
             EliminarColumnasSinDatos(detalles);
         }
+
+        private void Detalles_Load(object sender, EventArgs e)
+        {
+            // Puedes agregar código aquí si necesitas inicializar algo al cargar el formulario
+        }
+
         private void EliminarColumnasSinDatos(List<DetalleDte> detalles)
         {
             // Iterar por las columnas
