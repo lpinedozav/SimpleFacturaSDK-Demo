@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerXML));
-            this.cancelarpdf = new System.Windows.Forms.Button();
+            this.cancelarXml = new System.Windows.Forms.Button();
             this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
@@ -48,19 +48,20 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cancelarpdf
+            // cancelarXml
             // 
-            this.cancelarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarpdf.Location = new System.Drawing.Point(303, 269);
-            this.cancelarpdf.Name = "cancelarpdf";
-            this.cancelarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarpdf.Size = new System.Drawing.Size(102, 35);
-            this.cancelarpdf.TabIndex = 11;
-            this.cancelarpdf.Text = "Cancelar";
-            this.cancelarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarpdf.UseVisualStyleBackColor = true;
+            this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
+            this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancelarXml.Location = new System.Drawing.Point(303, 269);
+            this.cancelarXml.Name = "cancelarXml";
+            this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.cancelarXml.Size = new System.Drawing.Size(102, 35);
+            this.cancelarXml.TabIndex = 11;
+            this.cancelarXml.Text = "Cancelar";
+            this.cancelarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cancelarXml.UseVisualStyleBackColor = true;
+            this.cancelarXml.Click += new System.EventHandler(this.cancelarXml_Click);
             // 
             // generarpdf
             // 
@@ -201,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 314);
-            this.Controls.Add(this.cancelarpdf);
+            this.Controls.Add(this.cancelarXml);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -222,7 +223,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cancelarpdf;
+        private System.Windows.Forms.Button cancelarXml;
         private System.Windows.Forms.Button generarpdf;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;

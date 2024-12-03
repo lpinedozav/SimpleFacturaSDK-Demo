@@ -21,5 +21,10 @@ namespace SimpleFacturaSDK_Demo
             tipodte_oXML.SelectedIndex = 0;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
+
+        private void cancelarXml_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

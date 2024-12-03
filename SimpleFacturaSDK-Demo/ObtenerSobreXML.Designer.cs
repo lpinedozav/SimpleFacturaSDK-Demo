@@ -41,7 +41,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cancelarpdf = new System.Windows.Forms.Button();
+            this.cancelarSobre_Xml = new System.Windows.Forms.Button();
             this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
@@ -168,19 +168,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut Emisor:";
             // 
-            // cancelarpdf
+            // cancelarSobre_Xml
             // 
-            this.cancelarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarpdf.Location = new System.Drawing.Point(303, 269);
-            this.cancelarpdf.Name = "cancelarpdf";
-            this.cancelarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarpdf.Size = new System.Drawing.Size(102, 35);
-            this.cancelarpdf.TabIndex = 19;
-            this.cancelarpdf.Text = "Cancelar";
-            this.cancelarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarpdf.UseVisualStyleBackColor = true;
+            this.cancelarSobre_Xml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelarSobre_Xml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
+            this.cancelarSobre_Xml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancelarSobre_Xml.Location = new System.Drawing.Point(303, 269);
+            this.cancelarSobre_Xml.Name = "cancelarSobre_Xml";
+            this.cancelarSobre_Xml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.cancelarSobre_Xml.Size = new System.Drawing.Size(102, 35);
+            this.cancelarSobre_Xml.TabIndex = 19;
+            this.cancelarSobre_Xml.Text = "Cancelar";
+            this.cancelarSobre_Xml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cancelarSobre_Xml.UseVisualStyleBackColor = true;
+            this.cancelarSobre_Xml.Click += new System.EventHandler(this.cancelarSobre_Xml_Click);
             // 
             // generarpdf
             // 
@@ -201,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 310);
-            this.Controls.Add(this.cancelarpdf);
+            this.Controls.Add(this.cancelarSobre_Xml);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -224,7 +225,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cancelarpdf;
+        private System.Windows.Forms.Button cancelarSobre_Xml;
         private System.Windows.Forms.Button generarpdf;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;

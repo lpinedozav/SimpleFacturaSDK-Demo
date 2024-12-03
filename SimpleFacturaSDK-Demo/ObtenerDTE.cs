@@ -21,5 +21,10 @@ namespace SimpleFacturaSDK_Demo
             tipodte_oDTE.SelectedIndex = 0;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
+
+        private void cancelarDte_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

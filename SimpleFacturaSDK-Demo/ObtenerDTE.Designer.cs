@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerDTE));
-            this.cancelarpdf = new System.Windows.Forms.Button();
+            this.cancelarDte = new System.Windows.Forms.Button();
             this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
@@ -48,19 +48,20 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cancelarpdf
+            // cancelarDte
             // 
-            this.cancelarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarpdf.Location = new System.Drawing.Point(303, 269);
-            this.cancelarpdf.Name = "cancelarpdf";
-            this.cancelarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarpdf.Size = new System.Drawing.Size(102, 35);
-            this.cancelarpdf.TabIndex = 15;
-            this.cancelarpdf.Text = "Cancelar";
-            this.cancelarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarpdf.UseVisualStyleBackColor = true;
+            this.cancelarDte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelarDte.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
+            this.cancelarDte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancelarDte.Location = new System.Drawing.Point(303, 269);
+            this.cancelarDte.Name = "cancelarDte";
+            this.cancelarDte.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.cancelarDte.Size = new System.Drawing.Size(102, 35);
+            this.cancelarDte.TabIndex = 15;
+            this.cancelarDte.Text = "Cancelar";
+            this.cancelarDte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cancelarDte.UseVisualStyleBackColor = true;
+            this.cancelarDte.Click += new System.EventHandler(this.cancelarDte_Click);
             // 
             // generarpdf
             // 
@@ -201,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 312);
-            this.Controls.Add(this.cancelarpdf);
+            this.Controls.Add(this.cancelarDte);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -222,7 +223,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cancelarpdf;
+        private System.Windows.Forms.Button cancelarDte;
         private System.Windows.Forms.Button generarpdf;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;

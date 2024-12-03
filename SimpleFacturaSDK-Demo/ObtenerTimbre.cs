@@ -21,5 +21,10 @@ namespace SimpleFacturaSDK_Demo
             tipoDTE_oT.SelectedIndex = 0;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
+
+        private void cancelarTimbre_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
