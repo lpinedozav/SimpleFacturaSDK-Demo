@@ -118,17 +118,21 @@ namespace SimpleFacturaSDK_Demo
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verificar que se hizo clic en la columna "Detalles"
-            if (e.RowIndex >= 0 && dataGridView1.Columns[e.ColumnIndex].Name == "Detalles")
+            // Verificar que no se hizo clic en el selector de filas
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                // Obtener el objeto DTEent correspondiente a la fila seleccionada
-                DteEnt selectedDte = (DteEnt)dataGridView1.Rows[e.RowIndex].DataBoundItem;
+                // Verificar que se hizo clic en la columna "Detalles"
+                if (dataGridView1.Columns[e.ColumnIndex].Name == "Detalles")
+                {
+                    // Obtener el objeto DTEent correspondiente a la fila seleccionada
+                    DteEnt selectedDte = (DteEnt)dataGridView1.Rows[e.RowIndex].DataBoundItem;
 
-                // Obtener la lista de detalles asociada
-                List<DetalleDte> detalles = selectedDte.Detalles; // Asegúrate de que 'Detalles' es el nombre de la lista en tu clase DTEent
+                    // Obtener la lista de detalles asociada
+                    List<DetalleDte> detalles = selectedDte.Detalles; // Asegúrate de que 'Detalles' es el nombre de la lista en tu clase DTEent
 
-                // Mostrar la lista de detalles en otra tabla o ventana
-                MostrarDetallesEnOtraTabla(detalles);
+                    // Mostrar la lista de detalles en otra tabla o ventana
+                    MostrarDetallesEnOtraTabla(detalles);
+                }
             }
         }
         private void MostrarDetallesEnOtraTabla(List<DetalleDte> detalles)
