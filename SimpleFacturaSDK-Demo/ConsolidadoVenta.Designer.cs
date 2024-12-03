@@ -180,7 +180,7 @@
             this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
             this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarXml.Location = new System.Drawing.Point(127, 269);
+            this.cancelarXml.Location = new System.Drawing.Point(738, 272);
             this.cancelarXml.Name = "cancelarXml";
             this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.cancelarXml.Size = new System.Drawing.Size(102, 35);
@@ -194,7 +194,7 @@
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(235, 269);
+            this.generarpdf.Location = new System.Drawing.Point(846, 272);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarpdf.Size = new System.Drawing.Size(102, 35);
@@ -210,10 +210,10 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(593, 144);
+            this.groupBox3.Size = new System.Drawing.Size(593, 251);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Productos";
+            this.groupBox3.Text = "Resultado";
             // 
             // gridResultados
             // 
@@ -229,12 +229,12 @@
             this.gridEmitido,
             this.totalNeto,
             this.gridTotal});
-            this.gridResultados.Location = new System.Drawing.Point(4, 16);
+            this.gridResultados.Location = new System.Drawing.Point(8, 29);
             this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(579, 120);
+            this.gridResultados.Size = new System.Drawing.Size(575, 198);
             this.gridResultados.TabIndex = 0;
             // 
             // gridFecha
