@@ -40,6 +40,10 @@
             this.totalNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tipodte_ListEmitidos = new System.Windows.Forms.ComboBox();
+            this.folio_ListEmitido = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
@@ -50,21 +54,17 @@
             this.cancelarXml = new System.Windows.Forms.Button();
             this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textRutContribuyente = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textNombreSucursal = new System.Windows.Forms.TextBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textRutContribuyente = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tipodte_ListEmitidos = new System.Windows.Forms.ComboBox();
-            this.folio_ListEmitido = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_ListEmitido)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -172,6 +172,49 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Otros";
             // 
+            // tipodte_ListEmitidos
+            // 
+            this.tipodte_ListEmitidos.FormattingEnabled = true;
+            this.tipodte_ListEmitidos.Location = new System.Drawing.Point(125, 59);
+            this.tipodte_ListEmitidos.Name = "tipodte_ListEmitidos";
+            this.tipodte_ListEmitidos.Size = new System.Drawing.Size(187, 24);
+            this.tipodte_ListEmitidos.TabIndex = 23;
+            // 
+            // folio_ListEmitido
+            // 
+            this.folio_ListEmitido.Location = new System.Drawing.Point(126, 27);
+            this.folio_ListEmitido.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.folio_ListEmitido.Name = "folio_ListEmitido";
+            this.folio_ListEmitido.Size = new System.Drawing.Size(186, 22);
+            this.folio_ListEmitido.TabIndex = 22;
+            this.folio_ListEmitido.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 16);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Codigo TipoDTE:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Folio:";
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -242,7 +285,7 @@
             this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
             this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarXml.Location = new System.Drawing.Point(740, 273);
+            this.cancelarXml.Location = new System.Drawing.Point(783, 386);
             this.cancelarXml.Name = "cancelarXml";
             this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.cancelarXml.Size = new System.Drawing.Size(102, 35);
@@ -256,7 +299,7 @@
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(848, 273);
+            this.generarpdf.Location = new System.Drawing.Point(900, 386);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarpdf.Size = new System.Drawing.Size(102, 35);
@@ -279,6 +322,22 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
+            // 
+            // textRutContribuyente
+            // 
+            this.textRutContribuyente.Location = new System.Drawing.Point(124, 64);
+            this.textRutContribuyente.Name = "textRutContribuyente";
+            this.textRutContribuyente.Size = new System.Drawing.Size(240, 22);
+            this.textRutContribuyente.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Rut contribuyente:";
             // 
             // textNombreSucursal
             // 
@@ -312,70 +371,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut emisor:";
             // 
-            // textRutContribuyente
-            // 
-            this.textRutContribuyente.Location = new System.Drawing.Point(124, 64);
-            this.textRutContribuyente.Name = "textRutContribuyente";
-            this.textRutContribuyente.Size = new System.Drawing.Size(240, 22);
-            this.textRutContribuyente.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Rut contribuyente:";
-            // 
-            // tipodte_ListEmitidos
-            // 
-            this.tipodte_ListEmitidos.FormattingEnabled = true;
-            this.tipodte_ListEmitidos.Location = new System.Drawing.Point(125, 59);
-            this.tipodte_ListEmitidos.Name = "tipodte_ListEmitidos";
-            this.tipodte_ListEmitidos.Size = new System.Drawing.Size(187, 24);
-            this.tipodte_ListEmitidos.TabIndex = 23;
-            // 
-            // folio_ListEmitido
-            // 
-            this.folio_ListEmitido.Location = new System.Drawing.Point(126, 27);
-            this.folio_ListEmitido.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.folio_ListEmitido.Name = "folio_ListEmitido";
-            this.folio_ListEmitido.Size = new System.Drawing.Size(186, 22);
-            this.folio_ListEmitido.TabIndex = 22;
-            this.folio_ListEmitido.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 16);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Codigo TipoDTE:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Folio:";
-            // 
             // ListadoDteEmitidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 450);
+            this.ClientSize = new System.Drawing.Size(1020, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.cancelarXml);
@@ -390,9 +390,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.folio_ListEmitido)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.folio_ListEmitido)).EndInit();
             this.ResumeLayout(false);
 
         }
