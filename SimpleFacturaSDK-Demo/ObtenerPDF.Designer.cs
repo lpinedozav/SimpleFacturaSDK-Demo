@@ -96,7 +96,6 @@ namespace SimpleFacturaSDK_Demo
             this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut Emisor:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // groupBox2
             // 
@@ -136,7 +135,6 @@ namespace SimpleFacturaSDK_Demo
             this.radioCertificacion.TabStop = true;
             this.radioCertificacion.Text = "Certificacion";
             this.radioCertificacion.UseVisualStyleBackColor = true;
-            this.radioCertificacion.CheckedChanged += new System.EventHandler(this.radioCertificacion_CheckedChanged);
             // 
             // tipodte_oPDF
             // 

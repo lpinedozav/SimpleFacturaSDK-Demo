@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerTimbre));
             this.cancelarTimbre = new System.Windows.Forms.Button();
-            this.generarpdf = new System.Windows.Forms.Button();
+            this.generarTimbre = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
@@ -63,19 +63,20 @@
             this.cancelarTimbre.UseVisualStyleBackColor = true;
             this.cancelarTimbre.Click += new System.EventHandler(this.cancelarTimbre_Click);
             // 
-            // generarpdf
+            // generarTimbre
             // 
-            this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(411, 269);
-            this.generarpdf.Name = "generarpdf";
-            this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarpdf.Size = new System.Drawing.Size(102, 35);
-            this.generarpdf.TabIndex = 6;
-            this.generarpdf.Text = "Generar";
-            this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarpdf.UseVisualStyleBackColor = true;
+            this.generarTimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarTimbre.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarTimbre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarTimbre.Location = new System.Drawing.Point(411, 269);
+            this.generarTimbre.Name = "generarTimbre";
+            this.generarTimbre.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarTimbre.Size = new System.Drawing.Size(102, 35);
+            this.generarTimbre.TabIndex = 6;
+            this.generarTimbre.Text = "Generar";
+            this.generarTimbre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarTimbre.UseVisualStyleBackColor = true;
+            this.generarTimbre.Click += new System.EventHandler(this.generarTimbre_Click);
             // 
             // groupBox2
             // 
@@ -127,6 +128,11 @@
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(124, 22);
+            this.folio_oPDF.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.folio_oPDF.Name = "folio_oPDF";
             this.folio_oPDF.Size = new System.Drawing.Size(186, 22);
             this.folio_oPDF.TabIndex = 14;
@@ -203,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 316);
             this.Controls.Add(this.cancelarTimbre);
-            this.Controls.Add(this.generarpdf);
+            this.Controls.Add(this.generarTimbre);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -224,7 +230,7 @@
         #endregion
 
         private System.Windows.Forms.Button cancelarTimbre;
-        private System.Windows.Forms.Button generarpdf;
+        private System.Windows.Forms.Button generarTimbre;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.RadioButton radioCertificacion;
