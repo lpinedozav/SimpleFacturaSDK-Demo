@@ -189,6 +189,12 @@
     <Compile Include="Detalles.Designer.cs">
       <DependentUpon>Detalles.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmisonNC_ND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmisonNC_ND.Designer.cs">
+      <DependentUpon>EmisonNC_ND.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnviaMail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Detalles.resx">
       <DependentUpon>Detalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmisonNC_ND.resx">
+      <DependentUpon>EmisonNC_ND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnviaMail.resx">
       <DependentUpon>EnviaMail.cs</DependentUpon>

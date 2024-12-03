@@ -44,7 +44,7 @@
             this.folio_ListEmitido = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeHasta = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
@@ -158,7 +158,7 @@
             this.groupBox2.Controls.Add(this.folio_ListEmitido);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.dateTimeHasta);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.radioProduccion);
             this.groupBox2.Controls.Add(this.radioCertificacion);
@@ -215,13 +215,13 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Folio:";
             // 
-            // dateTimePicker2
+            // dateTimeHasta
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(124, 132);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(188, 22);
-            this.dateTimePicker2.TabIndex = 19;
+            this.dateTimeHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeHasta.Location = new System.Drawing.Point(124, 132);
+            this.dateTimeHasta.Name = "dateTimeHasta";
+            this.dateTimeHasta.Size = new System.Drawing.Size(188, 22);
+            this.dateTimeHasta.TabIndex = 19;
             // 
             // dateTimePicker1
             // 
@@ -285,7 +285,7 @@
             this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
             this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarXml.Location = new System.Drawing.Point(783, 386);
+            this.cancelarXml.Location = new System.Drawing.Point(792, 386);
             this.cancelarXml.Name = "cancelarXml";
             this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.cancelarXml.Size = new System.Drawing.Size(102, 35);
@@ -409,7 +409,7 @@
         private System.Windows.Forms.Button cancelarXml;
         private System.Windows.Forms.Button generarpdf;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimeHasta;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.RadioButton radioCertificacion;
