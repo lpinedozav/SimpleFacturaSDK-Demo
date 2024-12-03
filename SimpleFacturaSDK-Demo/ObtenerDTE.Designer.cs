@@ -55,7 +55,7 @@
             this.cancelarDte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarDte.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
             this.cancelarDte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarDte.Location = new System.Drawing.Point(726, 567);
+            this.cancelarDte.Location = new System.Drawing.Point(471, 502);
             this.cancelarDte.Name = "cancelarDte";
             this.cancelarDte.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.cancelarDte.Size = new System.Drawing.Size(102, 35);
@@ -70,7 +70,7 @@
             this.consultarDTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultarDTE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.consultarDTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.consultarDTE.Location = new System.Drawing.Point(834, 567);
+            this.consultarDTE.Location = new System.Drawing.Point(579, 502);
             this.consultarDTE.Name = "consultarDTE";
             this.consultarDTE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.consultarDTE.Size = new System.Drawing.Size(102, 35);
@@ -92,7 +92,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(924, 121);
+            this.groupBox2.Size = new System.Drawing.Size(669, 121);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dte Referenciado Externo";
@@ -104,13 +104,13 @@
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(96, 20);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.TabStop = true;
             this.radioProduccion.Text = "Produccion";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
+            this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(125, 66);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
@@ -139,7 +139,7 @@
             this.folio_oPDF.Size = new System.Drawing.Size(186, 22);
             this.folio_oPDF.TabIndex = 14;
             this.folio_oPDF.Value = new decimal(new int[] {
-            1,
+            4117,
             0,
             0,
             0});
@@ -184,7 +184,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(924, 78);
+            this.groupBox1.Size = new System.Drawing.Size(669, 78);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
@@ -208,19 +208,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 234);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 227);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(924, 317);
+            this.dataGridView1.Size = new System.Drawing.Size(668, 269);
             this.dataGridView1.TabIndex = 16;
             // 
             // ObtenerDTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 612);
+            this.ClientSize = new System.Drawing.Size(692, 546);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cancelarDte);
             this.Controls.Add(this.consultarDTE);
