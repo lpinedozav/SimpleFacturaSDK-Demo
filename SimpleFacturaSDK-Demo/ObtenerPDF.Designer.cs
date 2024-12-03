@@ -60,7 +60,7 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(501, 118);
+            this.groupBox1.Size = new System.Drawing.Size(356, 118);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
@@ -69,14 +69,14 @@ namespace SimpleFacturaSDK_Demo
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(124, 68);
             this.textNombreSucursal.Name = "textNombreSucursal";
-            this.textNombreSucursal.Size = new System.Drawing.Size(351, 22);
+            this.textNombreSucursal.Size = new System.Drawing.Size(186, 22);
             this.textNombreSucursal.TabIndex = 3;
             // 
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(124, 28);
             this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(351, 22);
+            this.textRutEmisor.Size = new System.Drawing.Size(186, 22);
             this.textRutEmisor.TabIndex = 2;
             // 
             // label2
@@ -109,7 +109,7 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 137);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(501, 162);
+            this.groupBox2.Size = new System.Drawing.Size(356, 162);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dte Referenciado Externo";
@@ -200,7 +200,7 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(411, 312);
+            this.generarpdf.Location = new System.Drawing.Point(266, 305);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarpdf.Size = new System.Drawing.Size(102, 35);
@@ -215,7 +215,7 @@ namespace SimpleFacturaSDK_Demo
             this.cancelarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
             this.cancelarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarpdf.Location = new System.Drawing.Point(303, 312);
+            this.cancelarpdf.Location = new System.Drawing.Point(158, 305);
             this.cancelarpdf.Name = "cancelarpdf";
             this.cancelarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.cancelarpdf.Size = new System.Drawing.Size(102, 35);
@@ -229,7 +229,7 @@ namespace SimpleFacturaSDK_Demo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 362);
+            this.ClientSize = new System.Drawing.Size(387, 352);
             this.Controls.Add(this.cancelarpdf);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
