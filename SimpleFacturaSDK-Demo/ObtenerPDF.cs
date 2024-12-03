@@ -24,7 +24,7 @@ namespace SimpleFacturaSDK_Demo
         private void ObtenerPDF_Load(object sender, EventArgs e)
         {
             cliente = SimpleClientSingleton.Instance;
-            tipodte_oPDF.SelectedIndex = 0;
+            tipodte_oPDF.SelectedIndex = 3; // factura electronica por defecto
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
         }

@@ -46,7 +46,6 @@ namespace SimpleFacturaSDK_Demo
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.generarpdf = new System.Windows.Forms.Button();
-            this.cancelarpdf = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
@@ -70,14 +69,16 @@ namespace SimpleFacturaSDK_Demo
             this.textNombreSucursal.Location = new System.Drawing.Point(124, 68);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(186, 22);
-            this.textNombreSucursal.TabIndex = 3;
+            this.textNombreSucursal.TabIndex = 0;
+            this.textNombreSucursal.TabStop = false;
             // 
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(124, 28);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(186, 22);
-            this.textRutEmisor.TabIndex = 2;
+            this.textRutEmisor.TabIndex = 0;
+            this.textRutEmisor.TabStop = false;
             // 
             // label2
             // 
@@ -120,29 +121,30 @@ namespace SimpleFacturaSDK_Demo
             this.radioProduccion.Location = new System.Drawing.Point(245, 93);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(96, 20);
-            this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.TabStop = true;
+            this.radioProduccion.TabIndex = 0;
             this.radioProduccion.Text = "Produccion";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
+            this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(125, 93);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
-            this.radioCertificacion.TabIndex = 16;
-            this.radioCertificacion.TabStop = true;
+            this.radioCertificacion.TabIndex = 0;
             this.radioCertificacion.Text = "Certificacion";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // tipodte_oPDF
             // 
+            this.tipodte_oPDF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipodte_oPDF.FormattingEnabled = true;
             this.tipodte_oPDF.Location = new System.Drawing.Point(123, 54);
             this.tipodte_oPDF.Name = "tipodte_oPDF";
-            this.tipodte_oPDF.Size = new System.Drawing.Size(187, 24);
-            this.tipodte_oPDF.TabIndex = 15;
+            this.tipodte_oPDF.Size = new System.Drawing.Size(218, 24);
+            this.tipodte_oPDF.TabIndex = 0;
+            this.tipodte_oPDF.TabStop = false;
             // 
             // folio_oPDF
             // 
@@ -153,10 +155,11 @@ namespace SimpleFacturaSDK_Demo
             0,
             0});
             this.folio_oPDF.Name = "folio_oPDF";
-            this.folio_oPDF.Size = new System.Drawing.Size(186, 22);
-            this.folio_oPDF.TabIndex = 14;
+            this.folio_oPDF.Size = new System.Drawing.Size(217, 22);
+            this.folio_oPDF.TabIndex = 0;
+            this.folio_oPDF.TabStop = false;
             this.folio_oPDF.Value = new decimal(new int[] {
-            1,
+            4117,
             0,
             0,
             0});
@@ -204,33 +207,17 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarpdf.Size = new System.Drawing.Size(102, 35);
-            this.generarpdf.TabIndex = 2;
+            this.generarpdf.TabIndex = 1;
             this.generarpdf.Text = "Generar";
             this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarpdf.UseVisualStyleBackColor = true;
             this.generarpdf.Click += new System.EventHandler(this.generarPdf_Click);
-            // 
-            // cancelarpdf
-            // 
-            this.cancelarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarpdf.Location = new System.Drawing.Point(158, 305);
-            this.cancelarpdf.Name = "cancelarpdf";
-            this.cancelarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarpdf.Size = new System.Drawing.Size(102, 35);
-            this.cancelarpdf.TabIndex = 3;
-            this.cancelarpdf.Text = "Cancelar";
-            this.cancelarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarpdf.UseVisualStyleBackColor = true;
-            this.cancelarpdf.Click += new System.EventHandler(this.cancelarpdf_Click);
             // 
             // ObtenerPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 352);
-            this.Controls.Add(this.cancelarpdf);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -269,6 +256,5 @@ namespace SimpleFacturaSDK_Demo
         private System.Windows.Forms.NumericUpDown folio_oPDF;
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.RadioButton radioProduccion;
-        private System.Windows.Forms.Button cancelarpdf;
     }
 }

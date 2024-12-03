@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Configuracion));
-            this.cancelar = new System.Windows.Forms.Button();
             this.guardar = new System.Windows.Forms.Button();
             this.username = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
@@ -47,28 +46,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cancelar
-            // 
-            this.cancelar.Image = ((System.Drawing.Image)(resources.GetObject("cancelar.Image")));
-            this.cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelar.Location = new System.Drawing.Point(495, 184);
-            this.cancelar.Name = "cancelar";
-            this.cancelar.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelar.Size = new System.Drawing.Size(126, 41);
-            this.cancelar.TabIndex = 0;
-            this.cancelar.Text = "Cancelar";
-            this.cancelar.UseVisualStyleBackColor = true;
-            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
             // 
             // guardar
             // 
             this.guardar.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guardar.Location = new System.Drawing.Point(627, 184);
+            this.guardar.Location = new System.Drawing.Point(620, 433);
             this.guardar.Name = "guardar";
             this.guardar.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.guardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -224,15 +211,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Email usuario:";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(12, 194);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(729, 233);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Emisor";
+            // 
             // Configuracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 250);
+            this.ClientSize = new System.Drawing.Size(753, 486);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guardar);
-            this.Controls.Add(this.cancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -249,8 +245,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Button guardar;
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label password;
@@ -268,5 +262,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -24,7 +24,7 @@ namespace SimpleFacturaSDK_Demo
         private void ObtenerTimbre_Load(object sender, EventArgs e)
         {
             cliente = SimpleClientSingleton.Instance;
-            tipoDTE_oT.SelectedIndex = 0;
+            tipoDTE_oT.SelectedIndex = 3;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
 

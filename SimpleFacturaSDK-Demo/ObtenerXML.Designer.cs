@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerXML));
-            this.cancelarXml = new System.Windows.Forms.Button();
             this.generarXml = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
@@ -48,31 +47,16 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cancelarXml
-            // 
-            this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarXml.Location = new System.Drawing.Point(303, 269);
-            this.cancelarXml.Name = "cancelarXml";
-            this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarXml.Size = new System.Drawing.Size(102, 35);
-            this.cancelarXml.TabIndex = 11;
-            this.cancelarXml.Text = "Cancelar";
-            this.cancelarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarXml.UseVisualStyleBackColor = true;
-            this.cancelarXml.Click += new System.EventHandler(this.cancelarXml_Click);
-            // 
             // generarXml
             // 
             this.generarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarXml.Location = new System.Drawing.Point(411, 269);
+            this.generarXml.Location = new System.Drawing.Point(264, 264);
             this.generarXml.Name = "generarXml";
             this.generarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarXml.Size = new System.Drawing.Size(102, 35);
-            this.generarXml.TabIndex = 10;
+            this.generarXml.TabIndex = 1;
             this.generarXml.Text = "Generar";
             this.generarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarXml.UseVisualStyleBackColor = true;
@@ -90,7 +74,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(501, 162);
+            this.groupBox2.Size = new System.Drawing.Size(354, 162);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dte Referenciado Externo";
@@ -102,13 +86,13 @@
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(96, 20);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.TabStop = true;
             this.radioProduccion.Text = "Produccion";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
+            this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(125, 93);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
@@ -124,6 +108,7 @@
             this.tipodte_oXML.Name = "tipodte_oXML";
             this.tipodte_oXML.Size = new System.Drawing.Size(187, 24);
             this.tipodte_oXML.TabIndex = 15;
+            this.tipodte_oXML.TabStop = false;
             // 
             // folio_oPDF
             // 
@@ -136,8 +121,9 @@
             this.folio_oPDF.Name = "folio_oPDF";
             this.folio_oPDF.Size = new System.Drawing.Size(186, 22);
             this.folio_oPDF.TabIndex = 14;
+            this.folio_oPDF.TabStop = false;
             this.folio_oPDF.Value = new decimal(new int[] {
-            1,
+            4117,
             0,
             0,
             0});
@@ -182,7 +168,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(501, 78);
+            this.groupBox1.Size = new System.Drawing.Size(354, 78);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
@@ -191,8 +177,9 @@
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(124, 28);
             this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(351, 22);
+            this.textRutEmisor.Size = new System.Drawing.Size(217, 22);
             this.textRutEmisor.TabIndex = 2;
+            this.textRutEmisor.TabStop = false;
             // 
             // label1
             // 
@@ -207,8 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 314);
-            this.Controls.Add(this.cancelarXml);
+            this.ClientSize = new System.Drawing.Size(383, 314);
             this.Controls.Add(this.generarXml);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -229,8 +215,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelarXml;
         private System.Windows.Forms.Button generarXml;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioProduccion;
