@@ -74,7 +74,7 @@
             this.tabControl2.Location = new System.Drawing.Point(13, 55);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(774, 297);
+            this.tabControl2.Size = new System.Drawing.Size(627, 315);
             this.tabControl2.TabIndex = 1;
             // 
             // item_facturacion
@@ -85,7 +85,7 @@
             this.item_facturacion.Location = new System.Drawing.Point(4, 25);
             this.item_facturacion.Name = "item_facturacion";
             this.item_facturacion.Padding = new System.Windows.Forms.Padding(3);
-            this.item_facturacion.Size = new System.Drawing.Size(766, 268);
+            this.item_facturacion.Size = new System.Drawing.Size(619, 286);
             this.item_facturacion.TabIndex = 0;
             this.item_facturacion.Text = "Facturacion";
             this.item_facturacion.UseVisualStyleBackColor = true;
@@ -96,18 +96,18 @@
             this.otros.Controls.Add(this.envio_mail);
             this.otros.Controls.Add(this.listado_dte_emitido);
             this.otros.Controls.Add(this.consolidado_ventas);
-            this.otros.Location = new System.Drawing.Point(512, 15);
+            this.otros.Location = new System.Drawing.Point(414, 15);
             this.otros.Name = "otros";
-            this.otros.Size = new System.Drawing.Size(235, 246);
+            this.otros.Size = new System.Drawing.Size(187, 254);
             this.otros.TabIndex = 2;
             this.otros.TabStop = false;
             this.otros.Text = "Otros";
             // 
             // conciliar_emitidos
             // 
-            this.conciliar_emitidos.Location = new System.Drawing.Point(12, 153);
+            this.conciliar_emitidos.Location = new System.Drawing.Point(15, 161);
             this.conciliar_emitidos.Name = "conciliar_emitidos";
-            this.conciliar_emitidos.Size = new System.Drawing.Size(210, 38);
+            this.conciliar_emitidos.Size = new System.Drawing.Size(158, 38);
             this.conciliar_emitidos.TabIndex = 13;
             this.conciliar_emitidos.Text = "Conciliar Emitidos";
             this.conciliar_emitidos.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@
             // 
             // envio_mail
             // 
-            this.envio_mail.Location = new System.Drawing.Point(12, 65);
+            this.envio_mail.Location = new System.Drawing.Point(15, 73);
             this.envio_mail.Name = "envio_mail";
-            this.envio_mail.Size = new System.Drawing.Size(210, 38);
+            this.envio_mail.Size = new System.Drawing.Size(158, 38);
             this.envio_mail.TabIndex = 11;
             this.envio_mail.Text = "Envio Mail";
             this.envio_mail.UseVisualStyleBackColor = true;
@@ -125,9 +125,9 @@
             // 
             // listado_dte_emitido
             // 
-            this.listado_dte_emitido.Location = new System.Drawing.Point(12, 21);
+            this.listado_dte_emitido.Location = new System.Drawing.Point(15, 29);
             this.listado_dte_emitido.Name = "listado_dte_emitido";
-            this.listado_dte_emitido.Size = new System.Drawing.Size(210, 38);
+            this.listado_dte_emitido.Size = new System.Drawing.Size(158, 38);
             this.listado_dte_emitido.TabIndex = 10;
             this.listado_dte_emitido.Text = "Listado DTE Emitido";
             this.listado_dte_emitido.UseVisualStyleBackColor = true;
@@ -135,9 +135,9 @@
             // 
             // consolidado_ventas
             // 
-            this.consolidado_ventas.Location = new System.Drawing.Point(12, 109);
+            this.consolidado_ventas.Location = new System.Drawing.Point(15, 117);
             this.consolidado_ventas.Name = "consolidado_ventas";
-            this.consolidado_ventas.Size = new System.Drawing.Size(210, 38);
+            this.consolidado_ventas.Size = new System.Drawing.Size(158, 38);
             this.consolidado_ventas.TabIndex = 12;
             this.consolidado_ventas.Text = "Consolidado de ventas";
             this.consolidado_ventas.UseVisualStyleBackColor = true;
@@ -150,18 +150,18 @@
             this.emision_dte.Controls.Add(this.facturacion_dte);
             this.emision_dte.Controls.Add(this.facturacion_exportacion);
             this.emision_dte.Controls.Add(this.facturacion_boleta);
-            this.emision_dte.Location = new System.Drawing.Point(267, 15);
+            this.emision_dte.Location = new System.Drawing.Point(209, 15);
             this.emision_dte.Name = "emision_dte";
-            this.emision_dte.Size = new System.Drawing.Size(228, 246);
+            this.emision_dte.Size = new System.Drawing.Size(186, 254);
             this.emision_dte.TabIndex = 1;
             this.emision_dte.TabStop = false;
             this.emision_dte.Text = "Emision DTE";
             // 
             // emision_nc_nd
             // 
-            this.emision_nc_nd.Location = new System.Drawing.Point(7, 197);
+            this.emision_nc_nd.Location = new System.Drawing.Point(13, 203);
             this.emision_nc_nd.Name = "emision_nc_nd";
-            this.emision_nc_nd.Size = new System.Drawing.Size(210, 38);
+            this.emision_nc_nd.Size = new System.Drawing.Size(161, 38);
             this.emision_nc_nd.TabIndex = 9;
             this.emision_nc_nd.Text = "Emision NC/ND";
             this.emision_nc_nd.UseVisualStyleBackColor = true;
@@ -169,9 +169,9 @@
             // 
             // facturacion_masiva
             // 
-            this.facturacion_masiva.Location = new System.Drawing.Point(7, 153);
+            this.facturacion_masiva.Location = new System.Drawing.Point(13, 159);
             this.facturacion_masiva.Name = "facturacion_masiva";
-            this.facturacion_masiva.Size = new System.Drawing.Size(210, 38);
+            this.facturacion_masiva.Size = new System.Drawing.Size(161, 38);
             this.facturacion_masiva.TabIndex = 8;
             this.facturacion_masiva.Text = "Facturacion Masiva";
             this.facturacion_masiva.UseVisualStyleBackColor = true;
@@ -179,9 +179,9 @@
             // 
             // facturacion_dte
             // 
-            this.facturacion_dte.Location = new System.Drawing.Point(7, 21);
+            this.facturacion_dte.Location = new System.Drawing.Point(13, 27);
             this.facturacion_dte.Name = "facturacion_dte";
-            this.facturacion_dte.Size = new System.Drawing.Size(210, 38);
+            this.facturacion_dte.Size = new System.Drawing.Size(161, 38);
             this.facturacion_dte.TabIndex = 5;
             this.facturacion_dte.Text = "Facturacion DTE";
             this.facturacion_dte.UseVisualStyleBackColor = true;
@@ -189,9 +189,9 @@
             // 
             // facturacion_exportacion
             // 
-            this.facturacion_exportacion.Location = new System.Drawing.Point(7, 109);
+            this.facturacion_exportacion.Location = new System.Drawing.Point(13, 115);
             this.facturacion_exportacion.Name = "facturacion_exportacion";
-            this.facturacion_exportacion.Size = new System.Drawing.Size(210, 38);
+            this.facturacion_exportacion.Size = new System.Drawing.Size(161, 38);
             this.facturacion_exportacion.TabIndex = 7;
             this.facturacion_exportacion.Text = "Facturacion Exportacion";
             this.facturacion_exportacion.UseVisualStyleBackColor = true;
@@ -199,9 +199,9 @@
             // 
             // facturacion_boleta
             // 
-            this.facturacion_boleta.Location = new System.Drawing.Point(7, 65);
+            this.facturacion_boleta.Location = new System.Drawing.Point(13, 71);
             this.facturacion_boleta.Name = "facturacion_boleta";
-            this.facturacion_boleta.Size = new System.Drawing.Size(210, 38);
+            this.facturacion_boleta.Size = new System.Drawing.Size(161, 38);
             this.facturacion_boleta.TabIndex = 6;
             this.facturacion_boleta.Text = "Facturacion Boleta";
             this.facturacion_boleta.UseVisualStyleBackColor = true;
@@ -216,16 +216,16 @@
             this.obtenerdte.Controls.Add(this.obtener_pdf);
             this.obtenerdte.Location = new System.Drawing.Point(18, 15);
             this.obtenerdte.Name = "obtenerdte";
-            this.obtenerdte.Size = new System.Drawing.Size(229, 246);
+            this.obtenerdte.Size = new System.Drawing.Size(172, 254);
             this.obtenerdte.TabIndex = 0;
             this.obtenerdte.TabStop = false;
             this.obtenerdte.Text = "Obtener DTE";
             // 
             // obtener_sobre_xml
             // 
-            this.obtener_sobre_xml.Location = new System.Drawing.Point(7, 197);
+            this.obtener_sobre_xml.Location = new System.Drawing.Point(14, 203);
             this.obtener_sobre_xml.Name = "obtener_sobre_xml";
-            this.obtener_sobre_xml.Size = new System.Drawing.Size(210, 38);
+            this.obtener_sobre_xml.Size = new System.Drawing.Size(145, 38);
             this.obtener_sobre_xml.TabIndex = 4;
             this.obtener_sobre_xml.Text = "Obtener SobreXML";
             this.obtener_sobre_xml.UseVisualStyleBackColor = true;
@@ -233,9 +233,9 @@
             // 
             // obtener_dte
             // 
-            this.obtener_dte.Location = new System.Drawing.Point(7, 153);
+            this.obtener_dte.Location = new System.Drawing.Point(14, 159);
             this.obtener_dte.Name = "obtener_dte";
-            this.obtener_dte.Size = new System.Drawing.Size(210, 38);
+            this.obtener_dte.Size = new System.Drawing.Size(145, 38);
             this.obtener_dte.TabIndex = 3;
             this.obtener_dte.Text = "Obtener DTE";
             this.obtener_dte.UseVisualStyleBackColor = true;
@@ -243,9 +243,9 @@
             // 
             // obtener_xml
             // 
-            this.obtener_xml.Location = new System.Drawing.Point(7, 109);
+            this.obtener_xml.Location = new System.Drawing.Point(14, 115);
             this.obtener_xml.Name = "obtener_xml";
-            this.obtener_xml.Size = new System.Drawing.Size(210, 38);
+            this.obtener_xml.Size = new System.Drawing.Size(145, 38);
             this.obtener_xml.TabIndex = 2;
             this.obtener_xml.Text = "Obtener XML";
             this.obtener_xml.UseVisualStyleBackColor = true;
@@ -253,9 +253,9 @@
             // 
             // obtener_timbre
             // 
-            this.obtener_timbre.Location = new System.Drawing.Point(7, 65);
+            this.obtener_timbre.Location = new System.Drawing.Point(14, 71);
             this.obtener_timbre.Name = "obtener_timbre";
-            this.obtener_timbre.Size = new System.Drawing.Size(210, 38);
+            this.obtener_timbre.Size = new System.Drawing.Size(145, 38);
             this.obtener_timbre.TabIndex = 1;
             this.obtener_timbre.Text = "Obtener Timbre";
             this.obtener_timbre.UseVisualStyleBackColor = true;
@@ -263,9 +263,9 @@
             // 
             // obtener_pdf
             // 
-            this.obtener_pdf.Location = new System.Drawing.Point(7, 21);
+            this.obtener_pdf.Location = new System.Drawing.Point(14, 27);
             this.obtener_pdf.Name = "obtener_pdf";
-            this.obtener_pdf.Size = new System.Drawing.Size(210, 38);
+            this.obtener_pdf.Size = new System.Drawing.Size(145, 38);
             this.obtener_pdf.TabIndex = 0;
             this.obtener_pdf.Text = "Obtener PDF";
             this.obtener_pdf.UseVisualStyleBackColor = true;
@@ -345,7 +345,7 @@
             // 
             // Main
             // 
-            this.ClientSize = new System.Drawing.Size(796, 356);
+            this.ClientSize = new System.Drawing.Size(648, 382);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.Configuracion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
