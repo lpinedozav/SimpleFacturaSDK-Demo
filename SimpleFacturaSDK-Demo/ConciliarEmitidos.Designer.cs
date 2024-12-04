@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.labelRutEmisor = new System.Windows.Forms.Label();
-            this.cancelarEmitido = new System.Windows.Forms.Button();
             this.generarEmitidos = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textRespuesta = new System.Windows.Forms.TextBox();
@@ -72,20 +71,6 @@
             this.labelRutEmisor.Size = new System.Drawing.Size(75, 16);
             this.labelRutEmisor.TabIndex = 0;
             this.labelRutEmisor.Text = "Rut Emisor:";
-            // 
-            // cancelarEmitido
-            // 
-            this.cancelarEmitido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarEmitido.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarEmitido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarEmitido.Location = new System.Drawing.Point(590, 274);
-            this.cancelarEmitido.Name = "cancelarEmitido";
-            this.cancelarEmitido.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarEmitido.Size = new System.Drawing.Size(102, 35);
-            this.cancelarEmitido.TabIndex = 15;
-            this.cancelarEmitido.Text = "Cancelar";
-            this.cancelarEmitido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarEmitido.UseVisualStyleBackColor = true;
             // 
             // generarEmitidos
             // 
@@ -152,7 +137,7 @@
             this.labelMes.AutoSize = true;
             this.labelMes.Location = new System.Drawing.Point(18, 84);
             this.labelMes.Name = "labelMes";
-            this.labelMes.Size = new System.Drawing.Size(45, 20);
+            this.labelMes.Size = new System.Drawing.Size(36, 16);
             this.labelMes.TabIndex = 3;
             this.labelMes.Text = "Mes:";
             // 
@@ -161,7 +146,7 @@
             this.labelAnio.AutoSize = true;
             this.labelAnio.Location = new System.Drawing.Point(18, 124);
             this.labelAnio.Name = "labelAnio";
-            this.labelAnio.Size = new System.Drawing.Size(46, 20);
+            this.labelAnio.Size = new System.Drawing.Size(37, 16);
             this.labelAnio.TabIndex = 26;
             this.labelAnio.Text = "Anio:";
             // 
@@ -175,7 +160,6 @@
             this.Controls.Add(this.textAnio);
             this.Controls.Add(this.textMes);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.cancelarEmitido);
             this.Controls.Add(this.generarEmitidos);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -197,8 +181,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelarEmitido;
         private System.Windows.Forms.Button generarEmitidos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textRutEmisor;

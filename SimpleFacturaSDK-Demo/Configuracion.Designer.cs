@@ -55,13 +55,14 @@
             // 
             this.guardar.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guardar.Location = new System.Drawing.Point(620, 433);
+            this.guardar.Location = new System.Drawing.Point(654, 433);
             this.guardar.Name = "guardar";
             this.guardar.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.guardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guardar.Size = new System.Drawing.Size(122, 41);
+            this.guardar.Size = new System.Drawing.Size(88, 41);
             this.guardar.TabIndex = 1;
             this.guardar.Text = "Guardar";
+            this.guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.guardar.UseVisualStyleBackColor = true;
             this.guardar.UseWaitCursor = true;
             this.guardar.Click += new System.EventHandler(this.guardar_Click);

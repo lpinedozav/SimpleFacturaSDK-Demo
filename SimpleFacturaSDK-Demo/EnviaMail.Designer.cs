@@ -37,7 +37,6 @@
             this.hasta = new System.Windows.Forms.Label();
             this.ambiente = new System.Windows.Forms.Label();
             this.desde = new System.Windows.Forms.Label();
-            this.cancelarXml = new System.Windows.Forms.Button();
             this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textRespuesta = new System.Windows.Forms.TextBox();
@@ -126,20 +125,6 @@
             this.desde.TabIndex = 4;
             this.desde.Text = "Desde:";
             // 
-            // cancelarXml
-            // 
-            this.cancelarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.cruzar;
-            this.cancelarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarXml.Location = new System.Drawing.Point(610, 255);
-            this.cancelarXml.Name = "cancelarXml";
-            this.cancelarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.cancelarXml.Size = new System.Drawing.Size(102, 35);
-            this.cancelarXml.TabIndex = 18;
-            this.cancelarXml.Text = "Cancelar";
-            this.cancelarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelarXml.UseVisualStyleBackColor = true;
-            // 
             // generarpdf
             // 
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,7 +166,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 302);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.cancelarXml);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -199,8 +183,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelarXml;
         private System.Windows.Forms.Button generarpdf;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
