@@ -232,12 +232,6 @@
     <Compile Include="Detalles.Designer.cs">
       <DependentUpon>Detalles.cs</DependentUpon>
     </Compile>
-    <Compile Include="DocumentoView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DocumentoView.Designer.cs">
-      <DependentUpon>DocumentoView.cs</DependentUpon>
-    </Compile>
     <Compile Include="EmisonNC_ND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,9 +312,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Detalles.resx">
       <DependentUpon>Detalles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DocumentoView.resx">
-      <DependentUpon>DocumentoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmisonNC_ND.resx">
       <DependentUpon>EmisonNC_ND.cs</DependentUpon>
