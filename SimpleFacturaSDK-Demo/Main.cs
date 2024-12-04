@@ -27,13 +27,6 @@ namespace SimpleFacturaSDK_Demo
 
         }
 
-
-        private void Configuracion_Click(object sender, EventArgs e)
-        {
-            Configuracion formulario = new Configuracion();
-            formulario.Show();
-        }
-
         private void obtener_xml_Click(object sender, EventArgs e)
         {
             ObtenerXML formulario = new ObtenerXML();
@@ -96,6 +89,12 @@ namespace SimpleFacturaSDK_Demo
         {
             ConciliarEmitidos conciliarEmitidos = new ConciliarEmitidos();
             conciliarEmitidos.Show();
+        }
+
+        private void Configuracion_Click(object sender, EventArgs e)
+        {
+            Configuracion formulario = new Configuracion();
+            formulario.Show();
         }
     }
 }

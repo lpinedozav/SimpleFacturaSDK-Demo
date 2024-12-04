@@ -95,16 +95,19 @@ namespace SimpleFacturaSDK_Demo
                             File.WriteAllBytes(filePath, response.Data);
 
                             // Notificar al usuario
-                            DialogResult result = MessageBox.Show($"El PDF se ha guardado correctamente en: {filePath}\n¿Desea visualizar el archivo ahora?",
+                            DialogResult result = MessageBox.Show($"El PDF se ha guardado correctamente en: {filePath}\n¿Desea abrir el archivo ahora?",
                                                                   "Éxito",
                                                                   MessageBoxButtons.YesNo,
                                                                   MessageBoxIcon.Information);
 
                             if (result == DialogResult.Yes)
                             {
-                                // Mostrar el visor de PDF
-                                DocumentoView viewerForm = new DocumentoView(filePath);
-                                viewerForm.ShowDialog();
+                                // Abrir el PDF
+                                Process.Start(new ProcessStartInfo
+                                {
+                                    FileName = filePath,
+                                    UseShellExecute = true
+                                });
                             }
 
                             this.Close();
@@ -114,6 +117,7 @@ namespace SimpleFacturaSDK_Demo
                             MessageBox.Show($"Ocurrió un error al guardar el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+
                 }
                 else
                 {

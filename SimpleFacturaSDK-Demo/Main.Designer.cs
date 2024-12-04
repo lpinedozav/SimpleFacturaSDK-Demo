@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.item_facturacion = new System.Windows.Forms.TabPage();
@@ -54,12 +55,16 @@
             this.item_folios = new System.Windows.Forms.TabPage();
             this.item_bh = new System.Windows.Forms.TabPage();
             this.item_otros = new System.Windows.Forms.TabPage();
-            this.Configuracion = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
             this.emision_dte.SuspendLayout();
             this.obtenerdte.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl2
@@ -276,7 +281,7 @@
             this.item_productos.Location = new System.Drawing.Point(4, 25);
             this.item_productos.Name = "item_productos";
             this.item_productos.Padding = new System.Windows.Forms.Padding(3);
-            this.item_productos.Size = new System.Drawing.Size(766, 268);
+            this.item_productos.Size = new System.Drawing.Size(619, 286);
             this.item_productos.TabIndex = 1;
             this.item_productos.Text = "Productos";
             this.item_productos.UseVisualStyleBackColor = true;
@@ -285,7 +290,7 @@
             // 
             this.item_proveedores.Location = new System.Drawing.Point(4, 25);
             this.item_proveedores.Name = "item_proveedores";
-            this.item_proveedores.Size = new System.Drawing.Size(766, 268);
+            this.item_proveedores.Size = new System.Drawing.Size(619, 286);
             this.item_proveedores.TabIndex = 2;
             this.item_proveedores.Text = "Proveedores";
             this.item_proveedores.UseVisualStyleBackColor = true;
@@ -294,7 +299,7 @@
             // 
             this.item_clientes.Location = new System.Drawing.Point(4, 25);
             this.item_clientes.Name = "item_clientes";
-            this.item_clientes.Size = new System.Drawing.Size(766, 268);
+            this.item_clientes.Size = new System.Drawing.Size(619, 286);
             this.item_clientes.TabIndex = 3;
             this.item_clientes.Text = "Clientes";
             this.item_clientes.UseVisualStyleBackColor = true;
@@ -303,7 +308,7 @@
             // 
             this.item_folios.Location = new System.Drawing.Point(4, 25);
             this.item_folios.Name = "item_folios";
-            this.item_folios.Size = new System.Drawing.Size(766, 268);
+            this.item_folios.Size = new System.Drawing.Size(619, 286);
             this.item_folios.TabIndex = 5;
             this.item_folios.Text = "Folios";
             this.item_folios.UseVisualStyleBackColor = true;
@@ -312,7 +317,7 @@
             // 
             this.item_bh.Location = new System.Drawing.Point(4, 25);
             this.item_bh.Name = "item_bh";
-            this.item_bh.Size = new System.Drawing.Size(766, 268);
+            this.item_bh.Size = new System.Drawing.Size(619, 286);
             this.item_bh.TabIndex = 6;
             this.item_bh.Text = "Boletas de honorarios";
             this.item_bh.UseVisualStyleBackColor = true;
@@ -321,35 +326,50 @@
             // 
             this.item_otros.Location = new System.Drawing.Point(4, 25);
             this.item_otros.Name = "item_otros";
-            this.item_otros.Size = new System.Drawing.Size(766, 268);
+            this.item_otros.Size = new System.Drawing.Size(619, 286);
             this.item_otros.TabIndex = 4;
             this.item_otros.Text = "Otros";
             this.item_otros.UseVisualStyleBackColor = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Configuracion});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(648, 30);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
             // Configuracion
             // 
-            this.Configuracion.FlatAppearance.BorderSize = 0;
-            this.Configuracion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Configuracion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
-            this.Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Configuracion.Location = new System.Drawing.Point(17, 18);
             this.Configuracion.Name = "Configuracion";
-            this.Configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Configuracion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Configuracion.Size = new System.Drawing.Size(150, 31);
-            this.Configuracion.TabIndex = 0;
+            this.Configuracion.Size = new System.Drawing.Size(136, 26);
             this.Configuracion.Text = "Configuración";
-            this.Configuracion.UseVisualStyleBackColor = true;
             this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
             // 
             // Main
             // 
             this.ClientSize = new System.Drawing.Size(648, 382);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl2);
-            this.Controls.Add(this.Configuracion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -360,7 +380,10 @@
             this.otros.ResumeLayout(false);
             this.emision_dte.ResumeLayout(false);
             this.obtenerdte.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -392,7 +415,6 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button Configuracion;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage item_facturacion;
         private System.Windows.Forms.TabPage item_productos;
@@ -418,6 +440,10 @@
         private System.Windows.Forms.Button obtener_xml;
         private System.Windows.Forms.Button obtener_timbre;
         private System.Windows.Forms.Button obtener_pdf;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem Configuracion;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }
 
