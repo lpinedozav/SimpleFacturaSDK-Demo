@@ -80,13 +80,6 @@ namespace SimpleFacturaSDK_Demo
                     request.DteReferenciadoExterno.Folio = (int)folio_oPDF.Value;
                     request.DteReferenciadoExterno.CodigoTipoDte = (int)tipoDte;
                     request.DteReferenciadoExterno.Ambiente = (int)ambienteSeleccionado;
-
-                    string mensaje = $"Datos.\n" +
-                                     $"Rut Emisor: {request.Credenciales.RutEmisor}\n" +
-                                     $"Folio: {request.DteReferenciadoExterno.Folio}\n" +
-                                     $"Código Tipo DTE: {request.DteReferenciadoExterno.CodigoTipoDte}\n" +
-                                     $"Ambiente: {request.DteReferenciadoExterno.Ambiente}";
-                    MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     var response = await cliente.Facturacion.ObtenerSobreXmlDteAsync(request, tipoSobreEnvioSeleccioando);
                     if ((int)response.Status == 400 || (int)response.Status == 500)
                     {
@@ -102,16 +95,25 @@ namespace SimpleFacturaSDK_Demo
                             {
                                 Directory.CreateDirectory(directoryPath);
                             }
-                            string filePath = Path.Combine(directoryPath, $"SobreXML_{DateTime.Now:yyyyMMdd_HHmmss}.xml");
+                            string filePath = Path.Combine(directoryPath, $"XML_{DateTime.Now:yyyyMMdd_HHmmss}.xml");
                             File.WriteAllBytes(filePath, response.Data);
-                            MessageBox.Show($"El Sobre XML se ha guardado correctamente en: {filePath}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Abrir el archivo XML en el navegador predeterminado
+                            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                            {
+                                FileName = filePath,
+                                UseShellExecute = true
+                            });
+
+                            MessageBox.Show($"El XML se ha guardado correctamente en: {filePath}\nSe ha abierto en el navegador.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show($"Error al guardar el Sobre XML: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"Error al guardar o abrir el XML: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+
                 }
                 else
                 {
