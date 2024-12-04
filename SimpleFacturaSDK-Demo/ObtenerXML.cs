@@ -26,7 +26,7 @@ namespace SimpleFacturaSDK_Demo
         private void ObtenerXML_Load(object sender, EventArgs e)
         {
             cliente = SimpleClientSingleton.Instance;
-            tipodte_oXML.SelectedIndex = 0;
+            tipodte_oXML.SelectedIndex = 3;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
 
