@@ -72,7 +72,8 @@ namespace SimpleFacturaSDK_Demo
 
         private void listado_dte_emitido_Click(object sender, EventArgs e)
         {
-
+            ListadoDteEmitidos formulario = new ListadoDteEmitidos();
+            formulario.Show();
         }
 
         private void envio_mail_Click(object sender, EventArgs e)

@@ -370,6 +370,7 @@
             this.Name = "ListadoDteEmitidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoDteEmitidos";
+            this.Load += new System.EventHandler(this.ListadoDteEmitidos_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.groupBox2.ResumeLayout(false);
