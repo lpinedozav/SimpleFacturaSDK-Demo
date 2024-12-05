@@ -39,7 +39,7 @@
             this.ambiente = new System.Windows.Forms.Label();
             this.desde = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textRutEmisor = new System.Windows.Forms.TextBox();
+            this.textRut = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.generarConsolidadoV = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -52,7 +52,7 @@
             this.totalexento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totaliva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalle = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -152,7 +152,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textRutEmisor);
+            this.groupBox1.Controls.Add(this.textRut);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -161,12 +161,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
             // 
-            // textRutEmisor
+            // textRut
             // 
-            this.textRutEmisor.Location = new System.Drawing.Point(100, 29);
-            this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(216, 22);
-            this.textRutEmisor.TabIndex = 2;
+            this.textRut.Location = new System.Drawing.Point(100, 29);
+            this.textRut.Name = "textRut";
+            this.textRut.Size = new System.Drawing.Size(216, 22);
+            this.textRut.TabIndex = 2;
+            this.textRut.TextChanged += new System.EventHandler(this.textRut_TextChanged);
             // 
             // label1
             // 
@@ -233,7 +234,7 @@
             // 
             // tipodte
             // 
-            this.tipodte.HeaderText = "Tipoe DTE";
+            this.tipodte.HeaderText = "Tipos DTE";
             this.tipodte.MinimumWidth = 6;
             this.tipodte.Name = "tipodte";
             this.tipodte.Width = 125;
@@ -285,6 +286,8 @@
             this.detalle.HeaderText = "Detalle";
             this.detalle.MinimumWidth = 6;
             this.detalle.Name = "detalle";
+            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.detalle.Width = 125;
             // 
             // ConsolidadoVenta
@@ -323,7 +326,7 @@
         private System.Windows.Forms.Label ambiente;
         private System.Windows.Forms.Label desde;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textRutEmisor;
+        private System.Windows.Forms.TextBox textRut;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimeHasta;
         private System.Windows.Forms.DateTimePicker dateTimeDesde;
@@ -337,6 +340,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalexento;
         private System.Windows.Forms.DataGridViewTextBoxColumn totaliva;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn detalle;
+        private System.Windows.Forms.DataGridViewButtonColumn detalle;
     }
 }

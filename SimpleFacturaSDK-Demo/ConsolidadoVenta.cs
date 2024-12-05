@@ -1,6 +1,8 @@
 ﻿using SDKSimpleFactura;
+using SDKSimpleFactura.Models.Facturacion;
 using SDKSimpleFactura.Models.Request;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
 
@@ -10,6 +12,8 @@ namespace SimpleFacturaSDK_Demo
     {
         private AppSettings _appSettings;
         private SimpleFacturaClient cliente;
+        private List<ReporteDTE> list;
+
         public ConsolidadoVenta()
         {
             InitializeComponent();
@@ -20,7 +24,7 @@ namespace SimpleFacturaSDK_Demo
         {
             cliente = SimpleClientSingleton.Instance;
 
-            textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            textRut.Text = _appSettings.Credenciales.RutEmisor;
         }
 
         private async void generarConsolidadoV_Click(object sender, EventArgs e)
@@ -43,8 +47,11 @@ namespace SimpleFacturaSDK_Demo
                     return;
                 }
 
-                var request = new ListaDteRequest();
-                request.Credenciales.RutEmisor = textRutEmisor.Text;
+                var request = new ListaDteRequest()
+                {
+                    Credenciales = new SDKSimpleFactura.Models.Facturacion.Credenciales()
+                };
+                request.Credenciales.RutEmisor = textRut.Text;
                 request.Desde = dateTimeDesde.Value;
                 request.Hasta = dateTimeHasta.Value;
                 request.Ambiente = ambienteSeleccionado;
@@ -55,7 +62,36 @@ namespace SimpleFacturaSDK_Demo
                 }
                 else
                 {
-                    var list = response.Data;
+                    list = response.Data;
+
+                    // Limpia las filas existentes en la grilla
+                    dataGridConsolidado.Rows.Clear();
+                    dataGridConsolidado.CellContentClick += dataGridConsolidado_CellContentClick;
+                    DataGridViewButtonCell detallesColumn = new DataGridViewButtonCell();
+                    detallesColumn.Value = "Ver Detalles";
+                    detallesColumn.UseColumnTextForButtonValue = true; // Hace que todas las celdas muestren el mismo texto en el botón
+                    // Recorre cada objeto RepoteDTE en la lista
+                    foreach (var reporte in list)
+                    {
+                        // Agrega una nueva fila a la grilla con los datos del reporte
+                        int rowIndex = dataGridConsolidado.Rows.Add(
+                            reporte.Fecha,
+                            reporte.TiposDTE,
+                            reporte.Emitidos,
+                            reporte.Anulados,
+                            reporte.TotalNeto,
+                            reporte.TotalExento,
+                            reporte.TotalIva,
+                            reporte.Total,
+                            detallesColumn
+                        );
+                        // Accede a la fila recién agregada
+                        DataGridViewRow row = dataGridConsolidado.Rows[rowIndex];
+
+                        // Establece el valor o texto del botón en la celda de la columna "Detalles"
+                        DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)row.Cells["detalle"];
+                        buttonCell.Value = "Ver Detalles"; // Texto que aparecerá en el botón
+                    }
                 }
 
             }
@@ -63,6 +99,38 @@ namespace SimpleFacturaSDK_Demo
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void dataGridConsolidado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica que el índice de columna corresponda a la columna del botón y que no sea una fila de encabezado
+            if (dataGridConsolidado.Columns[e.ColumnIndex].Name == "detalle" && e.RowIndex >= 0)
+            {
+                // Obtén el reporte correspondiente a la fila seleccionada
+                var reporte = list[e.RowIndex]; // Asegúrate de que 'list' esté accesible aquí
+
+                // Supongamos que 'reporte.Detalles' es una lista de DetalleDte
+                List<DetalleDte> detalles = reporte.Detalle;
+
+                // Llama al método para mostrar los detalles
+                MostrarDetallesEnOtraTabla(detalles);
+            }
+        }
+        private void MostrarDetallesEnOtraTabla(List<DetalleDte> detalles)
+        {
+            if (detalles == null || detalles.Count == 0)
+            {
+                MessageBox.Show("No hay detalles para mostrar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Crear y mostrar el formulario de detalles
+            Detalles detallesForm = new Detalles();
+            detallesForm.SetDetalles(detalles);
+            detallesForm.ShowDialog();
+        }
+        private void textRut_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
