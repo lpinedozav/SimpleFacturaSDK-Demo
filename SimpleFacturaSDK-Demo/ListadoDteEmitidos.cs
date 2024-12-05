@@ -3,6 +3,7 @@ using SDKSimpleFactura.Models.Facturacion;
 using SDKSimpleFactura.Models.Request;
 using SDKSimpleFactura.Models.Response;
 using SimpleFacturaSDK_Demo.Helpers;
+using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -62,6 +63,8 @@ namespace SimpleFacturaSDK_Demo
                 };
                 request.Credenciales.RutEmisor = textRutEmisor.Text;
                 request.Credenciales.NombreSucursal = textNombreSucursal.Text;
+                var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
+                request.CodigoTipoDte = (DTEType)tipoDte.Value;
                 request.Desde = dateTimeDesde.Value;
                 request.Hasta = dateTimeHasta.Value;
                 request.Ambiente = ambienteSeleccionado;

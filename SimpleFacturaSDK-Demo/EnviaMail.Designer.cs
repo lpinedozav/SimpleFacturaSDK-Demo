@@ -43,10 +43,10 @@
             this.numericFolio = new System.Windows.Forms.NumericUpDown();
             this.comboxTipoDte = new System.Windows.Forms.ComboBox();
             this.TipoDte = new System.Windows.Forms.Label();
-            this.textRutEmisor = new System.Windows.Forms.TextBox();
+            this.textRutEmpresa = new System.Windows.Forms.TextBox();
             this.folio = new System.Windows.Forms.Label();
             this.RutEmpresa = new System.Windows.Forms.Label();
-            this.generarpdf = new System.Windows.Forms.Button();
+            this.generarEM = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textRespuesta = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
@@ -69,7 +69,7 @@
             this.groupBox2.Controls.Add(this.numericFolio);
             this.groupBox2.Controls.Add(this.comboxTipoDte);
             this.groupBox2.Controls.Add(this.TipoDte);
-            this.groupBox2.Controls.Add(this.textRutEmisor);
+            this.groupBox2.Controls.Add(this.textRutEmpresa);
             this.groupBox2.Controls.Add(this.folio);
             this.groupBox2.Controls.Add(this.RutEmpresa);
             this.groupBox2.Location = new System.Drawing.Point(9, 10);
@@ -220,14 +220,14 @@
             this.TipoDte.TabIndex = 22;
             this.TipoDte.Text = "Tipo DTE:";
             // 
-            // textRutEmisor
+            // textRutEmpresa
             // 
-            this.textRutEmisor.Location = new System.Drawing.Point(73, 28);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
-            this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(141, 20);
-            this.textRutEmisor.TabIndex = 20;
-            this.textRutEmisor.TabStop = false;
+            this.textRutEmpresa.Location = new System.Drawing.Point(73, 28);
+            this.textRutEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.textRutEmpresa.Name = "textRutEmpresa";
+            this.textRutEmpresa.Size = new System.Drawing.Size(141, 20);
+            this.textRutEmpresa.TabIndex = 20;
+            this.textRutEmpresa.TabStop = false;
             // 
             // folio
             // 
@@ -249,20 +249,21 @@
             this.RutEmpresa.TabIndex = 4;
             this.RutEmpresa.Text = "Rut Empresa:";
             // 
-            // generarpdf
+            // generarEM
             // 
-            this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(514, 280);
-            this.generarpdf.Margin = new System.Windows.Forms.Padding(2);
-            this.generarpdf.Name = "generarpdf";
-            this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarpdf.Size = new System.Drawing.Size(76, 28);
-            this.generarpdf.TabIndex = 1;
-            this.generarpdf.Text = "Generar";
-            this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarpdf.UseVisualStyleBackColor = true;
+            this.generarEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarEM.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarEM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarEM.Location = new System.Drawing.Point(514, 280);
+            this.generarEM.Margin = new System.Windows.Forms.Padding(2);
+            this.generarEM.Name = "generarEM";
+            this.generarEM.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarEM.Size = new System.Drawing.Size(76, 28);
+            this.generarEM.TabIndex = 1;
+            this.generarEM.Text = "Generar";
+            this.generarEM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarEM.UseVisualStyleBackColor = true;
+            this.generarEM.Click += new System.EventHandler(this.generarEM_Click);
             // 
             // groupBox3
             // 
@@ -288,7 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 318);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.generarpdf);
+            this.Controls.Add(this.generarEM);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -309,13 +310,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button generarpdf;
+        private System.Windows.Forms.Button generarEM;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label folio;
         private System.Windows.Forms.Label RutEmpresa;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textRespuesta;
-        private System.Windows.Forms.TextBox textRutEmisor;
+        private System.Windows.Forms.TextBox textRutEmpresa;
         private System.Windows.Forms.ComboBox comboxTipoDte;
         private System.Windows.Forms.Label TipoDte;
         private System.Windows.Forms.NumericUpDown numericFolio;

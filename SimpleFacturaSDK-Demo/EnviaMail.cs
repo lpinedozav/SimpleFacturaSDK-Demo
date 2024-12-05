@@ -1,8 +1,13 @@
 ﻿using SDKSimpleFactura;
+using SDKSimpleFactura.Models.Request;
 using SimpleFacturaSDK_Demo.Helpers;
+using SimpleFacturaSDK_Demo.Models;
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.TipoDTE;
+using static SDKSimpleFactura.Models.Request.EnvioMailRequest;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -20,7 +25,7 @@ namespace SimpleFacturaSDK_Demo
 
         private void EnviarMail_Load(object sender, EventArgs e)
         {
-            textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            textRutEmpresa.Text = _appSettings.Credenciales.RutEmisor;
             numericFolio.Value = 2149;
             comboxTipoDte.SelectedIndex = 3;
             textPara.Text = "contacto@chilesystems.com";
@@ -29,6 +34,44 @@ namespace SimpleFacturaSDK_Demo
             checkXML.Checked = true;
             checkPDF.Checked = true;
             textComentario.Text = "ESTO ES UN COMENTARIO";
+        }
+
+        private async void generarEM_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var request = new EnvioMailRequest()
+                {
+                    Dte = new DteClass(),
+                    Mail = new MailClass()
+                };
+                request.RutEmpresa = textRutEmpresa.Text;
+                request.Dte.folio = (int)numericFolio.Value;
+                var tipoDte = comboxTipoDte.SelectedItem as ComboBoxItem;
+                request.Dte.tipoDTE = (int)tipoDte.Value;
+                request.Mail.to = new List<string> { textPara.Text };
+                request.Mail.ccs = new List<string> { textCC.Text };
+                request.Mail.ccos = new List<string> { textCCO.Text };
+                request.Xml = checkXML.Checked;
+                request.Xml = checkPDF.Checked;
+                request.Comments = textComentario.Text;
+                var response = await cliente.Facturacion.EnvioMailAsync(request);
+                if (response.Status == 400 || response.Status == 500)
+                {
+                    MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    textRespuesta.Text = $"Estado: {response.Status}\r\n" +
+                     $"Mensaje: {response.Message}\r\n" +
+                     $"Datos: {response.Data}\r\n" +
+                     $"Errores: {(response.Errors != null ? string.Join(", ", response.Errors) : "Ninguno")}\r\n";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
