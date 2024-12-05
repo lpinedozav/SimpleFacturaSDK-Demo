@@ -45,6 +45,7 @@
             this.tipodte_ListEmitidos = new System.Windows.Forms.ComboBox();
             this.tipoDte = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.razonSocial_Emisor = new System.Windows.Forms.TextBox();
             this.textCiudadEmisor = new System.Windows.Forms.TextBox();
             this.ciudad = new System.Windows.Forms.Label();
@@ -94,14 +95,13 @@
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.generarTimbre = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFolio_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFecha_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCodigo_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonRef = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.generarTimbre = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -123,10 +123,10 @@
             this.groupBox1.Controls.Add(this.tipodte_ListEmitidos);
             this.groupBox1.Controls.Add(this.tipoDte);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(608, 87);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(624, 87);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificacion DTE";
@@ -135,9 +135,9 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(514, 24);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(84, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
             this.dateTimePicker1.TabIndex = 33;
             // 
             // FchEmision
@@ -154,9 +154,9 @@
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(115, 52);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(92, 20);
             this.dateTimePicker2.TabIndex = 31;
             // 
             // label2
@@ -174,7 +174,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(321, 22);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(112, 21);
             this.comboBox1.TabIndex = 29;
@@ -193,7 +193,7 @@
             // 
             this.tipodte_ListEmitidos.FormattingEnabled = true;
             this.tipodte_ListEmitidos.Location = new System.Drawing.Point(64, 22);
-            this.tipodte_ListEmitidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipodte_ListEmitidos.Margin = new System.Windows.Forms.Padding(2);
             this.tipodte_ListEmitidos.Name = "tipodte_ListEmitidos";
             this.tipodte_ListEmitidos.Size = new System.Drawing.Size(173, 21);
             this.tipodte_ListEmitidos.TabIndex = 25;
@@ -231,17 +231,25 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(12, 102);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(608, 146);
+            this.groupBox3.Size = new System.Drawing.Size(621, 146);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Emisor";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox4.Location = new System.Drawing.Point(313, 115);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(87, 20);
+            this.textBox4.TabIndex = 36;
             // 
             // razonSocial_Emisor
             // 
             this.razonSocial_Emisor.BackColor = System.Drawing.SystemColors.Info;
             this.razonSocial_Emisor.Location = new System.Drawing.Point(266, 25);
             this.razonSocial_Emisor.Name = "razonSocial_Emisor";
-            this.razonSocial_Emisor.Size = new System.Drawing.Size(331, 20);
+            this.razonSocial_Emisor.Size = new System.Drawing.Size(340, 20);
             this.razonSocial_Emisor.TabIndex = 35;
             // 
             // textCiudadEmisor
@@ -335,7 +343,7 @@
             this.textComunaEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textComunaEmisor.Location = new System.Drawing.Point(453, 87);
             this.textComunaEmisor.Name = "textComunaEmisor";
-            this.textComunaEmisor.Size = new System.Drawing.Size(144, 20);
+            this.textComunaEmisor.Size = new System.Drawing.Size(153, 20);
             this.textComunaEmisor.TabIndex = 22;
             // 
             // textGiroEmisor
@@ -343,7 +351,7 @@
             this.textGiroEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textGiroEmisor.Location = new System.Drawing.Point(266, 53);
             this.textGiroEmisor.Name = "textGiroEmisor";
-            this.textGiroEmisor.Size = new System.Drawing.Size(331, 20);
+            this.textGiroEmisor.Size = new System.Drawing.Size(340, 20);
             this.textGiroEmisor.TabIndex = 24;
             // 
             // label9
@@ -449,7 +457,7 @@
             this.groupBox5.Controls.Add(this.gridResultados);
             this.groupBox5.Location = new System.Drawing.Point(12, 389);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(608, 128);
+            this.groupBox5.Size = new System.Drawing.Size(621, 128);
             this.groupBox5.TabIndex = 39;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Productos";
@@ -473,7 +481,7 @@
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(585, 98);
+            this.gridResultados.Size = new System.Drawing.Size(598, 98);
             this.gridResultados.TabIndex = 0;
             // 
             // gridNroLinea
@@ -554,7 +562,7 @@
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Location = new System.Drawing.Point(11, 254);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(608, 126);
+            this.groupBox7.Size = new System.Drawing.Size(622, 126);
             this.groupBox7.TabIndex = 36;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Receptor";
@@ -564,7 +572,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Info;
             this.textBox1.Location = new System.Drawing.Point(267, 24);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 20);
+            this.textBox1.Size = new System.Drawing.Size(340, 20);
             this.textBox1.TabIndex = 35;
             // 
             // textBox2
@@ -623,7 +631,7 @@
             this.textBox14.BackColor = System.Drawing.SystemColors.Info;
             this.textBox14.Location = new System.Drawing.Point(454, 87);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(144, 20);
+            this.textBox14.Size = new System.Drawing.Size(153, 20);
             this.textBox14.TabIndex = 22;
             // 
             // label29
@@ -640,7 +648,7 @@
             this.textBox19.BackColor = System.Drawing.SystemColors.Info;
             this.textBox19.Location = new System.Drawing.Point(267, 52);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(331, 20);
+            this.textBox19.Size = new System.Drawing.Size(340, 20);
             this.textBox19.TabIndex = 24;
             // 
             // label31
@@ -683,7 +691,7 @@
             this.groupBox4.Controls.Add(this.dataGridView1);
             this.groupBox4.Location = new System.Drawing.Point(11, 523);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(608, 132);
+            this.groupBox4.Size = new System.Drawing.Size(622, 132);
             this.groupBox4.TabIndex = 40;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Referencias";
@@ -707,23 +715,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(586, 98);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 98);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // generarTimbre
-            // 
-            this.generarTimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarTimbre.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarTimbre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarTimbre.Location = new System.Drawing.Point(532, 697);
-            this.generarTimbre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.generarTimbre.Name = "generarTimbre";
-            this.generarTimbre.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarTimbre.Size = new System.Drawing.Size(88, 28);
-            this.generarTimbre.TabIndex = 41;
-            this.generarTimbre.Text = "Generar";
-            this.generarTimbre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarTimbre.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -787,19 +780,26 @@
             this.RazonRef.ReadOnly = true;
             this.RazonRef.Width = 105;
             // 
-            // textBox4
+            // generarTimbre
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Location = new System.Drawing.Point(313, 115);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(87, 20);
-            this.textBox4.TabIndex = 36;
+            this.generarTimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarTimbre.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarTimbre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarTimbre.Location = new System.Drawing.Point(545, 697);
+            this.generarTimbre.Margin = new System.Windows.Forms.Padding(2);
+            this.generarTimbre.Name = "generarTimbre";
+            this.generarTimbre.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarTimbre.Size = new System.Drawing.Size(88, 28);
+            this.generarTimbre.TabIndex = 41;
+            this.generarTimbre.Text = "Generar";
+            this.generarTimbre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarTimbre.UseVisualStyleBackColor = true;
             // 
             // EmisonNC_ND
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 736);
+            this.ClientSize = new System.Drawing.Size(644, 736);
             this.Controls.Add(this.generarTimbre);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox7);
@@ -809,7 +809,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EmisonNC_ND";
