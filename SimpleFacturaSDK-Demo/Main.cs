@@ -83,13 +83,14 @@ namespace SimpleFacturaSDK_Demo
 
         private void consolidado_ventas_Click(object sender, EventArgs e)
         {
-
+            ConsolidadoVenta formulario = new ConsolidadoVenta();
+            formulario.Show();
         }
 
         private void conciliar_emitidos_Click(object sender, EventArgs e)
         {
-            ConciliarEmitidos conciliarEmitidos = new ConciliarEmitidos();
-            conciliarEmitidos.Show();
+            ConciliarEmitidos formulario = new ConciliarEmitidos();
+            formulario.Show();
         }
 
         private void Configuracion_Click(object sender, EventArgs e)

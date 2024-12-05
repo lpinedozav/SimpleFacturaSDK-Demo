@@ -24,13 +24,17 @@ namespace SimpleFacturaSDK_Demo
             // Asignar la lista de detalles al DataGridView
             dataGridViewDetalles.DataSource = detalles;
 
-            // Ajustar las columnas del DataGridView
-            dataGridViewDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            // Ajustar las columnas al contenido y al título
+            dataGridViewDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            // Ocultar encabezados de fila si no son necesarios
             dataGridViewDetalles.RowHeadersVisible = false;
 
             // Opcional: Eliminar columnas vacías
             EliminarColumnasSinDatos(detalles);
         }
+
+
 
         private void Detalles_Load(object sender, EventArgs e)
         {
