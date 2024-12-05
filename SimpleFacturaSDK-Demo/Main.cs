@@ -79,7 +79,8 @@ namespace SimpleFacturaSDK_Demo
 
         private void envio_mail_Click(object sender, EventArgs e)
         {
-
+            EnviarMail formulario = new EnviarMail();
+            formulario.Show();
         }
 
         private void consolidado_ventas_Click(object sender, EventArgs e)
