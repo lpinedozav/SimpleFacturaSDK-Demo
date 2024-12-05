@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmisonNC_ND));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -71,13 +71,6 @@
             this.IVA = new System.Windows.Forms.Label();
             this.montoNeto = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.gridResultados = new System.Windows.Forms.DataGridView();
-            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.umedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -102,15 +95,22 @@
             this.ColumnFecha_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCodigo_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonRef = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridResultados = new System.Windows.Forms.DataGridView();
+            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.umedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -150,7 +150,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(940, 29);
+            this.dateTimePicker2.Location = new System.Drawing.Point(947, 29);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(109, 22);
             this.dateTimePicker2.TabIndex = 31;
@@ -267,7 +267,7 @@
             // ciudad
             // 
             this.ciudad.AutoSize = true;
-            this.ciudad.Location = new System.Drawing.Point(784, 31);
+            this.ciudad.Location = new System.Drawing.Point(784, 35);
             this.ciudad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ciudad.Name = "ciudad";
             this.ciudad.Size = new System.Drawing.Size(53, 16);
@@ -357,7 +357,7 @@
             this.textComunaEmisor.Location = new System.Drawing.Point(75, 116);
             this.textComunaEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textComunaEmisor.Name = "textComunaEmisor";
-            this.textComunaEmisor.Size = new System.Drawing.Size(140, 22);
+            this.textComunaEmisor.Size = new System.Drawing.Size(145, 22);
             this.textComunaEmisor.TabIndex = 22;
             // 
             // textGiroEmisor
@@ -416,11 +416,11 @@
             this.groupBox2.Controls.Add(this.textBox18);
             this.groupBox2.Controls.Add(this.IVA);
             this.groupBox2.Controls.Add(this.montoNeto);
-            this.groupBox2.Location = new System.Drawing.Point(802, 400);
+            this.groupBox2.Location = new System.Drawing.Point(831, 400);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(293, 163);
+            this.groupBox2.Size = new System.Drawing.Size(264, 163);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
@@ -491,89 +491,6 @@
             this.groupBox5.TabIndex = 39;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Productos";
-            // 
-            // gridResultados
-            // 
-            this.gridResultados.AllowUserToAddRows = false;
-            this.gridResultados.AllowUserToDeleteRows = false;
-            this.gridResultados.AllowUserToResizeColumns = false;
-            this.gridResultados.AllowUserToResizeRows = false;
-            this.gridResultados.ColumnHeadersHeight = 29;
-            this.gridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gridResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gridNroLinea,
-            this.gridNombreProducto,
-            this.gridCantidadProducto,
-            this.umedida,
-            this.gridPrecio,
-            this.Monto});
-            this.gridResultados.Location = new System.Drawing.Point(11, 23);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
-            this.gridResultados.Name = "gridResultados";
-            this.gridResultados.ReadOnly = true;
-            this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(759, 120);
-            this.gridResultados.TabIndex = 0;
-            // 
-            // gridNroLinea
-            // 
-            this.gridNroLinea.DataPropertyName = "NroLinDet";
-            dataGridViewCellStyle1.Format = "N0";
-            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridNroLinea.HeaderText = "NroLinDet";
-            this.gridNroLinea.MinimumWidth = 6;
-            this.gridNroLinea.Name = "gridNroLinea";
-            this.gridNroLinea.ReadOnly = true;
-            this.gridNroLinea.Width = 90;
-            // 
-            // gridNombreProducto
-            // 
-            this.gridNombreProducto.DataPropertyName = "Nombre";
-            this.gridNombreProducto.HeaderText = "Nombre";
-            this.gridNombreProducto.MinimumWidth = 6;
-            this.gridNombreProducto.Name = "gridNombreProducto";
-            this.gridNombreProducto.ReadOnly = true;
-            this.gridNombreProducto.Width = 230;
-            // 
-            // gridCantidadProducto
-            // 
-            this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle2.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridCantidadProducto.HeaderText = "Cantidad";
-            this.gridCantidadProducto.MinimumWidth = 6;
-            this.gridCantidadProducto.Name = "gridCantidadProducto";
-            this.gridCantidadProducto.ReadOnly = true;
-            this.gridCantidadProducto.Width = 80;
-            // 
-            // umedida
-            // 
-            this.umedida.DataPropertyName = "UnidadMedida";
-            this.umedida.HeaderText = "Unidad";
-            this.umedida.MinimumWidth = 6;
-            this.umedida.Name = "umedida";
-            this.umedida.ReadOnly = true;
-            this.umedida.Width = 80;
-            // 
-            // gridPrecio
-            // 
-            this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle3.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridPrecio.HeaderText = "Precio";
-            this.gridPrecio.MinimumWidth = 6;
-            this.gridPrecio.Name = "gridPrecio";
-            this.gridPrecio.ReadOnly = true;
-            this.gridPrecio.Width = 118;
-            // 
-            // Monto
-            // 
-            this.Monto.DataPropertyName = "Monto";
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MinimumWidth = 6;
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            this.Monto.Width = 125;
             // 
             // groupBox7
             // 
@@ -740,7 +657,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(781, 163);
+            this.groupBox4.Size = new System.Drawing.Size(810, 163);
             this.groupBox4.TabIndex = 40;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Referencias";
@@ -765,7 +682,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(761, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(782, 120);
             this.dataGridView1.TabIndex = 0;
             // 
             // generarTimbre
@@ -773,10 +690,10 @@
             this.generarTimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarTimbre.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarTimbre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarTimbre.Location = new System.Drawing.Point(993, 735);
+            this.generarTimbre.Location = new System.Drawing.Point(978, 735);
             this.generarTimbre.Name = "generarTimbre";
             this.generarTimbre.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarTimbre.Size = new System.Drawing.Size(102, 35);
+            this.generarTimbre.Size = new System.Drawing.Size(117, 35);
             this.generarTimbre.TabIndex = 41;
             this.generarTimbre.Text = "Generar";
             this.generarTimbre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -787,6 +704,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "NroLinRef";
             dataGridViewCellStyle4.Format = "N0";
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "NroLinRef";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -796,11 +714,12 @@
             // columnTipoDoc
             // 
             this.columnTipoDoc.DataPropertyName = "TipoDocumento";
+            this.columnTipoDoc.Frozen = true;
             this.columnTipoDoc.HeaderText = "Tipo Documento";
             this.columnTipoDoc.MinimumWidth = 6;
             this.columnTipoDoc.Name = "columnTipoDoc";
             this.columnTipoDoc.ReadOnly = true;
-            this.columnTipoDoc.Width = 120;
+            this.columnTipoDoc.Width = 95;
             // 
             // ColumnFolio_Ref
             // 
@@ -811,7 +730,7 @@
             this.ColumnFolio_Ref.MinimumWidth = 6;
             this.ColumnFolio_Ref.Name = "ColumnFolio_Ref";
             this.ColumnFolio_Ref.ReadOnly = true;
-            this.ColumnFolio_Ref.Width = 120;
+            this.ColumnFolio_Ref.Width = 85;
             // 
             // ColumnFecha_Ref
             // 
@@ -822,7 +741,6 @@
             this.ColumnFecha_Ref.MinimumWidth = 6;
             this.ColumnFecha_Ref.Name = "ColumnFecha_Ref";
             this.ColumnFecha_Ref.ReadOnly = true;
-            this.ColumnFecha_Ref.Width = 120;
             // 
             // ColumnCodigo_Ref
             // 
@@ -831,7 +749,7 @@
             this.ColumnCodigo_Ref.MinimumWidth = 6;
             this.ColumnCodigo_Ref.Name = "ColumnCodigo_Ref";
             this.ColumnCodigo_Ref.ReadOnly = true;
-            this.ColumnCodigo_Ref.Width = 140;
+            this.ColumnCodigo_Ref.Width = 105;
             // 
             // RazonRef
             // 
@@ -840,7 +758,90 @@
             this.RazonRef.MinimumWidth = 6;
             this.RazonRef.Name = "RazonRef";
             this.RazonRef.ReadOnly = true;
-            this.RazonRef.Width = 135;
+            this.RazonRef.Width = 99;
+            // 
+            // gridResultados
+            // 
+            this.gridResultados.AllowUserToAddRows = false;
+            this.gridResultados.AllowUserToDeleteRows = false;
+            this.gridResultados.AllowUserToResizeColumns = false;
+            this.gridResultados.AllowUserToResizeRows = false;
+            this.gridResultados.ColumnHeadersHeight = 29;
+            this.gridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridNroLinea,
+            this.gridNombreProducto,
+            this.gridCantidadProducto,
+            this.umedida,
+            this.gridPrecio,
+            this.Monto});
+            this.gridResultados.Location = new System.Drawing.Point(11, 23);
+            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.gridResultados.Name = "gridResultados";
+            this.gridResultados.ReadOnly = true;
+            this.gridResultados.RowHeadersWidth = 25;
+            this.gridResultados.Size = new System.Drawing.Size(780, 120);
+            this.gridResultados.TabIndex = 0;
+            // 
+            // gridNroLinea
+            // 
+            this.gridNroLinea.DataPropertyName = "NroLinDet";
+            dataGridViewCellStyle1.Format = "N0";
+            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridNroLinea.HeaderText = "NroLinDet";
+            this.gridNroLinea.MinimumWidth = 6;
+            this.gridNroLinea.Name = "gridNroLinea";
+            this.gridNroLinea.ReadOnly = true;
+            this.gridNroLinea.Width = 65;
+            // 
+            // gridNombreProducto
+            // 
+            this.gridNombreProducto.DataPropertyName = "Nombre";
+            this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
+            this.gridNombreProducto.Name = "gridNombreProducto";
+            this.gridNombreProducto.ReadOnly = true;
+            this.gridNombreProducto.Width = 210;
+            // 
+            // gridCantidadProducto
+            // 
+            this.gridCantidadProducto.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle2.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
+            this.gridCantidadProducto.Name = "gridCantidadProducto";
+            this.gridCantidadProducto.ReadOnly = true;
+            this.gridCantidadProducto.Width = 60;
+            // 
+            // umedida
+            // 
+            this.umedida.DataPropertyName = "UnidadMedida";
+            this.umedida.HeaderText = "Unidad";
+            this.umedida.MinimumWidth = 6;
+            this.umedida.Name = "umedida";
+            this.umedida.ReadOnly = true;
+            this.umedida.Width = 60;
+            // 
+            // gridPrecio
+            // 
+            this.gridPrecio.DataPropertyName = "Precio";
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
+            this.gridPrecio.Name = "gridPrecio";
+            this.gridPrecio.ReadOnly = true;
+            this.gridPrecio.Width = 70;
+            // 
+            // Monto
+            // 
+            this.Monto.DataPropertyName = "Monto";
+            this.Monto.HeaderText = "Monto";
+            this.Monto.MinimumWidth = 6;
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
+            this.Monto.Width = 80;
             // 
             // EmisonNC_ND
             // 
@@ -869,11 +870,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -913,7 +914,6 @@
         private System.Windows.Forms.Label IVA;
         private System.Windows.Forms.Label montoNeto;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView gridResultados;
         private System.Windows.Forms.TextBox razonSocial_Emisor;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBox1;
@@ -934,12 +934,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn umedida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.Button generarTimbre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnTipoDoc;
@@ -947,5 +941,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFecha_Ref;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo_Ref;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonRef;
+        private System.Windows.Forms.DataGridView gridResultados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn umedida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
     }
 }
