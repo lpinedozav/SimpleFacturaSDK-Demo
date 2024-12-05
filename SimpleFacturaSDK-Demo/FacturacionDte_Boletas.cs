@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
 {
-    public partial class EmisonNC_ND : Form
+    public partial class FacturacionDte_Boletas : Form
     {
-        public EmisonNC_ND()
+        public FacturacionDte_Boletas()
         {
             InitializeComponent();
-        }
-
-        private void tipodte_ListEmitidos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

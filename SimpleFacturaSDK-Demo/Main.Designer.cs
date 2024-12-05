@@ -42,7 +42,6 @@
             this.facturacion_masiva = new System.Windows.Forms.Button();
             this.facturacion_dte = new System.Windows.Forms.Button();
             this.facturacion_exportacion = new System.Windows.Forms.Button();
-            this.facturacion_boleta = new System.Windows.Forms.Button();
             this.obtenerdte = new System.Windows.Forms.GroupBox();
             this.obtener_sobre_xml = new System.Windows.Forms.Button();
             this.obtener_dte = new System.Windows.Forms.Button();
@@ -57,8 +56,8 @@
             this.item_otros = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
@@ -92,7 +91,7 @@
             this.item_facturacion.Padding = new System.Windows.Forms.Padding(3);
             this.item_facturacion.Size = new System.Drawing.Size(619, 286);
             this.item_facturacion.TabIndex = 0;
-            this.item_facturacion.Text = "Facturacion";
+            this.item_facturacion.Text = "Facturación";
             this.item_facturacion.UseVisualStyleBackColor = true;
             // 
             // otros
@@ -154,63 +153,52 @@
             this.emision_dte.Controls.Add(this.facturacion_masiva);
             this.emision_dte.Controls.Add(this.facturacion_dte);
             this.emision_dte.Controls.Add(this.facturacion_exportacion);
-            this.emision_dte.Controls.Add(this.facturacion_boleta);
             this.emision_dte.Location = new System.Drawing.Point(209, 15);
             this.emision_dte.Name = "emision_dte";
-            this.emision_dte.Size = new System.Drawing.Size(186, 254);
+            this.emision_dte.Size = new System.Drawing.Size(187, 254);
             this.emision_dte.TabIndex = 1;
             this.emision_dte.TabStop = false;
             this.emision_dte.Text = "Emision DTE";
             // 
             // emision_nc_nd
             // 
-            this.emision_nc_nd.Location = new System.Drawing.Point(13, 203);
+            this.emision_nc_nd.Location = new System.Drawing.Point(7, 159);
             this.emision_nc_nd.Name = "emision_nc_nd";
-            this.emision_nc_nd.Size = new System.Drawing.Size(161, 38);
+            this.emision_nc_nd.Size = new System.Drawing.Size(173, 38);
             this.emision_nc_nd.TabIndex = 9;
-            this.emision_nc_nd.Text = "Emision NC/ND";
+            this.emision_nc_nd.Text = "Emisión NC/ND";
             this.emision_nc_nd.UseVisualStyleBackColor = true;
             this.emision_nc_nd.Click += new System.EventHandler(this.emision_nc_nd_Click);
             // 
             // facturacion_masiva
             // 
-            this.facturacion_masiva.Location = new System.Drawing.Point(13, 159);
+            this.facturacion_masiva.Location = new System.Drawing.Point(7, 115);
             this.facturacion_masiva.Name = "facturacion_masiva";
-            this.facturacion_masiva.Size = new System.Drawing.Size(161, 38);
+            this.facturacion_masiva.Size = new System.Drawing.Size(173, 38);
             this.facturacion_masiva.TabIndex = 8;
-            this.facturacion_masiva.Text = "Facturacion Masiva";
+            this.facturacion_masiva.Text = "Facturación Masiva";
             this.facturacion_masiva.UseVisualStyleBackColor = true;
             this.facturacion_masiva.Click += new System.EventHandler(this.facturacion_masiva_Click);
             // 
             // facturacion_dte
             // 
-            this.facturacion_dte.Location = new System.Drawing.Point(13, 27);
+            this.facturacion_dte.Location = new System.Drawing.Point(7, 27);
             this.facturacion_dte.Name = "facturacion_dte";
-            this.facturacion_dte.Size = new System.Drawing.Size(161, 38);
+            this.facturacion_dte.Size = new System.Drawing.Size(173, 38);
             this.facturacion_dte.TabIndex = 5;
-            this.facturacion_dte.Text = "Facturacion DTE";
+            this.facturacion_dte.Text = "Facturación DTE / Boletas";
             this.facturacion_dte.UseVisualStyleBackColor = true;
             this.facturacion_dte.Click += new System.EventHandler(this.facturacion_dte_Click);
             // 
             // facturacion_exportacion
             // 
-            this.facturacion_exportacion.Location = new System.Drawing.Point(13, 115);
+            this.facturacion_exportacion.Location = new System.Drawing.Point(7, 71);
             this.facturacion_exportacion.Name = "facturacion_exportacion";
-            this.facturacion_exportacion.Size = new System.Drawing.Size(161, 38);
+            this.facturacion_exportacion.Size = new System.Drawing.Size(173, 38);
             this.facturacion_exportacion.TabIndex = 7;
-            this.facturacion_exportacion.Text = "Facturacion Exportacion";
+            this.facturacion_exportacion.Text = "Facturación Exportación";
             this.facturacion_exportacion.UseVisualStyleBackColor = true;
             this.facturacion_exportacion.Click += new System.EventHandler(this.facturacion_exportacion_Click);
-            // 
-            // facturacion_boleta
-            // 
-            this.facturacion_boleta.Location = new System.Drawing.Point(13, 71);
-            this.facturacion_boleta.Name = "facturacion_boleta";
-            this.facturacion_boleta.Size = new System.Drawing.Size(161, 38);
-            this.facturacion_boleta.TabIndex = 6;
-            this.facturacion_boleta.Text = "Facturacion Boleta";
-            this.facturacion_boleta.UseVisualStyleBackColor = true;
-            this.facturacion_boleta.Click += new System.EventHandler(this.facturacion_boleta_Click);
             // 
             // obtenerdte
             // 
@@ -344,23 +332,23 @@
             this.Configuracion});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(648, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(648, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // Configuracion
+            // 
+            this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
+            this.Configuracion.Name = "Configuracion";
+            this.Configuracion.Size = new System.Drawing.Size(136, 24);
+            this.Configuracion.Text = "Configuración";
+            this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
             // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // Configuracion
-            // 
-            this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
-            this.Configuracion.Name = "Configuracion";
-            this.Configuracion.Size = new System.Drawing.Size(136, 26);
-            this.Configuracion.Text = "Configuración";
-            this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
             // 
             // Main
             // 
@@ -433,7 +421,6 @@
         private System.Windows.Forms.Button facturacion_masiva;
         private System.Windows.Forms.Button facturacion_dte;
         private System.Windows.Forms.Button facturacion_exportacion;
-        private System.Windows.Forms.Button facturacion_boleta;
         private System.Windows.Forms.GroupBox obtenerdte;
         private System.Windows.Forms.Button obtener_sobre_xml;
         private System.Windows.Forms.Button obtener_dte;
