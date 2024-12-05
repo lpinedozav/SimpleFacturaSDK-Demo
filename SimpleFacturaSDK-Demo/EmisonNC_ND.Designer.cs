@@ -46,7 +46,6 @@
             this.tipoDte = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.razonSocial_Emisor = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textCiudadEmisor = new System.Windows.Forms.TextBox();
             this.ciudad = new System.Windows.Forms.Label();
             this.textDireccionEmisor = new System.Windows.Forms.TextBox();
@@ -95,16 +94,16 @@
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.generarTimbre = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFolio_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFecha_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCodigo_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonRef = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generarTimbre = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
@@ -123,9 +122,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tipodte_ListEmitidos);
             this.groupBox1.Controls.Add(this.tipoDte);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(9, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1083, 78);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(608, 87);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificacion DTE";
@@ -133,34 +134,38 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(697, 29);
+            this.dateTimePicker1.Location = new System.Drawing.Point(514, 24);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(110, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(84, 20);
             this.dateTimePicker1.TabIndex = 33;
             // 
             // FchEmision
             // 
             this.FchEmision.AutoSize = true;
-            this.FchEmision.Location = new System.Drawing.Point(593, 32);
+            this.FchEmision.Location = new System.Drawing.Point(436, 26);
+            this.FchEmision.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FchEmision.Name = "FchEmision";
-            this.FchEmision.Size = new System.Drawing.Size(98, 16);
+            this.FchEmision.Size = new System.Drawing.Size(78, 13);
             this.FchEmision.TabIndex = 32;
             this.FchEmision.Text = "Fecha emisión:";
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(947, 29);
+            this.dateTimePicker2.Location = new System.Drawing.Point(115, 52);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(109, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(83, 20);
             this.dateTimePicker2.TabIndex = 31;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(816, 32);
+            this.label2.Location = new System.Drawing.Point(11, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 16);
+            this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 30;
             this.label2.Text = "Fecha vencimiento:";
             // 
@@ -168,42 +173,46 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(435, 27);
+            this.comboBox1.Location = new System.Drawing.Point(321, 22);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 24);
+            this.comboBox1.Size = new System.Drawing.Size(112, 21);
             this.comboBox1.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(328, 31);
+            this.label1.Location = new System.Drawing.Point(241, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 28;
             this.label1.Text = "Forma de pago:";
             // 
             // tipodte_ListEmitidos
             // 
             this.tipodte_ListEmitidos.FormattingEnabled = true;
-            this.tipodte_ListEmitidos.Location = new System.Drawing.Point(86, 27);
+            this.tipodte_ListEmitidos.Location = new System.Drawing.Point(64, 22);
+            this.tipodte_ListEmitidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tipodte_ListEmitidos.Name = "tipodte_ListEmitidos";
-            this.tipodte_ListEmitidos.Size = new System.Drawing.Size(229, 24);
+            this.tipodte_ListEmitidos.Size = new System.Drawing.Size(173, 21);
             this.tipodte_ListEmitidos.TabIndex = 25;
             this.tipodte_ListEmitidos.SelectedIndexChanged += new System.EventHandler(this.tipodte_ListEmitidos_SelectedIndexChanged);
             // 
             // tipoDte
             // 
             this.tipoDte.AutoSize = true;
-            this.tipoDte.Location = new System.Drawing.Point(15, 31);
+            this.tipoDte.Location = new System.Drawing.Point(11, 25);
+            this.tipoDte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tipoDte.Name = "tipoDte";
-            this.tipoDte.Size = new System.Drawing.Size(66, 16);
+            this.tipoDte.Size = new System.Drawing.Size(53, 13);
             this.tipoDte.TabIndex = 24;
             this.tipoDte.Text = "TipoDTE:";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox4);
             this.groupBox3.Controls.Add(this.razonSocial_Emisor);
-            this.groupBox3.Controls.Add(this.numericUpDown1);
             this.groupBox3.Controls.Add(this.textCiudadEmisor);
             this.groupBox3.Controls.Add(this.ciudad);
             this.groupBox3.Controls.Add(this.textDireccionEmisor);
@@ -220,191 +229,158 @@
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.textRUTEmisor);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(12, 97);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 102);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1084, 162);
+            this.groupBox3.Size = new System.Drawing.Size(608, 146);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Emisor";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // razonSocial_Emisor
             // 
             this.razonSocial_Emisor.BackColor = System.Drawing.SystemColors.Info;
-            this.razonSocial_Emisor.Location = new System.Drawing.Point(316, 119);
-            this.razonSocial_Emisor.Margin = new System.Windows.Forms.Padding(4);
+            this.razonSocial_Emisor.Location = new System.Drawing.Point(266, 25);
             this.razonSocial_Emisor.Name = "razonSocial_Emisor";
-            this.razonSocial_Emisor.Size = new System.Drawing.Size(461, 22);
+            this.razonSocial_Emisor.Size = new System.Drawing.Size(331, 20);
             this.razonSocial_Emisor.TabIndex = 35;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(664, 74);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(113, 22);
-            this.numericUpDown1.TabIndex = 35;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // textCiudadEmisor
             // 
             this.textCiudadEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textCiudadEmisor.Location = new System.Drawing.Point(855, 31);
-            this.textCiudadEmisor.Margin = new System.Windows.Forms.Padding(4);
+            this.textCiudadEmisor.Location = new System.Drawing.Point(59, 83);
             this.textCiudadEmisor.Name = "textCiudadEmisor";
-            this.textCiudadEmisor.Size = new System.Drawing.Size(211, 22);
+            this.textCiudadEmisor.Size = new System.Drawing.Size(133, 20);
             this.textCiudadEmisor.TabIndex = 34;
             // 
             // ciudad
             // 
             this.ciudad.AutoSize = true;
-            this.ciudad.Location = new System.Drawing.Point(784, 35);
-            this.ciudad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ciudad.Location = new System.Drawing.Point(5, 83);
             this.ciudad.Name = "ciudad";
-            this.ciudad.Size = new System.Drawing.Size(53, 16);
+            this.ciudad.Size = new System.Drawing.Size(43, 13);
             this.ciudad.TabIndex = 33;
             this.ciudad.Text = "Ciudad:";
             // 
             // textDireccionEmisor
             // 
             this.textDireccionEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textDireccionEmisor.Location = new System.Drawing.Point(855, 75);
-            this.textDireccionEmisor.Margin = new System.Windows.Forms.Padding(4);
+            this.textDireccionEmisor.Location = new System.Drawing.Point(266, 86);
             this.textDireccionEmisor.Name = "textDireccionEmisor";
-            this.textDireccionEmisor.Size = new System.Drawing.Size(211, 22);
+            this.textDireccionEmisor.Size = new System.Drawing.Size(134, 20);
             this.textDireccionEmisor.TabIndex = 26;
+            this.textDireccionEmisor.TextChanged += new System.EventHandler(this.textDireccionEmisor_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(784, 78);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(195, 86);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 16);
+            this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 25;
             this.label8.Text = "Dirección:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 81);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(5, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 27;
             this.label3.Text = "Telefono:";
             // 
             // textTelefonEmisor
             // 
             this.textTelefonEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textTelefonEmisor.Location = new System.Drawing.Point(75, 75);
-            this.textTelefonEmisor.Margin = new System.Windows.Forms.Padding(4);
+            this.textTelefonEmisor.Location = new System.Drawing.Point(59, 114);
             this.textTelefonEmisor.Name = "textTelefonEmisor";
-            this.textTelefonEmisor.Size = new System.Drawing.Size(145, 22);
+            this.textTelefonEmisor.Size = new System.Drawing.Size(133, 20);
             this.textTelefonEmisor.TabIndex = 28;
             // 
             // correo_emisor
             // 
             this.correo_emisor.BackColor = System.Drawing.SystemColors.Info;
-            this.correo_emisor.Location = new System.Drawing.Point(316, 77);
-            this.correo_emisor.Margin = new System.Windows.Forms.Padding(4);
+            this.correo_emisor.Location = new System.Drawing.Point(59, 54);
             this.correo_emisor.Name = "correo_emisor";
-            this.correo_emisor.Size = new System.Drawing.Size(196, 22);
+            this.correo_emisor.Size = new System.Drawing.Size(133, 20);
             this.correo_emisor.TabIndex = 30;
             // 
             // CorreoEmisor
             // 
             this.CorreoEmisor.AutoSize = true;
-            this.CorreoEmisor.Location = new System.Drawing.Point(221, 81);
-            this.CorreoEmisor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CorreoEmisor.Location = new System.Drawing.Point(6, 57);
             this.CorreoEmisor.Name = "CorreoEmisor";
-            this.CorreoEmisor.Size = new System.Drawing.Size(51, 16);
+            this.CorreoEmisor.Size = new System.Drawing.Size(41, 13);
             this.CorreoEmisor.TabIndex = 29;
             this.CorreoEmisor.Text = "Correo:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(221, 122);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(195, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
+            this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 17;
             this.label7.Text = "Razón Social:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(520, 80);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(198, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 16);
+            this.label4.Size = new System.Drawing.Size(110, 13);
             this.label4.TabIndex = 31;
             this.label4.Text = "Actividad Economica:";
             // 
             // textComunaEmisor
             // 
             this.textComunaEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textComunaEmisor.Location = new System.Drawing.Point(75, 116);
-            this.textComunaEmisor.Margin = new System.Windows.Forms.Padding(4);
+            this.textComunaEmisor.Location = new System.Drawing.Point(453, 87);
             this.textComunaEmisor.Name = "textComunaEmisor";
-            this.textComunaEmisor.Size = new System.Drawing.Size(145, 22);
+            this.textComunaEmisor.Size = new System.Drawing.Size(144, 20);
             this.textComunaEmisor.TabIndex = 22;
             // 
             // textGiroEmisor
             // 
             this.textGiroEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textGiroEmisor.Location = new System.Drawing.Point(316, 31);
-            this.textGiroEmisor.Margin = new System.Windows.Forms.Padding(4);
+            this.textGiroEmisor.Location = new System.Drawing.Point(266, 53);
             this.textGiroEmisor.Name = "textGiroEmisor";
-            this.textGiroEmisor.Size = new System.Drawing.Size(461, 22);
+            this.textGiroEmisor.Size = new System.Drawing.Size(331, 20);
             this.textGiroEmisor.TabIndex = 24;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 119);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(403, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 16);
+            this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 21;
             this.label9.Text = "Comuna:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(222, 36);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(195, 57);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 16);
+            this.label10.Size = new System.Drawing.Size(29, 13);
             this.label10.TabIndex = 23;
             this.label10.Text = "Giro:";
             // 
             // textRUTEmisor
             // 
             this.textRUTEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textRUTEmisor.Location = new System.Drawing.Point(73, 30);
-            this.textRUTEmisor.Margin = new System.Windows.Forms.Padding(4);
+            this.textRUTEmisor.Location = new System.Drawing.Point(59, 24);
             this.textRUTEmisor.Name = "textRUTEmisor";
-            this.textRUTEmisor.Size = new System.Drawing.Size(145, 22);
+            this.textRUTEmisor.Size = new System.Drawing.Size(133, 20);
             this.textRUTEmisor.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 33);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(6, 27);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 16);
+            this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 3;
             this.label6.Text = "RUT:";
             // 
@@ -416,78 +392,68 @@
             this.groupBox2.Controls.Add(this.textBox18);
             this.groupBox2.Controls.Add(this.IVA);
             this.groupBox2.Controls.Add(this.montoNeto);
-            this.groupBox2.Location = new System.Drawing.Point(831, 400);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(12, 661);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(264, 163);
+            this.groupBox2.Size = new System.Drawing.Size(494, 64);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(65, 90);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox10.Location = new System.Drawing.Point(331, 26);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(115, 22);
+            this.textBox10.Size = new System.Drawing.Size(87, 20);
             this.textBox10.TabIndex = 26;
             // 
             // montoTotal
             // 
             this.montoTotal.AutoSize = true;
-            this.montoTotal.Location = new System.Drawing.Point(8, 93);
-            this.montoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.montoTotal.Location = new System.Drawing.Point(288, 30);
             this.montoTotal.Name = "montoTotal";
-            this.montoTotal.Size = new System.Drawing.Size(41, 16);
+            this.montoTotal.Size = new System.Drawing.Size(34, 13);
             this.montoTotal.TabIndex = 25;
             this.montoTotal.Text = "Total:";
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(65, 60);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox17.Location = new System.Drawing.Point(193, 26);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(115, 22);
+            this.textBox17.Size = new System.Drawing.Size(87, 20);
             this.textBox17.TabIndex = 18;
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(64, 30);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox18.Location = new System.Drawing.Point(48, 24);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(116, 22);
+            this.textBox18.Size = new System.Drawing.Size(88, 20);
             this.textBox18.TabIndex = 4;
             this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // IVA
             // 
             this.IVA.AutoSize = true;
-            this.IVA.Location = new System.Drawing.Point(10, 63);
-            this.IVA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IVA.Location = new System.Drawing.Point(152, 29);
             this.IVA.Name = "IVA";
-            this.IVA.Size = new System.Drawing.Size(31, 16);
+            this.IVA.Size = new System.Drawing.Size(27, 13);
             this.IVA.TabIndex = 17;
             this.IVA.Text = "IVA:";
             // 
             // montoNeto
             // 
             this.montoNeto.AutoSize = true;
-            this.montoNeto.Location = new System.Drawing.Point(8, 33);
-            this.montoNeto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.montoNeto.Location = new System.Drawing.Point(6, 27);
             this.montoNeto.Name = "montoNeto";
-            this.montoNeto.Size = new System.Drawing.Size(39, 16);
+            this.montoNeto.Size = new System.Drawing.Size(33, 13);
             this.montoNeto.TabIndex = 3;
             this.montoNeto.Text = "Neto:";
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.gridResultados);
-            this.groupBox5.Location = new System.Drawing.Point(13, 399);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Location = new System.Drawing.Point(12, 389);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(810, 157);
+            this.groupBox5.Size = new System.Drawing.Size(608, 128);
             this.groupBox5.TabIndex = 39;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Productos";
@@ -507,12 +473,11 @@
             this.umedida,
             this.gridPrecio,
             this.Monto});
-            this.gridResultados.Location = new System.Drawing.Point(11, 23);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.gridResultados.Location = new System.Drawing.Point(8, 19);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(780, 120);
+            this.gridResultados.Size = new System.Drawing.Size(585, 98);
             this.gridResultados.TabIndex = 0;
             // 
             // gridNroLinea
@@ -591,156 +556,139 @@
             this.groupBox7.Controls.Add(this.textBox20);
             this.groupBox7.Controls.Add(this.label32);
             this.groupBox7.Controls.Add(this.label33);
-            this.groupBox7.Location = new System.Drawing.Point(12, 267);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Location = new System.Drawing.Point(11, 254);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(1083, 124);
+            this.groupBox7.Size = new System.Drawing.Size(608, 126);
             this.groupBox7.TabIndex = 36;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Receptor";
+            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(353, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(267, 24);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 22);
+            this.textBox1.Size = new System.Drawing.Size(331, 20);
             this.textBox1.TabIndex = 35;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(642, 78);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(53, 82);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 22);
+            this.textBox2.Size = new System.Drawing.Size(140, 20);
             this.textBox2.TabIndex = 34;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(586, 80);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(5, 84);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 16);
+            this.label25.Size = new System.Drawing.Size(43, 13);
             this.label25.TabIndex = 33;
             this.label25.Text = "Ciudad:";
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Location = new System.Drawing.Point(355, 77);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Location = new System.Drawing.Point(267, 84);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(223, 22);
+            this.textBox3.Size = new System.Drawing.Size(134, 20);
             this.textBox3.TabIndex = 26;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(260, 80);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(199, 90);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(67, 16);
+            this.label26.Size = new System.Drawing.Size(55, 13);
             this.label26.TabIndex = 25;
             this.label26.Text = "Dirección:";
             // 
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox7.Location = new System.Drawing.Point(63, 75);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox7.Location = new System.Drawing.Point(53, 52);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(189, 22);
+            this.textBox7.Size = new System.Drawing.Size(140, 20);
             this.textBox7.TabIndex = 30;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(8, 78);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(6, 54);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(51, 16);
+            this.label28.Size = new System.Drawing.Size(41, 13);
             this.label28.TabIndex = 29;
             this.label28.Text = "Correo:";
             // 
             // textBox14
             // 
             this.textBox14.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox14.Location = new System.Drawing.Point(903, 78);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox14.Location = new System.Drawing.Point(454, 87);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(149, 22);
+            this.textBox14.Size = new System.Drawing.Size(144, 20);
             this.textBox14.TabIndex = 22;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(839, 80);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(404, 89);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 16);
+            this.label29.Size = new System.Drawing.Size(49, 13);
             this.label29.TabIndex = 21;
             this.label29.Text = "Comuna:";
             // 
             // textBox19
             // 
             this.textBox19.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox19.Location = new System.Drawing.Point(641, 31);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox19.Location = new System.Drawing.Point(267, 52);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(411, 22);
+            this.textBox19.Size = new System.Drawing.Size(331, 20);
             this.textBox19.TabIndex = 24;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(585, 34);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Location = new System.Drawing.Point(199, 55);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(35, 16);
+            this.label31.Size = new System.Drawing.Size(29, 13);
             this.label31.TabIndex = 23;
             this.label31.Text = "Giro:";
             // 
             // textBox20
             // 
             this.textBox20.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox20.Location = new System.Drawing.Point(66, 30);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox20.Location = new System.Drawing.Point(53, 24);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(186, 22);
+            this.textBox20.Size = new System.Drawing.Size(140, 20);
             this.textBox20.TabIndex = 4;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(259, 33);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(197, 27);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(90, 16);
+            this.label32.Size = new System.Drawing.Size(73, 13);
             this.label32.TabIndex = 17;
             this.label32.Text = "Razón Social:";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(8, 33);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(6, 27);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(39, 16);
+            this.label33.Size = new System.Drawing.Size(33, 13);
             this.label33.TabIndex = 3;
             this.label33.Text = "RUT:";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridView1);
-            this.groupBox4.Location = new System.Drawing.Point(13, 564);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(11, 523);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(810, 163);
+            this.groupBox4.Size = new System.Drawing.Size(608, 132);
             this.groupBox4.TabIndex = 40;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Referencias";
@@ -760,13 +708,27 @@
             this.ColumnFecha_Ref,
             this.ColumnCodigo_Ref,
             this.RazonRef});
-            this.dataGridView1.Location = new System.Drawing.Point(9, 23);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(782, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(586, 98);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // generarTimbre
+            // 
+            this.generarTimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarTimbre.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarTimbre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarTimbre.Location = new System.Drawing.Point(532, 697);
+            this.generarTimbre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarTimbre.Name = "generarTimbre";
+            this.generarTimbre.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarTimbre.Size = new System.Drawing.Size(88, 28);
+            this.generarTimbre.TabIndex = 41;
+            this.generarTimbre.Text = "Generar";
+            this.generarTimbre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarTimbre.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -778,7 +740,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 65;
+            this.dataGridViewTextBoxColumn1.Width = 64;
             // 
             // columnTipoDoc
             // 
@@ -810,7 +772,7 @@
             this.ColumnFecha_Ref.MinimumWidth = 6;
             this.ColumnFecha_Ref.Name = "ColumnFecha_Ref";
             this.ColumnFecha_Ref.ReadOnly = true;
-            this.ColumnFecha_Ref.Width = 125;
+            this.ColumnFecha_Ref.Width = 95;
             // 
             // ColumnCodigo_Ref
             // 
@@ -828,27 +790,21 @@
             this.RazonRef.MinimumWidth = 6;
             this.RazonRef.Name = "RazonRef";
             this.RazonRef.ReadOnly = true;
-            this.RazonRef.Width = 99;
+            this.RazonRef.Width = 105;
             // 
-            // generarTimbre
+            // textBox4
             // 
-            this.generarTimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarTimbre.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarTimbre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarTimbre.Location = new System.Drawing.Point(978, 692);
-            this.generarTimbre.Name = "generarTimbre";
-            this.generarTimbre.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarTimbre.Size = new System.Drawing.Size(117, 35);
-            this.generarTimbre.TabIndex = 41;
-            this.generarTimbre.Text = "Generar";
-            this.generarTimbre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarTimbre.UseVisualStyleBackColor = true;
+            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox4.Location = new System.Drawing.Point(313, 115);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(87, 20);
+            this.textBox4.TabIndex = 36;
             // 
             // EmisonNC_ND
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 732);
+            this.ClientSize = new System.Drawing.Size(628, 736);
             this.Controls.Add(this.generarTimbre);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox7);
@@ -858,6 +814,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EmisonNC_ND";
@@ -867,7 +824,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -934,14 +890,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button generarTimbre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnTipoDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFolio_Ref;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFecha_Ref;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo_Ref;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazonRef;
         private System.Windows.Forms.DataGridView gridResultados;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
@@ -949,5 +898,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn umedida;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnTipoDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFolio_Ref;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFecha_Ref;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo_Ref;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RazonRef;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
