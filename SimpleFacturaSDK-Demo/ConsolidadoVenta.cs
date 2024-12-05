@@ -64,18 +64,19 @@ namespace SimpleFacturaSDK_Demo
                 {
                     list = response.Data;
 
-                    // Limpia las filas existentes en la grilla
+                   
                     dataGridConsolidado.Rows.Clear();
                     dataGridConsolidado.CellContentClick += dataGridConsolidado_CellContentClick;
                     DataGridViewButtonCell detallesColumn = new DataGridViewButtonCell();
                     detallesColumn.Value = "Ver Detalles";
                     detallesColumn.UseColumnTextForButtonValue = true; // Hace que todas las celdas muestren el mismo texto en el botón
-                    // Recorre cada objeto RepoteDTE en la lista
+                                                                       // Recorre cada objeto RepoteDTE en la lista
+                    dataGridConsolidado.AllowUserToAddRows = false;
+
                     foreach (var reporte in list)
-                    {
-                        // Agrega una nueva fila a la grilla con los datos del reporte
+                    { 
                         int rowIndex = dataGridConsolidado.Rows.Add(
-                            reporte.Fecha,
+                            reporte.Fecha.ToString("dd/MM/yyyy"),
                             reporte.TiposDTE,
                             reporte.Emitidos,
                             reporte.Anulados,
@@ -85,15 +86,12 @@ namespace SimpleFacturaSDK_Demo
                             reporte.Total,
                             detallesColumn
                         );
-                        // Accede a la fila recién agregada
                         DataGridViewRow row = dataGridConsolidado.Rows[rowIndex];
-
-                        // Establece el valor o texto del botón en la celda de la columna "Detalles"
                         DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)row.Cells["detalle"];
-                        buttonCell.Value = "Ver Detalles"; // Texto que aparecerá en el botón
+                        buttonCell.Value = "Ver Detalles";
                     }
-                }
 
+                }
             }
             catch (Exception ex)
             {
