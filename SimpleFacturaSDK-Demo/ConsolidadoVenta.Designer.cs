@@ -230,56 +230,56 @@
             this.fecha.HeaderText = "Fecha";
             this.fecha.MinimumWidth = 6;
             this.fecha.Name = "fecha";
-            this.fecha.Width = 125;
+            this.fecha.Width = 64;
             // 
             // tipodte
             // 
             this.tipodte.HeaderText = "Tipos DTE";
             this.tipodte.MinimumWidth = 6;
             this.tipodte.Name = "tipodte";
-            this.tipodte.Width = 125;
+            this.tipodte.Width = 82;
             // 
             // emitidos
             // 
             this.emitidos.HeaderText = "Emitidos";
             this.emitidos.MinimumWidth = 6;
             this.emitidos.Name = "emitidos";
-            this.emitidos.Width = 125;
+            this.emitidos.Width = 52;
             // 
             // anulados
             // 
             this.anulados.HeaderText = "Anulados";
             this.anulados.MinimumWidth = 6;
             this.anulados.Name = "anulados";
-            this.anulados.Width = 125;
+            this.anulados.Width = 54;
             // 
             // totalneto
             // 
             this.totalneto.HeaderText = "Total Neto";
             this.totalneto.MinimumWidth = 6;
             this.totalneto.Name = "totalneto";
-            this.totalneto.Width = 125;
+            this.totalneto.Width = 55;
             // 
             // totalexento
             // 
             this.totalexento.HeaderText = "Total Exento";
             this.totalexento.MinimumWidth = 6;
             this.totalexento.Name = "totalexento";
-            this.totalexento.Width = 125;
+            this.totalexento.Width = 53;
             // 
             // totaliva
             // 
             this.totaliva.HeaderText = "Total Iva";
             this.totaliva.MinimumWidth = 6;
             this.totaliva.Name = "totaliva";
-            this.totaliva.Width = 125;
+            this.totaliva.Width = 55;
             // 
             // total
             // 
             this.total.HeaderText = "Total";
             this.total.MinimumWidth = 6;
             this.total.Name = "total";
-            this.total.Width = 125;
+            this.total.Width = 55;
             // 
             // detalle
             // 
@@ -288,7 +288,7 @@
             this.detalle.Name = "detalle";
             this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.detalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.detalle.Width = 125;
+            this.detalle.Width = 70;
             // 
             // ConsolidadoVenta
             // 
