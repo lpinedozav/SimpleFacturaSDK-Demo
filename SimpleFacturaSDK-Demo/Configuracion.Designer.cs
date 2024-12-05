@@ -47,15 +47,35 @@
             this.textEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textEmisor = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textRazonsocial = new System.Windows.Forms.TextBox();
+            this.textGiro = new System.Windows.Forms.TextBox();
+            this.textCorreo = new System.Windows.Forms.TextBox();
+            this.textTelefono = new System.Windows.Forms.TextBox();
+            this.textDireccion = new System.Windows.Forms.TextBox();
+            this.textComuna = new System.Windows.Forms.TextBox();
+            this.textCiudad = new System.Windows.Forms.TextBox();
+            this.numericAzteco = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAzteco)).BeginInit();
             this.SuspendLayout();
             // 
             // guardar
             // 
             this.guardar.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guardar.Location = new System.Drawing.Point(654, 433);
+            this.guardar.Location = new System.Drawing.Point(654, 383);
             this.guardar.Name = "guardar";
             this.guardar.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.guardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -214,18 +234,185 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.numericAzteco);
+            this.groupBox3.Controls.Add(this.textCiudad);
+            this.groupBox3.Controls.Add(this.textComuna);
+            this.groupBox3.Controls.Add(this.textDireccion);
+            this.groupBox3.Controls.Add(this.textTelefono);
+            this.groupBox3.Controls.Add(this.textCorreo);
+            this.groupBox3.Controls.Add(this.textGiro);
+            this.groupBox3.Controls.Add(this.textRazonsocial);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.textEmisor);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(12, 194);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(729, 233);
+            this.groupBox3.Size = new System.Drawing.Size(729, 183);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Emisor";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 20);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Rut:";
+            // 
+            // textEmisor
+            // 
+            this.textEmisor.Location = new System.Drawing.Point(99, 15);
+            this.textEmisor.Name = "textEmisor";
+            this.textEmisor.Size = new System.Drawing.Size(228, 22);
+            this.textEmisor.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Razon social:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 76);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "GIro:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 109);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 20);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Correo:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 139);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 16);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Telefono:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(341, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Azteco:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(341, 46);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 16);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Direccion Origen:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(341, 76);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(103, 16);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Comuna Origen:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(341, 109);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(120, 20);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Ciudad Origen:";
+            // 
+            // textRazonsocial
+            // 
+            this.textRazonsocial.Location = new System.Drawing.Point(99, 43);
+            this.textRazonsocial.Name = "textRazonsocial";
+            this.textRazonsocial.Size = new System.Drawing.Size(228, 22);
+            this.textRazonsocial.TabIndex = 24;
+            // 
+            // textGiro
+            // 
+            this.textGiro.Location = new System.Drawing.Point(99, 76);
+            this.textGiro.Name = "textGiro";
+            this.textGiro.Size = new System.Drawing.Size(228, 22);
+            this.textGiro.TabIndex = 25;
+            // 
+            // textCorreo
+            // 
+            this.textCorreo.Location = new System.Drawing.Point(99, 109);
+            this.textCorreo.Name = "textCorreo";
+            this.textCorreo.Size = new System.Drawing.Size(228, 22);
+            this.textCorreo.TabIndex = 26;
+            // 
+            // textTelefono
+            // 
+            this.textTelefono.Location = new System.Drawing.Point(99, 139);
+            this.textTelefono.Name = "textTelefono";
+            this.textTelefono.Size = new System.Drawing.Size(228, 22);
+            this.textTelefono.TabIndex = 27;
+            // 
+            // textDireccion
+            // 
+            this.textDireccion.Location = new System.Drawing.Point(457, 43);
+            this.textDireccion.Name = "textDireccion";
+            this.textDireccion.Size = new System.Drawing.Size(228, 22);
+            this.textDireccion.TabIndex = 28;
+            // 
+            // textComuna
+            // 
+            this.textComuna.Location = new System.Drawing.Point(457, 74);
+            this.textComuna.Name = "textComuna";
+            this.textComuna.Size = new System.Drawing.Size(228, 22);
+            this.textComuna.TabIndex = 29;
+            // 
+            // textCiudad
+            // 
+            this.textCiudad.Location = new System.Drawing.Point(457, 109);
+            this.textCiudad.Name = "textCiudad";
+            this.textCiudad.Size = new System.Drawing.Size(228, 22);
+            this.textCiudad.TabIndex = 30;
+            // 
+            // numericAzteco
+            // 
+            this.numericAzteco.Location = new System.Drawing.Point(459, 16);
+            this.numericAzteco.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericAzteco.Name = "numericAzteco";
+            this.numericAzteco.Size = new System.Drawing.Size(226, 22);
+            this.numericAzteco.TabIndex = 31;
             // 
             // Configuracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 486);
+            this.ClientSize = new System.Drawing.Size(755, 439);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -241,6 +428,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAzteco)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,5 +454,23 @@
         private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textEmisor;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textCiudad;
+        private System.Windows.Forms.TextBox textComuna;
+        private System.Windows.Forms.TextBox textDireccion;
+        private System.Windows.Forms.TextBox textTelefono;
+        private System.Windows.Forms.TextBox textCorreo;
+        private System.Windows.Forms.TextBox textGiro;
+        private System.Windows.Forms.TextBox textRazonsocial;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericAzteco;
     }
 }
