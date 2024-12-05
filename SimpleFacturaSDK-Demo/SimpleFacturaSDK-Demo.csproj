@@ -253,6 +253,12 @@
     <Compile Include="FacturacionDte_Boletas.Designer.cs">
       <DependentUpon>FacturacionDte_Boletas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacturacionMasiva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturacionMasiva.Designer.cs">
+      <DependentUpon>FacturacionMasiva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="ListadoDteEmitidos.cs">
       <SubType>Form</SubType>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacturacionDte_Boletas.resx">
       <DependentUpon>FacturacionDte_Boletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturacionMasiva.resx">
+      <DependentUpon>FacturacionMasiva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoDteEmitidos.resx">
       <DependentUpon>ListadoDteEmitidos.cs</DependentUpon>

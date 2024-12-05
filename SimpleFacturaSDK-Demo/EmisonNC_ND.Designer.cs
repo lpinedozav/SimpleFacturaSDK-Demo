@@ -235,7 +235,6 @@
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Emisor";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // razonSocial_Emisor
             // 
@@ -269,7 +268,6 @@
             this.textDireccionEmisor.Name = "textDireccionEmisor";
             this.textDireccionEmisor.Size = new System.Drawing.Size(134, 20);
             this.textDireccionEmisor.TabIndex = 26;
-            this.textDireccionEmisor.TextChanged += new System.EventHandler(this.textDireccionEmisor_TextChanged);
             // 
             // label8
             // 
@@ -279,7 +277,6 @@
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 25;
             this.label8.Text = "Dirección:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label3
             // 
@@ -428,7 +425,6 @@
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(88, 20);
             this.textBox18.TabIndex = 4;
-            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // IVA
             // 
@@ -562,7 +558,6 @@
             this.groupBox7.TabIndex = 36;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Receptor";
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // textBox1
             // 

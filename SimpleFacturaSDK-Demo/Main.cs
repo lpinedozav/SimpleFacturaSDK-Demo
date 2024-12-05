@@ -62,7 +62,8 @@ namespace SimpleFacturaSDK_Demo
 
         private void facturacion_masiva_Click(object sender, EventArgs e)
         {
-           
+            FacturacionMasiva formulario = new FacturacionMasiva();
+            formulario.Show();
         }
 
         private void emision_nc_nd_Click(object sender, EventArgs e)
