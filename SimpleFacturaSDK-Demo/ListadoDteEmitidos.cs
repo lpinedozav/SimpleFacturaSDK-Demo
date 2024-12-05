@@ -76,7 +76,7 @@ namespace SimpleFacturaSDK_Demo
 
 
                     gridResultados.Rows.Clear();
-                    //gridResultados.CellContentClick += dataGridConsolidado_CellContentClick;
+                    gridResultados.CellContentClick += dataGridConsolidado_CellContentClick;
                     DataGridViewButtonCell detallesColumn = new DataGridViewButtonCell();
                     detallesColumn.Value = "Ver Detalles";
                     detallesColumn.UseColumnTextForButtonValue = true; // Hace que todas las celdas muestren el mismo texto en el botón
@@ -115,6 +115,34 @@ namespace SimpleFacturaSDK_Demo
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void dataGridConsolidado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica que el índice de columna corresponda a la columna del botón y que no sea una fila de encabezado
+            if (gridResultados.Columns[e.ColumnIndex].Name == "detalles" && e.RowIndex >= 0)
+            {
+                // Obtén el reporte correspondiente a la fila seleccionada
+                var reporte = list[e.RowIndex]; // Asegúrate de que 'list' esté accesible aquí
+
+                // Supongamos que 'reporte.Detalles' es una lista de DetalleDte
+                List<DetalleDte> detalles = reporte.Detalles;
+
+                // Llama al método para mostrar los detalles
+                MostrarDetallesEnOtraTabla(detalles);
+            }
+        }
+        private void MostrarDetallesEnOtraTabla(List<DetalleDte> detalles)
+        {
+            if (detalles == null || detalles.Count == 0)
+            {
+                MessageBox.Show("No hay detalles para mostrar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Crear y mostrar el formulario de detalles
+            Detalles detallesForm = new Detalles();
+            detallesForm.SetDetalles(detalles);
+            detallesForm.ShowDialog();
         }
     }
 }
