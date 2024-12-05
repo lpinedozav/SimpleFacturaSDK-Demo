@@ -31,8 +31,8 @@ namespace SimpleFacturaSDK_Demo
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             numericFolio.Value = 0; // Valor predeterminado para el Folio
             comboBoxCodigoTipoDTE.SelectedIndex = 3; // Seleccionar el primer ítem del ComboBox
-            dateTimeDesde.Value = DateTime.Now.AddDays(-4); // Predeterminado a 4 días antes de hoy
-            dateTimeHasta.Value = DateTime.Now; // Predeterminado al día actual
+            dateTimeDesde.Value = DateTime.Parse("2024-12-01"); // Predeterminado a 4 días antes de hoy
+            dateTimeHasta.Value = DateTime.Parse("2024-12-05"); // Predeterminado al día actual
             radioCertificacion.Checked = true; // Ambiente predeterminado: Certificación
         }
 
