@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
@@ -26,6 +28,17 @@ namespace SimpleFacturaSDK_Demo
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textRutContribuyente.Text = _appSettings.Credenciales.RutContribuyente;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+
+            //Cargar Emisor (en memoria)
+            textEmisor.Text = _appSettings.emisor.RUTEmisor;
+            textRazonsocial.Text = _appSettings.emisor.RznSoc;
+            textGiro.Text = _appSettings.emisor.GiroEmis;
+            textTelefono.Text = _appSettings.emisor.Telefono.FirstOrDefault();
+            textCorreo.Text = _appSettings.emisor.CorreoEmisor;
+            numericAzteco.Value = _appSettings.emisor.Acteco.FirstOrDefault();
+            textDireccion.Text = _appSettings.emisor.DirOrigen;
+            textComuna.Text = _appSettings.emisor.CmnaOrigen;
+            textCiudad.Text = _appSettings.emisor.CiudadOrigen;
         }
 
         private void guardar_Click(object sender, EventArgs e)
@@ -48,6 +61,16 @@ namespace SimpleFacturaSDK_Demo
             _appSettings.Credenciales.RutEmisor = textRutEmisor.Text;
             _appSettings.Credenciales.RutContribuyente = textRutContribuyente.Text;
             _appSettings.Credenciales.NombreSucursal = textNombreSucursal.Text;
+
+            _appSettings.emisor.RUTEmisor = textEmisor.Text;
+            _appSettings.emisor.RznSoc = textRazonsocial.Text;
+            _appSettings.emisor.GiroEmis = textGiro.Text;
+            _appSettings.emisor.Telefono = new List<string> { textTelefono.Text };
+            _appSettings.emisor.CorreoEmisor = textCorreo.Text;
+            _appSettings.emisor.Acteco = new List<int> { (int)numericAzteco.Value };
+            _appSettings.emisor.DirOrigen = textDireccion.Text;
+            _appSettings.emisor.CmnaOrigen = textComuna.Text;
+            _appSettings.emisor.CiudadOrigen = textCiudad.Text;
 
             // Guardar los cambios en appsettings.json
             _appSettings.Save();
