@@ -1,35 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SDKSimpleFactura;
+using SimpleFacturaSDK_Demo.Helpers;
+using System;
 using System.Windows.Forms;
+using static SDKSimpleFactura.Enum.TipoDTE;
 
 namespace SimpleFacturaSDK_Demo
 {
     public partial class EnviarMail : Form
     {
+        private AppSettings _appSettings;
+        private SimpleFacturaClient cliente;
         public EnviarMail()
         {
             InitializeComponent();
+            _appSettings = AppSettings.Current;
+            cliente = SimpleClientSingleton.Instance;
+            EnumHelper.LlenarComboBoxConEnum<DTEType>(comboxTipoDte);
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void EnviarMail_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            numericFolio.Value = 2149;
+            comboxTipoDte.SelectedIndex = 3;
+            textPara.Text = "contacto@chilesystems.com";
+            textCC.Text = "correo2@gmail.com";
+            textCCO.Text = "correo@gmail.com";
+            checkXML.Checked = true;
+            checkPDF.Checked = true;
+            textComentario.Text = "ESTO ES UN COMENTARIO";
         }
     }
 }
