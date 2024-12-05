@@ -62,12 +62,13 @@ namespace SimpleFacturaSDK_Demo
 
         private void facturacion_masiva_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void emision_nc_nd_Click(object sender, EventArgs e)
         {
-
+            EmisonNC_ND formulario = new EmisonNC_ND();
+            formulario.Show();
         }
 
         private void listado_dte_emitido_Click(object sender, EventArgs e)
