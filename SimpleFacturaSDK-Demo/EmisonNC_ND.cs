@@ -21,5 +21,10 @@ namespace SimpleFacturaSDK_Demo
         {
 
         }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
