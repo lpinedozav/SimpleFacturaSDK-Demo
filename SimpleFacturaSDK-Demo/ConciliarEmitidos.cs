@@ -20,6 +20,8 @@ namespace SimpleFacturaSDK_Demo
         {
             cliente = SimpleClientSingleton.Instance;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            textMes.Value = 5;
+            textAnio.Value = 2024;
         }
 
         private async void generarEmitidos_Click(object sender, EventArgs e)
