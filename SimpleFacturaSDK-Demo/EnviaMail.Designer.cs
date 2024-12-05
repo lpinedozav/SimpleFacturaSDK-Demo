@@ -78,7 +78,6 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Envio Mail";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // folio
             // 
@@ -196,7 +195,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(187, 22);
             this.textBox3.TabIndex = 28;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // cco
             // 
@@ -206,7 +204,6 @@
             this.cco.Size = new System.Drawing.Size(34, 16);
             this.cco.TabIndex = 27;
             this.cco.Text = "Cco:";
-            this.cco.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox4
             // 
