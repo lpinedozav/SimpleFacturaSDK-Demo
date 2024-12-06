@@ -45,19 +45,16 @@ namespace SimpleFacturaSDK_Demo
             formulario.Show();
         }
 
-        private void facturacion_dte_Click(object sender, EventArgs e)
+        private void facturacion_dte_boleta_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void facturacion_boleta_Click(object sender, EventArgs e)
-        {
-
+            FacturacionDte_boleta formulario = new FacturacionDte_boleta();
+            formulario.Show();
         }
 
         private void facturacion_exportacion_Click(object sender, EventArgs e)
         {
-
+            FacturacionExportacion formulario = new FacturacionExportacion();
+            formulario.Show();
         }
 
         private void facturacion_masiva_Click(object sender, EventArgs e)

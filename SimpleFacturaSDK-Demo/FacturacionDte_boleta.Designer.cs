@@ -233,7 +233,7 @@
             // textCmnReceptor
             // 
             this.textCmnReceptor.BackColor = System.Drawing.SystemColors.Info;
-            this.textCmnReceptor.Location = new System.Drawing.Point(454, 87);
+            this.textCmnReceptor.Location = new System.Drawing.Point(454, 85);
             this.textCmnReceptor.Name = "textCmnReceptor";
             this.textCmnReceptor.Size = new System.Drawing.Size(153, 20);
             this.textCmnReceptor.TabIndex = 22;
@@ -771,6 +771,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FacturacionDte_boleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturación DTE/Boletas";

@@ -70,9 +70,9 @@
             this.groupBox2.Controls.Add(this.ambiente);
             this.groupBox2.Controls.Add(this.desde);
             this.groupBox2.Location = new System.Drawing.Point(9, 82);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(616, 64);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
@@ -82,7 +82,7 @@
             // 
             this.dateTimeHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeHasta.Location = new System.Drawing.Point(238, 27);
-            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeHasta.Name = "dateTimeHasta";
             this.dateTimeHasta.Size = new System.Drawing.Size(100, 20);
             this.dateTimeHasta.TabIndex = 19;
@@ -93,7 +93,7 @@
             // 
             this.dateTimeDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeDesde.Location = new System.Drawing.Point(58, 27);
-            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDesde.Name = "dateTimeDesde";
             this.dateTimeDesde.Size = new System.Drawing.Size(98, 20);
             this.dateTimeDesde.TabIndex = 18;
@@ -104,7 +104,7 @@
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(537, 26);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
@@ -116,17 +116,18 @@
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(447, 26);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
+            this.radioCertificacion.TabStop = true;
             this.radioCertificacion.Text = "Certificacion";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(7, 132);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(311, 20);
             this.textBox5.TabIndex = 9;
@@ -166,9 +167,9 @@
             this.groupBox1.Controls.Add(this.textRut);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(616, 63);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -177,7 +178,7 @@
             // textRut
             // 
             this.textRut.Location = new System.Drawing.Point(75, 24);
-            this.textRut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRut.Margin = new System.Windows.Forms.Padding(2);
             this.textRut.Name = "textRut";
             this.textRut.Size = new System.Drawing.Size(163, 20);
             this.textRut.TabIndex = 2;
@@ -200,7 +201,7 @@
             this.generarConsolidadoV.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarConsolidadoV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generarConsolidadoV.Location = new System.Drawing.Point(548, 441);
-            this.generarConsolidadoV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarConsolidadoV.Margin = new System.Windows.Forms.Padding(2);
             this.generarConsolidadoV.Name = "generarConsolidadoV";
             this.generarConsolidadoV.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarConsolidadoV.Size = new System.Drawing.Size(76, 28);
@@ -234,7 +235,7 @@
             this.total,
             this.detalle});
             this.dataGridConsolidado.Location = new System.Drawing.Point(7, 26);
-            this.dataGridConsolidado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridConsolidado.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridConsolidado.Name = "dataGridConsolidado";
             this.dataGridConsolidado.RowHeadersWidth = 51;
             this.dataGridConsolidado.RowTemplate.Height = 24;
@@ -317,8 +318,9 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ConsolidadoVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consolidado de Ventas";
