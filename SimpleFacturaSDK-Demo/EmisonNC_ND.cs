@@ -23,7 +23,6 @@ namespace SimpleFacturaSDK_Demo
             EnumHelper.LlenarComboBoxConEnum<DTEType>(comboBoxCodigoTipoDTE, value => value == DTEType.NotaDebitoElectronica || value == DTEType.NotaCreditoElectronica);
             EnumHelper.LlenarComboBoxConEnum<FormaPago.FormaPagoEnum>(comboBoxFormaPago);
             EnumHelper.LlenarComboBoxConEnum<ReasonTypeEnum>(comboBoxMotivo);
-
         }
         private void EmisonNC_ND_Load(object sender, EventArgs e)
         {
