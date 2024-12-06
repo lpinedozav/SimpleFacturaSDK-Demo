@@ -70,12 +70,6 @@
             this.montoNeto = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.gridProductos = new System.Windows.Forms.DataGridView();
-            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.umedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textRznReceptor = new System.Windows.Forms.TextBox();
             this.textCiudadReceptor = new System.Windows.Forms.TextBox();
@@ -93,15 +87,26 @@
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gridReferencias = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFolio_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFecha_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCodigo_Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazonRef = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generarNcNd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.numericFolio = new System.Windows.Forms.NumericUpDown();
+            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridIndExe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridRefNroLin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridRefTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridRefFolio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridRefFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridRefCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridRefRazon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textSucursal = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxMotivo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -111,6 +116,7 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridReferencias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -480,11 +486,11 @@
             this.gridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gridNroLinea,
+            this.gridIndExe,
             this.gridNombreProducto,
             this.gridCantidadProducto,
-            this.umedida,
             this.gridPrecio,
-            this.Monto});
+            this.gridMonto});
             this.gridProductos.Location = new System.Drawing.Point(11, 23);
             this.gridProductos.Margin = new System.Windows.Forms.Padding(4);
             this.gridProductos.Name = "gridProductos";
@@ -492,66 +498,6 @@
             this.gridProductos.RowHeadersWidth = 25;
             this.gridProductos.Size = new System.Drawing.Size(797, 121);
             this.gridProductos.TabIndex = 0;
-            // 
-            // gridNroLinea
-            // 
-            this.gridNroLinea.DataPropertyName = "NroLinDet";
-            dataGridViewCellStyle1.Format = "N0";
-            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridNroLinea.HeaderText = "NroLinDet";
-            this.gridNroLinea.MinimumWidth = 6;
-            this.gridNroLinea.Name = "gridNroLinea";
-            this.gridNroLinea.ReadOnly = true;
-            this.gridNroLinea.Width = 65;
-            // 
-            // gridNombreProducto
-            // 
-            this.gridNombreProducto.DataPropertyName = "Nombre";
-            this.gridNombreProducto.HeaderText = "Nombre";
-            this.gridNombreProducto.MinimumWidth = 6;
-            this.gridNombreProducto.Name = "gridNombreProducto";
-            this.gridNombreProducto.ReadOnly = true;
-            this.gridNombreProducto.Width = 210;
-            // 
-            // gridCantidadProducto
-            // 
-            this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle2.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridCantidadProducto.HeaderText = "Cantidad";
-            this.gridCantidadProducto.MinimumWidth = 6;
-            this.gridCantidadProducto.Name = "gridCantidadProducto";
-            this.gridCantidadProducto.ReadOnly = true;
-            this.gridCantidadProducto.Width = 60;
-            // 
-            // umedida
-            // 
-            this.umedida.DataPropertyName = "UnidadMedida";
-            this.umedida.HeaderText = "Unidad";
-            this.umedida.MinimumWidth = 6;
-            this.umedida.Name = "umedida";
-            this.umedida.ReadOnly = true;
-            this.umedida.Width = 60;
-            // 
-            // gridPrecio
-            // 
-            this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle3.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridPrecio.HeaderText = "Precio";
-            this.gridPrecio.MinimumWidth = 6;
-            this.gridPrecio.Name = "gridPrecio";
-            this.gridPrecio.ReadOnly = true;
-            this.gridPrecio.Width = 70;
-            // 
-            // Monto
-            // 
-            this.Monto.DataPropertyName = "Monto";
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MinimumWidth = 6;
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            this.Monto.Width = 80;
             // 
             // groupBox7
             // 
@@ -732,12 +678,12 @@
             this.gridReferencias.ColumnHeadersHeight = 29;
             this.gridReferencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridReferencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.columnTipoDoc,
-            this.ColumnFolio_Ref,
-            this.ColumnFecha_Ref,
-            this.ColumnCodigo_Ref,
-            this.RazonRef});
+            this.gridRefNroLin,
+            this.gridRefTipoDoc,
+            this.gridRefFolio,
+            this.gridRefFecha,
+            this.gridRefCodigo,
+            this.gridRefRazon});
             this.gridReferencias.Location = new System.Drawing.Point(9, 23);
             this.gridReferencias.Margin = new System.Windows.Forms.Padding(4);
             this.gridReferencias.Name = "gridReferencias";
@@ -746,74 +692,12 @@
             this.gridReferencias.Size = new System.Drawing.Size(800, 121);
             this.gridReferencias.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "NroLinRef";
-            dataGridViewCellStyle4.Format = "N0";
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "NroLinRef";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 64;
-            // 
-            // columnTipoDoc
-            // 
-            this.columnTipoDoc.DataPropertyName = "TipoDocumento";
-            this.columnTipoDoc.Frozen = true;
-            this.columnTipoDoc.HeaderText = "Tipo Documento";
-            this.columnTipoDoc.MinimumWidth = 6;
-            this.columnTipoDoc.Name = "columnTipoDoc";
-            this.columnTipoDoc.ReadOnly = true;
-            this.columnTipoDoc.Width = 95;
-            // 
-            // ColumnFolio_Ref
-            // 
-            this.ColumnFolio_Ref.DataPropertyName = "FolioRefencia";
-            dataGridViewCellStyle5.Format = "N1";
-            this.ColumnFolio_Ref.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ColumnFolio_Ref.HeaderText = "Folio Refencia";
-            this.ColumnFolio_Ref.MinimumWidth = 6;
-            this.ColumnFolio_Ref.Name = "ColumnFolio_Ref";
-            this.ColumnFolio_Ref.ReadOnly = true;
-            this.ColumnFolio_Ref.Width = 85;
-            // 
-            // ColumnFecha_Ref
-            // 
-            this.ColumnFecha_Ref.DataPropertyName = "FechaRefencia";
-            dataGridViewCellStyle6.Format = "N0";
-            this.ColumnFecha_Ref.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ColumnFecha_Ref.HeaderText = "Fecha Refencia";
-            this.ColumnFecha_Ref.MinimumWidth = 6;
-            this.ColumnFecha_Ref.Name = "ColumnFecha_Ref";
-            this.ColumnFecha_Ref.ReadOnly = true;
-            this.ColumnFecha_Ref.Width = 95;
-            // 
-            // ColumnCodigo_Ref
-            // 
-            this.ColumnCodigo_Ref.DataPropertyName = "CodigoReferencia";
-            this.ColumnCodigo_Ref.HeaderText = "Codigo Referencia";
-            this.ColumnCodigo_Ref.MinimumWidth = 6;
-            this.ColumnCodigo_Ref.Name = "ColumnCodigo_Ref";
-            this.ColumnCodigo_Ref.ReadOnly = true;
-            this.ColumnCodigo_Ref.Width = 105;
-            // 
-            // RazonRef
-            // 
-            this.RazonRef.DataPropertyName = "RazonReferencia";
-            this.RazonRef.HeaderText = "Razón Referencia";
-            this.RazonRef.MinimumWidth = 6;
-            this.RazonRef.Name = "RazonRef";
-            this.RazonRef.ReadOnly = true;
-            this.RazonRef.Width = 105;
-            // 
             // generarNcNd
             // 
             this.generarNcNd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarNcNd.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarNcNd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarNcNd.Location = new System.Drawing.Point(722, 850);
+            this.generarNcNd.Location = new System.Drawing.Point(727, 899);
             this.generarNcNd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.generarNcNd.Name = "generarNcNd";
             this.generarNcNd.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
@@ -852,11 +736,187 @@
             0,
             0});
             // 
+            // gridNroLinea
+            // 
+            this.gridNroLinea.DataPropertyName = "NroLinDet";
+            dataGridViewCellStyle1.Format = "N0";
+            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridNroLinea.HeaderText = "NroLinDet";
+            this.gridNroLinea.MinimumWidth = 6;
+            this.gridNroLinea.Name = "gridNroLinea";
+            this.gridNroLinea.ReadOnly = true;
+            this.gridNroLinea.Width = 65;
+            // 
+            // gridIndExe
+            // 
+            this.gridIndExe.DataPropertyName = "indexe";
+            this.gridIndExe.HeaderText = "IndExe";
+            this.gridIndExe.MinimumWidth = 6;
+            this.gridIndExe.Name = "gridIndExe";
+            this.gridIndExe.ReadOnly = true;
+            this.gridIndExe.Width = 60;
+            // 
+            // gridNombreProducto
+            // 
+            this.gridNombreProducto.DataPropertyName = "Nombre";
+            this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
+            this.gridNombreProducto.Name = "gridNombreProducto";
+            this.gridNombreProducto.ReadOnly = true;
+            this.gridNombreProducto.Width = 210;
+            // 
+            // gridCantidadProducto
+            // 
+            this.gridCantidadProducto.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle2.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
+            this.gridCantidadProducto.Name = "gridCantidadProducto";
+            this.gridCantidadProducto.ReadOnly = true;
+            this.gridCantidadProducto.Width = 60;
+            // 
+            // gridPrecio
+            // 
+            this.gridPrecio.DataPropertyName = "Precio";
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
+            this.gridPrecio.Name = "gridPrecio";
+            this.gridPrecio.ReadOnly = true;
+            this.gridPrecio.Width = 70;
+            // 
+            // gridMonto
+            // 
+            this.gridMonto.DataPropertyName = "Monto";
+            this.gridMonto.HeaderText = "Monto";
+            this.gridMonto.MinimumWidth = 6;
+            this.gridMonto.Name = "gridMonto";
+            this.gridMonto.ReadOnly = true;
+            this.gridMonto.Width = 80;
+            // 
+            // gridRefNroLin
+            // 
+            this.gridRefNroLin.DataPropertyName = "NroLinRef";
+            dataGridViewCellStyle4.Format = "N0";
+            this.gridRefNroLin.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gridRefNroLin.Frozen = true;
+            this.gridRefNroLin.HeaderText = "NroLinRef";
+            this.gridRefNroLin.MinimumWidth = 6;
+            this.gridRefNroLin.Name = "gridRefNroLin";
+            this.gridRefNroLin.ReadOnly = true;
+            this.gridRefNroLin.Width = 64;
+            // 
+            // gridRefTipoDoc
+            // 
+            this.gridRefTipoDoc.DataPropertyName = "TipoDocumento";
+            this.gridRefTipoDoc.Frozen = true;
+            this.gridRefTipoDoc.HeaderText = "Tipo Documento";
+            this.gridRefTipoDoc.MinimumWidth = 6;
+            this.gridRefTipoDoc.Name = "gridRefTipoDoc";
+            this.gridRefTipoDoc.ReadOnly = true;
+            this.gridRefTipoDoc.Width = 95;
+            // 
+            // gridRefFolio
+            // 
+            this.gridRefFolio.DataPropertyName = "FolioRefencia";
+            dataGridViewCellStyle5.Format = "N1";
+            this.gridRefFolio.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gridRefFolio.HeaderText = "Folio Refencia";
+            this.gridRefFolio.MinimumWidth = 6;
+            this.gridRefFolio.Name = "gridRefFolio";
+            this.gridRefFolio.ReadOnly = true;
+            this.gridRefFolio.Width = 85;
+            // 
+            // gridRefFecha
+            // 
+            this.gridRefFecha.DataPropertyName = "FechaRefencia";
+            dataGridViewCellStyle6.Format = "N0";
+            this.gridRefFecha.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gridRefFecha.HeaderText = "Fecha Refencia";
+            this.gridRefFecha.MinimumWidth = 6;
+            this.gridRefFecha.Name = "gridRefFecha";
+            this.gridRefFecha.ReadOnly = true;
+            this.gridRefFecha.Width = 95;
+            // 
+            // gridRefCodigo
+            // 
+            this.gridRefCodigo.DataPropertyName = "CodigoReferencia";
+            this.gridRefCodigo.HeaderText = "Codigo Referencia";
+            this.gridRefCodigo.MinimumWidth = 6;
+            this.gridRefCodigo.Name = "gridRefCodigo";
+            this.gridRefCodigo.ReadOnly = true;
+            this.gridRefCodigo.Width = 105;
+            // 
+            // gridRefRazon
+            // 
+            this.gridRefRazon.DataPropertyName = "RazonReferencia";
+            this.gridRefRazon.HeaderText = "Razón Referencia";
+            this.gridRefRazon.MinimumWidth = 6;
+            this.gridRefRazon.Name = "gridRefRazon";
+            this.gridRefRazon.ReadOnly = true;
+            this.gridRefRazon.Width = 105;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.comboBoxMotivo);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.textSucursal);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Location = new System.Drawing.Point(439, 814);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(405, 79);
+            this.groupBox6.TabIndex = 37;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Otros";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(218, 36);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 20);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Motivo:";
+            // 
+            // textSucursal
+            // 
+            this.textSucursal.Location = new System.Drawing.Point(72, 31);
+            this.textSucursal.Margin = new System.Windows.Forms.Padding(4);
+            this.textSucursal.Name = "textSucursal";
+            this.textSucursal.Size = new System.Drawing.Size(116, 22);
+            this.textSucursal.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 33);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 20);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Sucursal:";
+            // 
+            // comboBoxMotivo
+            // 
+            this.comboBoxMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMotivo.FormattingEnabled = true;
+            this.comboBoxMotivo.Location = new System.Drawing.Point(271, 36);
+            this.comboBoxMotivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMotivo.Name = "comboBoxMotivo";
+            this.comboBoxMotivo.Size = new System.Drawing.Size(127, 24);
+            this.comboBoxMotivo.TabIndex = 36;
+            // 
             // EmisonNC_ND
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 895);
+            this.ClientSize = new System.Drawing.Size(851, 939);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.generarNcNd);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox7);
@@ -886,6 +946,8 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridReferencias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -944,20 +1006,25 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button generarNcNd;
         private System.Windows.Forms.DataGridView gridProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn umedida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnTipoDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFolio_Ref;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFecha_Ref;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo_Ref;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazonRef;
         private System.Windows.Forms.TextBox textActividadEconomica;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericFolio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridIndExe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridMonto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefNroLin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefTipoDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefFolio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefRazon;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox comboBoxMotivo;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textSucursal;
+        private System.Windows.Forms.Label label12;
     }
 }
