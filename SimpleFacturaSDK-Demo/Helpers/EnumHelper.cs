@@ -14,21 +14,34 @@ namespace SimpleFacturaSDK_Demo.Helpers
         /// </summary>
         /// <typeparam name="T">Tipo de enum.</typeparam>
         /// <param name="comboBox">ComboBox a llenar.</param>
-        public static void LlenarComboBoxConEnum<T>(ComboBox comboBox) where T : Enum
+        public static void LlenarComboBoxConEnum<T>(ComboBox comboBox, Func<T, bool> filtro = null) where T : Enum
         {
+            // Obtén todos los valores del enum
             var enumValues = Enum.GetValues(typeof(T)).Cast<T>();
 
+            // Aplica el filtro si se proporciona
+            if (filtro != null)
+            {
+                enumValues = enumValues.Where(filtro);
+            }
+
+            // Limpia los elementos existentes
+            comboBox.Items.Clear();
+
+            // Agrega los elementos filtrados al ComboBox
             foreach (var value in enumValues)
             {
                 string descripcion = ObtenerDescripcion(value);
                 comboBox.Items.Add(new ComboBoxItem { Text = descripcion, Value = value });
             }
 
+            // Selecciona el primer elemento si hay al menos uno
             if (comboBox.Items.Count > 0)
             {
-                comboBox.SelectedIndex = 0; // Seleccionar el primer elemento por defecto
+                comboBox.SelectedIndex = 0;
             }
         }
+
 
         /// <summary>
         /// Obtiene la descripción del atributo Description de un valor de enum.
