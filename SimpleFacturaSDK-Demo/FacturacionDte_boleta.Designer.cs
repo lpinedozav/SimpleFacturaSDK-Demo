@@ -775,6 +775,7 @@
             this.Name = "FacturacionDte_boleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturación DTE/Boletas";
+            this.Load += new System.EventHandler(this.FacturacionDte_boleta_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
