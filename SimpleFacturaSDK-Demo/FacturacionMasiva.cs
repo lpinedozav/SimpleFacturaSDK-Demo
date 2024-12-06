@@ -32,6 +32,9 @@ namespace SimpleFacturaSDK_Demo
             }
         }
 
-       
+        private void FacturacionMasiva_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
