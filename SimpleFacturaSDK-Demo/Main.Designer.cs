@@ -183,12 +183,12 @@
             // facturacion_dte
             // 
             this.facturacion_dte.Location = new System.Drawing.Point(7, 27);
-            this.facturacion_dte.Name = "facturacion_dte";
+            this.facturacion_dte.Name = "facturacion_dte_boleta";
             this.facturacion_dte.Size = new System.Drawing.Size(173, 38);
             this.facturacion_dte.TabIndex = 5;
             this.facturacion_dte.Text = "Facturación DTE / Boletas";
             this.facturacion_dte.UseVisualStyleBackColor = true;
-            this.facturacion_dte.Click += new System.EventHandler(this.facturacion_dte_Click);
+            this.facturacion_dte.Click += new System.EventHandler(this.facturacion_dte_boleta_Click);
             // 
             // facturacion_exportacion
             // 

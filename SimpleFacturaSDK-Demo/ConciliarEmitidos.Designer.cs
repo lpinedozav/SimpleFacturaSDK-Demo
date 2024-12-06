@@ -50,9 +50,9 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.labelRutEmisor);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(240, 54);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -61,7 +61,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(73, 20);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(150, 20);
             this.textRutEmisor.TabIndex = 2;
@@ -83,7 +83,7 @@
             this.generarEmitidos.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarEmitidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generarEmitidos.Location = new System.Drawing.Point(524, 223);
-            this.generarEmitidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarEmitidos.Margin = new System.Windows.Forms.Padding(2);
             this.generarEmitidos.Name = "generarEmitidos";
             this.generarEmitidos.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarEmitidos.Size = new System.Drawing.Size(76, 28);
@@ -114,7 +114,7 @@
             // textMes
             // 
             this.textMes.Location = new System.Drawing.Point(82, 68);
-            this.textMes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textMes.Margin = new System.Windows.Forms.Padding(2);
             this.textMes.Maximum = new decimal(new int[] {
             12,
             0,
@@ -128,7 +128,7 @@
             // textAnio
             // 
             this.textAnio.Location = new System.Drawing.Point(82, 101);
-            this.textAnio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textAnio.Margin = new System.Windows.Forms.Padding(2);
             this.textAnio.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -173,8 +173,9 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ConciliarEmitidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conciliar Emitidos";
