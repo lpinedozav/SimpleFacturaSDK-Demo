@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
 {
-    public partial class FacturacionDte_Boletas : Form
+    public partial class FacturacionDte_boleta : Form
     {
-        public FacturacionDte_Boletas()
+        public FacturacionDte_boleta()
         {
             InitializeComponent();
         }

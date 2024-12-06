@@ -241,17 +241,11 @@
     <Compile Include="EnviaMail.Designer.cs">
       <DependentUpon>EnviaMail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacturacionDTE.cs">
+    <Compile Include="FacturacionDte_boleta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacturacionDTE.Designer.cs">
-      <DependentUpon>FacturacionDTE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FacturacionDte_Boletas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FacturacionDte_Boletas.Designer.cs">
-      <DependentUpon>FacturacionDte_Boletas.cs</DependentUpon>
+    <Compile Include="FacturacionDte_boleta.Designer.cs">
+      <DependentUpon>FacturacionDte_boleta.cs</DependentUpon>
     </Compile>
     <Compile Include="FacturacionExportacion.cs">
       <SubType>Form</SubType>
@@ -334,11 +328,8 @@
     <EmbeddedResource Include="EnviaMail.resx">
       <DependentUpon>EnviaMail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacturacionDTE.resx">
-      <DependentUpon>FacturacionDTE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FacturacionDte_Boletas.resx">
-      <DependentUpon>FacturacionDte_Boletas.cs</DependentUpon>
+    <EmbeddedResource Include="FacturacionDte_boleta.resx">
+      <DependentUpon>FacturacionDte_boleta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacturacionExportacion.resx">
       <DependentUpon>FacturacionExportacion.cs</DependentUpon>
