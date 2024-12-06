@@ -38,8 +38,9 @@ namespace SimpleFacturaSDK_Demo
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string relativePath = Path.Combine(baseDirectory, "Files", "ejemplo_carga_masiva_nacional.csv");
-            txtRutaArchivo.Text = relativePath;
+            string projectDirectory = Path.Combine(baseDirectory, @"..\..\"); // Subir al nivel raíz del proyecto
+            string filePath = Path.Combine(projectDirectory, "Files", "ejemplo_carga_masiva_nacional.csv");
+            txtRutaArchivo.Text = filePath;
         }
 
         private async void generarMasiva_Click(object sender, EventArgs e)
