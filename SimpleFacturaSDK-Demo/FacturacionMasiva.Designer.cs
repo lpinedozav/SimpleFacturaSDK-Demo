@@ -39,6 +39,7 @@
             this.txtRutaArchivo = new System.Windows.Forms.TextBox();
             this.btnSeleccionarArchivo = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.generarMasiva = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -98,9 +99,9 @@
             // 
             this.groupBox3.Controls.Add(this.textRespuesta);
             this.groupBox3.Location = new System.Drawing.Point(352, 14);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(376, 273);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
@@ -109,28 +110,30 @@
             // textRespuesta
             // 
             this.textRespuesta.Location = new System.Drawing.Point(16, 23);
-            this.textRespuesta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRespuesta.Margin = new System.Windows.Forms.Padding(4);
             this.textRespuesta.Multiline = true;
             this.textRespuesta.Name = "textRespuesta";
             this.textRespuesta.Size = new System.Drawing.Size(345, 239);
             this.textRespuesta.TabIndex = 19;
+            this.textRespuesta.TabStop = false;
             // 
             // txtRutaArchivo
             // 
-            this.txtRutaArchivo.Location = new System.Drawing.Point(112, 144);
+            this.txtRutaArchivo.Location = new System.Drawing.Point(139, 152);
             this.txtRutaArchivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRutaArchivo.Name = "txtRutaArchivo";
-            this.txtRutaArchivo.Size = new System.Drawing.Size(212, 22);
+            this.txtRutaArchivo.Size = new System.Drawing.Size(185, 22);
             this.txtRutaArchivo.TabIndex = 2;
             this.txtRutaArchivo.TabStop = false;
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(15, 142);
-            this.btnSeleccionarArchivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(15, 144);
+            this.btnSeleccionarArchivo.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(103, 30);
             this.btnSeleccionarArchivo.TabIndex = 27;
+            this.btnSeleccionarArchivo.TabStop = false;
             this.btnSeleccionarArchivo.Text = "Agregar Csv";
             this.btnSeleccionarArchivo.UseVisualStyleBackColor = true;
             this.btnSeleccionarArchivo.Click += new System.EventHandler(this.btnSeleccionarArchivo_Click);
@@ -139,18 +142,35 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // generarMasiva
+            // 
+            this.generarMasiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarMasiva.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarMasiva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarMasiva.Location = new System.Drawing.Point(611, 293);
+            this.generarMasiva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generarMasiva.Name = "generarMasiva";
+            this.generarMasiva.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
+            this.generarMasiva.Size = new System.Drawing.Size(117, 34);
+            this.generarMasiva.TabIndex = 1;
+            this.generarMasiva.Text = "Generar";
+            this.generarMasiva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarMasiva.UseVisualStyleBackColor = true;
+            this.generarMasiva.Click += new System.EventHandler(this.generarMasiva_Click);
+            // 
             // FacturacionMasiva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 407);
+            this.ClientSize = new System.Drawing.Size(744, 336);
+            this.Controls.Add(this.generarMasiva);
             this.Controls.Add(this.btnSeleccionarArchivo);
             this.Controls.Add(this.txtRutaArchivo);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FacturacionMasiva";
@@ -178,5 +198,6 @@
         private System.Windows.Forms.TextBox txtRutaArchivo;
         private System.Windows.Forms.Button btnSeleccionarArchivo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button generarMasiva;
     }
 }

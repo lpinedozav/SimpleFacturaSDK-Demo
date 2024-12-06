@@ -148,6 +148,7 @@
             this.fechaEmision.Name = "fechaEmision";
             this.fechaEmision.Size = new System.Drawing.Size(125, 22);
             this.fechaEmision.TabIndex = 33;
+            this.fechaEmision.TabStop = false;
             // 
             // FchEmision
             // 
@@ -166,6 +167,7 @@
             this.fechaVencimiento.Name = "fechaVencimiento";
             this.fechaVencimiento.Size = new System.Drawing.Size(121, 22);
             this.fechaVencimiento.TabIndex = 31;
+            this.fechaVencimiento.TabStop = false;
             // 
             // label2
             // 
@@ -185,6 +187,7 @@
             this.comboBoxFormaPago.Name = "comboBoxFormaPago";
             this.comboBoxFormaPago.Size = new System.Drawing.Size(148, 24);
             this.comboBoxFormaPago.TabIndex = 29;
+            this.comboBoxFormaPago.TabStop = false;
             // 
             // label1
             // 
@@ -203,6 +206,7 @@
             this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
             this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(229, 24);
             this.comboBoxCodigoTipoDTE.TabIndex = 25;
+            this.comboBoxCodigoTipoDTE.TabStop = false;
             // 
             // tipoDte
             // 
@@ -250,6 +254,7 @@
             this.textActividadEconomica.Name = "textActividadEconomica";
             this.textActividadEconomica.Size = new System.Drawing.Size(115, 22);
             this.textActividadEconomica.TabIndex = 36;
+            this.textActividadEconomica.TabStop = false;
             // 
             // razonSocial_Emisor
             // 
@@ -259,6 +264,7 @@
             this.razonSocial_Emisor.Name = "razonSocial_Emisor";
             this.razonSocial_Emisor.Size = new System.Drawing.Size(452, 22);
             this.razonSocial_Emisor.TabIndex = 35;
+            this.razonSocial_Emisor.TabStop = false;
             // 
             // textCiudadEmisor
             // 
@@ -268,6 +274,7 @@
             this.textCiudadEmisor.Name = "textCiudadEmisor";
             this.textCiudadEmisor.Size = new System.Drawing.Size(176, 22);
             this.textCiudadEmisor.TabIndex = 34;
+            this.textCiudadEmisor.TabStop = false;
             // 
             // ciudad
             // 
@@ -287,6 +294,7 @@
             this.textDireccionEmisor.Name = "textDireccionEmisor";
             this.textDireccionEmisor.Size = new System.Drawing.Size(177, 22);
             this.textDireccionEmisor.TabIndex = 26;
+            this.textDireccionEmisor.TabStop = false;
             // 
             // label8
             // 
@@ -316,6 +324,7 @@
             this.textTelefonEmisor.Name = "textTelefonEmisor";
             this.textTelefonEmisor.Size = new System.Drawing.Size(176, 22);
             this.textTelefonEmisor.TabIndex = 28;
+            this.textTelefonEmisor.TabStop = false;
             // 
             // correo_emisor
             // 
@@ -325,6 +334,7 @@
             this.correo_emisor.Name = "correo_emisor";
             this.correo_emisor.Size = new System.Drawing.Size(176, 22);
             this.correo_emisor.TabIndex = 30;
+            this.correo_emisor.TabStop = false;
             // 
             // CorreoEmisor
             // 
@@ -364,6 +374,7 @@
             this.textComunaEmisor.Name = "textComunaEmisor";
             this.textComunaEmisor.Size = new System.Drawing.Size(203, 22);
             this.textComunaEmisor.TabIndex = 22;
+            this.textComunaEmisor.TabStop = false;
             // 
             // textGiroEmisor
             // 
@@ -373,6 +384,7 @@
             this.textGiroEmisor.Name = "textGiroEmisor";
             this.textGiroEmisor.Size = new System.Drawing.Size(452, 22);
             this.textGiroEmisor.TabIndex = 24;
+            this.textGiroEmisor.TabStop = false;
             // 
             // label9
             // 
@@ -402,6 +414,7 @@
             this.textRUTEmisor.Name = "textRUTEmisor";
             this.textRUTEmisor.Size = new System.Drawing.Size(176, 22);
             this.textRUTEmisor.TabIndex = 4;
+            this.textRUTEmisor.TabStop = false;
             // 
             // label6
             // 
@@ -435,6 +448,7 @@
             this.textMontoTotal.Name = "textMontoTotal";
             this.textMontoTotal.Size = new System.Drawing.Size(115, 22);
             this.textMontoTotal.TabIndex = 26;
+            this.textMontoTotal.TabStop = false;
             // 
             // montoTotal
             // 
@@ -453,6 +467,7 @@
             this.textMontoExento.Name = "textMontoExento";
             this.textMontoExento.Size = new System.Drawing.Size(116, 22);
             this.textMontoExento.TabIndex = 4;
+            this.textMontoExento.TabStop = false;
             // 
             // montoNeto
             // 
@@ -498,6 +513,7 @@
             this.gridProductos.RowHeadersWidth = 25;
             this.gridProductos.Size = new System.Drawing.Size(797, 121);
             this.gridProductos.TabIndex = 0;
+            this.gridProductos.TabStop = false;
             // 
             // groupBox7
             // 
@@ -532,6 +548,7 @@
             this.textRznReceptor.Name = "textRznReceptor";
             this.textRznReceptor.Size = new System.Drawing.Size(452, 22);
             this.textRznReceptor.TabIndex = 35;
+            this.textRznReceptor.TabStop = false;
             // 
             // textCiudadReceptor
             // 
@@ -541,6 +558,7 @@
             this.textCiudadReceptor.Name = "textCiudadReceptor";
             this.textCiudadReceptor.Size = new System.Drawing.Size(185, 22);
             this.textCiudadReceptor.TabIndex = 34;
+            this.textCiudadReceptor.TabStop = false;
             // 
             // label25
             // 
@@ -560,6 +578,7 @@
             this.textDirReceptor.Name = "textDirReceptor";
             this.textDirReceptor.Size = new System.Drawing.Size(177, 22);
             this.textDirReceptor.TabIndex = 26;
+            this.textDirReceptor.TabStop = false;
             // 
             // label26
             // 
@@ -579,6 +598,7 @@
             this.textCorreoReceptor.Name = "textCorreoReceptor";
             this.textCorreoReceptor.Size = new System.Drawing.Size(185, 22);
             this.textCorreoReceptor.TabIndex = 30;
+            this.textCorreoReceptor.TabStop = false;
             // 
             // label28
             // 
@@ -598,6 +618,7 @@
             this.textCmnReceptor.Name = "textCmnReceptor";
             this.textCmnReceptor.Size = new System.Drawing.Size(203, 22);
             this.textCmnReceptor.TabIndex = 22;
+            this.textCmnReceptor.TabStop = false;
             // 
             // label29
             // 
@@ -617,6 +638,7 @@
             this.textGiroReceptor.Name = "textGiroReceptor";
             this.textGiroReceptor.Size = new System.Drawing.Size(452, 22);
             this.textGiroReceptor.TabIndex = 24;
+            this.textGiroReceptor.TabStop = false;
             // 
             // label31
             // 
@@ -636,6 +658,7 @@
             this.textRutReceptor.Name = "textRutReceptor";
             this.textRutReceptor.Size = new System.Drawing.Size(185, 22);
             this.textRutReceptor.TabIndex = 4;
+            this.textRutReceptor.TabStop = false;
             // 
             // label32
             // 
@@ -691,6 +714,7 @@
             this.gridReferencias.RowHeadersWidth = 25;
             this.gridReferencias.Size = new System.Drawing.Size(800, 121);
             this.gridReferencias.TabIndex = 0;
+            this.gridReferencias.TabStop = false;
             // 
             // generarNcNd
             // 
@@ -702,7 +726,7 @@
             this.generarNcNd.Name = "generarNcNd";
             this.generarNcNd.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
             this.generarNcNd.Size = new System.Drawing.Size(117, 34);
-            this.generarNcNd.TabIndex = 41;
+            this.generarNcNd.TabIndex = 1;
             this.generarNcNd.Text = "Generar";
             this.generarNcNd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarNcNd.UseVisualStyleBackColor = true;
@@ -890,6 +914,7 @@
             this.textSucursal.Name = "textSucursal";
             this.textSucursal.Size = new System.Drawing.Size(116, 22);
             this.textSucursal.TabIndex = 4;
+            this.textSucursal.TabStop = false;
             // 
             // label12
             // 
@@ -910,6 +935,7 @@
             this.comboBoxMotivo.Name = "comboBoxMotivo";
             this.comboBoxMotivo.Size = new System.Drawing.Size(127, 24);
             this.comboBoxMotivo.TabIndex = 36;
+            this.comboBoxMotivo.TabStop = false;
             // 
             // EmisonNC_ND
             // 

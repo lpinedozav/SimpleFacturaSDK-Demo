@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SDKSimpleFactura;
+using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
 {
     public partial class FacturacionMasiva : Form
     {
+        private AppSettings _appSettings;
+        private SimpleFacturaClient cliente;
         public FacturacionMasiva()
         {
             InitializeComponent();
+            _appSettings = AppSettings.Current;
+            cliente = SimpleClientSingleton.Instance;
         }
 
         private void btnSeleccionarArchivo_Click(object sender, EventArgs e)
@@ -33,6 +32,16 @@ namespace SimpleFacturaSDK_Demo
         }
 
         private void FacturacionMasiva_Load(object sender, EventArgs e)
+        {
+            cliente = SimpleClientSingleton.Instance;
+            textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string relativePath = Path.Combine(baseDirectory, "Files", "ejemplo_carga_masiva_nacional.csv");
+            txtRutaArchivo.Text = relativePath;
+        }
+
+        private void generarMasiva_Click(object sender, EventArgs e)
         {
 
         }
