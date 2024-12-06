@@ -1,4 +1,5 @@
 ﻿using SDKSimpleFactura;
+using SDKSimpleFactura.Models.Facturacion;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -41,9 +42,25 @@ namespace SimpleFacturaSDK_Demo
             txtRutaArchivo.Text = relativePath;
         }
 
-        private void generarMasiva_Click(object sender, EventArgs e)
+        private async void generarMasiva_Click(object sender, EventArgs e)
         {
-
+            var request = new Credenciales();
+            request.RutEmisor = textRutEmisor.Text;
+            request.NombreSucursal = textNombreSucursal.Text;
+            var path = txtRutaArchivo.Text;
+            var response = await cliente.Facturacion.FacturacionMasivaAsync(request, path);
+            if (response.Status == 400 || response.Status == 500)
+            {
+                MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textRespuesta.Text = $"Estado: {response.Status}\r\n" +
+                     $"Mensaje: {response.Message}\r\n" +
+                     $"Datos: {response.Data}\r\n" +
+                     $"Errores: {(response.Errors != null ? string.Join(", ", response.Errors) : "Ninguno")}\r\n";
+            }
         }
     }
 }
