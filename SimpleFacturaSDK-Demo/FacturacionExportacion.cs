@@ -17,9 +17,5 @@ namespace SimpleFacturaSDK_Demo
             InitializeComponent();
         }
 
-        private void generarTimbre_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
