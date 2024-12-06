@@ -35,7 +35,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textSucursal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.generarNcNd = new System.Windows.Forms.Button();
+            this.generarFacturacioDte_Boleta = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textRznReceptor = new System.Windows.Forms.TextBox();
             this.textCiudadReceptor = new System.Windows.Forms.TextBox();
@@ -53,6 +53,13 @@
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.gridProductos = new System.Windows.Forms.DataGridView();
+            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textMontoTotal = new System.Windows.Forms.TextBox();
             this.montoTotal = new System.Windows.Forms.Label();
@@ -78,25 +85,18 @@
             this.textRUTEmisor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.fechaEmision = new System.Windows.Forms.DateTimePicker();
-            this.FchEmision = new System.Windows.Forms.Label();
-            this.fechaVencimiento = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxFormaPago = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxCodigoTipoDTE = new System.Windows.Forms.ComboBox();
-            this.tipoDte = new System.Windows.Forms.Label();
-            this.BoletasRadioButton = new System.Windows.Forms.RadioButton();
-            this.DteRadioButton = new System.Windows.Forms.RadioButton();
             this.comboIndService = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaEmision = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxFormaPago = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.FchEmision = new System.Windows.Forms.Label();
+            this.comboBoxCodigoTipoDTE = new System.Windows.Forms.ComboBox();
+            this.fechaVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.tipoDte = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BoletasRadioButton = new System.Windows.Forms.RadioButton();
+            this.DteRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -133,20 +133,21 @@
             this.label12.TabIndex = 3;
             this.label12.Text = "Sucursal:";
             // 
-            // generarNcNd
+            // generarFacturacioDte_Boleta
             // 
-            this.generarNcNd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarNcNd.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarNcNd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarNcNd.Location = new System.Drawing.Point(541, 598);
-            this.generarNcNd.Margin = new System.Windows.Forms.Padding(2);
-            this.generarNcNd.Name = "generarNcNd";
-            this.generarNcNd.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarNcNd.Size = new System.Drawing.Size(88, 28);
-            this.generarNcNd.TabIndex = 49;
-            this.generarNcNd.Text = "Generar";
-            this.generarNcNd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarNcNd.UseVisualStyleBackColor = true;
+            this.generarFacturacioDte_Boleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarFacturacioDte_Boleta.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarFacturacioDte_Boleta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(541, 598);
+            this.generarFacturacioDte_Boleta.Margin = new System.Windows.Forms.Padding(2);
+            this.generarFacturacioDte_Boleta.Name = "generarFacturacioDte_Boleta";
+            this.generarFacturacioDte_Boleta.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarFacturacioDte_Boleta.Size = new System.Drawing.Size(88, 28);
+            this.generarFacturacioDte_Boleta.TabIndex = 49;
+            this.generarFacturacioDte_Boleta.Text = "Generar";
+            this.generarFacturacioDte_Boleta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarFacturacioDte_Boleta.UseVisualStyleBackColor = true;
+            this.generarFacturacioDte_Boleta.Click += new System.EventHandler(this.generarFacturacioDte_Boleta_Click);
             // 
             // groupBox7
             // 
@@ -322,6 +323,71 @@
             this.gridProductos.RowHeadersWidth = 25;
             this.gridProductos.Size = new System.Drawing.Size(598, 98);
             this.gridProductos.TabIndex = 0;
+            // 
+            // gridNroLinea
+            // 
+            this.gridNroLinea.DataPropertyName = "NroLinDet";
+            dataGridViewCellStyle1.Format = "N0";
+            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridNroLinea.HeaderText = "NroLinDet";
+            this.gridNroLinea.MinimumWidth = 6;
+            this.gridNroLinea.Name = "gridNroLinea";
+            this.gridNroLinea.ReadOnly = true;
+            this.gridNroLinea.Width = 65;
+            // 
+            // gridNombreProducto
+            // 
+            this.gridNombreProducto.DataPropertyName = "Nombre";
+            this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
+            this.gridNombreProducto.Name = "gridNombreProducto";
+            this.gridNombreProducto.ReadOnly = true;
+            this.gridNombreProducto.Width = 150;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 80;
+            // 
+            // gridCantidadProducto
+            // 
+            this.gridCantidadProducto.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle2.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
+            this.gridCantidadProducto.Name = "gridCantidadProducto";
+            this.gridCantidadProducto.ReadOnly = true;
+            this.gridCantidadProducto.Width = 60;
+            // 
+            // Unidad
+            // 
+            this.Unidad.HeaderText = "Unidad";
+            this.Unidad.Name = "Unidad";
+            this.Unidad.ReadOnly = true;
+            this.Unidad.Width = 50;
+            // 
+            // gridPrecio
+            // 
+            this.gridPrecio.DataPropertyName = "Precio";
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
+            this.gridPrecio.Name = "gridPrecio";
+            this.gridPrecio.ReadOnly = true;
+            this.gridPrecio.Width = 70;
+            // 
+            // gridMonto
+            // 
+            this.gridMonto.DataPropertyName = "Monto";
+            this.gridMonto.HeaderText = "Monto";
+            this.gridMonto.MinimumWidth = 6;
+            this.gridMonto.Name = "gridMonto";
+            this.gridMonto.ReadOnly = true;
+            this.gridMonto.Width = 80;
             // 
             // groupBox2
             // 
@@ -569,6 +635,26 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Identificacion DTE";
             // 
+            // comboIndService
+            // 
+            this.comboIndService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboIndService.FormattingEnabled = true;
+            this.comboIndService.Location = new System.Drawing.Point(81, 46);
+            this.comboIndService.Margin = new System.Windows.Forms.Padding(2);
+            this.comboIndService.Name = "comboIndService";
+            this.comboIndService.Size = new System.Drawing.Size(146, 21);
+            this.comboIndService.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 49);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Ind Servicio:";
+            // 
             // fechaEmision
             // 
             this.fechaEmision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -577,6 +663,26 @@
             this.fechaEmision.Name = "fechaEmision";
             this.fechaEmision.Size = new System.Drawing.Size(95, 20);
             this.fechaEmision.TabIndex = 33;
+            // 
+            // comboBoxFormaPago
+            // 
+            this.comboBoxFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFormaPago.FormattingEnabled = true;
+            this.comboBoxFormaPago.Location = new System.Drawing.Point(336, 46);
+            this.comboBoxFormaPago.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxFormaPago.Name = "comboBoxFormaPago";
+            this.comboBoxFormaPago.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxFormaPago.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(232, 51);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Forma de pago:";
             // 
             // FchEmision
             // 
@@ -588,6 +694,15 @@
             this.FchEmision.TabIndex = 32;
             this.FchEmision.Text = "Fecha emisión:";
             // 
+            // comboBoxCodigoTipoDTE
+            // 
+            this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
+            this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(81, 17);
+            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
+            this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(146, 21);
+            this.comboBoxCodigoTipoDTE.TabIndex = 25;
+            // 
             // fechaVencimiento
             // 
             this.fechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -596,45 +711,6 @@
             this.fechaVencimiento.Name = "fechaVencimiento";
             this.fechaVencimiento.Size = new System.Drawing.Size(92, 20);
             this.fechaVencimiento.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Fecha vencimiento:";
-            // 
-            // comboBoxFormaPago
-            // 
-            this.comboBoxFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFormaPago.FormattingEnabled = true;
-            this.comboBoxFormaPago.Location = new System.Drawing.Point(93, 48);
-            this.comboBoxFormaPago.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxFormaPago.Name = "comboBoxFormaPago";
-            this.comboBoxFormaPago.Size = new System.Drawing.Size(134, 21);
-            this.comboBoxFormaPago.TabIndex = 29;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 51);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Forma de pago:";
-            // 
-            // comboBoxCodigoTipoDTE
-            // 
-            this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
-            this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(93, 17);
-            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
-            this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(134, 21);
-            this.comboBoxCodigoTipoDTE.TabIndex = 25;
             // 
             // tipoDte
             // 
@@ -646,6 +722,16 @@
             this.tipoDte.TabIndex = 24;
             this.tipoDte.Text = "TipoDTE:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(232, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Fecha vencimiento:";
+            // 
             // BoletasRadioButton
             // 
             this.BoletasRadioButton.Location = new System.Drawing.Point(91, 16);
@@ -655,6 +741,7 @@
             this.BoletasRadioButton.TabIndex = 37;
             this.BoletasRadioButton.Text = "Boletas";
             this.BoletasRadioButton.UseVisualStyleBackColor = true;
+            this.BoletasRadioButton.CheckedChanged += new System.EventHandler(this.BoletasRadioButton_CheckedChanged);
             // 
             // DteRadioButton
             // 
@@ -667,91 +754,7 @@
             this.DteRadioButton.TabStop = true;
             this.DteRadioButton.Text = "DTE";
             this.DteRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // comboIndService
-            // 
-            this.comboIndService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboIndService.FormattingEnabled = true;
-            this.comboIndService.Location = new System.Drawing.Point(336, 48);
-            this.comboIndService.Margin = new System.Windows.Forms.Padding(2);
-            this.comboIndService.Name = "comboIndService";
-            this.comboIndService.Size = new System.Drawing.Size(92, 21);
-            this.comboIndService.TabIndex = 35;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(236, 53);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Ind Servicio:";
-            // 
-            // gridNroLinea
-            // 
-            this.gridNroLinea.DataPropertyName = "NroLinDet";
-            dataGridViewCellStyle1.Format = "N0";
-            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridNroLinea.HeaderText = "NroLinDet";
-            this.gridNroLinea.MinimumWidth = 6;
-            this.gridNroLinea.Name = "gridNroLinea";
-            this.gridNroLinea.ReadOnly = true;
-            this.gridNroLinea.Width = 65;
-            // 
-            // gridNombreProducto
-            // 
-            this.gridNombreProducto.DataPropertyName = "Nombre";
-            this.gridNombreProducto.HeaderText = "Nombre";
-            this.gridNombreProducto.MinimumWidth = 6;
-            this.gridNombreProducto.Name = "gridNombreProducto";
-            this.gridNombreProducto.ReadOnly = true;
-            this.gridNombreProducto.Width = 150;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 80;
-            // 
-            // gridCantidadProducto
-            // 
-            this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle2.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridCantidadProducto.HeaderText = "Cantidad";
-            this.gridCantidadProducto.MinimumWidth = 6;
-            this.gridCantidadProducto.Name = "gridCantidadProducto";
-            this.gridCantidadProducto.ReadOnly = true;
-            this.gridCantidadProducto.Width = 60;
-            // 
-            // Unidad
-            // 
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.Name = "Unidad";
-            this.Unidad.ReadOnly = true;
-            this.Unidad.Width = 50;
-            // 
-            // gridPrecio
-            // 
-            this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle3.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridPrecio.HeaderText = "Precio";
-            this.gridPrecio.MinimumWidth = 6;
-            this.gridPrecio.Name = "gridPrecio";
-            this.gridPrecio.ReadOnly = true;
-            this.gridPrecio.Width = 70;
-            // 
-            // gridMonto
-            // 
-            this.gridMonto.DataPropertyName = "Monto";
-            this.gridMonto.HeaderText = "Monto";
-            this.gridMonto.MinimumWidth = 6;
-            this.gridMonto.Name = "gridMonto";
-            this.gridMonto.ReadOnly = true;
-            this.gridMonto.Width = 80;
+            this.DteRadioButton.CheckedChanged += new System.EventHandler(this.DteRadioButton_CheckedChanged);
             // 
             // FacturacionDte_boleta
             // 
@@ -761,7 +764,7 @@
             this.Controls.Add(this.BoletasRadioButton);
             this.Controls.Add(this.DteRadioButton);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.generarNcNd);
+            this.Controls.Add(this.generarFacturacioDte_Boleta);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox2);
@@ -797,7 +800,7 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textSucursal;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button generarNcNd;
+        private System.Windows.Forms.Button generarFacturacioDte_Boleta;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textRznReceptor;
         private System.Windows.Forms.TextBox textCiudadReceptor;
