@@ -41,7 +41,6 @@
             this.checkUnidad = new System.Windows.Forms.CheckBox();
             this.numericPrecio = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.botonAgregarLinea = new System.Windows.Forms.Button();
             this.numericCantidad = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.gridResultados = new System.Windows.Forms.DataGridView();
             this.comboBoxImpuesto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.generarAgregarProducto = new System.Windows.Forms.Button();
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,9 +57,7 @@
             this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.umedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Impuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generarAgregarProducto = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecio)).BeginInit();
@@ -128,7 +126,6 @@
             this.groupBox2.Controls.Add(this.checkUnidad);
             this.groupBox2.Controls.Add(this.numericPrecio);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.botonAgregarLinea);
             this.groupBox2.Controls.Add(this.numericCantidad);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textNombre);
@@ -175,15 +172,6 @@
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Precio:";
-            // 
-            // botonAgregarLinea
-            // 
-            this.botonAgregarLinea.Location = new System.Drawing.Point(236, 51);
-            this.botonAgregarLinea.Name = "botonAgregarLinea";
-            this.botonAgregarLinea.Size = new System.Drawing.Size(39, 30);
-            this.botonAgregarLinea.TabIndex = 15;
-            this.botonAgregarLinea.Text = " + ";
-            this.botonAgregarLinea.UseVisualStyleBackColor = true;
             // 
             // numericCantidad
             // 
@@ -254,7 +242,6 @@
             this.gridPrecio,
             this.umedida,
             this.stock,
-            this.Impuesto,
             this.gridTotal});
             this.gridResultados.Location = new System.Drawing.Point(5, 13);
             this.gridResultados.Name = "gridResultados";
@@ -284,6 +271,21 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Impuesto:";
             // 
+            // generarAgregarProducto
+            // 
+            this.generarAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarAgregarProducto.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarAgregarProducto.Location = new System.Drawing.Point(699, 227);
+            this.generarAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.generarAgregarProducto.Name = "generarAgregarProducto";
+            this.generarAgregarProducto.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarAgregarProducto.Size = new System.Drawing.Size(76, 28);
+            this.generarAgregarProducto.TabIndex = 21;
+            this.generarAgregarProducto.Text = "Generar";
+            this.generarAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarAgregarProducto.UseVisualStyleBackColor = true;
+            // 
             // Activo
             // 
             this.Activo.HeaderText = "Activo";
@@ -298,14 +300,14 @@
             this.gridNombreProducto.MinimumWidth = 6;
             this.gridNombreProducto.Name = "gridNombreProducto";
             this.gridNombreProducto.ReadOnly = true;
-            this.gridNombreProducto.Width = 150;
+            this.gridNombreProducto.Width = 187;
             // 
             // codigoBarra
             // 
             this.codigoBarra.HeaderText = "Codigo Barra";
             this.codigoBarra.Name = "codigoBarra";
             this.codigoBarra.ReadOnly = true;
-            this.codigoBarra.Width = 150;
+            this.codigoBarra.Width = 187;
             // 
             // gridCantidadProducto
             // 
@@ -345,13 +347,6 @@
             this.stock.ReadOnly = true;
             this.stock.Width = 45;
             // 
-            // Impuesto
-            // 
-            this.Impuesto.HeaderText = "Impuesto";
-            this.Impuesto.Name = "Impuesto";
-            this.Impuesto.ReadOnly = true;
-            this.Impuesto.Width = 70;
-            // 
             // gridTotal
             // 
             this.gridTotal.DataPropertyName = "Total";
@@ -362,21 +357,6 @@
             this.gridTotal.Name = "gridTotal";
             this.gridTotal.ReadOnly = true;
             this.gridTotal.Width = 70;
-            // 
-            // generarAgregarProducto
-            // 
-            this.generarAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarAgregarProducto.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarAgregarProducto.Location = new System.Drawing.Point(699, 227);
-            this.generarAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.generarAgregarProducto.Name = "generarAgregarProducto";
-            this.generarAgregarProducto.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarAgregarProducto.Size = new System.Drawing.Size(76, 28);
-            this.generarAgregarProducto.TabIndex = 21;
-            this.generarAgregarProducto.Text = "Generar";
-            this.generarAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarAgregarProducto.UseVisualStyleBackColor = true;
             // 
             // AgregarProductos
             // 
@@ -392,6 +372,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Productos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -416,7 +397,6 @@
         private System.Windows.Forms.CheckBox checkUnidad;
         private System.Windows.Forms.NumericUpDown numericPrecio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button botonAgregarLinea;
         private System.Windows.Forms.NumericUpDown numericCantidad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textNombre;
@@ -425,6 +405,7 @@
         private System.Windows.Forms.DataGridView gridResultados;
         private System.Windows.Forms.ComboBox comboBoxImpuesto;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button generarAgregarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoBarra;
@@ -432,8 +413,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn umedida;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Impuesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridTotal;
-        private System.Windows.Forms.Button generarAgregarProducto;
     }
 }
