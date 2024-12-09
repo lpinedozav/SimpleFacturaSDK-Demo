@@ -17,13 +17,65 @@ namespace SimpleFacturaSDK_Demo
         private AppSettings _appSettings;
         private SimpleFacturaClient cliente;
         private List<DteEnt> list;
+        private List<DataGridViewColumn> columnasOriginales = new List<DataGridViewColumn>();
+
         public ListadoDteEmitidos_Recibidos()
         {
             InitializeComponent();
             _appSettings = AppSettings.Current;
             cliente = SimpleClientSingleton.Instance;
             EnumHelper.LlenarComboBoxConEnum<DTEType>(comboBoxCodigoTipoDTE);
+            GuardarColumnasOriginales();
+        }
+        private void GuardarColumnasOriginales()
+        {
+            columnasOriginales.Clear();
+            foreach (DataGridViewColumn col in gridResultados.Columns)
+            {
+                // Creamos una copia de la columna original para poder restaurarla más tarde
+                DataGridViewColumn colClone = (DataGridViewColumn)((ICloneable)col).Clone();
+                columnasOriginales.Add(colClone);
+            }
+        }
+        private void RemoverColumnasVacias()
+        {
+            // Recorremos las columnas de derecha a izquierda para poder eliminarlas sin problemas
+            for (int i = gridResultados.Columns.Count - 1; i >= 0; i--)
+            {
+                bool columnaVacia = true;
+                foreach (DataGridViewRow fila in gridResultados.Rows)
+                {
+                    var valor = fila.Cells[i].Value;
+                    if (valor != null && !string.IsNullOrWhiteSpace(valor.ToString()))
+                    {
+                        // Encontramos un valor en esta columna, por lo tanto no está vacía
+                        columnaVacia = false;
+                        break;
+                    }
+                }
 
+                // Si la columna resultó vacía, la removemos
+                if (columnaVacia)
+                {
+                    gridResultados.Columns.RemoveAt(i);
+                }
+            }
+        }
+
+        // Método para resetear las columnas a las originales
+        private void ResetearColumnas()
+        {
+            // Limpia el grid completamente
+            gridResultados.Rows.Clear();
+            gridResultados.Columns.Clear();
+
+            // Restaura las columnas originales
+            foreach (var col in columnasOriginales)
+            {
+                // Clonamos nuevamente por si se requiere regenerar el estado inicial
+                DataGridViewColumn newCol = (DataGridViewColumn)((ICloneable)col).Clone();
+                gridResultados.Columns.Add(newCol);
+            }
         }
 
         private void ListadoDteEmitidos_Load(object sender, EventArgs e)
@@ -31,10 +83,7 @@ namespace SimpleFacturaSDK_Demo
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             numericFolio.Value = 0; // Valor predeterminado para el Folio
-            comboBoxCodigoTipoDTE.SelectedIndex = 3; // Seleccionar el primer ítem del ComboBox
-            dateTimeDesde.Value = DateTime.Parse("2024-12-01"); // Predeterminado a 4 días antes de hoy
-            dateTimeHasta.Value = DateTime.Parse("2024-12-05"); // Predeterminado al día actual
-            radioCertificacion.Checked = true; // Ambiente predeterminado: Certificación
+            ChangeUI();
         }
 
         private async void generarListaDTE_Click(object sender, EventArgs e)
@@ -56,19 +105,26 @@ namespace SimpleFacturaSDK_Demo
                     MessageBox.Show("Por favor, selecciona un ambiente (Certificación o Producción).", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
-                var request = new ListaDteRequest()
+                Response<List<DteEnt>> response;
+                ListaDteRequest request = new ListaDteRequest()
                 {
                     Credenciales = new SDKSimpleFactura.Models.Facturacion.Credenciales()
                 };
                 request.Credenciales.RutEmisor = textRutEmisor.Text;
-                request.Credenciales.NombreSucursal = textNombreSucursal.Text;
+                if (textNombreSucursal.Enabled) { request.Credenciales.NombreSucursal = textNombreSucursal.Text; }
                 var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
                 request.CodigoTipoDte = (DTEType)tipoDte.Value;
                 request.Desde = dateTimeDesde.Value;
                 request.Hasta = dateTimeHasta.Value;
                 request.Ambiente = ambienteSeleccionado;
-                var response = await cliente.Facturacion.ListadoDtesEmitidosAsync(request);
+                if (radio_Bton_emitidoListado.Checked)
+                {
+                    response = await cliente.Facturacion.ListadoDtesEmitidosAsync(request);
+                }
+                else
+                {
+                    response = await cliente.Proveedores.ListadoDtesRecibidosAsync(request);
+                }
                 if (response.Status == 400 || response.Status == 500)
                 {
                     MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -76,16 +132,13 @@ namespace SimpleFacturaSDK_Demo
                 else
                 {
                     list = response.Data;
-
-
+                    ResetearColumnas();
                     gridResultados.Rows.Clear();
                     gridResultados.CellContentClick += dataGridConsolidado_CellContentClick;
                     DataGridViewButtonCell detallesColumn = new DataGridViewButtonCell();
                     detallesColumn.Value = "Ver Detalles";
-                    detallesColumn.UseColumnTextForButtonValue = true; // Hace que todas las celdas muestren el mismo texto en el botón
-                                                                       // Recorre cada objeto RepoteDTE en la lista
+                    detallesColumn.UseColumnTextForButtonValue = true;
                     gridResultados.AllowUserToAddRows = false;
-
                     foreach (var reporte in list)
                     {
                         int rowIndex = gridResultados.Rows.Add(
@@ -111,6 +164,7 @@ namespace SimpleFacturaSDK_Demo
                         DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)row.Cells["detalles"];
                         buttonCell.Value = "Ver Detalles";
                     }
+                    RemoverColumnasVacias();
 
                 }
             }
@@ -146,6 +200,37 @@ namespace SimpleFacturaSDK_Demo
             Detalles detallesForm = new Detalles();
             detallesForm.SetDetalles(detalles);
             detallesForm.ShowDialog();
+        }
+
+        private void radio_Bton_emitidoListado_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeUI();
+        }
+
+        private void radio_Bton_recibidoListado_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeUI();
+        }
+        private void ChangeUI()
+        {
+            if (radio_Bton_emitidoListado.Checked) 
+            { 
+                textNombreSucursal.Enabled = true; 
+                dateTimeDesde.Value = DateTime.Parse("2024-12-01"); 
+                dateTimeHasta.Value = DateTime.Parse("2024-12-05");
+                comboBoxCodigoTipoDTE.SelectedIndex = 3;
+                radioCertificacion.Checked = true;
+                radioProduccion.Checked = false;
+            }
+            if (radio_Bton_recibidoListado.Checked) 
+            { 
+                textNombreSucursal.Enabled = false; 
+                dateTimeDesde.Value = DateTime.Parse("2024-04-01"); 
+                dateTimeHasta.Value = DateTime.Parse("2024-04-30"); 
+                comboBoxCodigoTipoDTE.SelectedIndex = 0; 
+                radioCertificacion.Checked = false; 
+                radioProduccion.Checked = true; 
+            }
         }
     }
 }
