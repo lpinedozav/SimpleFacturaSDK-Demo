@@ -1,5 +1,6 @@
 ﻿using SDKSimpleFactura;
 using SDKSimpleFactura.Models.Facturacion;
+using SDKSimpleFactura.Models.Response;
 using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
@@ -27,7 +28,9 @@ namespace SimpleFacturaSDK_Demo
         {
             cliente = SimpleClientSingleton.Instance;
             tipodte_oXML.SelectedIndex = 3;
-            textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            textRutE.Text = _appSettings.Credenciales.RutEmisor;
+            textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+            ChangeUI();
         }
 
         private void cancelarXml_Click(object sender, EventArgs e)
@@ -54,65 +57,86 @@ namespace SimpleFacturaSDK_Demo
                     MessageBox.Show("Por favor, selecciona un ambiente (Certificación o Producción).", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if (tipodte_oXML.SelectedItem is ComboBoxItem selectedItem)
+                Response<byte[]> response;
+                if (radioButton_emitidoXml.Checked)
                 {
-                    var tipoDte = (DTEType)selectedItem.Value;
                     var request = new SolicitudDte
                     {
                         Credenciales = new SDKSimpleFactura.Models.Facturacion.Credenciales(),
                         DteReferenciadoExterno = new DteReferenciadoExterno()
                     };
 
-                    request.Credenciales.RutEmisor = textRutEmisor.Text;
+                    request.Credenciales.RutEmisor = textRutE.Text;
                     request.DteReferenciadoExterno.Folio = (int)folio_oPDF.Value;
-                    request.DteReferenciadoExterno.CodigoTipoDte = (int)tipoDte;
+                    request.DteReferenciadoExterno.CodigoTipoDte = (int)EnumHelper.ObtenerValorSeleccionado<DTEType>(tipodte_oXML);
                     request.DteReferenciadoExterno.Ambiente = (int)ambienteSeleccionado;
-                    var response = await cliente.Facturacion.ObtenerXmlDteAsync(request);
-                    if ((int)response.Status == 400 || (int)response.Status == 500)
-                    {
-                        MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        try
-                        {
-                            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-                            string directoryPath = Path.Combine(projectDirectory, "Files");
-                            if (!Directory.Exists(directoryPath))
-                            {
-                                Directory.CreateDirectory(directoryPath);
-                            }
-                            string filePath = Path.Combine(directoryPath, $"XML_{DateTime.Now:yyyyMMdd_HHmmss}.xml");
-                            File.WriteAllBytes(filePath, response.Data);
-
-                            // Abrir el archivo XML en el navegador predeterminado
-                            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-                            {
-                                FileName = filePath,
-                                UseShellExecute = true
-                            });
-
-                            MessageBox.Show($"El XML se ha guardado correctamente en: {filePath}\nSe ha abierto en el navegador.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Error al guardar o abrir el XML: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-
-
+                    response = await cliente.Facturacion.ObtenerXmlDteAsync(request);
                 }
                 else
                 {
-                    // Manejo en caso de que no se seleccione ningún valor
-                    MessageBox.Show("Por favor, selecciona un tipo de DTE válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    var request = new SDKSimpleFactura.Models.Request.ListaDteRequest()
+                    {
+                        Credenciales = new SDKSimpleFactura.Models.Facturacion.Credenciales(), // Inicializamos Credenciales
+                    };
+                    request.Credenciales.RutEmisor = textRutE.Text;
+                    request.Credenciales.RutContribuyente = textRutContribuyente.Text;
+                    request.CodigoTipoDte = EnumHelper.ObtenerValorSeleccionado<DTEType>(tipodte_oXML);
+                    request.Ambiente = ambienteSeleccionado;
+                    request.Folio = (int)folio_oPDF.Value;
+                    response = await cliente.Proveedores.ObtenerXmlAsync(request);
                 }
+                if (response.Status == 400 || response.Status == 500)
+                {
+                    MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    try
+                    {
+                        string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                        string directoryPath = Path.Combine(projectDirectory, "Files");
+                        if (!Directory.Exists(directoryPath))
+                        {
+                            Directory.CreateDirectory(directoryPath);
+                        }
+                        string filePath = Path.Combine(directoryPath, $"XML_{DateTime.Now:yyyyMMdd_HHmmss}.xml");
+                        File.WriteAllBytes(filePath, response.Data);
+
+                        // Abrir el archivo XML en el navegador predeterminado
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                        {
+                            FileName = filePath,
+                            UseShellExecute = true
+                        });
+
+                        MessageBox.Show($"El XML se ha guardado correctamente en: {filePath}\nSe ha abierto en el navegador.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al guardar o abrir el XML: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void radioButton_emitidoXml_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeUI();
+        }
+
+        private void radio_Bton_recibidoXml_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeUI();
+        }
+        private void ChangeUI()
+        {
+            if (radioButton_emitidoXml.Checked) { textRutContribuyente.Enabled = false; textNombreSucursal.Enabled = true; folio_oPDF.Value = 4117; }
+            if (radio_Bton_recibidoXml.Checked) { textNombreSucursal.Enabled = false; textRutContribuyente.Enabled = true; textRutContribuyente.Text = "76269769-6"; folio_oPDF.Value = 4405; }
         }
     }
 }
