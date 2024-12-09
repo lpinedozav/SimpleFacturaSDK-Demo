@@ -35,13 +35,14 @@
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.tipodte_oXML = new System.Windows.Forms.ComboBox();
             this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.radio_Bton_recibidoXml = new System.Windows.Forms.RadioButton();
+            this.radio_Bton_emitidoXml = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -52,8 +53,8 @@
             this.generarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarXml.Location = new System.Drawing.Point(198, 214);
-            this.generarXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarXml.Location = new System.Drawing.Point(201, 217);
+            this.generarXml.Margin = new System.Windows.Forms.Padding(2);
             this.generarXml.Name = "generarXml";
             this.generarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarXml.Size = new System.Drawing.Size(76, 28);
@@ -69,15 +70,14 @@
             this.groupBox2.Controls.Add(this.radioCertificacion);
             this.groupBox2.Controls.Add(this.tipodte_oXML);
             this.groupBox2.Controls.Add(this.folio_oPDF);
-            this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(9, 78);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(11, 103);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(266, 132);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(266, 110);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dte Referenciado Externo";
@@ -86,7 +86,7 @@
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(184, 76);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
@@ -98,7 +98,7 @@
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(94, 76);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
@@ -110,7 +110,7 @@
             // 
             this.tipodte_oXML.FormattingEnabled = true;
             this.tipodte_oXML.Location = new System.Drawing.Point(92, 44);
-            this.tipodte_oXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipodte_oXML.Margin = new System.Windows.Forms.Padding(2);
             this.tipodte_oXML.Name = "tipodte_oXML";
             this.tipodte_oXML.Size = new System.Drawing.Size(141, 21);
             this.tipodte_oXML.TabIndex = 15;
@@ -119,7 +119,7 @@
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(93, 18);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.folio_oPDF.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -134,14 +134,6 @@
             0,
             0,
             0});
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(7, 132);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(311, 20);
-            this.textBox5.TabIndex = 9;
             // 
             // label5
             // 
@@ -177,10 +169,10 @@
             // 
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(11, 36);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(266, 63);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -189,7 +181,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(164, 20);
             this.textRutEmisor.TabIndex = 2;
@@ -205,17 +197,41 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut Emisor:";
             // 
+            // radio_Bton_recibidoXml
+            // 
+            this.radio_Bton_recibidoXml.Location = new System.Drawing.Point(86, 11);
+            this.radio_Bton_recibidoXml.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_recibidoXml.Name = "radio_Bton_recibidoXml";
+            this.radio_Bton_recibidoXml.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_recibidoXml.TabIndex = 41;
+            this.radio_Bton_recibidoXml.Text = "Recibido";
+            this.radio_Bton_recibidoXml.UseVisualStyleBackColor = true;
+            // 
+            // radio_Bton_emitidoXml
+            // 
+            this.radio_Bton_emitidoXml.Checked = true;
+            this.radio_Bton_emitidoXml.Location = new System.Drawing.Point(11, 11);
+            this.radio_Bton_emitidoXml.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_emitidoXml.Name = "radio_Bton_emitidoXml";
+            this.radio_Bton_emitidoXml.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_emitidoXml.TabIndex = 40;
+            this.radio_Bton_emitidoXml.TabStop = true;
+            this.radio_Bton_emitidoXml.Text = "Emitido";
+            this.radio_Bton_emitidoXml.UseVisualStyleBackColor = true;
+            // 
             // ObtenerXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 255);
+            this.ClientSize = new System.Drawing.Size(287, 252);
+            this.Controls.Add(this.radio_Bton_recibidoXml);
+            this.Controls.Add(this.radio_Bton_emitidoXml);
             this.Controls.Add(this.generarXml);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ObtenerXML";
@@ -238,12 +254,13 @@
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.ComboBox tipodte_oXML;
         private System.Windows.Forms.NumericUpDown folio_oPDF;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textRutEmisor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radio_Bton_recibidoXml;
+        private System.Windows.Forms.RadioButton radio_Bton_emitidoXml;
     }
 }

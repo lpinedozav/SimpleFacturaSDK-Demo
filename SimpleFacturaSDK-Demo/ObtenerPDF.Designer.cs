@@ -41,11 +41,12 @@ namespace SimpleFacturaSDK_Demo
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.tipodte_oPDF = new System.Windows.Forms.ComboBox();
             this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.generarpdf = new System.Windows.Forms.Button();
+            this.radio_Bton_recibidoPdf = new System.Windows.Forms.RadioButton();
+            this.radio_Bton_emitidoPdf = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
@@ -57,10 +58,10 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(9, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(11, 38);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(267, 96);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -69,7 +70,7 @@ namespace SimpleFacturaSDK_Demo
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(93, 55);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 0;
@@ -78,7 +79,7 @@ namespace SimpleFacturaSDK_Demo
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 0;
@@ -110,15 +111,14 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox2.Controls.Add(this.radioCertificacion);
             this.groupBox2.Controls.Add(this.tipodte_oPDF);
             this.groupBox2.Controls.Add(this.folio_oPDF);
-            this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(9, 111);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(11, 138);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(267, 132);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(267, 106);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dte Referenciado Externo";
@@ -127,7 +127,7 @@ namespace SimpleFacturaSDK_Demo
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(184, 76);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 0;
@@ -139,7 +139,7 @@ namespace SimpleFacturaSDK_Demo
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(94, 76);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 0;
@@ -152,7 +152,7 @@ namespace SimpleFacturaSDK_Demo
             this.tipodte_oPDF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipodte_oPDF.FormattingEnabled = true;
             this.tipodte_oPDF.Location = new System.Drawing.Point(92, 44);
-            this.tipodte_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipodte_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.tipodte_oPDF.Name = "tipodte_oPDF";
             this.tipodte_oPDF.Size = new System.Drawing.Size(164, 21);
             this.tipodte_oPDF.TabIndex = 0;
@@ -161,7 +161,7 @@ namespace SimpleFacturaSDK_Demo
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(93, 18);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.folio_oPDF.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -176,14 +176,6 @@ namespace SimpleFacturaSDK_Demo
             0,
             0,
             0});
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(7, 132);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(311, 20);
-            this.textBox5.TabIndex = 9;
             // 
             // label5
             // 
@@ -220,8 +212,8 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(200, 248);
-            this.generarpdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarpdf.Location = new System.Drawing.Point(202, 248);
+            this.generarpdf.Margin = new System.Windows.Forms.Padding(2);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarpdf.Size = new System.Drawing.Size(76, 28);
@@ -231,17 +223,41 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf.UseVisualStyleBackColor = true;
             this.generarpdf.Click += new System.EventHandler(this.generarPdf_Click);
             // 
+            // radio_Bton_recibidoPdf
+            // 
+            this.radio_Bton_recibidoPdf.Location = new System.Drawing.Point(86, 11);
+            this.radio_Bton_recibidoPdf.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_recibidoPdf.Name = "radio_Bton_recibidoPdf";
+            this.radio_Bton_recibidoPdf.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_recibidoPdf.TabIndex = 39;
+            this.radio_Bton_recibidoPdf.Text = "Recibido";
+            this.radio_Bton_recibidoPdf.UseVisualStyleBackColor = true;
+            // 
+            // radio_Bton_emitidoPdf
+            // 
+            this.radio_Bton_emitidoPdf.Checked = true;
+            this.radio_Bton_emitidoPdf.Location = new System.Drawing.Point(11, 11);
+            this.radio_Bton_emitidoPdf.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_emitidoPdf.Name = "radio_Bton_emitidoPdf";
+            this.radio_Bton_emitidoPdf.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_emitidoPdf.TabIndex = 38;
+            this.radio_Bton_emitidoPdf.TabStop = true;
+            this.radio_Bton_emitidoPdf.Text = "Emitido";
+            this.radio_Bton_emitidoPdf.UseVisualStyleBackColor = true;
+            // 
             // ObtenerPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 286);
+            this.ClientSize = new System.Drawing.Size(290, 282);
+            this.Controls.Add(this.radio_Bton_recibidoPdf);
+            this.Controls.Add(this.radio_Bton_emitidoPdf);
             this.Controls.Add(this.generarpdf);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ObtenerPDF";
@@ -268,7 +284,6 @@ namespace SimpleFacturaSDK_Demo
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNombreSucursal;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -276,5 +291,7 @@ namespace SimpleFacturaSDK_Demo
         private System.Windows.Forms.NumericUpDown folio_oPDF;
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.RadioButton radioProduccion;
+        private System.Windows.Forms.RadioButton radio_Bton_recibidoPdf;
+        private System.Windows.Forms.RadioButton radio_Bton_emitidoPdf;
     }
 }
