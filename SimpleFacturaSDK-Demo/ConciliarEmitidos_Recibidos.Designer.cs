@@ -115,7 +115,7 @@
             // 
             // textMes
             // 
-            this.textMes.Location = new System.Drawing.Point(82, 90);
+            this.textMes.Location = new System.Drawing.Point(82, 97);
             this.textMes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textMes.Maximum = new decimal(new int[] {
             12,
@@ -144,7 +144,7 @@
             // labelMes
             // 
             this.labelMes.AutoSize = true;
-            this.labelMes.Location = new System.Drawing.Point(14, 95);
+            this.labelMes.Location = new System.Drawing.Point(14, 102);
             this.labelMes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMes.Name = "labelMes";
             this.labelMes.Size = new System.Drawing.Size(30, 13);
