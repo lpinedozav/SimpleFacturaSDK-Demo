@@ -226,6 +226,12 @@
     <Compile Include="Acuse.Designer.cs">
       <DependentUpon>Acuse.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProductos.Designer.cs">
+      <DependentUpon>AgregarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConciliarEmitidos_Recibidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +340,9 @@
     <Compile Include="SimpleFacturaClient.cs" />
     <EmbeddedResource Include="Acuse.resx">
       <DependentUpon>Acuse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProductos.resx">
+      <DependentUpon>AgregarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConciliarEmitidos_Recibidos.resx">
       <DependentUpon>ConciliarEmitidos_Recibidos.cs</DependentUpon>
