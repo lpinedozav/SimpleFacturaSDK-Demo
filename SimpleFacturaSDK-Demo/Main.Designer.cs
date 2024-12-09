@@ -89,7 +89,7 @@
             // 
             this.tabControl2.Controls.Add(this.item_facturacion);
             this.tabControl2.Controls.Add(this.item_otros);
-            this.tabControl2.Location = new System.Drawing.Point(13, 55);
+            this.tabControl2.Location = new System.Drawing.Point(12, 42);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(623, 311);
@@ -341,7 +341,7 @@
             // 
             // consultarFolios
             // 
-            this.consultarFolios.Location = new System.Drawing.Point(12, 111);
+            this.consultarFolios.Location = new System.Drawing.Point(15, 107);
             this.consultarFolios.Name = "consultarFolios";
             this.consultarFolios.Size = new System.Drawing.Size(164, 38);
             this.consultarFolios.TabIndex = 13;
@@ -350,7 +350,7 @@
             // 
             // FoliosSinUso
             // 
-            this.FoliosSinUso.Location = new System.Drawing.Point(12, 155);
+            this.FoliosSinUso.Location = new System.Drawing.Point(15, 151);
             this.FoliosSinUso.Name = "FoliosSinUso";
             this.FoliosSinUso.Size = new System.Drawing.Size(164, 38);
             this.FoliosSinUso.TabIndex = 11;
@@ -359,7 +359,7 @@
             // 
             // FoliosDisponibles
             // 
-            this.FoliosDisponibles.Location = new System.Drawing.Point(12, 23);
+            this.FoliosDisponibles.Location = new System.Drawing.Point(15, 19);
             this.FoliosDisponibles.Name = "FoliosDisponibles";
             this.FoliosDisponibles.Size = new System.Drawing.Size(164, 38);
             this.FoliosDisponibles.TabIndex = 11;
@@ -368,7 +368,7 @@
             // 
             // solicitarFolios
             // 
-            this.solicitarFolios.Location = new System.Drawing.Point(12, 67);
+            this.solicitarFolios.Location = new System.Drawing.Point(15, 63);
             this.solicitarFolios.Name = "solicitarFolios";
             this.solicitarFolios.Size = new System.Drawing.Size(164, 38);
             this.solicitarFolios.TabIndex = 12;
@@ -504,7 +504,7 @@
             // 
             // Main
             // 
-            this.ClientSize = new System.Drawing.Size(644, 373);
+            this.ClientSize = new System.Drawing.Size(644, 369);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
