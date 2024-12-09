@@ -37,6 +37,12 @@
             this.Acuse = new System.Windows.Forms.Button();
             this.envio_mail = new System.Windows.Forms.Button();
             this.consolidado_ventas = new System.Windows.Forms.Button();
+            this.dte_recibidos = new System.Windows.Forms.GroupBox();
+            this.obtener_pdfRecibido = new System.Windows.Forms.Button();
+            this.Conciliar_Recibidos = new System.Windows.Forms.Button();
+            this.obtener_xmlRecibido = new System.Windows.Forms.Button();
+            this.Acuse = new System.Windows.Forms.Button();
+            this.listado_DteRecibido = new System.Windows.Forms.Button();
             this.emision_dte = new System.Windows.Forms.GroupBox();
             this.emision_nc_nd = new System.Windows.Forms.Button();
             this.facturacion_masiva = new System.Windows.Forms.Button();
@@ -61,6 +67,7 @@
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
+            this.dte_recibidos.SuspendLayout();
             this.emision_dte.SuspendLayout();
             this.obtenerdte.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -85,7 +92,7 @@
             this.item_facturacion.Controls.Add(this.otros);
             this.item_facturacion.Controls.Add(this.emision_dte);
             this.item_facturacion.Controls.Add(this.obtenerdte);
-            this.item_facturacion.Location = new System.Drawing.Point(4, 22);
+            this.item_facturacion.Location = new System.Drawing.Point(4, 25);
             this.item_facturacion.Name = "item_facturacion";
             this.item_facturacion.Padding = new System.Windows.Forms.Padding(3);
             this.item_facturacion.Size = new System.Drawing.Size(615, 289);
@@ -276,7 +283,7 @@
             // 
             // item_productos
             // 
-            this.item_productos.Location = new System.Drawing.Point(4, 22);
+            this.item_productos.Location = new System.Drawing.Point(4, 25);
             this.item_productos.Name = "item_productos";
             this.item_productos.Padding = new System.Windows.Forms.Padding(3);
             this.item_productos.Size = new System.Drawing.Size(771, 289);
@@ -286,7 +293,7 @@
             // 
             // item_clientes
             // 
-            this.item_clientes.Location = new System.Drawing.Point(4, 22);
+            this.item_clientes.Location = new System.Drawing.Point(4, 25);
             this.item_clientes.Name = "item_clientes";
             this.item_clientes.Size = new System.Drawing.Size(771, 289);
             this.item_clientes.TabIndex = 3;
@@ -295,7 +302,7 @@
             // 
             // item_folios
             // 
-            this.item_folios.Location = new System.Drawing.Point(4, 22);
+            this.item_folios.Location = new System.Drawing.Point(4, 25);
             this.item_folios.Name = "item_folios";
             this.item_folios.Size = new System.Drawing.Size(771, 289);
             this.item_folios.TabIndex = 5;
@@ -304,7 +311,7 @@
             // 
             // item_bh
             // 
-            this.item_bh.Location = new System.Drawing.Point(4, 22);
+            this.item_bh.Location = new System.Drawing.Point(4, 25);
             this.item_bh.Name = "item_bh";
             this.item_bh.Size = new System.Drawing.Size(771, 289);
             this.item_bh.TabIndex = 6;
@@ -313,7 +320,7 @@
             // 
             // item_otros
             // 
-            this.item_otros.Location = new System.Drawing.Point(4, 22);
+            this.item_otros.Location = new System.Drawing.Point(4, 25);
             this.item_otros.Name = "item_otros";
             this.item_otros.Size = new System.Drawing.Size(771, 289);
             this.item_otros.TabIndex = 4;
@@ -341,7 +348,7 @@
             // 
             this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
             this.Configuracion.Name = "Configuracion";
-            this.Configuracion.Size = new System.Drawing.Size(115, 24);
+            this.Configuracion.Size = new System.Drawing.Size(136, 24);
             this.Configuracion.Text = "Configuración";
             this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
             // 
@@ -366,7 +373,6 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl2.ResumeLayout(false);
             this.item_facturacion.ResumeLayout(false);
-            this.otros.ResumeLayout(false);
             this.emision_dte.ResumeLayout(false);
             this.obtenerdte.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
