@@ -164,7 +164,6 @@
             this.obtener_pdfRecibido.TabIndex = 15;
             this.obtener_pdfRecibido.Text = "Obtener PDF";
             this.obtener_pdfRecibido.UseVisualStyleBackColor = true;
-            this.obtener_pdfRecibido.Click += new System.EventHandler(this.obtener_pdfRecibido_Click);
             // 
             // Conciliar_Recibidos
             // 
@@ -174,7 +173,6 @@
             this.Conciliar_Recibidos.TabIndex = 14;
             this.Conciliar_Recibidos.Text = "Conciliar Recibidos";
             this.Conciliar_Recibidos.UseVisualStyleBackColor = true;
-            this.Conciliar_Recibidos.Click += new System.EventHandler(this.Conciliar_Recibidos_Click);
             // 
             // obtener_xmlRecibido
             // 

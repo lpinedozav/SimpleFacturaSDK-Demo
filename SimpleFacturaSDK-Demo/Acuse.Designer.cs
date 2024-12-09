@@ -30,11 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Acuse));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioProduccion = new System.Windows.Forms.RadioButton();
+            this.radioCertificacion = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.comboBoxCodigoTipoDTE = new System.Windows.Forms.ComboBox();
-            this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
+            this.numericFolio = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textNombreSucursal = new System.Windows.Forms.TextBox();
             this.textRutContribuyente = new System.Windows.Forms.TextBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,13 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.generarAcuse = new System.Windows.Forms.Button();
-            this.textNombreSucursal = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.radioProduccion = new System.Windows.Forms.RadioButton();
-            this.radioCertificacion = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -64,17 +64,50 @@
             this.groupBox2.Controls.Add(this.radioCertificacion);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.comboBoxCodigoTipoDTE);
-            this.groupBox2.Controls.Add(this.folio_oPDF);
+            this.groupBox2.Controls.Add(this.numericFolio);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(15, 157);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(323, 133);
+            this.groupBox2.Size = new System.Drawing.Size(323, 123);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dte Referenciado Externo";
+            // 
+            // radioProduccion
+            // 
+            this.radioProduccion.AutoSize = true;
+            this.radioProduccion.Location = new System.Drawing.Point(215, 91);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioProduccion.Name = "radioProduccion";
+            this.radioProduccion.Size = new System.Drawing.Size(96, 20);
+            this.radioProduccion.TabIndex = 20;
+            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.UseVisualStyleBackColor = true;
+            // 
+            // radioCertificacion
+            // 
+            this.radioCertificacion.AutoSize = true;
+            this.radioCertificacion.Checked = true;
+            this.radioCertificacion.Location = new System.Drawing.Point(108, 91);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioCertificacion.Name = "radioCertificacion";
+            this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
+            this.radioCertificacion.TabIndex = 19;
+            this.radioCertificacion.TabStop = true;
+            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Ambiente:";
             // 
             // comboBoxCodigoTipoDTE
             // 
@@ -87,20 +120,20 @@
             this.comboBoxCodigoTipoDTE.TabIndex = 0;
             this.comboBoxCodigoTipoDTE.TabStop = false;
             // 
-            // folio_oPDF
+            // numericFolio
             // 
-            this.folio_oPDF.Location = new System.Drawing.Point(124, 22);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.folio_oPDF.Maximum = new decimal(new int[] {
+            this.numericFolio.Location = new System.Drawing.Point(124, 22);
+            this.numericFolio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericFolio.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.folio_oPDF.Name = "folio_oPDF";
-            this.folio_oPDF.Size = new System.Drawing.Size(187, 22);
-            this.folio_oPDF.TabIndex = 0;
-            this.folio_oPDF.TabStop = false;
-            this.folio_oPDF.Value = new decimal(new int[] {
+            this.numericFolio.Name = "numericFolio";
+            this.numericFolio.Size = new System.Drawing.Size(187, 22);
+            this.numericFolio.TabIndex = 0;
+            this.numericFolio.TabStop = false;
+            this.numericFolio.Value = new decimal(new int[] {
             4117,
             0,
             0,
@@ -141,6 +174,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Nombre sucursal:";
+            // 
+            // textNombreSucursal
+            // 
+            this.textNombreSucursal.Location = new System.Drawing.Point(123, 96);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textNombreSucursal.Name = "textNombreSucursal";
+            this.textNombreSucursal.Size = new System.Drawing.Size(185, 22);
+            this.textNombreSucursal.TabIndex = 2;
+            this.textNombreSucursal.TabStop = false;
+            // 
             // textRutContribuyente
             // 
             this.textRutContribuyente.Location = new System.Drawing.Point(124, 62);
@@ -164,7 +215,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(5, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Rut contribuyente:";
             // 
@@ -185,7 +236,7 @@
             this.groupBox3.Controls.Add(this.comboBoxTipoRechazo);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(15, 294);
+            this.groupBox3.Location = new System.Drawing.Point(15, 284);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -257,7 +308,7 @@
             this.generarAcuse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarAcuse.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarAcuse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarAcuse.Location = new System.Drawing.Point(237, 435);
+            this.generarAcuse.Location = new System.Drawing.Point(237, 425);
             this.generarAcuse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.generarAcuse.Name = "generarAcuse";
             this.generarAcuse.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
@@ -266,62 +317,13 @@
             this.generarAcuse.Text = "Generar";
             this.generarAcuse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarAcuse.UseVisualStyleBackColor = true;
-            // 
-            // textNombreSucursal
-            // 
-            this.textNombreSucursal.Location = new System.Drawing.Point(123, 96);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textNombreSucursal.Name = "textNombreSucursal";
-            this.textNombreSucursal.Size = new System.Drawing.Size(185, 22);
-            this.textNombreSucursal.TabIndex = 2;
-            this.textNombreSucursal.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 16);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Nombre sucursal:";
-            // 
-            // radioProduccion
-            // 
-            this.radioProduccion.AutoSize = true;
-            this.radioProduccion.Location = new System.Drawing.Point(215, 101);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioProduccion.Name = "radioProduccion";
-            this.radioProduccion.Size = new System.Drawing.Size(96, 20);
-            this.radioProduccion.TabIndex = 20;
-            this.radioProduccion.Text = "Produccion";
-            this.radioProduccion.UseVisualStyleBackColor = true;
-            // 
-            // radioCertificacion
-            // 
-            this.radioCertificacion.AutoSize = true;
-            this.radioCertificacion.Checked = true;
-            this.radioCertificacion.Location = new System.Drawing.Point(108, 101);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioCertificacion.Name = "radioCertificacion";
-            this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
-            this.radioCertificacion.TabIndex = 19;
-            this.radioCertificacion.Text = "Certificacion";
-            this.radioCertificacion.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 16);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Ambiente:";
+            this.generarAcuse.Click += new System.EventHandler(this.generarAcuse_Click);
             // 
             // Acuse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 478);
+            this.ClientSize = new System.Drawing.Size(350, 465);
             this.Controls.Add(this.generarAcuse);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -337,7 +339,7 @@
             this.Load += new System.EventHandler(this.Acuse_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -350,7 +352,7 @@
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBoxCodigoTipoDTE;
-        private System.Windows.Forms.NumericUpDown folio_oPDF;
+        private System.Windows.Forms.NumericUpDown numericFolio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
