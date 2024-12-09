@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<DTE version="1.0">
+<Documento ID="DTE_76269769_T33_F4405">
+<Encabezado>
+<IdDoc>
+<TipoDTE>33</TipoDTE>
+<Folio>4405</Folio>
+<FchEmis>2024-06-19</FchEmis>
+<FmaPago>1</FmaPago>
+<FchVenc>2024-06-19</FchVenc>
+</IdDoc>
+<Emisor>
+<RUTEmisor>76269769-6</RUTEmisor>
+<RznSoc>CHILESYSTEMS</RznSoc>
+<GiroEmis>Desarrollo de software</GiroEmis>
+<Telefono>99999999</Telefono>
+<CorreoEmisor>chilesystems@chilesystems.com</CorreoEmisor>
+<Acteco>620900</Acteco>
+<DirOrigen>Calle 7 numero 3 </DirOrigen>
+<CmnaOrigen>Santiago</CmnaOrigen>
+<CiudadOrigen>Santiago</CiudadOrigen>
+</Emisor>
+<Receptor>
+<RUTRecep>76269769-6</RUTRecep>
+<RznSocRecep>SERVICIOS INFORMATICOS GONZALO ALEJANDRO BUSTAMANTE BANADOS EMPRESA IN</RznSocRecep>
+<GiroRecep>ACTIVIDADES DE CONSULTORIA DE GESTION</GiroRecep>
+<CorreoRecep>intercambio@chilesystems.com</CorreoRecep>
+<DirRecep>LAS BELLOTAS 199 OF 62      </DirRecep>
+<CmnaRecep>PROVIDENCIA</CmnaRecep>
+<CiudadRecep>PROVIDENCIA</CiudadRecep>
+</Receptor>
+<Totales>
+<MntNeto>1825</MntNeto>
+<TasaIVA>19</TasaIVA>
+<IVA>347</IVA>
+<ImptoReten>
+<TipoImp>271</TipoImp>
+<TasaImp>18</TasaImp>
+<MontoImp>328</MontoImp>
+</ImptoReten>
+<MntTotal>2500</MntTotal>
+</Totales>
+</Encabezado>
+<Detalle>
+<NroLinDet>1</NroLinDet>
+<NmbItem>Coca B</NmbItem>
+<QtyItem>1</QtyItem>
+<UnmdItem>unid</UnmdItem>
+<PrcItem>1824.817518</PrcItem>
+<CodImpAdic>271</CodImpAdic>
+<MontoItem>1825</MontoItem>
+</Detalle>
+<TED version="1.0">
+<DD>
+<RE>76269769-6</RE>
+<TD>33</TD>
+<F>4405</F>
+<FE>2024-06-19</FE>
+<RR>76269769-6</RR>
+<RSR>SERVICIOS INFORMATICOS GONZALO ALEJANDRO</RSR>
+<MNT>2500</MNT>
+<IT1>Coca B</IT1>
+<CAF version="1.0">
+<DA>
+<RE>76269769-6</RE>
+<RS>SERVICIOS INFORMATICOS GONZALO ALEJANDRO</RS>
+<TD>33</TD>
+<RNG>
+<D>4313</D>
+<H>4639</H>
+</RNG>
+<FA>2024-06-14</FA>
+<RSAPK>
+<M>6g6KsuF29WhZ04Q4MGzJjFEW/3i6iBaDV10h0ISWwuoh5gJHNLy9PuXSrv9PlzdnBh2ASQKY7fix/tGfBskopQ==</M>
+<E>Aw==</E>
+</RSAPK>
+<IDK>100</IDK>
+</DA>
+<FRMA algoritmo="SHA1withRSA">GC70K2aZTIhBNlHPNkF+YCOTSo5Gu2v6rDoloNM25UTILMbHjl57qF29FMGco5Cq1DdNJupVln7KsNh7MqVjpA==</FRMA>
+</CAF>
+<TSTED>2024-06-19T11:44:20</TSTED>
+</DD>
+<FRMT algoritmo="SHA1withRSA">NyxXZ+iYmpfG0uVz48IBZ33y/qKNwI5Veb1TK6D2rB1Rokpg13pv+mdh8+5polxGJlpj4TgWyyMdONNcnG4HZw==</FRMT>
+</TED>
+<TmstFirma>2024-06-19T11:44:20</TmstFirma>
+</Documento>
+</DTE>
