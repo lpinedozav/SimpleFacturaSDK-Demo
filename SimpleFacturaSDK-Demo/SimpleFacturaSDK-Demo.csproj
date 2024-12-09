@@ -226,11 +226,11 @@
     <Compile Include="Acuse.Designer.cs">
       <DependentUpon>Acuse.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConciliarEmitidos.cs">
+    <Compile Include="ConciliarEmitidos_Recibidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConciliarEmitidos.Designer.cs">
-      <DependentUpon>ConciliarEmitidos.cs</DependentUpon>
+    <Compile Include="ConciliarEmitidos_Recibidos.Designer.cs">
+      <DependentUpon>ConciliarEmitidos_Recibidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion.cs">
       <SubType>Form</SubType>
@@ -335,8 +335,8 @@
     <EmbeddedResource Include="Acuse.resx">
       <DependentUpon>Acuse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConciliarEmitidos.resx">
-      <DependentUpon>ConciliarEmitidos.cs</DependentUpon>
+    <EmbeddedResource Include="ConciliarEmitidos_Recibidos.resx">
+      <DependentUpon>ConciliarEmitidos_Recibidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>

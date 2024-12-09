@@ -87,9 +87,9 @@ namespace SimpleFacturaSDK_Demo
             formulario.Show();
         }
 
-        private void conciliar_emitidos_Click(object sender, EventArgs e)
+        private void conciliar_emitidos_Recibidos_Click(object sender, EventArgs e)
         {
-            ConciliarEmitidos formulario = new ConciliarEmitidos();
+            ConciliarEmitidos_Recibidos formulario = new ConciliarEmitidos_Recibidos();
             formulario.Show();
         }
 

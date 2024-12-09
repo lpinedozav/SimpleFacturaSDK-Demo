@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
 {
-    public partial class ConciliarEmitidos : Form
+    public partial class ConciliarEmitidos_Recibidos : Form
     {
         private AppSettings _appSettings;
         private SimpleFacturaClient cliente;
-        public ConciliarEmitidos()
+        public ConciliarEmitidos_Recibidos()
         {
             InitializeComponent();
             _appSettings = AppSettings.Current;
