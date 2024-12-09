@@ -32,20 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.item_facturacion = new System.Windows.Forms.TabPage();
+            this.otros = new System.Windows.Forms.GroupBox();
+            this.conciliar_emitidos = new System.Windows.Forms.Button();
+            this.envio_mail = new System.Windows.Forms.Button();
+            this.consolidado_ventas = new System.Windows.Forms.Button();
             this.dte_recibidos = new System.Windows.Forms.GroupBox();
+            this.obtener_pdfRecibido = new System.Windows.Forms.Button();
+            this.Conciliar_Recibidos = new System.Windows.Forms.Button();
             this.obtener_xmlRecibido = new System.Windows.Forms.Button();
             this.Acuse = new System.Windows.Forms.Button();
             this.listado_DteRecibido = new System.Windows.Forms.Button();
-            this.otros = new System.Windows.Forms.GroupBox();
-            this.Conciliar_Recibidos = new System.Windows.Forms.Button();
-            this.conciliar_emitidos = new System.Windows.Forms.Button();
-            this.envio_mail = new System.Windows.Forms.Button();
-            this.listado_dte_emitido = new System.Windows.Forms.Button();
-            this.consolidado_ventas = new System.Windows.Forms.Button();
             this.emision_dte = new System.Windows.Forms.GroupBox();
             this.emision_nc_nd = new System.Windows.Forms.Button();
             this.facturacion_masiva = new System.Windows.Forms.Button();
             this.facturacion_dte = new System.Windows.Forms.Button();
+            this.listado_dte_emitido = new System.Windows.Forms.Button();
             this.facturacion_exportacion = new System.Windows.Forms.Button();
             this.obtenerdte = new System.Windows.Forms.GroupBox();
             this.obtener_sobre_xml = new System.Windows.Forms.Button();
@@ -62,11 +63,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.obtener_pdfRecibido = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
-            this.dte_recibidos.SuspendLayout();
             this.otros.SuspendLayout();
+            this.dte_recibidos.SuspendLayout();
             this.emision_dte.SuspendLayout();
             this.obtenerdte.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -92,57 +92,13 @@
             this.item_facturacion.Controls.Add(this.dte_recibidos);
             this.item_facturacion.Controls.Add(this.emision_dte);
             this.item_facturacion.Controls.Add(this.obtenerdte);
-            this.item_facturacion.Location = new System.Drawing.Point(4, 22);
+            this.item_facturacion.Location = new System.Drawing.Point(4, 25);
             this.item_facturacion.Name = "item_facturacion";
             this.item_facturacion.Padding = new System.Windows.Forms.Padding(3);
-            this.item_facturacion.Size = new System.Drawing.Size(771, 289);
+            this.item_facturacion.Size = new System.Drawing.Size(771, 286);
             this.item_facturacion.TabIndex = 0;
             this.item_facturacion.Text = "Facturación";
             this.item_facturacion.UseVisualStyleBackColor = true;
-            // 
-            // dte_recibidos
-            // 
-            this.dte_recibidos.Controls.Add(this.obtener_pdfRecibido);
-            this.dte_recibidos.Controls.Add(this.Conciliar_Recibidos);
-            this.dte_recibidos.Controls.Add(this.obtener_xmlRecibido);
-            this.dte_recibidos.Controls.Add(this.Acuse);
-            this.dte_recibidos.Controls.Add(this.listado_DteRecibido);
-            this.dte_recibidos.Location = new System.Drawing.Point(374, 15);
-            this.dte_recibidos.Name = "dte_recibidos";
-            this.dte_recibidos.Size = new System.Drawing.Size(187, 254);
-            this.dte_recibidos.TabIndex = 14;
-            this.dte_recibidos.TabStop = false;
-            this.dte_recibidos.Text = "DTE Recibidos";
-            // 
-            // obtener_xmlRecibido
-            // 
-            this.obtener_xmlRecibido.Location = new System.Drawing.Point(14, 117);
-            this.obtener_xmlRecibido.Name = "obtener_xmlRecibido";
-            this.obtener_xmlRecibido.Size = new System.Drawing.Size(158, 38);
-            this.obtener_xmlRecibido.TabIndex = 13;
-            this.obtener_xmlRecibido.Text = "Obtener XML";
-            this.obtener_xmlRecibido.UseVisualStyleBackColor = true;
-            this.obtener_xmlRecibido.Click += new System.EventHandler(this.obtener_xmlRecibido_Click);
-            // 
-            // Acuse
-            // 
-            this.Acuse.Location = new System.Drawing.Point(14, 29);
-            this.Acuse.Name = "Acuse";
-            this.Acuse.Size = new System.Drawing.Size(158, 38);
-            this.Acuse.TabIndex = 11;
-            this.Acuse.Text = "Aceptar o Recharzar DTE";
-            this.Acuse.UseVisualStyleBackColor = true;
-            this.Acuse.Click += new System.EventHandler(this.Acuse_Click);
-            // 
-            // listado_DteRecibido
-            // 
-            this.listado_DteRecibido.Location = new System.Drawing.Point(14, 73);
-            this.listado_DteRecibido.Name = "listado_DteRecibido";
-            this.listado_DteRecibido.Size = new System.Drawing.Size(158, 38);
-            this.listado_DteRecibido.TabIndex = 12;
-            this.listado_DteRecibido.Text = "Listado DTE Recibido";
-            this.listado_DteRecibido.UseVisualStyleBackColor = true;
-            this.listado_DteRecibido.Click += new System.EventHandler(this.listado_DteRecibido_Click);
             // 
             // otros
             // 
@@ -155,16 +111,6 @@
             this.otros.TabIndex = 2;
             this.otros.TabStop = false;
             this.otros.Text = "Otros";
-            // 
-            // Conciliar_Recibidos
-            // 
-            this.Conciliar_Recibidos.Location = new System.Drawing.Point(14, 203);
-            this.Conciliar_Recibidos.Name = "Conciliar_Recibidos";
-            this.Conciliar_Recibidos.Size = new System.Drawing.Size(158, 38);
-            this.Conciliar_Recibidos.TabIndex = 14;
-            this.Conciliar_Recibidos.Text = "Conciliar Recibidos";
-            this.Conciliar_Recibidos.UseVisualStyleBackColor = true;
-            this.Conciliar_Recibidos.Click += new System.EventHandler(this.Conciliar_Recibidos_Click);
             // 
             // conciliar_emitidos
             // 
@@ -186,16 +132,6 @@
             this.envio_mail.UseVisualStyleBackColor = true;
             this.envio_mail.Click += new System.EventHandler(this.envio_mail_Click);
             // 
-            // listado_dte_emitido
-            // 
-            this.listado_dte_emitido.Location = new System.Drawing.Point(14, 203);
-            this.listado_dte_emitido.Name = "listado_dte_emitido";
-            this.listado_dte_emitido.Size = new System.Drawing.Size(145, 38);
-            this.listado_dte_emitido.TabIndex = 10;
-            this.listado_dte_emitido.Text = "Listado DTE Emitido";
-            this.listado_dte_emitido.UseVisualStyleBackColor = true;
-            this.listado_dte_emitido.Click += new System.EventHandler(this.listado_dte_emitido_Click);
-            // 
             // consolidado_ventas
             // 
             this.consolidado_ventas.Location = new System.Drawing.Point(15, 73);
@@ -205,6 +141,70 @@
             this.consolidado_ventas.Text = "Consolidado de ventas";
             this.consolidado_ventas.UseVisualStyleBackColor = true;
             this.consolidado_ventas.Click += new System.EventHandler(this.consolidado_ventas_Click);
+            // 
+            // dte_recibidos
+            // 
+            this.dte_recibidos.Controls.Add(this.obtener_pdfRecibido);
+            this.dte_recibidos.Controls.Add(this.Conciliar_Recibidos);
+            this.dte_recibidos.Controls.Add(this.obtener_xmlRecibido);
+            this.dte_recibidos.Controls.Add(this.Acuse);
+            this.dte_recibidos.Controls.Add(this.listado_DteRecibido);
+            this.dte_recibidos.Location = new System.Drawing.Point(374, 15);
+            this.dte_recibidos.Name = "dte_recibidos";
+            this.dte_recibidos.Size = new System.Drawing.Size(187, 254);
+            this.dte_recibidos.TabIndex = 14;
+            this.dte_recibidos.TabStop = false;
+            this.dte_recibidos.Text = "DTE Recibidos";
+            // 
+            // obtener_pdfRecibido
+            // 
+            this.obtener_pdfRecibido.Location = new System.Drawing.Point(14, 159);
+            this.obtener_pdfRecibido.Name = "obtener_pdfRecibido";
+            this.obtener_pdfRecibido.Size = new System.Drawing.Size(158, 38);
+            this.obtener_pdfRecibido.TabIndex = 15;
+            this.obtener_pdfRecibido.Text = "Obtener PDF";
+            this.obtener_pdfRecibido.UseVisualStyleBackColor = true;
+            this.obtener_pdfRecibido.Click += new System.EventHandler(this.obtener_pdfRecibido_Click);
+            // 
+            // Conciliar_Recibidos
+            // 
+            this.Conciliar_Recibidos.Location = new System.Drawing.Point(14, 203);
+            this.Conciliar_Recibidos.Name = "Conciliar_Recibidos";
+            this.Conciliar_Recibidos.Size = new System.Drawing.Size(158, 38);
+            this.Conciliar_Recibidos.TabIndex = 14;
+            this.Conciliar_Recibidos.Text = "Conciliar Recibidos";
+            this.Conciliar_Recibidos.UseVisualStyleBackColor = true;
+            this.Conciliar_Recibidos.Click += new System.EventHandler(this.Conciliar_Recibidos_Click);
+            // 
+            // obtener_xmlRecibido
+            // 
+            this.obtener_xmlRecibido.Location = new System.Drawing.Point(14, 117);
+            this.obtener_xmlRecibido.Name = "obtener_xmlRecibido";
+            this.obtener_xmlRecibido.Size = new System.Drawing.Size(158, 38);
+            this.obtener_xmlRecibido.TabIndex = 13;
+            this.obtener_xmlRecibido.Text = "Obtener XML";
+            this.obtener_xmlRecibido.UseVisualStyleBackColor = true;
+            this.obtener_xmlRecibido.Click += new System.EventHandler(this.obtener_xmlRecibido_Click);
+            // 
+            // Acuse
+            // 
+            this.Acuse.Location = new System.Drawing.Point(14, 29);
+            this.Acuse.Name = "Acuse";
+            this.Acuse.Size = new System.Drawing.Size(158, 38);
+            this.Acuse.TabIndex = 11;
+            this.Acuse.Text = "Aceptar o Rechazar DTE";
+            this.Acuse.UseVisualStyleBackColor = true;
+            this.Acuse.Click += new System.EventHandler(this.Acuse_Click);
+            // 
+            // listado_DteRecibido
+            // 
+            this.listado_DteRecibido.Location = new System.Drawing.Point(14, 73);
+            this.listado_DteRecibido.Name = "listado_DteRecibido";
+            this.listado_DteRecibido.Size = new System.Drawing.Size(158, 38);
+            this.listado_DteRecibido.TabIndex = 12;
+            this.listado_DteRecibido.Text = "Listado DTE Recibido";
+            this.listado_DteRecibido.UseVisualStyleBackColor = true;
+            this.listado_DteRecibido.Click += new System.EventHandler(this.listado_DteRecibido_Click);
             // 
             // emision_dte
             // 
@@ -249,6 +249,16 @@
             this.facturacion_dte.Text = "Facturación DTE / Boletas";
             this.facturacion_dte.UseVisualStyleBackColor = true;
             this.facturacion_dte.Click += new System.EventHandler(this.facturacion_dte_boleta_Click);
+            // 
+            // listado_dte_emitido
+            // 
+            this.listado_dte_emitido.Location = new System.Drawing.Point(14, 203);
+            this.listado_dte_emitido.Name = "listado_dte_emitido";
+            this.listado_dte_emitido.Size = new System.Drawing.Size(145, 38);
+            this.listado_dte_emitido.TabIndex = 10;
+            this.listado_dte_emitido.Text = "Listado DTE Emitido";
+            this.listado_dte_emitido.UseVisualStyleBackColor = true;
+            this.listado_dte_emitido.Click += new System.EventHandler(this.listado_dte_emitido_Click);
             // 
             // facturacion_exportacion
             // 
@@ -326,46 +336,46 @@
             // 
             // item_productos
             // 
-            this.item_productos.Location = new System.Drawing.Point(4, 22);
+            this.item_productos.Location = new System.Drawing.Point(4, 25);
             this.item_productos.Name = "item_productos";
             this.item_productos.Padding = new System.Windows.Forms.Padding(3);
-            this.item_productos.Size = new System.Drawing.Size(801, 289);
+            this.item_productos.Size = new System.Drawing.Size(771, 286);
             this.item_productos.TabIndex = 1;
             this.item_productos.Text = "Productos";
             this.item_productos.UseVisualStyleBackColor = true;
             // 
             // item_clientes
             // 
-            this.item_clientes.Location = new System.Drawing.Point(4, 22);
+            this.item_clientes.Location = new System.Drawing.Point(4, 25);
             this.item_clientes.Name = "item_clientes";
-            this.item_clientes.Size = new System.Drawing.Size(801, 289);
+            this.item_clientes.Size = new System.Drawing.Size(771, 286);
             this.item_clientes.TabIndex = 3;
             this.item_clientes.Text = "Clientes";
             this.item_clientes.UseVisualStyleBackColor = true;
             // 
             // item_folios
             // 
-            this.item_folios.Location = new System.Drawing.Point(4, 22);
+            this.item_folios.Location = new System.Drawing.Point(4, 25);
             this.item_folios.Name = "item_folios";
-            this.item_folios.Size = new System.Drawing.Size(801, 289);
+            this.item_folios.Size = new System.Drawing.Size(771, 286);
             this.item_folios.TabIndex = 5;
             this.item_folios.Text = "Folios";
             this.item_folios.UseVisualStyleBackColor = true;
             // 
             // item_bh
             // 
-            this.item_bh.Location = new System.Drawing.Point(4, 22);
+            this.item_bh.Location = new System.Drawing.Point(4, 25);
             this.item_bh.Name = "item_bh";
-            this.item_bh.Size = new System.Drawing.Size(801, 289);
+            this.item_bh.Size = new System.Drawing.Size(771, 286);
             this.item_bh.TabIndex = 6;
             this.item_bh.Text = "Boletas de honorarios";
             this.item_bh.UseVisualStyleBackColor = true;
             // 
             // item_otros
             // 
-            this.item_otros.Location = new System.Drawing.Point(4, 22);
+            this.item_otros.Location = new System.Drawing.Point(4, 25);
             this.item_otros.Name = "item_otros";
-            this.item_otros.Size = new System.Drawing.Size(801, 289);
+            this.item_otros.Size = new System.Drawing.Size(771, 286);
             this.item_otros.TabIndex = 4;
             this.item_otros.Text = "Otros";
             this.item_otros.UseVisualStyleBackColor = true;
@@ -391,7 +401,7 @@
             // 
             this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
             this.Configuracion.Name = "Configuracion";
-            this.Configuracion.Size = new System.Drawing.Size(115, 24);
+            this.Configuracion.Size = new System.Drawing.Size(136, 24);
             this.Configuracion.Text = "Configuración";
             this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
             // 
@@ -400,16 +410,6 @@
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // obtener_pdfRecibido
-            // 
-            this.obtener_pdfRecibido.Location = new System.Drawing.Point(14, 159);
-            this.obtener_pdfRecibido.Name = "obtener_pdfRecibido";
-            this.obtener_pdfRecibido.Size = new System.Drawing.Size(158, 38);
-            this.obtener_pdfRecibido.TabIndex = 15;
-            this.obtener_pdfRecibido.Text = "Obtener PDF";
-            this.obtener_pdfRecibido.UseVisualStyleBackColor = true;
-            this.obtener_pdfRecibido.Click += new System.EventHandler(this.obtener_pdfRecibido_Click);
             // 
             // Main
             // 
@@ -426,8 +426,8 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl2.ResumeLayout(false);
             this.item_facturacion.ResumeLayout(false);
-            this.dte_recibidos.ResumeLayout(false);
             this.otros.ResumeLayout(false);
+            this.dte_recibidos.ResumeLayout(false);
             this.emision_dte.ResumeLayout(false);
             this.obtenerdte.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
