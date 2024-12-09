@@ -184,7 +184,6 @@
             this.obtener_xmlRecibido.TabIndex = 13;
             this.obtener_xmlRecibido.Text = "Obtener XML";
             this.obtener_xmlRecibido.UseVisualStyleBackColor = true;
-            this.obtener_xmlRecibido.Click += new System.EventHandler(this.obtener_xmlRecibido_Click);
             // 
             // Acuse
             // 
@@ -204,7 +203,67 @@
             this.listado_DteRecibido.TabIndex = 12;
             this.listado_DteRecibido.Text = "Listado DTE Recibido";
             this.listado_DteRecibido.UseVisualStyleBackColor = true;
-            this.listado_DteRecibido.Click += new System.EventHandler(this.listado_DteRecibido_Click);
+            // 
+            // otros
+            // 
+            this.otros.Controls.Add(this.conciliar_emitidos);
+            this.otros.Controls.Add(this.envio_mail);
+            this.otros.Controls.Add(this.consolidado_ventas);
+            this.otros.Location = new System.Drawing.Point(567, 15);
+            this.otros.Name = "otros";
+            this.otros.Size = new System.Drawing.Size(187, 254);
+            this.otros.TabIndex = 2;
+            this.otros.TabStop = false;
+            this.otros.Text = "Otros";
+            // 
+            // Conciliar_Recibidos
+            // 
+            this.Conciliar_Recibidos.Location = new System.Drawing.Point(14, 203);
+            this.Conciliar_Recibidos.Name = "Conciliar_Recibidos";
+            this.Conciliar_Recibidos.Size = new System.Drawing.Size(158, 38);
+            this.Conciliar_Recibidos.TabIndex = 14;
+            this.Conciliar_Recibidos.Text = "Conciliar Recibidos";
+            this.Conciliar_Recibidos.UseVisualStyleBackColor = true;
+            // 
+            // conciliar_emitidos
+            // 
+            this.conciliar_emitidos.Location = new System.Drawing.Point(15, 117);
+            this.conciliar_emitidos.Name = "conciliar_emitidos";
+            this.conciliar_emitidos.Size = new System.Drawing.Size(158, 38);
+            this.conciliar_emitidos.TabIndex = 13;
+            this.conciliar_emitidos.Text = "Conciliar Emitidos";
+            this.conciliar_emitidos.UseVisualStyleBackColor = true;
+            this.conciliar_emitidos.Click += new System.EventHandler(this.conciliar_emitidos_Click);
+            // 
+            // envio_mail
+            // 
+            this.envio_mail.Location = new System.Drawing.Point(15, 27);
+            this.envio_mail.Name = "envio_mail";
+            this.envio_mail.Size = new System.Drawing.Size(158, 38);
+            this.envio_mail.TabIndex = 11;
+            this.envio_mail.Text = "Envio Mail";
+            this.envio_mail.UseVisualStyleBackColor = true;
+            this.envio_mail.Click += new System.EventHandler(this.envio_mail_Click);
+            // 
+            // listado_dte_emitido
+            // 
+            this.listado_dte_emitido.Location = new System.Drawing.Point(14, 203);
+            this.listado_dte_emitido.Name = "listado_dte_emitido";
+            this.listado_dte_emitido.Size = new System.Drawing.Size(145, 38);
+            this.listado_dte_emitido.TabIndex = 10;
+            this.listado_dte_emitido.Text = "Listado DTE Emitido";
+            this.listado_dte_emitido.UseVisualStyleBackColor = true;
+            this.listado_dte_emitido.Click += new System.EventHandler(this.listado_dte_emitido_Click);
+            // 
+            // consolidado_ventas
+            // 
+            this.consolidado_ventas.Location = new System.Drawing.Point(15, 73);
+            this.consolidado_ventas.Name = "consolidado_ventas";
+            this.consolidado_ventas.Size = new System.Drawing.Size(158, 38);
+            this.consolidado_ventas.TabIndex = 12;
+            this.consolidado_ventas.Text = "Consolidado de ventas";
+            this.consolidado_ventas.UseVisualStyleBackColor = true;
+            this.consolidado_ventas.Click += new System.EventHandler(this.consolidado_ventas_Click);
             // 
             // emision_dte
             // 
@@ -410,6 +469,15 @@
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // obtener_pdfRecibido
+            // 
+            this.obtener_pdfRecibido.Location = new System.Drawing.Point(14, 159);
+            this.obtener_pdfRecibido.Name = "obtener_pdfRecibido";
+            this.obtener_pdfRecibido.Size = new System.Drawing.Size(158, 38);
+            this.obtener_pdfRecibido.TabIndex = 15;
+            this.obtener_pdfRecibido.Text = "Obtener PDF";
+            this.obtener_pdfRecibido.UseVisualStyleBackColor = true;
             // 
             // Main
             // 

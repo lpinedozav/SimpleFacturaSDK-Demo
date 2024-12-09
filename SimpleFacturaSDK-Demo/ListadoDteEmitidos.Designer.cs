@@ -31,6 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoDteEmitidos));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
+            this.ambiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folioreutilizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipodte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoacuse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechadte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonsocialreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rutreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trackid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalles = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxCodigoTipoDTE = new System.Windows.Forms.ComboBox();
             this.numericFolio = new System.Windows.Forms.NumericUpDown();
@@ -49,23 +66,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.generarListaDTE = new System.Windows.Forms.Button();
-            this.ambiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folioreutilizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipodte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoacuse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechadte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razonsocialreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rutreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trackid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalles = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -115,6 +115,142 @@
             this.gridResultados.RowHeadersWidth = 25;
             this.gridResultados.Size = new System.Drawing.Size(431, 248);
             this.gridResultados.TabIndex = 0;
+            // 
+            // ambiente
+            // 
+            this.ambiente.HeaderText = "Ambiente";
+            this.ambiente.MinimumWidth = 6;
+            this.ambiente.Name = "ambiente";
+            this.ambiente.ReadOnly = true;
+            this.ambiente.Width = 70;
+            // 
+            // folioreutilizado
+            // 
+            this.folioreutilizado.HeaderText = "Folio reutilizado";
+            this.folioreutilizado.MinimumWidth = 6;
+            this.folioreutilizado.Name = "folioreutilizado";
+            this.folioreutilizado.ReadOnly = true;
+            this.folioreutilizado.Width = 90;
+            // 
+            // importado
+            // 
+            this.importado.HeaderText = "Importado";
+            this.importado.MinimumWidth = 6;
+            this.importado.Name = "importado";
+            this.importado.ReadOnly = true;
+            this.importado.Width = 60;
+            // 
+            // codigosii
+            // 
+            this.codigosii.HeaderText = "Codigo Sii";
+            this.codigosii.MinimumWidth = 6;
+            this.codigosii.Name = "codigosii";
+            this.codigosii.ReadOnly = true;
+            this.codigosii.Width = 60;
+            // 
+            // tipodte
+            // 
+            this.tipodte.HeaderText = "Tipo dte";
+            this.tipodte.MinimumWidth = 6;
+            this.tipodte.Name = "tipodte";
+            this.tipodte.ReadOnly = true;
+            this.tipodte.Width = 125;
+            // 
+            // estadoacuse
+            // 
+            this.estadoacuse.HeaderText = "Estado acuse";
+            this.estadoacuse.MinimumWidth = 6;
+            this.estadoacuse.Name = "estadoacuse";
+            this.estadoacuse.ReadOnly = true;
+            this.estadoacuse.Width = 80;
+            // 
+            // fechadte
+            // 
+            this.fechadte.HeaderText = "Fecha dte";
+            this.fechadte.MinimumWidth = 6;
+            this.fechadte.Name = "fechadte";
+            this.fechadte.ReadOnly = true;
+            this.fechadte.Width = 65;
+            // 
+            // folio
+            // 
+            this.folio.HeaderText = "Folio";
+            this.folio.MinimumWidth = 6;
+            this.folio.Name = "folio";
+            this.folio.ReadOnly = true;
+            this.folio.Width = 45;
+            // 
+            // razonsocialreceptor
+            // 
+            this.razonsocialreceptor.HeaderText = "Razon social receptor";
+            this.razonsocialreceptor.MinimumWidth = 6;
+            this.razonsocialreceptor.Name = "razonsocialreceptor";
+            this.razonsocialreceptor.ReadOnly = true;
+            this.razonsocialreceptor.Width = 125;
+            // 
+            // rutreceptor
+            // 
+            this.rutreceptor.HeaderText = "Rut receptor";
+            this.rutreceptor.MinimumWidth = 6;
+            this.rutreceptor.Name = "rutreceptor";
+            this.rutreceptor.ReadOnly = true;
+            this.rutreceptor.Width = 75;
+            // 
+            // trackid
+            // 
+            this.trackid.HeaderText = "Track id";
+            this.trackid.MinimumWidth = 6;
+            this.trackid.Name = "trackid";
+            this.trackid.ReadOnly = true;
+            this.trackid.Width = 75;
+            // 
+            // estadosii
+            // 
+            this.estadosii.HeaderText = "Estado Sii";
+            this.estadosii.MinimumWidth = 6;
+            this.estadosii.Name = "estadosii";
+            this.estadosii.ReadOnly = true;
+            this.estadosii.Width = 125;
+            // 
+            // neto
+            // 
+            this.neto.HeaderText = "Neto";
+            this.neto.MinimumWidth = 6;
+            this.neto.Name = "neto";
+            this.neto.ReadOnly = true;
+            this.neto.Width = 65;
+            // 
+            // exento
+            // 
+            this.exento.HeaderText = "Exento";
+            this.exento.MinimumWidth = 6;
+            this.exento.Name = "exento";
+            this.exento.ReadOnly = true;
+            this.exento.Width = 65;
+            // 
+            // iva
+            // 
+            this.iva.HeaderText = "Iva";
+            this.iva.MinimumWidth = 6;
+            this.iva.Name = "iva";
+            this.iva.ReadOnly = true;
+            this.iva.Width = 65;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total";
+            this.total.MinimumWidth = 6;
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 65;
+            // 
+            // detalles
+            // 
+            this.detalles.HeaderText = "Detalles";
+            this.detalles.MinimumWidth = 6;
+            this.detalles.Name = "detalles";
+            this.detalles.ReadOnly = true;
+            this.detalles.Width = 85;
             // 
             // groupBox2
             // 
@@ -327,142 +463,6 @@
             this.generarListaDTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarListaDTE.UseVisualStyleBackColor = true;
             this.generarListaDTE.Click += new System.EventHandler(this.generarListaDTE_Click);
-            // 
-            // ambiente
-            // 
-            this.ambiente.HeaderText = "Ambiente";
-            this.ambiente.MinimumWidth = 6;
-            this.ambiente.Name = "ambiente";
-            this.ambiente.ReadOnly = true;
-            this.ambiente.Width = 70;
-            // 
-            // folioreutilizado
-            // 
-            this.folioreutilizado.HeaderText = "Folio reutilizado";
-            this.folioreutilizado.MinimumWidth = 6;
-            this.folioreutilizado.Name = "folioreutilizado";
-            this.folioreutilizado.ReadOnly = true;
-            this.folioreutilizado.Width = 90;
-            // 
-            // importado
-            // 
-            this.importado.HeaderText = "Importado";
-            this.importado.MinimumWidth = 6;
-            this.importado.Name = "importado";
-            this.importado.ReadOnly = true;
-            this.importado.Width = 60;
-            // 
-            // codigosii
-            // 
-            this.codigosii.HeaderText = "Codigo Sii";
-            this.codigosii.MinimumWidth = 6;
-            this.codigosii.Name = "codigosii";
-            this.codigosii.ReadOnly = true;
-            this.codigosii.Width = 60;
-            // 
-            // tipodte
-            // 
-            this.tipodte.HeaderText = "Tipo dte";
-            this.tipodte.MinimumWidth = 6;
-            this.tipodte.Name = "tipodte";
-            this.tipodte.ReadOnly = true;
-            this.tipodte.Width = 125;
-            // 
-            // estadoacuse
-            // 
-            this.estadoacuse.HeaderText = "Estado acuse";
-            this.estadoacuse.MinimumWidth = 6;
-            this.estadoacuse.Name = "estadoacuse";
-            this.estadoacuse.ReadOnly = true;
-            this.estadoacuse.Width = 80;
-            // 
-            // fechadte
-            // 
-            this.fechadte.HeaderText = "Fecha dte";
-            this.fechadte.MinimumWidth = 6;
-            this.fechadte.Name = "fechadte";
-            this.fechadte.ReadOnly = true;
-            this.fechadte.Width = 65;
-            // 
-            // folio
-            // 
-            this.folio.HeaderText = "Folio";
-            this.folio.MinimumWidth = 6;
-            this.folio.Name = "folio";
-            this.folio.ReadOnly = true;
-            this.folio.Width = 45;
-            // 
-            // razonsocialreceptor
-            // 
-            this.razonsocialreceptor.HeaderText = "Razon social receptor";
-            this.razonsocialreceptor.MinimumWidth = 6;
-            this.razonsocialreceptor.Name = "razonsocialreceptor";
-            this.razonsocialreceptor.ReadOnly = true;
-            this.razonsocialreceptor.Width = 125;
-            // 
-            // rutreceptor
-            // 
-            this.rutreceptor.HeaderText = "Rut receptor";
-            this.rutreceptor.MinimumWidth = 6;
-            this.rutreceptor.Name = "rutreceptor";
-            this.rutreceptor.ReadOnly = true;
-            this.rutreceptor.Width = 75;
-            // 
-            // trackid
-            // 
-            this.trackid.HeaderText = "Track id";
-            this.trackid.MinimumWidth = 6;
-            this.trackid.Name = "trackid";
-            this.trackid.ReadOnly = true;
-            this.trackid.Width = 75;
-            // 
-            // estadosii
-            // 
-            this.estadosii.HeaderText = "Estado Sii";
-            this.estadosii.MinimumWidth = 6;
-            this.estadosii.Name = "estadosii";
-            this.estadosii.ReadOnly = true;
-            this.estadosii.Width = 125;
-            // 
-            // neto
-            // 
-            this.neto.HeaderText = "Neto";
-            this.neto.MinimumWidth = 6;
-            this.neto.Name = "neto";
-            this.neto.ReadOnly = true;
-            this.neto.Width = 65;
-            // 
-            // exento
-            // 
-            this.exento.HeaderText = "Exento";
-            this.exento.MinimumWidth = 6;
-            this.exento.Name = "exento";
-            this.exento.ReadOnly = true;
-            this.exento.Width = 65;
-            // 
-            // iva
-            // 
-            this.iva.HeaderText = "Iva";
-            this.iva.MinimumWidth = 6;
-            this.iva.Name = "iva";
-            this.iva.ReadOnly = true;
-            this.iva.Width = 65;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Total";
-            this.total.MinimumWidth = 6;
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            this.total.Width = 65;
-            // 
-            // detalles
-            // 
-            this.detalles.HeaderText = "Detalles";
-            this.detalles.MinimumWidth = 6;
-            this.detalles.Name = "detalles";
-            this.detalles.ReadOnly = true;
-            this.detalles.Width = 85;
             // 
             // ListadoDteEmitidos
             // 

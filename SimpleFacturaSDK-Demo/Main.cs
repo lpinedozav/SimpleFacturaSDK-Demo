@@ -104,25 +104,5 @@ namespace SimpleFacturaSDK_Demo
             Acuse formulario = new Acuse();
             formulario.Show();
         }
-
-        private void listado_DteRecibido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void obtener_xmlRecibido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void obtener_pdfRecibido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Conciliar_Recibidos_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
