@@ -36,6 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmisonNC_ND));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericFolio = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.fechaEmision = new System.Windows.Forms.DateTimePicker();
             this.FchEmision = new System.Windows.Forms.Label();
             this.fechaVencimiento = new System.Windows.Forms.DateTimePicker();
@@ -70,6 +72,12 @@
             this.montoNeto = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.gridProductos = new System.Windows.Forms.DataGridView();
+            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridIndExe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textRznReceptor = new System.Windows.Forms.TextBox();
             this.textCiudadReceptor = new System.Windows.Forms.TextBox();
@@ -87,27 +95,20 @@
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gridReferencias = new System.Windows.Forms.DataGridView();
-            this.generarNcNd = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericFolio = new System.Windows.Forms.NumericUpDown();
-            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridIndExe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridRefNroLin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridRefTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridRefFolio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridRefFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridRefCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridRefRazon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generarNcNd = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.comboBoxMotivo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textSucursal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBoxMotivo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -115,7 +116,6 @@
             this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridReferencias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +139,34 @@
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificacion DTE";
+            // 
+            // numericFolio
+            // 
+            this.numericFolio.Location = new System.Drawing.Point(639, 29);
+            this.numericFolio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericFolio.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericFolio.Name = "numericFolio";
+            this.numericFolio.Size = new System.Drawing.Size(173, 22);
+            this.numericFolio.TabIndex = 35;
+            this.numericFolio.TabStop = false;
+            this.numericFolio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(594, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Folio:";
             // 
             // fechaEmision
             // 
@@ -443,7 +471,7 @@
             // 
             // textMontoTotal
             // 
-            this.textMontoTotal.Location = new System.Drawing.Point(295, 33);
+            this.textMontoTotal.Location = new System.Drawing.Point(297, 30);
             this.textMontoTotal.Margin = new System.Windows.Forms.Padding(4);
             this.textMontoTotal.Name = "textMontoTotal";
             this.textMontoTotal.Size = new System.Drawing.Size(115, 22);
@@ -515,6 +543,66 @@
             this.gridProductos.TabIndex = 0;
             this.gridProductos.TabStop = false;
             // 
+            // gridNroLinea
+            // 
+            this.gridNroLinea.DataPropertyName = "NroLinDet";
+            dataGridViewCellStyle1.Format = "N0";
+            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridNroLinea.HeaderText = "NroLinDet";
+            this.gridNroLinea.MinimumWidth = 6;
+            this.gridNroLinea.Name = "gridNroLinea";
+            this.gridNroLinea.ReadOnly = true;
+            this.gridNroLinea.Width = 65;
+            // 
+            // gridIndExe
+            // 
+            this.gridIndExe.DataPropertyName = "indexe";
+            this.gridIndExe.HeaderText = "IndExe";
+            this.gridIndExe.MinimumWidth = 6;
+            this.gridIndExe.Name = "gridIndExe";
+            this.gridIndExe.ReadOnly = true;
+            this.gridIndExe.Width = 60;
+            // 
+            // gridNombreProducto
+            // 
+            this.gridNombreProducto.DataPropertyName = "Nombre";
+            this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
+            this.gridNombreProducto.Name = "gridNombreProducto";
+            this.gridNombreProducto.ReadOnly = true;
+            this.gridNombreProducto.Width = 210;
+            // 
+            // gridCantidadProducto
+            // 
+            this.gridCantidadProducto.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle2.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
+            this.gridCantidadProducto.Name = "gridCantidadProducto";
+            this.gridCantidadProducto.ReadOnly = true;
+            this.gridCantidadProducto.Width = 60;
+            // 
+            // gridPrecio
+            // 
+            this.gridPrecio.DataPropertyName = "Precio";
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
+            this.gridPrecio.Name = "gridPrecio";
+            this.gridPrecio.ReadOnly = true;
+            this.gridPrecio.Width = 70;
+            // 
+            // gridMonto
+            // 
+            this.gridMonto.DataPropertyName = "Monto";
+            this.gridMonto.HeaderText = "Monto";
+            this.gridMonto.MinimumWidth = 6;
+            this.gridMonto.Name = "gridMonto";
+            this.gridMonto.ReadOnly = true;
+            this.gridMonto.Width = 80;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.textRznReceptor);
@@ -553,7 +641,7 @@
             // textCiudadReceptor
             // 
             this.textCiudadReceptor.BackColor = System.Drawing.SystemColors.Info;
-            this.textCiudadReceptor.Location = new System.Drawing.Point(71, 101);
+            this.textCiudadReceptor.Location = new System.Drawing.Point(72, 104);
             this.textCiudadReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCiudadReceptor.Name = "textCiudadReceptor";
             this.textCiudadReceptor.Size = new System.Drawing.Size(185, 22);
@@ -563,7 +651,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(7, 103);
+            this.label25.Location = new System.Drawing.Point(8, 110);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(53, 16);
@@ -573,7 +661,7 @@
             // textDirReceptor
             // 
             this.textDirReceptor.BackColor = System.Drawing.SystemColors.Info;
-            this.textDirReceptor.Location = new System.Drawing.Point(356, 103);
+            this.textDirReceptor.Location = new System.Drawing.Point(353, 104);
             this.textDirReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textDirReceptor.Name = "textDirReceptor";
             this.textDirReceptor.Size = new System.Drawing.Size(177, 22);
@@ -583,7 +671,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(265, 111);
+            this.label26.Location = new System.Drawing.Point(265, 110);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(67, 16);
@@ -613,7 +701,7 @@
             // textCmnReceptor
             // 
             this.textCmnReceptor.BackColor = System.Drawing.SystemColors.Info;
-            this.textCmnReceptor.Location = new System.Drawing.Point(605, 107);
+            this.textCmnReceptor.Location = new System.Drawing.Point(605, 104);
             this.textCmnReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCmnReceptor.Name = "textCmnReceptor";
             this.textCmnReceptor.Size = new System.Drawing.Size(203, 22);
@@ -623,7 +711,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(539, 110);
+            this.label29.Location = new System.Drawing.Point(538, 110);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(60, 16);
@@ -716,110 +804,6 @@
             this.gridReferencias.TabIndex = 0;
             this.gridReferencias.TabStop = false;
             // 
-            // generarNcNd
-            // 
-            this.generarNcNd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarNcNd.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarNcNd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarNcNd.Location = new System.Drawing.Point(727, 899);
-            this.generarNcNd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.generarNcNd.Name = "generarNcNd";
-            this.generarNcNd.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
-            this.generarNcNd.Size = new System.Drawing.Size(117, 34);
-            this.generarNcNd.TabIndex = 1;
-            this.generarNcNd.Text = "Generar";
-            this.generarNcNd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarNcNd.UseVisualStyleBackColor = true;
-            this.generarNcNd.Click += new System.EventHandler(this.generarNcNd_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(594, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Folio:";
-            // 
-            // numericFolio
-            // 
-            this.numericFolio.Location = new System.Drawing.Point(639, 29);
-            this.numericFolio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericFolio.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numericFolio.Name = "numericFolio";
-            this.numericFolio.Size = new System.Drawing.Size(173, 22);
-            this.numericFolio.TabIndex = 35;
-            this.numericFolio.TabStop = false;
-            this.numericFolio.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // gridNroLinea
-            // 
-            this.gridNroLinea.DataPropertyName = "NroLinDet";
-            dataGridViewCellStyle1.Format = "N0";
-            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridNroLinea.HeaderText = "NroLinDet";
-            this.gridNroLinea.MinimumWidth = 6;
-            this.gridNroLinea.Name = "gridNroLinea";
-            this.gridNroLinea.ReadOnly = true;
-            this.gridNroLinea.Width = 65;
-            // 
-            // gridIndExe
-            // 
-            this.gridIndExe.DataPropertyName = "indexe";
-            this.gridIndExe.HeaderText = "IndExe";
-            this.gridIndExe.MinimumWidth = 6;
-            this.gridIndExe.Name = "gridIndExe";
-            this.gridIndExe.ReadOnly = true;
-            this.gridIndExe.Width = 60;
-            // 
-            // gridNombreProducto
-            // 
-            this.gridNombreProducto.DataPropertyName = "Nombre";
-            this.gridNombreProducto.HeaderText = "Nombre";
-            this.gridNombreProducto.MinimumWidth = 6;
-            this.gridNombreProducto.Name = "gridNombreProducto";
-            this.gridNombreProducto.ReadOnly = true;
-            this.gridNombreProducto.Width = 210;
-            // 
-            // gridCantidadProducto
-            // 
-            this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle2.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridCantidadProducto.HeaderText = "Cantidad";
-            this.gridCantidadProducto.MinimumWidth = 6;
-            this.gridCantidadProducto.Name = "gridCantidadProducto";
-            this.gridCantidadProducto.ReadOnly = true;
-            this.gridCantidadProducto.Width = 60;
-            // 
-            // gridPrecio
-            // 
-            this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle3.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridPrecio.HeaderText = "Precio";
-            this.gridPrecio.MinimumWidth = 6;
-            this.gridPrecio.Name = "gridPrecio";
-            this.gridPrecio.ReadOnly = true;
-            this.gridPrecio.Width = 70;
-            // 
-            // gridMonto
-            // 
-            this.gridMonto.DataPropertyName = "Monto";
-            this.gridMonto.HeaderText = "Monto";
-            this.gridMonto.MinimumWidth = 6;
-            this.gridMonto.Name = "gridMonto";
-            this.gridMonto.ReadOnly = true;
-            this.gridMonto.Width = 80;
-            // 
             // gridRefNroLin
             // 
             this.gridRefNroLin.DataPropertyName = "NroLinRef";
@@ -882,6 +866,22 @@
             this.gridRefRazon.ReadOnly = true;
             this.gridRefRazon.Width = 105;
             // 
+            // generarNcNd
+            // 
+            this.generarNcNd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarNcNd.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarNcNd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarNcNd.Location = new System.Drawing.Point(727, 899);
+            this.generarNcNd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generarNcNd.Name = "generarNcNd";
+            this.generarNcNd.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
+            this.generarNcNd.Size = new System.Drawing.Size(117, 34);
+            this.generarNcNd.TabIndex = 1;
+            this.generarNcNd.Text = "Generar";
+            this.generarNcNd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarNcNd.UseVisualStyleBackColor = true;
+            this.generarNcNd.Click += new System.EventHandler(this.generarNcNd_Click);
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.comboBoxMotivo);
@@ -897,19 +897,30 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros";
             // 
+            // comboBoxMotivo
+            // 
+            this.comboBoxMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMotivo.FormattingEnabled = true;
+            this.comboBoxMotivo.Location = new System.Drawing.Point(271, 30);
+            this.comboBoxMotivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMotivo.Name = "comboBoxMotivo";
+            this.comboBoxMotivo.Size = new System.Drawing.Size(127, 24);
+            this.comboBoxMotivo.TabIndex = 36;
+            this.comboBoxMotivo.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(218, 36);
+            this.label11.Location = new System.Drawing.Point(214, 33);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 20);
+            this.label11.Size = new System.Drawing.Size(50, 16);
             this.label11.TabIndex = 25;
             this.label11.Text = "Motivo:";
             // 
             // textSucursal
             // 
-            this.textSucursal.Location = new System.Drawing.Point(72, 31);
+            this.textSucursal.Location = new System.Drawing.Point(68, 30);
             this.textSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.textSucursal.Name = "textSucursal";
             this.textSucursal.Size = new System.Drawing.Size(116, 22);
@@ -922,20 +933,9 @@
             this.label12.Location = new System.Drawing.Point(8, 33);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 20);
+            this.label12.Size = new System.Drawing.Size(62, 16);
             this.label12.TabIndex = 3;
             this.label12.Text = "Sucursal:";
-            // 
-            // comboBoxMotivo
-            // 
-            this.comboBoxMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMotivo.FormattingEnabled = true;
-            this.comboBoxMotivo.Location = new System.Drawing.Point(271, 36);
-            this.comboBoxMotivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxMotivo.Name = "comboBoxMotivo";
-            this.comboBoxMotivo.Size = new System.Drawing.Size(127, 24);
-            this.comboBoxMotivo.TabIndex = 36;
-            this.comboBoxMotivo.TabStop = false;
             // 
             // EmisonNC_ND
             // 
@@ -961,6 +961,7 @@
             this.Load += new System.EventHandler(this.EmisonNC_ND_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -971,7 +972,6 @@
             this.groupBox7.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridReferencias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
