@@ -104,5 +104,11 @@ namespace SimpleFacturaSDK_Demo
             Acuse formulario = new Acuse();
             formulario.Show();
         }
+
+        private void agregar_productos_Click(object sender, EventArgs e)
+        {
+            AgregarProductos formulario = new AgregarProductos();
+            formulario.Show();
+        }
     }
 }
