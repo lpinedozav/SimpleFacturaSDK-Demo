@@ -1,5 +1,6 @@
 ﻿using SDKSimpleFactura;
 using SDKSimpleFactura.Models.Facturacion;
+using SDKSimpleFactura.Models.Response;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -32,7 +33,15 @@ namespace SimpleFacturaSDK_Demo
                 request.RutEmisor = textRutEmisor.Text;
                 var mes = (int)textMes.Value;
                 var anio = (int)textAnio.Value;
-                var response = await cliente.Facturacion.ConsolidadoEmitidosAsync(request, mes, anio);
+                Response<string> response;
+                if (radio_Bton_emitidoConciliar.Checked)
+                {
+                    response = await cliente.Facturacion.ConsolidadoEmitidosAsync(request, mes, anio);
+                }
+                else
+                {
+                    response = await cliente.Proveedores.ConciliarRecibidosAsync(request, mes, anio);
+                }
                 if (response.Status == 400 || response.Status == 500)
                 {
                     MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -50,5 +59,6 @@ namespace SimpleFacturaSDK_Demo
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
