@@ -37,12 +37,7 @@
             this.Acuse = new System.Windows.Forms.Button();
             this.envio_mail = new System.Windows.Forms.Button();
             this.consolidado_ventas = new System.Windows.Forms.Button();
-            this.dte_recibidos = new System.Windows.Forms.GroupBox();
-            this.obtener_pdfRecibido = new System.Windows.Forms.Button();
-            this.Conciliar_Recibidos = new System.Windows.Forms.Button();
-            this.obtener_xmlRecibido = new System.Windows.Forms.Button();
             this.Acuse = new System.Windows.Forms.Button();
-            this.listado_DteRecibido = new System.Windows.Forms.Button();
             this.emision_dte = new System.Windows.Forms.GroupBox();
             this.emision_nc_nd = new System.Windows.Forms.Button();
             this.facturacion_masiva = new System.Windows.Forms.Button();
@@ -67,7 +62,6 @@
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
-            this.dte_recibidos.SuspendLayout();
             this.emision_dte.SuspendLayout();
             this.obtenerdte.SuspendLayout();
             this.menuStrip1.SuspendLayout();
