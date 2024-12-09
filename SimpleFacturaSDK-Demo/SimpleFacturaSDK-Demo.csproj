@@ -282,11 +282,11 @@
     </Compile>
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\FormattingHelper.cs" />
-    <Compile Include="ListadoDteEmitidos.cs">
+    <Compile Include="ListadoDteEmitidos_Recibidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoDteEmitidos.Designer.cs">
-      <DependentUpon>ListadoDteEmitidos.cs</DependentUpon>
+    <Compile Include="ListadoDteEmitidos_Recibidos.Designer.cs">
+      <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -362,8 +362,8 @@
     <EmbeddedResource Include="FacturacionMasiva.resx">
       <DependentUpon>FacturacionMasiva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoDteEmitidos.resx">
-      <DependentUpon>ListadoDteEmitidos.cs</DependentUpon>
+    <EmbeddedResource Include="ListadoDteEmitidos_Recibidos.resx">
+      <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace SimpleFacturaSDK_Demo
 {
-    partial class ListadoDteEmitidos
+    partial class ListadoDteEmitidos_Recibidos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoDteEmitidos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoDteEmitidos_Recibidos));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
             this.ambiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +66,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.generarListaDTE = new System.Windows.Forms.Button();
+            this.radio_Bton_recibidoListado = new System.Windows.Forms.RadioButton();
+            this.radio_Bton_emitidoListado = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -76,7 +78,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
-            this.groupBox3.Location = new System.Drawing.Point(314, 12);
+            this.groupBox3.Location = new System.Drawing.Point(310, 37);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(444, 280);
             this.groupBox3.TabIndex = 23;
@@ -265,7 +267,7 @@
             this.groupBox2.Controls.Add(this.hasta);
             this.groupBox2.Controls.Add(this.ambientelabel);
             this.groupBox2.Controls.Add(this.desde);
-            this.groupBox2.Location = new System.Drawing.Point(15, 106);
+            this.groupBox2.Location = new System.Drawing.Point(11, 131);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -401,7 +403,7 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 12);
+            this.groupBox1.Location = new System.Drawing.Point(11, 37);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -453,7 +455,7 @@
             this.generarListaDTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarListaDTE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarListaDTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarListaDTE.Location = new System.Drawing.Point(675, 291);
+            this.generarListaDTE.Location = new System.Drawing.Point(678, 322);
             this.generarListaDTE.Margin = new System.Windows.Forms.Padding(2);
             this.generarListaDTE.Name = "generarListaDTE";
             this.generarListaDTE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
@@ -464,11 +466,35 @@
             this.generarListaDTE.UseVisualStyleBackColor = true;
             this.generarListaDTE.Click += new System.EventHandler(this.generarListaDTE_Click);
             // 
-            // ListadoDteEmitidos
+            // radio_Bton_recibidoListado
+            // 
+            this.radio_Bton_recibidoListado.Location = new System.Drawing.Point(86, 11);
+            this.radio_Bton_recibidoListado.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_recibidoListado.Name = "radio_Bton_recibidoListado";
+            this.radio_Bton_recibidoListado.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_recibidoListado.TabIndex = 41;
+            this.radio_Bton_recibidoListado.Text = "Recibido";
+            this.radio_Bton_recibidoListado.UseVisualStyleBackColor = true;
+            // 
+            // radio_Bton_emitidoListado
+            // 
+            this.radio_Bton_emitidoListado.Checked = true;
+            this.radio_Bton_emitidoListado.Location = new System.Drawing.Point(11, 11);
+            this.radio_Bton_emitidoListado.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_emitidoListado.Name = "radio_Bton_emitidoListado";
+            this.radio_Bton_emitidoListado.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_emitidoListado.TabIndex = 40;
+            this.radio_Bton_emitidoListado.TabStop = true;
+            this.radio_Bton_emitidoListado.Text = "Emitido";
+            this.radio_Bton_emitidoListado.UseVisualStyleBackColor = true;
+            // 
+            // ListadoDteEmitidos_Recibidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 324);
+            this.ClientSize = new System.Drawing.Size(761, 352);
+            this.Controls.Add(this.radio_Bton_recibidoListado);
+            this.Controls.Add(this.radio_Bton_emitidoListado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.generarListaDTE);
@@ -478,9 +504,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ListadoDteEmitidos";
+            this.Name = "ListadoDteEmitidos_Recibidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListadoDteEmitidos";
+            this.Text = "Listado DTE Emitido/Recibido";
             this.Load += new System.EventHandler(this.ListadoDteEmitidos_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
@@ -532,5 +558,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iva;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewButtonColumn detalles;
+        private System.Windows.Forms.RadioButton radio_Bton_recibidoListado;
+        private System.Windows.Forms.RadioButton radio_Bton_emitidoListado;
     }
 }

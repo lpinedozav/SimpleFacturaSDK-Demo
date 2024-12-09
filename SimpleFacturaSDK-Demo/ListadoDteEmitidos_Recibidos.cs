@@ -12,12 +12,12 @@ using static SDKSimpleFactura.Enum.TipoDTE;
 
 namespace SimpleFacturaSDK_Demo
 {
-    public partial class ListadoDteEmitidos : Form
+    public partial class ListadoDteEmitidos_Recibidos : Form
     {
         private AppSettings _appSettings;
         private SimpleFacturaClient cliente;
         private List<DteEnt> list;
-        public ListadoDteEmitidos()
+        public ListadoDteEmitidos_Recibidos()
         {
             InitializeComponent();
             _appSettings = AppSettings.Current;
