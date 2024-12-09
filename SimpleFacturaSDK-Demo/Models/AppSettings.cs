@@ -16,7 +16,7 @@ public class AppSettings
     {
         EmailUsuario = "test@correo.com",
         RutEmisor = "76269769-6",
-        RutContribuyente = "10422710-4",
+        RutContribuyente = "76269769-6",
         NombreSucursal = "Casa Matriz"
     };
     [JsonIgnore]
