@@ -49,7 +49,6 @@
             this.obtener_timbre = new System.Windows.Forms.Button();
             this.obtener_pdf = new System.Windows.Forms.Button();
             this.item_productos = new System.Windows.Forms.TabPage();
-            this.item_proveedores = new System.Windows.Forms.TabPage();
             this.item_clientes = new System.Windows.Forms.TabPage();
             this.item_folios = new System.Windows.Forms.TabPage();
             this.item_bh = new System.Windows.Forms.TabPage();
@@ -77,7 +76,6 @@
             // 
             this.tabControl2.Controls.Add(this.item_facturacion);
             this.tabControl2.Controls.Add(this.item_productos);
-            this.tabControl2.Controls.Add(this.item_proveedores);
             this.tabControl2.Controls.Add(this.item_clientes);
             this.tabControl2.Controls.Add(this.item_folios);
             this.tabControl2.Controls.Add(this.item_bh);
@@ -279,25 +277,16 @@
             this.item_productos.Location = new System.Drawing.Point(4, 22);
             this.item_productos.Name = "item_productos";
             this.item_productos.Padding = new System.Windows.Forms.Padding(3);
-            this.item_productos.Size = new System.Drawing.Size(619, 289);
+            this.item_productos.Size = new System.Drawing.Size(801, 289);
             this.item_productos.TabIndex = 1;
             this.item_productos.Text = "Productos";
             this.item_productos.UseVisualStyleBackColor = true;
-            // 
-            // item_proveedores
-            // 
-            this.item_proveedores.Location = new System.Drawing.Point(4, 22);
-            this.item_proveedores.Name = "item_proveedores";
-            this.item_proveedores.Size = new System.Drawing.Size(619, 289);
-            this.item_proveedores.TabIndex = 2;
-            this.item_proveedores.Text = "Proveedores";
-            this.item_proveedores.UseVisualStyleBackColor = true;
             // 
             // item_clientes
             // 
             this.item_clientes.Location = new System.Drawing.Point(4, 22);
             this.item_clientes.Name = "item_clientes";
-            this.item_clientes.Size = new System.Drawing.Size(619, 289);
+            this.item_clientes.Size = new System.Drawing.Size(801, 289);
             this.item_clientes.TabIndex = 3;
             this.item_clientes.Text = "Clientes";
             this.item_clientes.UseVisualStyleBackColor = true;
@@ -306,7 +295,7 @@
             // 
             this.item_folios.Location = new System.Drawing.Point(4, 22);
             this.item_folios.Name = "item_folios";
-            this.item_folios.Size = new System.Drawing.Size(619, 289);
+            this.item_folios.Size = new System.Drawing.Size(801, 289);
             this.item_folios.TabIndex = 5;
             this.item_folios.Text = "Folios";
             this.item_folios.UseVisualStyleBackColor = true;
@@ -315,7 +304,7 @@
             // 
             this.item_bh.Location = new System.Drawing.Point(4, 22);
             this.item_bh.Name = "item_bh";
-            this.item_bh.Size = new System.Drawing.Size(619, 289);
+            this.item_bh.Size = new System.Drawing.Size(801, 289);
             this.item_bh.TabIndex = 6;
             this.item_bh.Text = "Boletas de honorarios";
             this.item_bh.UseVisualStyleBackColor = true;
@@ -324,7 +313,7 @@
             // 
             this.item_otros.Location = new System.Drawing.Point(4, 22);
             this.item_otros.Name = "item_otros";
-            this.item_otros.Size = new System.Drawing.Size(619, 289);
+            this.item_otros.Size = new System.Drawing.Size(801, 289);
             this.item_otros.TabIndex = 4;
             this.item_otros.Text = "Otros";
             this.item_otros.UseVisualStyleBackColor = true;
@@ -474,7 +463,6 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage item_facturacion;
         private System.Windows.Forms.TabPage item_productos;
-        private System.Windows.Forms.TabPage item_proveedores;
         private System.Windows.Forms.TabPage item_clientes;
         private System.Windows.Forms.TabPage item_otros;
         private System.Windows.Forms.TabPage item_folios;
