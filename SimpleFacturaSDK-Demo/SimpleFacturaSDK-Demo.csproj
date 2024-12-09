@@ -220,6 +220,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acuse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acuse.Designer.cs">
+      <DependentUpon>Acuse.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConciliarEmitidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,12 @@
     <Compile Include="ListadoDteEmitidos.Designer.cs">
       <DependentUpon>ListadoDteEmitidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoDteRecibido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoDteRecibido.Designer.cs">
+      <DependentUpon>ListadoDteRecibido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +338,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleFacturaClient.cs" />
+    <EmbeddedResource Include="Acuse.resx">
+      <DependentUpon>Acuse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConciliarEmitidos.resx">
       <DependentUpon>ConciliarEmitidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoDteEmitidos.resx">
       <DependentUpon>ListadoDteEmitidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoDteRecibido.resx">
+      <DependentUpon>ListadoDteRecibido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
