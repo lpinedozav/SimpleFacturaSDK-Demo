@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
+using SimpleFacturaSDK_Demo.Helpers;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -72,7 +73,6 @@ namespace SimpleFacturaSDK_Demo
                     detallesColumn.UseColumnTextForButtonValue = true; // Hace que todas las celdas muestren el mismo texto en el botón
                                                                        // Recorre cada objeto RepoteDTE en la lista
                     dataGridConsolidado.AllowUserToAddRows = false;
-
                     foreach (var reporte in list)
                     { 
                         int rowIndex = dataGridConsolidado.Rows.Add(
@@ -80,10 +80,10 @@ namespace SimpleFacturaSDK_Demo
                             reporte.TiposDTE,
                             reporte.Emitidos,
                             reporte.Anulados,
-                            reporte.TotalNeto,
-                            reporte.TotalExento,
-                            reporte.TotalIva,
-                            reporte.Total,
+                            FormattingHelper.FormatearPrecio(reporte.TotalNeto),
+                            FormattingHelper.FormatearPrecio(reporte.TotalExento),
+                            FormattingHelper.FormatearPrecio(reporte.TotalIva),
+                            FormattingHelper.FormatearPrecio(reporte.Total),
                             detallesColumn
                         );
                         DataGridViewRow row = dataGridConsolidado.Rows[rowIndex];

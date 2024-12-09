@@ -56,8 +56,8 @@ namespace SimpleFacturaSDK_Demo
                 1,
                 "test",
                 1,
-                200,
-                200
+                FormattingHelper.FormatearPrecio(200),
+                FormattingHelper.FormatearPrecio(200)
                 );
             //Referencias
             gridReferencias.Rows.Add(

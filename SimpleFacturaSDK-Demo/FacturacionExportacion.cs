@@ -102,8 +102,8 @@ namespace SimpleFacturaSDK_Demo
                 "OPCIONAL",
                 1,
                 "U",
-                1000,
-                1000
+                FormattingHelper.FormatearPrecio(1000),
+                FormattingHelper.FormatearPrecio(1000)
                 );
             //Bulto
             gridBulto.Rows.Add(
