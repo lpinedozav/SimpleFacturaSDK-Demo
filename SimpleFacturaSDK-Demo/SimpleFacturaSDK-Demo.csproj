@@ -294,6 +294,12 @@
     <Compile Include="ListadoDteEmitidos_Recibidos.Designer.cs">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarProductos.Designer.cs">
+      <DependentUpon>ListarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoDteEmitidos_Recibidos.resx">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarProductos.resx">
+      <DependentUpon>ListarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

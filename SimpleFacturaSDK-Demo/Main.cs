@@ -110,5 +110,16 @@ namespace SimpleFacturaSDK_Demo
             AgregarProductos formulario = new AgregarProductos();
             formulario.Show();
         }
+
+        private void listar_productos_Click(object sender, EventArgs e)
+        {
+            ListarProductos formulario = new ListarProductos();
+            formulario.Show();
+        }
+
+        private void datosEmpresa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
