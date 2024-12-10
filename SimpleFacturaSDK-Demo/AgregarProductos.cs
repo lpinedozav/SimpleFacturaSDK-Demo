@@ -6,7 +6,6 @@ using SimpleFacturaSDK_Demo.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using static SDKSimpleFactura.Enum.TipoDTE;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -83,16 +82,6 @@ namespace SimpleFacturaSDK_Demo
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void AgregarProductos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void generarAgregarProducto_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
