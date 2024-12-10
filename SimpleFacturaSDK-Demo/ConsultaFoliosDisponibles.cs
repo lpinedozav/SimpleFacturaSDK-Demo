@@ -15,12 +15,12 @@ namespace SimpleFacturaSDK_Demo
         public ConsultaFoliosDisponibles()
         {
             _appSettings = AppSettings.Current;
+            cliente = SimpleClientSingleton.Instance;
             InitializeComponent();
         }
 
         private void ConsultaFoliosDisponibles_Load(object sender, EventArgs e)
         {
-            cliente = SimpleClientSingleton.Instance;
             textRutEmpresa.Text = _appSettings.Credenciales.RutEmisor;
             EnumHelper.LlenarComboBoxConEnum<DTEType>(comboBoxCodigoTipoDTE);
             comboBoxCodigoTipoDTE.SelectedIndex = 3;
