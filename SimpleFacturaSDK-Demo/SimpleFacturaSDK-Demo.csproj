@@ -304,6 +304,12 @@
     <Compile Include="FacturacionMasiva.Designer.cs">
       <DependentUpon>FacturacionMasiva.cs</DependentUpon>
     </Compile>
+    <Compile Include="FoliosSinUso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoliosSinUso.Designer.cs">
+      <DependentUpon>FoliosSinUso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\FormattingHelper.cs" />
     <Compile Include="ListadoDteEmitidos_Recibidos.cs">
@@ -421,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacturacionMasiva.resx">
       <DependentUpon>FacturacionMasiva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoliosSinUso.resx">
+      <DependentUpon>FoliosSinUso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoDteEmitidos_Recibidos.resx">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
