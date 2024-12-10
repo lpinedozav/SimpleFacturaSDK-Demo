@@ -52,7 +52,7 @@
             this.item_otros = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.datosEmpresa = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.ListarSucursales = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listarClientes = new System.Windows.Forms.Button();
             this.agregarClientes = new System.Windows.Forms.Button();
@@ -306,7 +306,7 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.datosEmpresa);
-            this.groupBox9.Controls.Add(this.button24);
+            this.groupBox9.Controls.Add(this.ListarSucursales);
             this.groupBox9.Location = new System.Drawing.Point(212, 145);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(191, 122);
@@ -324,14 +324,15 @@
             this.datosEmpresa.UseVisualStyleBackColor = true;
             this.datosEmpresa.Click += new System.EventHandler(this.datosEmpresa_Click);
             // 
-            // button24
+            // ListarSucursales
             // 
-            this.button24.Location = new System.Drawing.Point(14, 23);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(164, 38);
-            this.button24.TabIndex = 0;
-            this.button24.Text = "Listado Sucursales";
-            this.button24.UseVisualStyleBackColor = true;
+            this.ListarSucursales.Location = new System.Drawing.Point(14, 23);
+            this.ListarSucursales.Name = "ListarSucursales";
+            this.ListarSucursales.Size = new System.Drawing.Size(164, 38);
+            this.ListarSucursales.TabIndex = 0;
+            this.ListarSucursales.Text = "Listado Sucursales";
+            this.ListarSucursales.UseVisualStyleBackColor = true;
+            this.ListarSucursales.Click += new System.EventHandler(this.ListarSucursales_Click);
             // 
             // groupBox7
             // 
@@ -403,6 +404,7 @@
             this.FoliosDisponibles.TabIndex = 11;
             this.FoliosDisponibles.Text = "Consulta Folios Disponibles";
             this.FoliosDisponibles.UseVisualStyleBackColor = true;
+            this.FoliosDisponibles.Click += new System.EventHandler(this.FoliosDisponibles_Click);
             // 
             // solicitarFolios
             // 
@@ -603,7 +605,7 @@
         private System.Windows.Forms.Button agregarClientes;
         private System.Windows.Forms.Button datosEmpresa;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button ListarSucursales;
     }
 }
 

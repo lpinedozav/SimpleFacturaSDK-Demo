@@ -256,6 +256,12 @@
     <Compile Include="ConsolidadoVenta.Designer.cs">
       <DependentUpon>ConsolidadoVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaFoliosDisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaFoliosDisponibles.Designer.cs">
+      <DependentUpon>ConsultaFoliosDisponibles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detalles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsolidadoVenta.resx">
       <DependentUpon>ConsolidadoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaFoliosDisponibles.resx">
+      <DependentUpon>ConsultaFoliosDisponibles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Detalles.resx">
       <DependentUpon>Detalles.cs</DependentUpon>

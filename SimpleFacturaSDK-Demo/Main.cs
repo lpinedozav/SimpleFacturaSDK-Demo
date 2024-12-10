@@ -127,11 +127,21 @@ namespace SimpleFacturaSDK_Demo
             ListarClientes formulario = new ListarClientes();
             formulario.Show();
         }
+        private void ListarSucursales_Click(object sender, EventArgs e)
+        {
+            ListarSucursales formulario = new ListarSucursales();
+            formulario.Show();
+        }
 
         private void datosEmpresa_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void FoliosDisponibles_Click(object sender, EventArgs e)
+        {
+            ConsultaFoliosDisponibles formulario = new ConsultaFoliosDisponibles();
+            formulario.Show();
+        }
     }
 }
