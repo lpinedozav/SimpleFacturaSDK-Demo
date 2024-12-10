@@ -25,6 +25,7 @@ namespace SimpleFacturaSDK_Demo
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+            gridResultados.CellContentClick += dataGridProductos_CellContentClick;
         }
 
         private async void generarListadoProductos_Click(object sender, EventArgs e)
@@ -34,7 +35,9 @@ namespace SimpleFacturaSDK_Demo
                 var request = new Credenciales();
                 request.RutEmisor = textRutEmisor.Text;
                 request.NombreSucursal = textNombreSucursal.Text;
+
                 var response = await cliente.Productos.ListarProductosAsync(request);
+
                 if (response.Status == 400 || response.Status == 500)
                 {
                     MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -42,40 +45,11 @@ namespace SimpleFacturaSDK_Demo
                 else
                 {
                     list = response.Data;
-                    gridResultados.Rows.Clear();
-                    gridResultados.CellContentClick += dataGridProductos_CellContentClick;
-                    DataGridViewButtonCell detallesColumn = new DataGridViewButtonCell();
-                    detallesColumn.Value = "Ver Impuestos";
-                    detallesColumn.UseColumnTextForButtonValue = true;
-                    gridResultados.AllowUserToAddRows = false;
-                    foreach (var producto in list)
-                    {
-                        int rowIndex = gridResultados.Rows.Add(
-                            //producto.ProductoId,
-                            producto.Nombre,
-                            FormattingHelper.FormatearPrecio((decimal)producto.Precio),
-                            producto.Exento,
-                            detallesColumn
-                        );
-                        DataGridViewRow row = gridResultados.Rows[rowIndex];
-                        DataGridViewButtonCell buttonCell = new DataGridViewButtonCell();
 
-                        if (producto.Impuestos == null || producto.Impuestos.Count == 0)
-                        {
-                            // Configurar el botón como "Sin Impuestos" con estilo visual diferenciado
-                            buttonCell.Value = "Sin Impuestos";
-                            buttonCell.Style.ForeColor = System.Drawing.Color.Gray; // Cambiar el color del texto
-                            buttonCell.Style.BackColor = System.Drawing.Color.LightGray; // Cambiar el color de fondo
-                            buttonCell.FlatStyle = FlatStyle.Flat; // Asegurarse de usar estilo plano para aplicar colores
-                        }
-                        else
-                        {
-                            // Configurar el botón normalmente
-                            buttonCell.Value = "Ver Impuestos";
-                        }
+                    gridResultados.DataSource = null;
+                    gridResultados.DataSource = list;
 
-                        row.Cells["impuestos"] = buttonCell;
-                    }
+                    ConfigurarColumnasBotones();
                 }
             }
             catch (Exception ex)
@@ -83,18 +57,55 @@ namespace SimpleFacturaSDK_Demo
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ConfigurarColumnasBotones()
+        {
+            if (gridResultados.Columns["impuestos"] == null)
+            {
+                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
+                {
+                    Name = "impuestos",
+                    HeaderText = "Impuestos",
+                    Text = "Ver Impuestos",
+                    UseColumnTextForButtonValue = true
+                };
+
+                gridResultados.Columns.Add(buttonColumn);
+            }
+            else
+            {
+                foreach (DataGridViewRow row in gridResultados.Rows)
+                {
+                    if (row.Cells["impuestos"] is DataGridViewButtonCell buttonCell)
+                    {
+                        var producto = (ProductoExternoEnt)row.DataBoundItem;
+
+                        if (producto?.Impuestos == null || producto.Impuestos.Count == 0)
+                        {
+                            buttonCell.Value = "Sin Impuestos";
+                            buttonCell.Style.ForeColor = System.Drawing.Color.Gray;
+                            buttonCell.Style.BackColor = System.Drawing.Color.LightGray;
+                            buttonCell.FlatStyle = FlatStyle.Flat;
+                        }
+                        else
+                        {
+                            buttonCell.Value = "Ver Impuestos";
+                            buttonCell.Style.ForeColor = System.Drawing.Color.Black;
+                            buttonCell.Style.BackColor = System.Drawing.Color.White;
+                            buttonCell.FlatStyle = FlatStyle.Flat;
+                        }
+                    }
+                }
+            }
+            gridResultados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            gridResultados.AllowUserToAddRows = false;
+        }
+
         private void dataGridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifica que el índice de columna corresponda a la columna del botón y que no sea una fila de encabezado
             if (gridResultados.Columns[e.ColumnIndex].Name == "impuestos" && e.RowIndex >= 0)
             {
-                // Obtén el reporte correspondiente a la fila seleccionada
-                var reporte = list[e.RowIndex]; // Asegúrate de que 'list' esté accesible aquí
-
-                // Supongamos que 'reporte.Detalles' es una lista de DetalleDte
+                var reporte = list[e.RowIndex];
                 List<ImpuestoProductoExternoEnt> impuestos = reporte.Impuestos;
-
-                // Llama al método para mostrar los detalles
                 MostrarDetallesEnOtraTabla(impuestos);
             }
         }
