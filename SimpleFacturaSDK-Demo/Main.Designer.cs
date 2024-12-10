@@ -437,6 +437,7 @@
             this.Listado_BHE_Emitidas_Recibidas.TabIndex = 9;
             this.Listado_BHE_Emitidas_Recibidas.Text = "Listado BHE";
             this.Listado_BHE_Emitidas_Recibidas.UseVisualStyleBackColor = true;
+            this.Listado_BHE_Emitidas_Recibidas.Click += new System.EventHandler(this.Listado_BHE_Emitidas_Recibidas_Click);
             // 
             // obtenerPdf_Emitidas_Recibidas
             // 
@@ -446,6 +447,7 @@
             this.obtenerPdf_Emitidas_Recibidas.TabIndex = 8;
             this.obtenerPdf_Emitidas_Recibidas.Text = "Obtener PDF BHE";
             this.obtenerPdf_Emitidas_Recibidas.UseVisualStyleBackColor = true;
+            this.obtenerPdf_Emitidas_Recibidas.Click += new System.EventHandler(this.obtenerPdf_Emitidas_Recibidas_Click);
             // 
             // groupBox6
             // 

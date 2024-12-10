@@ -162,5 +162,17 @@ namespace SimpleFacturaSDK_Demo
             DatosEmpresa formulario = new DatosEmpresa();
             formulario.Show();
         }
+
+        private void obtenerPdf_Emitidas_Recibidas_Click(object sender, EventArgs e)
+        {
+            ObtenerPdfBhe_Emitida_Recibida formulario = new ObtenerPdfBhe_Emitida_Recibida();
+            formulario.Show();
+        }
+
+        private void Listado_BHE_Emitidas_Recibidas_Click(object sender, EventArgs e)
+        {
+            ListadoBhe_Emitida_Recibida formulario = new ListadoBhe_Emitida_Recibida();
+            formulario.Show();
+        }
     }
 }
