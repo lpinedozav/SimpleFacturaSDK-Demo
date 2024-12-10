@@ -64,7 +64,7 @@
             this.trackid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalles = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -79,9 +79,9 @@
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
             this.groupBox3.Location = new System.Drawing.Point(413, 46);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(592, 345);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
@@ -114,7 +114,7 @@
             this.total,
             this.detalles});
             this.gridResultados.Location = new System.Drawing.Point(8, 31);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -475,6 +475,8 @@
             this.exento.MinimumWidth = 6;
             this.exento.Name = "exento";
             this.exento.ReadOnly = true;
+            this.exento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.exento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.exento.Width = 65;
             // 
             // iva
@@ -574,7 +576,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trackid;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadosii;
         private System.Windows.Forms.DataGridViewTextBoxColumn neto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exento;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn exento;
         private System.Windows.Forms.DataGridViewTextBoxColumn iva;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewButtonColumn detalles;

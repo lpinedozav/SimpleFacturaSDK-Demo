@@ -66,19 +66,7 @@ namespace SimpleFacturaSDK_Demo
                 }
                 else
                 {
-                    var list = response.Data;
-                    foreach (var producto in list)
-                    {
-                        int rowIndex = gridResultados.Rows.Add(
-                            producto.Activo,
-                            producto.Nombre,
-                            producto.CodigoBarra,
-                            producto.Precio,
-                            producto.UnidadMedida,
-                            producto.Stock
-                        );
-                        //DataGridViewRow row = gridResultados.Rows[rowIndex];
-                    }
+                    MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
