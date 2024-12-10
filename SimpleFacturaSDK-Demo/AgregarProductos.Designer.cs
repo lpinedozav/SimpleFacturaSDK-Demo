@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxImpuesto = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.checkUnidad = new System.Windows.Forms.CheckBox();
             this.numericPrecio = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,9 +49,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
-            this.comboBoxImpuesto = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.generarAgregarProducto = new System.Windows.Forms.Button();
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +57,7 @@
             this.umedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generarAgregarProducto = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecio)).BeginInit();
@@ -80,6 +80,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
+      
             // 
             // textNombreSucursal
             // 
@@ -136,6 +137,28 @@
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nuevo Producto";
+        
+            // 
+            // comboBoxImpuesto
+            // 
+            this.comboBoxImpuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxImpuesto.FormattingEnabled = true;
+            this.comboBoxImpuesto.Location = new System.Drawing.Point(63, 56);
+            this.comboBoxImpuesto.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxImpuesto.Name = "comboBoxImpuesto";
+            this.comboBoxImpuesto.Size = new System.Drawing.Size(164, 21);
+            this.comboBoxImpuesto.TabIndex = 17;
+            this.comboBoxImpuesto.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 60);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Impuesto:";
             // 
             // checkUnidad
             // 
@@ -249,42 +272,7 @@
             this.gridResultados.RowHeadersWidth = 25;
             this.gridResultados.Size = new System.Drawing.Size(751, 98);
             this.gridResultados.TabIndex = 0;
-            // 
-            // comboBoxImpuesto
-            // 
-            this.comboBoxImpuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxImpuesto.FormattingEnabled = true;
-            this.comboBoxImpuesto.Location = new System.Drawing.Point(63, 56);
-            this.comboBoxImpuesto.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxImpuesto.Name = "comboBoxImpuesto";
-            this.comboBoxImpuesto.Size = new System.Drawing.Size(164, 21);
-            this.comboBoxImpuesto.TabIndex = 17;
-            this.comboBoxImpuesto.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 60);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Impuesto:";
-            // 
-            // generarAgregarProducto
-            // 
-            this.generarAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarAgregarProducto.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarAgregarProducto.Location = new System.Drawing.Point(699, 227);
-            this.generarAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.generarAgregarProducto.Name = "generarAgregarProducto";
-            this.generarAgregarProducto.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarAgregarProducto.Size = new System.Drawing.Size(76, 28);
-            this.generarAgregarProducto.TabIndex = 21;
-            this.generarAgregarProducto.Text = "Generar";
-            this.generarAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarAgregarProducto.UseVisualStyleBackColor = true;
+            
             // 
             // Activo
             // 
@@ -358,6 +346,22 @@
             this.gridTotal.ReadOnly = true;
             this.gridTotal.Width = 70;
             // 
+            // generarAgregarProducto
+            // 
+            this.generarAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarAgregarProducto.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarAgregarProducto.Location = new System.Drawing.Point(699, 227);
+            this.generarAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.generarAgregarProducto.Name = "generarAgregarProducto";
+            this.generarAgregarProducto.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarAgregarProducto.Size = new System.Drawing.Size(76, 28);
+            this.generarAgregarProducto.TabIndex = 21;
+            this.generarAgregarProducto.Text = "Generar";
+            this.generarAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarAgregarProducto.UseVisualStyleBackColor = true;
+            this.generarAgregarProducto.Click += new System.EventHandler(this.generarAgregarProducto_Click);
+            // 
             // AgregarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,6 +378,7 @@
             this.Name = "AgregarProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Productos";
+            this.Load += new System.EventHandler(this.AgregarProductos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

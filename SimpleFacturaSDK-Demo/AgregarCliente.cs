@@ -10,21 +10,12 @@ using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
 {
-    public partial class AgregarProductos : Form
+    public partial class AgregarCliente : Form
     {
-        public AgregarProductos()
+        public AgregarCliente()
         {
             InitializeComponent();
         }
 
-        private void AgregarProductos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void generarAgregarProducto_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
