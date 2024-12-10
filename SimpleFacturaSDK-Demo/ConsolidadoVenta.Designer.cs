@@ -47,7 +47,7 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipodte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emitidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anulados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anulados = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.totalneto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalexento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totaliva = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -210,9 +210,9 @@
             // 
             this.groupBox3.Controls.Add(this.dataGridConsolidado);
             this.groupBox3.Location = new System.Drawing.Point(12, 197);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(821, 324);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
@@ -269,6 +269,8 @@
             this.anulados.HeaderText = "Anulados";
             this.anulados.MinimumWidth = 6;
             this.anulados.Name = "anulados";
+            this.anulados.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.anulados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.anulados.Width = 54;
             // 
             // totalneto
@@ -359,7 +361,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipodte;
         private System.Windows.Forms.DataGridViewTextBoxColumn emitidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn anulados;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn anulados;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalneto;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalexento;
         private System.Windows.Forms.DataGridViewTextBoxColumn totaliva;

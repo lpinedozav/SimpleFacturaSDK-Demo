@@ -40,7 +40,7 @@
             this.generarListadoProductos = new System.Windows.Forms.Button();
             this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.impuestos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
@@ -175,6 +175,8 @@
             this.exento.MinimumWidth = 6;
             this.exento.Name = "exento";
             this.exento.ReadOnly = true;
+            this.exento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.exento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.exento.Width = 50;
             // 
             // impuestos
@@ -224,7 +226,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exento;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn exento;
         private System.Windows.Forms.DataGridViewButtonColumn impuestos;
     }
 }
