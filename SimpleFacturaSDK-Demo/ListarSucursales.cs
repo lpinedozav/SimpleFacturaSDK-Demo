@@ -1,14 +1,9 @@
 ﻿using SDKSimpleFactura;
 using System;
-using SDKSimpleFactura.Models.Request;
 using SDKSimpleFactura.Models.Facturacion;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
@@ -30,32 +25,40 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarListado_Click(object sender, EventArgs e)
         {
-            var request = new Credenciales();
-            request.RutEmisor = textRutEmisor.Text;
-
-            var response = await cliente.Sucursal.ListadoSucursalesAsync(request);
-
-            if (response.Status == 200)
+            try
             {
-                var data = response.Data;
+                var request = new Credenciales();
+                request.RutEmisor = textRutEmisor.Text;
 
-                if (data == null || data.Count == 0)
+                var response = await cliente.Sucursal.ListadoSucursalesAsync(request);
+
+                if (response.Status == 200)
                 {
-                    MessageBox.Show("No se encontraron datos.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
+                    var data = response.Data;
+
+                    if (data == null || data.Count == 0)
+                    {
+                        MessageBox.Show("No se encontraron datos.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    gridResultados.DataSource = data.Select(x => new
+                    {
+                        nombre = x.Nombre,
+                        direccion = x.Direccion,
+                    }).ToList();
                 }
-
-                gridResultados.DataSource = data.Select(x => new
+                else
                 {
-                    nombre = x.Nombre,
-                    direccion = x.Direccion,
-                }).ToList();
+                    MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+
+            }
         }
 
     }
