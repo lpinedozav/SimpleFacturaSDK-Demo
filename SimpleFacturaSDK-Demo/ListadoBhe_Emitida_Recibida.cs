@@ -17,11 +17,8 @@ namespace SimpleFacturaSDK_Demo
             _appSettings = AppSettings.Current;
             cliente = SimpleClientSingleton.Instance;
 
-            // Ajustar las columnas para que llenen el espacio disponible
-            dataGridEmisor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridReceptor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridTotales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            gridOtros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+    
+
         }
 
         private void ListadoBhe_Emitida_Recibida_Load(object sender, EventArgs e)
@@ -37,6 +34,8 @@ namespace SimpleFacturaSDK_Demo
             dataGridReceptor.AllowUserToAddRows = false;
             dataGridTotales.AllowUserToAddRows = false;
             gridOtros.AllowUserToAddRows = false;
+
+
 
             ChangeUI();
         }
@@ -75,20 +74,20 @@ namespace SimpleFacturaSDK_Demo
                     {
                         dataGridEmisor.DataSource = data.Select(d => new {
                             Rut = d.Emisor?.rutEmisor,
-                            direccion = d.Emisor?.Direccion,
+                            direccion = d.Emisor?.Direccion ?? "",
                             razonSocial = d.Emisor?.RazonSocial
                         }).ToList();
 
                         dataGridReceptor.DataSource = data.Select(d => new {
                             RutReceptor = d.Receptor?.Rut,
                             ComunaReceptor = d.Receptor?.Comuna,
-                            Nombre = d.Receptor?.Nombre,
+                            nombre = d.Receptor?.Nombre,
                             DireccionReceptor = d.Receptor?.Direccion,
-                            Region = d.Receptor?.Region
+                            region = d.Receptor?.Region
                         }).ToList();
 
                         dataGridTotales.DataSource = data.Select(d => new {
-                            TotalHonorarios = d.Totales?.TotalHonorarios,
+                            totalHonorarios = d.Totales?.TotalHonorarios,
                             MontoBruto = d.Totales?.Bruto,
                             MontoLiquido = d.Totales?.Liquido,
                             pagado = 0,
@@ -108,6 +107,8 @@ namespace SimpleFacturaSDK_Demo
                             gridOtros.Columns["codigoBarra"].Visible = true;
                         if (gridOtros.Columns["descripcionAnulacion"] != null)
                             gridOtros.Columns["descripcionAnulacion"].Visible = true;
+                       
+
                     }
                     else
                     {
@@ -121,13 +122,13 @@ namespace SimpleFacturaSDK_Demo
                         dataGridReceptor.DataSource = data.Select(d => new {
                             RutReceptor = d.Receptor?.Rut,
                             ComunaReceptor = "",
-                            Nombre = d.Receptor?.Nombre,
+                            nombre = d.Receptor?.Nombre,
                             DireccionReceptor = "",
                             Region = ""
                         }).ToList();
 
                         dataGridTotales.DataSource = data.Select(d => new {
-                            TotalHonorarios = d.Totales?.TotalHonorarios,
+                            totalHonorarios = d.Totales?.TotalHonorarios,
                             MontoBruto = d.Totales?.Bruto,
                             MontoLiquido = d.Totales?.Liquido,
                             pagado = d.Totales?.Pagado,
@@ -147,6 +148,13 @@ namespace SimpleFacturaSDK_Demo
                             gridOtros.Columns["codigoBarra"].Visible = false;
                         if (gridOtros.Columns["descripcionAnulacion"] != null)
                             gridOtros.Columns["descripcionAnulacion"].Visible = false;
+
+                        // Ajustar las columnas para que llenen el espacio disponible
+                        dataGridEmisor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataGridReceptor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        //dataGridTotales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        gridOtros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
                     }
 
                     // Ocultar columnas completamente vacías
