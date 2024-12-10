@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoBhe_Emitida_Recibida));
@@ -52,18 +52,18 @@
             this.dataGridTotales = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridReceptor = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridEmisor = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gridOtros = new System.Windows.Forms.DataGridView();
-            this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RutReceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComunaReceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DireccionReceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Region = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridEmisor = new System.Windows.Forms.DataGridView();
+            this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gridOtros = new System.Windows.Forms.DataGridView();
             this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -327,94 +327,6 @@
             this.dataGridReceptor.Size = new System.Drawing.Size(454, 111);
             this.dataGridReceptor.TabIndex = 0;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridEmisor);
-            this.groupBox2.Location = new System.Drawing.Point(9, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(470, 130);
-            this.groupBox2.TabIndex = 52;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Emisor";
-            // 
-            // dataGridEmisor
-            // 
-            this.dataGridEmisor.AllowUserToAddRows = false;
-            this.dataGridEmisor.AllowUserToDeleteRows = false;
-            this.dataGridEmisor.AllowUserToResizeColumns = false;
-            this.dataGridEmisor.AllowUserToResizeRows = false;
-            this.dataGridEmisor.ColumnHeadersHeight = 29;
-            this.dataGridEmisor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridEmisor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Rut,
-            this.direccion,
-            this.razonSocial});
-            this.dataGridEmisor.Location = new System.Drawing.Point(7, 13);
-            this.dataGridEmisor.Name = "dataGridEmisor";
-            this.dataGridEmisor.ReadOnly = true;
-            this.dataGridEmisor.RowHeadersWidth = 25;
-            this.dataGridEmisor.Size = new System.Drawing.Size(454, 111);
-            this.dataGridEmisor.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.gridOtros);
-            this.groupBox3.Location = new System.Drawing.Point(9, 427);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(470, 130);
-            this.groupBox3.TabIndex = 51;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Otros";
-            // 
-            // gridOtros
-            // 
-            this.gridOtros.AllowUserToAddRows = false;
-            this.gridOtros.AllowUserToDeleteRows = false;
-            this.gridOtros.AllowUserToResizeColumns = false;
-            this.gridOtros.AllowUserToResizeRows = false;
-            this.gridOtros.ColumnHeadersHeight = 29;
-            this.gridOtros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gridOtros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.folio,
-            this.fechaEmision,
-            this.codigoBarra,
-            this.estado,
-            this.descripcionAnulacion});
-            this.gridOtros.Location = new System.Drawing.Point(7, 13);
-            this.gridOtros.Name = "gridOtros";
-            this.gridOtros.ReadOnly = true;
-            this.gridOtros.RowHeadersWidth = 25;
-            this.gridOtros.Size = new System.Drawing.Size(454, 111);
-            this.gridOtros.TabIndex = 0;
-            // 
-            // Rut
-            // 
-            this.Rut.DataPropertyName = "Rut";
-            this.Rut.HeaderText = "Rut";
-            this.Rut.Name = "Rut";
-            this.Rut.ReadOnly = true;
-            this.Rut.Width = 75;
-            // 
-            // direccion
-            // 
-            this.direccion.DataPropertyName = "Direccion";
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.MinimumWidth = 6;
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Width = 170;
-            // 
-            // razonSocial
-            // 
-            this.razonSocial.DataPropertyName = "RazonSocial";
-            dataGridViewCellStyle3.Format = "N0";
-            this.razonSocial.DefaultCellStyle = dataGridViewCellStyle3;
-            this.razonSocial.HeaderText = "Razón Social";
-            this.razonSocial.MinimumWidth = 6;
-            this.razonSocial.Name = "razonSocial";
-            this.razonSocial.ReadOnly = true;
-            this.razonSocial.Width = 170;
-            // 
             // RutReceptor
             // 
             this.RutReceptor.DataPropertyName = "RutReceptor";
@@ -460,6 +372,94 @@
             this.Region.ReadOnly = true;
             this.Region.Width = 120;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridEmisor);
+            this.groupBox2.Location = new System.Drawing.Point(9, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(470, 130);
+            this.groupBox2.TabIndex = 52;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Emisor";
+            // 
+            // dataGridEmisor
+            // 
+            this.dataGridEmisor.AllowUserToAddRows = false;
+            this.dataGridEmisor.AllowUserToDeleteRows = false;
+            this.dataGridEmisor.AllowUserToResizeColumns = false;
+            this.dataGridEmisor.AllowUserToResizeRows = false;
+            this.dataGridEmisor.ColumnHeadersHeight = 29;
+            this.dataGridEmisor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridEmisor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Rut,
+            this.direccion,
+            this.razonSocial});
+            this.dataGridEmisor.Location = new System.Drawing.Point(7, 13);
+            this.dataGridEmisor.Name = "dataGridEmisor";
+            this.dataGridEmisor.ReadOnly = true;
+            this.dataGridEmisor.RowHeadersWidth = 25;
+            this.dataGridEmisor.Size = new System.Drawing.Size(454, 111);
+            this.dataGridEmisor.TabIndex = 0;
+            // 
+            // Rut
+            // 
+            this.Rut.DataPropertyName = "Rut";
+            this.Rut.HeaderText = "Rut";
+            this.Rut.Name = "Rut";
+            this.Rut.ReadOnly = true;
+            this.Rut.Width = 75;
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "Direccion";
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.MinimumWidth = 6;
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Width = 170;
+            // 
+            // razonSocial
+            // 
+            this.razonSocial.DataPropertyName = "RazonSocial";
+            dataGridViewCellStyle3.Format = "N0";
+            this.razonSocial.DefaultCellStyle = dataGridViewCellStyle3;
+            this.razonSocial.HeaderText = "Razón Social";
+            this.razonSocial.MinimumWidth = 6;
+            this.razonSocial.Name = "razonSocial";
+            this.razonSocial.ReadOnly = true;
+            this.razonSocial.Width = 170;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.gridOtros);
+            this.groupBox3.Location = new System.Drawing.Point(9, 427);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(470, 130);
+            this.groupBox3.TabIndex = 51;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Otros";
+            // 
+            // gridOtros
+            // 
+            this.gridOtros.AllowUserToAddRows = false;
+            this.gridOtros.AllowUserToDeleteRows = false;
+            this.gridOtros.AllowUserToResizeColumns = false;
+            this.gridOtros.AllowUserToResizeRows = false;
+            this.gridOtros.ColumnHeadersHeight = 29;
+            this.gridOtros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridOtros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.folio,
+            this.fechaEmision,
+            this.codigoBarra,
+            this.estado,
+            this.descripcionAnulacion});
+            this.gridOtros.Location = new System.Drawing.Point(7, 13);
+            this.gridOtros.Name = "gridOtros";
+            this.gridOtros.ReadOnly = true;
+            this.gridOtros.RowHeadersWidth = 25;
+            this.gridOtros.Size = new System.Drawing.Size(454, 111);
+            this.gridOtros.TabIndex = 0;
+            // 
             // folio
             // 
             this.folio.DataPropertyName = "folio";
@@ -475,7 +475,7 @@
             this.fechaEmision.MinimumWidth = 6;
             this.fechaEmision.Name = "fechaEmision";
             this.fechaEmision.ReadOnly = true;
-            this.fechaEmision.Width = 97;
+            this.fechaEmision.Width = 105;
             // 
             // codigoBarra
             // 
@@ -501,6 +501,7 @@
             // 
             this.descripcionAnulacion.DataPropertyName = "descripcionAnulacion";
             this.descripcionAnulacion.HeaderText = "Descr Anulación";
+            this.descripcionAnulacion.MinimumWidth = 6;
             this.descripcionAnulacion.Name = "descripcionAnulacion";
             this.descripcionAnulacion.ReadOnly = true;
             this.descripcionAnulacion.Width = 150;
@@ -509,9 +510,10 @@
             // 
             this.TotalHonorarios.DataPropertyName = "TotalHonorarios";
             this.TotalHonorarios.HeaderText = "Total Honorarios";
+            this.TotalHonorarios.MinimumWidth = 6;
             this.TotalHonorarios.Name = "TotalHonorarios";
             this.TotalHonorarios.ReadOnly = true;
-            this.TotalHonorarios.Width = 120;
+            this.TotalHonorarios.Width = 140;
             // 
             // MontoBruto
             // 
@@ -553,7 +555,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 766);
+            this.ClientSize = new System.Drawing.Size(526, 766);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.generarListadoBHE);
             this.Controls.Add(this.radioButton_recibidoListado);
