@@ -39,10 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
+            this.generarConsultaFolios = new System.Windows.Forms.Button();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generarConsultaFolios = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
@@ -168,27 +168,6 @@
             this.gridResultados.Size = new System.Drawing.Size(230, 171);
             this.gridResultados.TabIndex = 0;
             // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 65;
-            // 
-            // desde
-            // 
-            this.desde.HeaderText = "Desde";
-            this.desde.Name = "desde";
-            this.desde.ReadOnly = true;
-            this.desde.Width = 60;
-            // 
-            // hasta
-            // 
-            this.hasta.HeaderText = "Hasta";
-            this.hasta.Name = "hasta";
-            this.hasta.ReadOnly = true;
-            this.hasta.Width = 60;
-            // 
             // generarConsultaFolios
             // 
             this.generarConsultaFolios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,6 +182,30 @@
             this.generarConsultaFolios.Text = "Generar";
             this.generarConsultaFolios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarConsultaFolios.UseVisualStyleBackColor = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 65;
+            // 
+            // desde
+            // 
+            this.desde.DataPropertyName = "Desde";
+            this.desde.HeaderText = "Desde";
+            this.desde.Name = "desde";
+            this.desde.ReadOnly = true;
+            this.desde.Width = 60;
+            // 
+            // hasta
+            // 
+            this.hasta.DataPropertyName = "Hasta";
+            this.hasta.HeaderText = "Hasta";
+            this.hasta.Name = "hasta";
+            this.hasta.ReadOnly = true;
+            this.hasta.Width = 60;
             // 
             // FoliosSinUso
             // 
@@ -237,9 +240,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridResultados;
+        private System.Windows.Forms.Button generarConsultaFolios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn desde;
         private System.Windows.Forms.DataGridViewTextBoxColumn hasta;
-        private System.Windows.Forms.Button generarConsultaFolios;
     }
 }
