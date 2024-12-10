@@ -50,9 +50,12 @@
             this.obtener_timbre = new System.Windows.Forms.Button();
             this.obtener_pdf = new System.Windows.Forms.Button();
             this.item_otros = new System.Windows.Forms.TabPage();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.datosEmpresa = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.listarClientes = new System.Windows.Forms.Button();
+            this.agregarClientes = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.consultarFolios = new System.Windows.Forms.Button();
             this.FoliosSinUso = new System.Windows.Forms.Button();
@@ -64,25 +67,22 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.listar_productos = new System.Windows.Forms.Button();
             this.agregar_productos = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.listarClientes = new System.Windows.Forms.Button();
-            this.agregarClientes = new System.Windows.Forms.Button();
-            this.datosEmpresa = new System.Windows.Forms.Button();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button24 = new System.Windows.Forms.Button();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
             this.emision_dte.SuspendLayout();
             this.obtenerdte.SuspendLayout();
             this.item_otros.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox9.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl2
@@ -303,28 +303,65 @@
             this.item_otros.Text = "Otros";
             this.item_otros.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip1
+            // groupBox9
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.groupBox9.Controls.Add(this.datosEmpresa);
+            this.groupBox9.Controls.Add(this.button24);
+            this.groupBox9.Location = new System.Drawing.Point(212, 145);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(191, 122);
+            this.groupBox9.TabIndex = 5;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Otros";
             // 
-            // menuStrip1
+            // datosEmpresa
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Configuracion});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(644, 28);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.datosEmpresa.Location = new System.Drawing.Point(14, 67);
+            this.datosEmpresa.Name = "datosEmpresa";
+            this.datosEmpresa.Size = new System.Drawing.Size(164, 38);
+            this.datosEmpresa.TabIndex = 0;
+            this.datosEmpresa.Text = "Datos de Empresa";
+            this.datosEmpresa.UseVisualStyleBackColor = true;
+            this.datosEmpresa.Click += new System.EventHandler(this.datosEmpresa_Click);
             // 
-            // contextMenuStrip2
+            // button24
             // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            this.button24.Location = new System.Drawing.Point(14, 23);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(164, 38);
+            this.button24.TabIndex = 0;
+            this.button24.Text = "Listado Sucursales";
+            this.button24.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.listarClientes);
+            this.groupBox7.Controls.Add(this.agregarClientes);
+            this.groupBox7.Location = new System.Drawing.Point(212, 17);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(191, 122);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Clientes";
+            // 
+            // listarClientes
+            // 
+            this.listarClientes.Location = new System.Drawing.Point(13, 67);
+            this.listarClientes.Name = "listarClientes";
+            this.listarClientes.Size = new System.Drawing.Size(164, 38);
+            this.listarClientes.TabIndex = 1;
+            this.listarClientes.Text = "Listar Clientes";
+            this.listarClientes.UseVisualStyleBackColor = true;
+            // 
+            // agregarClientes
+            // 
+            this.agregarClientes.Location = new System.Drawing.Point(13, 23);
+            this.agregarClientes.Name = "agregarClientes";
+            this.agregarClientes.Size = new System.Drawing.Size(164, 38);
+            this.agregarClientes.TabIndex = 0;
+            this.agregarClientes.Text = "Agregar Clientes";
+            this.agregarClientes.UseVisualStyleBackColor = true;
+            this.agregarClientes.Click += new System.EventHandler(this.agregarClientes_Click);
             // 
             // groupBox4
             // 
@@ -435,6 +472,23 @@
             this.agregar_productos.UseVisualStyleBackColor = true;
             this.agregar_productos.Click += new System.EventHandler(this.agregar_productos_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Configuracion});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(644, 28);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // Configuracion
             // 
             this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
@@ -443,64 +497,11 @@
             this.Configuracion.Text = "Configuración";
             this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
             // 
-            // groupBox7
+            // contextMenuStrip2
             // 
-            this.groupBox7.Controls.Add(this.listarClientes);
-            this.groupBox7.Controls.Add(this.agregarClientes);
-            this.groupBox7.Location = new System.Drawing.Point(212, 17);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(191, 122);
-            this.groupBox7.TabIndex = 4;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Clientes";
-            // 
-            // listarClientes
-            // 
-            this.listarClientes.Location = new System.Drawing.Point(13, 67);
-            this.listarClientes.Name = "listarClientes";
-            this.listarClientes.Size = new System.Drawing.Size(164, 38);
-            this.listarClientes.TabIndex = 1;
-            this.listarClientes.Text = "Listar Clientes";
-            this.listarClientes.UseVisualStyleBackColor = true;
-            // 
-            // agregarClientes
-            // 
-            this.agregarClientes.Location = new System.Drawing.Point(13, 23);
-            this.agregarClientes.Name = "agregarClientes";
-            this.agregarClientes.Size = new System.Drawing.Size(164, 38);
-            this.agregarClientes.TabIndex = 0;
-            this.agregarClientes.Text = "Agregar Clientes";
-            this.agregarClientes.UseVisualStyleBackColor = true;
-            // 
-            // datosEmpresa
-            // 
-            this.datosEmpresa.Location = new System.Drawing.Point(14, 67);
-            this.datosEmpresa.Name = "datosEmpresa";
-            this.datosEmpresa.Size = new System.Drawing.Size(164, 38);
-            this.datosEmpresa.TabIndex = 0;
-            this.datosEmpresa.Text = "Datos de Empresa";
-            this.datosEmpresa.UseVisualStyleBackColor = true;
-            this.datosEmpresa.Click += new System.EventHandler(this.datosEmpresa_Click);
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.datosEmpresa);
-            this.groupBox9.Controls.Add(this.button24);
-            this.groupBox9.Location = new System.Drawing.Point(212, 145);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(191, 122);
-            this.groupBox9.TabIndex = 5;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Otros";
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(14, 23);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(164, 38);
-            this.button24.TabIndex = 0;
-            this.button24.Text = "Listado Sucursales";
-            this.button24.UseVisualStyleBackColor = true;
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // Main
             // 
@@ -521,13 +522,13 @@
             this.emision_dte.ResumeLayout(false);
             this.obtenerdte.ResumeLayout(false);
             this.item_otros.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

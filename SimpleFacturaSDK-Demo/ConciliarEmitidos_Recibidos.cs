@@ -27,21 +27,19 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarEmitidos_Click(object sender, EventArgs e)
         {
+            // Show the loading indicator on the button (or another control if you prefer)
+            Loading.ShowLoading(generarEmitidos);
+
             try
             {
                 var request = new Credenciales();
                 request.RutEmisor = textRutEmisor.Text;
                 var mes = (int)textMes.Value;
                 var anio = (int)textAnio.Value;
-                Response<string> response;
-                if (radio_Bton_emitidoConciliar.Checked)
-                {
-                    response = await cliente.Facturacion.ConsolidadoEmitidosAsync(request, mes, anio);
-                }
-                else
-                {
-                    response = await cliente.Proveedores.ConciliarRecibidosAsync(request, mes, anio);
-                }
+
+                // Perform the asynchronous API call
+                var response = await cliente.Facturacion.ConsolidadoEmitidosAsync(request, mes, anio);
+
                 if (response.Status == 400 || response.Status == 500)
                 {
                     MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -49,16 +47,22 @@ namespace SimpleFacturaSDK_Demo
                 else
                 {
                     textRespuesta.Text = $"Estado: {response.Status}\r\n" +
-                     $"Mensaje: {response.Message}\r\n" +
-                     $"Datos: {response.Data ?? "Ninguno"}\r\n" +
-                     $"Errores: {(response.Errors != null ? string.Join(", ", response.Errors) : "Ninguno")}\r\n";
+                                         $"Mensaje: {response.Message}\r\n" +
+                                         $"Datos: {response.Data ?? "Ninguno"}\r\n" +
+                                         $"Errores: {(response.Errors != null ? string.Join(", ", response.Errors) : "Ninguno")}\r\n";
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                // Hide the loading indicator once the request is done (success or failure)
+                Loading.HideLoading(generarEmitidos);
+            }
         }
+
 
     }
 }

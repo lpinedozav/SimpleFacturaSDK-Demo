@@ -84,5 +84,15 @@ namespace SimpleFacturaSDK_Demo
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AgregarProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generarAgregarProducto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
