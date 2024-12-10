@@ -318,6 +318,12 @@
     </Compile>
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\FormattingHelper.cs" />
+    <Compile Include="ListadoBhe_Emitida_Recibida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoBhe_Emitida_Recibida.Designer.cs">
+      <DependentUpon>ListadoBhe_Emitida_Recibida.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoDteEmitidos_Recibidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -445,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FoliosSinUso.resx">
       <DependentUpon>FoliosSinUso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoBhe_Emitida_Recibida.resx">
+      <DependentUpon>ListadoBhe_Emitida_Recibida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoDteEmitidos_Recibidos.resx">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
