@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarSucursales));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.generarAgregarProducto = new System.Windows.Forms.Button();
+            this.generarListado = new System.Windows.Forms.Button();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
@@ -49,7 +49,7 @@
             this.groupBox3.Size = new System.Drawing.Size(428, 117);
             this.groupBox3.TabIndex = 34;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sucursales";
+            this.groupBox3.Text = "Resultado sucursales";
             // 
             // gridResultados
             // 
@@ -69,14 +69,14 @@
             this.gridResultados.Size = new System.Drawing.Size(413, 98);
             this.gridResultados.TabIndex = 0;
             // 
-            // textBox1
+            // textRutEmisor
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 32;
-            this.textBox1.TabStop = false;
+            this.textRutEmisor.Location = new System.Drawing.Point(76, 8);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
+            this.textRutEmisor.Name = "textRutEmisor";
+            this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
+            this.textRutEmisor.TabIndex = 32;
+            this.textRutEmisor.TabStop = false;
             // 
             // label2
             // 
@@ -88,23 +88,25 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "Rut Emisor:";
             // 
-            // generarAgregarProducto
+            // generarListado
             // 
-            this.generarAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarAgregarProducto.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarAgregarProducto.Location = new System.Drawing.Point(364, 160);
-            this.generarAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.generarAgregarProducto.Name = "generarAgregarProducto";
-            this.generarAgregarProducto.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarAgregarProducto.Size = new System.Drawing.Size(76, 28);
-            this.generarAgregarProducto.TabIndex = 31;
-            this.generarAgregarProducto.Text = "Generar";
-            this.generarAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarAgregarProducto.UseVisualStyleBackColor = true;
+            this.generarListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarListado.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarListado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarListado.Location = new System.Drawing.Point(364, 160);
+            this.generarListado.Margin = new System.Windows.Forms.Padding(2);
+            this.generarListado.Name = "generarListado";
+            this.generarListado.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarListado.Size = new System.Drawing.Size(76, 28);
+            this.generarListado.TabIndex = 31;
+            this.generarListado.Text = "Generar";
+            this.generarListado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarListado.UseVisualStyleBackColor = true;
+            this.generarListado.Click += new System.EventHandler(this.generarListado_Click);
             // 
             // nombre
             // 
+            this.nombre.DataPropertyName = "Nombre";
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
@@ -112,7 +114,7 @@
             // 
             // direccion
             // 
-            this.direccion.DataPropertyName = "Giro";
+            this.direccion.DataPropertyName = "Direccion";
             dataGridViewCellStyle1.Format = "N1";
             this.direccion.DefaultCellStyle = dataGridViewCellStyle1;
             this.direccion.HeaderText = "Dirección";
@@ -127,9 +129,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 195);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textRutEmisor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.generarAgregarProducto);
+            this.Controls.Add(this.generarListado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -137,6 +139,7 @@
             this.Name = "ListarSucursales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar Sucursales";
+            this.Load += new System.EventHandler(this.ListarSucursales_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.ResumeLayout(false);
@@ -148,9 +151,9 @@
 
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridResultados;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textRutEmisor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button generarAgregarProducto;
+        private System.Windows.Forms.Button generarListado;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
     }
