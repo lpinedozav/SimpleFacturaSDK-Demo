@@ -32,11 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarClientes));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generarListarClientes = new System.Windows.Forms.Button();
+            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RutCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rut_Formateado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,36 +49,36 @@
             this.Comuna = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dirPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DirFact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generarAgregarProducto = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textRutEmisor
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 9);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 28;
-            this.textBox1.TabStop = false;
+            this.textRutEmisor.Location = new System.Drawing.Point(97, 11);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textRutEmisor.Name = "textRutEmisor";
+            this.textRutEmisor.Size = new System.Drawing.Size(185, 22);
+            this.textRutEmisor.TabIndex = 28;
+            this.textRutEmisor.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(11, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 29;
             this.label2.Text = "Rut Emisor:";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
-            this.groupBox3.Location = new System.Drawing.Point(9, 39);
+            this.groupBox3.Location = new System.Drawing.Point(12, 48);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(529, 117);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(705, 272);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Clientes";
@@ -103,22 +104,46 @@
             this.Comuna,
             this.dirPart,
             this.DirFact});
-            this.gridResultados.Location = new System.Drawing.Point(5, 13);
+            this.gridResultados.Location = new System.Drawing.Point(7, 16);
+            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(515, 98);
+            this.gridResultados.Size = new System.Drawing.Size(687, 238);
             this.gridResultados.TabIndex = 0;
+            // 
+            // generarListarClientes
+            // 
+            this.generarListarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarListarClientes.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarListarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarListarClientes.Location = new System.Drawing.Point(616, 326);
+            this.generarListarClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generarListarClientes.Name = "generarListarClientes";
+            this.generarListarClientes.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
+            this.generarListarClientes.Size = new System.Drawing.Size(101, 34);
+            this.generarListarClientes.TabIndex = 27;
+            this.generarListarClientes.Text = "Generar";
+            this.generarListarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarListarClientes.UseVisualStyleBackColor = true;
+            this.generarListarClientes.Click += new System.EventHandler(this.generarListarClientes_Click);
             // 
             // Activo
             // 
+            this.Activo.DataPropertyName = "Activo";
             this.Activo.HeaderText = "Activo";
+            this.Activo.MinimumWidth = 6;
             this.Activo.Name = "Activo";
             this.Activo.ReadOnly = true;
+            this.Activo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Activo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Activo.Width = 125;
             // 
             // RutCliente
             // 
+            this.RutCliente.DataPropertyName = "Rut";
             this.RutCliente.HeaderText = "Rut";
+            this.RutCliente.MinimumWidth = 6;
             this.RutCliente.Name = "RutCliente";
             this.RutCliente.ReadOnly = true;
             this.RutCliente.Width = 65;
@@ -134,13 +159,18 @@
             // 
             // Rut_Formateado
             // 
+            this.Rut_Formateado.DataPropertyName = "RutFormateado";
             this.Rut_Formateado.HeaderText = "Rut Formateado";
+            this.Rut_Formateado.MinimumWidth = 6;
             this.Rut_Formateado.Name = "Rut_Formateado";
             this.Rut_Formateado.ReadOnly = true;
+            this.Rut_Formateado.Width = 125;
             // 
             // razonSocial
             // 
+            this.razonSocial.DataPropertyName = "RazonSocial";
             this.razonSocial.HeaderText = "Razón Social";
+            this.razonSocial.MinimumWidth = 6;
             this.razonSocial.Name = "razonSocial";
             this.razonSocial.ReadOnly = true;
             this.razonSocial.Width = 187;
@@ -158,7 +188,9 @@
             // 
             // correoPart
             // 
+            this.correoPart.DataPropertyName = "CorreoPar";
             this.correoPart.HeaderText = "Correo Part";
+            this.correoPart.MinimumWidth = 6;
             this.correoPart.Name = "correoPart";
             this.correoPart.ReadOnly = true;
             this.correoPart.Width = 105;
@@ -176,15 +208,21 @@
             // 
             // Ciudad
             // 
+            this.Ciudad.DataPropertyName = "Ciudad";
             this.Ciudad.HeaderText = "Ciudad";
+            this.Ciudad.MinimumWidth = 6;
             this.Ciudad.Name = "Ciudad";
             this.Ciudad.ReadOnly = true;
+            this.Ciudad.Width = 125;
             // 
             // Comuna
             // 
+            this.Comuna.DataPropertyName = "Comuna";
             this.Comuna.HeaderText = "Comuna";
+            this.Comuna.MinimumWidth = 6;
             this.Comuna.Name = "Comuna";
             this.Comuna.ReadOnly = true;
+            this.Comuna.Width = 125;
             // 
             // dirPart
             // 
@@ -206,37 +244,24 @@
             this.DirFact.ReadOnly = true;
             this.DirFact.Width = 105;
             // 
-            // generarAgregarProducto
-            // 
-            this.generarAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarAgregarProducto.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarAgregarProducto.Location = new System.Drawing.Point(462, 161);
-            this.generarAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.generarAgregarProducto.Name = "generarAgregarProducto";
-            this.generarAgregarProducto.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarAgregarProducto.Size = new System.Drawing.Size(76, 28);
-            this.generarAgregarProducto.TabIndex = 27;
-            this.generarAgregarProducto.Text = "Generar";
-            this.generarAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarAgregarProducto.UseVisualStyleBackColor = true;
-            // 
             // ListarClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 200);
+            this.ClientSize = new System.Drawing.Size(728, 368);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textRutEmisor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.generarAgregarProducto);
+            this.Controls.Add(this.generarListarClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListarClientes";
+            this.Load += new System.EventHandler(this.ListarClientes_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.ResumeLayout(false);
@@ -246,12 +271,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button generarAgregarProducto;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button generarListarClientes;
+        private System.Windows.Forms.TextBox textRutEmisor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridResultados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Activo;
         private System.Windows.Forms.DataGridViewTextBoxColumn RutCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rut_Formateado;
