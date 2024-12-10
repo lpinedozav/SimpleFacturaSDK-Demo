@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerPdfBhe_Emitida_Recibida));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.folio_oPDF_BHE = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textRutContribuyente = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton_recibidoPdf = new System.Windows.Forms.RadioButton();
             this.radioButton_emitidoPdf = new System.Windows.Forms.RadioButton();
-            this.textNombreSucursal = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.folio_oPDF = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
             this.generarpdf = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF_BHE)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.folio_oPDF);
+            this.groupBox1.Controls.Add(this.folio_oPDF_BHE);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textNombreSucursal);
+            this.groupBox1.Controls.Add(this.textRutContribuyente);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label1);
@@ -59,6 +59,54 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Consulta";
+            // 
+            // folio_oPDF_BHE
+            // 
+            this.folio_oPDF_BHE.Location = new System.Drawing.Point(100, 82);
+            this.folio_oPDF_BHE.Margin = new System.Windows.Forms.Padding(2);
+            this.folio_oPDF_BHE.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.folio_oPDF_BHE.Name = "folio_oPDF_BHE";
+            this.folio_oPDF_BHE.Size = new System.Drawing.Size(141, 20);
+            this.folio_oPDF_BHE.TabIndex = 6;
+            this.folio_oPDF_BHE.TabStop = false;
+            this.folio_oPDF_BHE.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 85);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Folio:";
+            // 
+            // textRutContribuyente
+            // 
+            this.textRutContribuyente.Location = new System.Drawing.Point(101, 54);
+            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2);
+            this.textRutContribuyente.Name = "textRutContribuyente";
+            this.textRutContribuyente.Size = new System.Drawing.Size(140, 20);
+            this.textRutContribuyente.TabIndex = 5;
+            this.textRutContribuyente.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 58);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Rut Contribuyente:";
             // 
             // textRutEmisor
             // 
@@ -88,6 +136,7 @@
             this.radioButton_recibidoPdf.TabIndex = 41;
             this.radioButton_recibidoPdf.Text = "Recibido";
             this.radioButton_recibidoPdf.UseVisualStyleBackColor = true;
+            this.radioButton_recibidoPdf.CheckedChanged += new System.EventHandler(this.radioButton_recibidoPdf_CheckedChanged_1);
             // 
             // radioButton_emitidoPdf
             // 
@@ -100,54 +149,7 @@
             this.radioButton_emitidoPdf.TabStop = true;
             this.radioButton_emitidoPdf.Text = "Emitido";
             this.radioButton_emitidoPdf.UseVisualStyleBackColor = true;
-            // 
-            // textNombreSucursal
-            // 
-            this.textNombreSucursal.Location = new System.Drawing.Point(101, 54);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
-            this.textNombreSucursal.Name = "textNombreSucursal";
-            this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
-            this.textNombreSucursal.TabIndex = 5;
-            this.textNombreSucursal.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 57);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Nombre sucursal:";
-            // 
-            // folio_oPDF
-            // 
-            this.folio_oPDF.Location = new System.Drawing.Point(100, 82);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2);
-            this.folio_oPDF.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.folio_oPDF.Name = "folio_oPDF";
-            this.folio_oPDF.Size = new System.Drawing.Size(141, 20);
-            this.folio_oPDF.TabIndex = 6;
-            this.folio_oPDF.TabStop = false;
-            this.folio_oPDF.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 85);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Folio:";
+            this.radioButton_emitidoPdf.CheckedChanged += new System.EventHandler(this.radioButton_emitidoPdf_CheckedChanged_1);
             // 
             // generarpdf
             // 
@@ -163,6 +165,7 @@
             this.generarpdf.Text = "Generar";
             this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarpdf.UseVisualStyleBackColor = true;
+            this.generarpdf.Click += new System.EventHandler(this.generarpdf_Click);
             // 
             // ObtenerPdfBhe_Emitida_Recibida
             // 
@@ -180,9 +183,10 @@
             this.Name = "ObtenerPdfBhe_Emitida_Recibida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Obtener Pdf Boletas de Honorarios";
+            this.Load += new System.EventHandler(this.ObtenerPdfBhe_Emitida_Recibida_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF_BHE)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,9 +198,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton_recibidoPdf;
         private System.Windows.Forms.RadioButton radioButton_emitidoPdf;
-        private System.Windows.Forms.TextBox textNombreSucursal;
+        private System.Windows.Forms.TextBox textRutContribuyente;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown folio_oPDF;
+        private System.Windows.Forms.NumericUpDown folio_oPDF_BHE;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button generarpdf;
     }
