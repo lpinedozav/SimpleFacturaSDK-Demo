@@ -300,11 +300,23 @@
     <Compile Include="ListadoDteEmitidos_Recibidos.Designer.cs">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarClientes.Designer.cs">
+      <DependentUpon>ListarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListarProductos.Designer.cs">
       <DependentUpon>ListarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarSucursales.Designer.cs">
+      <DependentUpon>ListarSucursales.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -389,8 +401,14 @@
     <EmbeddedResource Include="ListadoDteEmitidos_Recibidos.resx">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListarClientes.resx">
+      <DependentUpon>ListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListarProductos.resx">
       <DependentUpon>ListarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarSucursales.resx">
+      <DependentUpon>ListarSucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

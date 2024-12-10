@@ -122,10 +122,16 @@ namespace SimpleFacturaSDK_Demo
             AgregarCliente formulario = new AgregarCliente();
             formulario.Show();
         }
+        private void listarClientes_Click(object sender, EventArgs e)
+        {
+            ListarClientes formulario = new ListarClientes();
+            formulario.Show();
+        }
 
         private void datosEmpresa_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
