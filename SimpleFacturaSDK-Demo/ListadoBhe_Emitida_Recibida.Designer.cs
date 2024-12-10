@@ -547,7 +547,7 @@
             this.MinimizeBox = false;
             this.Name = "ListadoBhe_Emitida_Recibida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListadoBhe_Emitida_Recibida";
+            this.Text = "Listado Boletas de Honorarios";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
