@@ -11,9 +11,14 @@ namespace SimpleFacturaSDK_Demo
         {
             InitializeComponent();
         }
+        public void SetDetalles<T>(List<T> detalles, string titulo)
+        {
+            Text = titulo;
+            SetDetalles(detalles);
+        }
 
         // Método para asignar los detalles al DataGridView
-        public void SetDetalles(List<DetalleDte> detalles)
+        public void SetDetalles<T>(List<T> detalles)
         {
             if (detalles == null || detalles.Count == 0)
             {
@@ -34,24 +39,20 @@ namespace SimpleFacturaSDK_Demo
             EliminarColumnasSinDatos(detalles);
         }
 
-
-
         private void Detalles_Load(object sender, EventArgs e)
         {
             // Puedes agregar código aquí si necesitas inicializar algo al cargar el formulario
         }
 
-        private void EliminarColumnasSinDatos(List<DetalleDte> detalles)
+        private void EliminarColumnasSinDatos<T>(List<T> detalles)
         {
-            // Iterar por las columnas
             foreach (DataGridViewColumn column in dataGridViewDetalles.Columns)
             {
                 bool hasData = false;
 
-                // Revisar si alguna fila tiene un valor no nulo o no vacío en esta columna
                 foreach (var detalle in detalles)
                 {
-                    var value = detalle.GetType().GetProperty(column.DataPropertyName)?.GetValue(detalle, null);
+                    var value = typeof(T).GetProperty(column.DataPropertyName)?.GetValue(detalle, null);
 
                     if (value != null && !string.IsNullOrWhiteSpace(value.ToString()))
                     {
@@ -60,12 +61,12 @@ namespace SimpleFacturaSDK_Demo
                     }
                 }
 
-                // Si ninguna fila tiene datos, ocultar la columna
                 if (!hasData)
                 {
                     column.Visible = false;
                 }
             }
         }
+
     }
 }

@@ -41,7 +41,7 @@
             this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.impuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.impuestos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -51,9 +51,9 @@
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
             this.groupBox3.Location = new System.Drawing.Point(15, 165);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(558, 352);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
@@ -71,9 +71,9 @@
             this.gridNombreProducto,
             this.gridPrecio,
             this.exento,
-            this.impuesto});
+            this.impuestos});
             this.gridResultados.Location = new System.Drawing.Point(7, 16);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
@@ -177,13 +177,15 @@
             this.exento.ReadOnly = true;
             this.exento.Width = 50;
             // 
-            // impuesto
+            // impuestos
             // 
-            this.impuesto.HeaderText = "Impuestos";
-            this.impuesto.MinimumWidth = 6;
-            this.impuesto.Name = "impuesto";
-            this.impuesto.ReadOnly = true;
-            this.impuesto.Width = 187;
+            this.impuestos.HeaderText = "Impuestos";
+            this.impuestos.MinimumWidth = 6;
+            this.impuestos.Name = "impuestos";
+            this.impuestos.ReadOnly = true;
+            this.impuestos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.impuestos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.impuestos.Width = 120;
             // 
             // ListarProductos
             // 
@@ -195,7 +197,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListarProductos";
@@ -223,6 +225,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn exento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn impuesto;
+        private System.Windows.Forms.DataGridViewButtonColumn impuestos;
     }
 }
