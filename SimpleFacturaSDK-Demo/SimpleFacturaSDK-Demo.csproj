@@ -268,6 +268,12 @@
     <Compile Include="ConsultarFolios.Designer.cs">
       <DependentUpon>ConsultarFolios.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosEmpresa.Designer.cs">
+      <DependentUpon>DatosEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detalles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,12 @@
     </Compile>
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\FormattingHelper.cs" />
+    <Compile Include="ListadoBhe_Emitida_Recibida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoBhe_Emitida_Recibida.Designer.cs">
+      <DependentUpon>ListadoBhe_Emitida_Recibida.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoDteEmitidos_Recibidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +370,12 @@
     </Compile>
     <Compile Include="ObtenerPDF.Designer.cs">
       <DependentUpon>ObtenerPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObtenerPdfBhe_Emitida_Recibida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObtenerPdfBhe_Emitida_Recibida.Designer.cs">
+      <DependentUpon>ObtenerPdfBhe_Emitida_Recibida.cs</DependentUpon>
     </Compile>
     <Compile Include="ObtenerSobreXML.cs">
       <SubType>Form</SubType>
@@ -410,6 +428,9 @@
     <EmbeddedResource Include="ConsultarFolios.resx">
       <DependentUpon>ConsultarFolios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DatosEmpresa.resx">
+      <DependentUpon>DatosEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Detalles.resx">
       <DependentUpon>Detalles.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +452,9 @@
     <EmbeddedResource Include="FoliosSinUso.resx">
       <DependentUpon>FoliosSinUso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListadoBhe_Emitida_Recibida.resx">
+      <DependentUpon>ListadoBhe_Emitida_Recibida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListadoDteEmitidos_Recibidos.resx">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -451,6 +475,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ObtenerPDF.resx">
       <DependentUpon>ObtenerPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObtenerPdfBhe_Emitida_Recibida.resx">
+      <DependentUpon>ObtenerPdfBhe_Emitida_Recibida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObtenerSobreXML.resx">
       <DependentUpon>ObtenerSobreXML.cs</DependentUpon>

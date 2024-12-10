@@ -69,8 +69,8 @@
             this.agregar_productos = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
@@ -386,6 +386,7 @@
             this.consultarFolios.TabIndex = 13;
             this.consultarFolios.Text = "Consultar Folios";
             this.consultarFolios.UseVisualStyleBackColor = true;
+            this.consultarFolios.Click += new System.EventHandler(this.consultarFolios_Click);
             // 
             // FoliosSinUso
             // 
@@ -395,6 +396,7 @@
             this.FoliosSinUso.TabIndex = 11;
             this.FoliosSinUso.Text = "Folios Sin Uso";
             this.FoliosSinUso.UseVisualStyleBackColor = true;
+            this.FoliosSinUso.Click += new System.EventHandler(this.FoliosSinUso_Click);
             // 
             // FoliosDisponibles
             // 
@@ -414,6 +416,7 @@
             this.solicitarFolios.TabIndex = 12;
             this.solicitarFolios.Text = "Solicitar Folios";
             this.solicitarFolios.UseVisualStyleBackColor = true;
+            this.solicitarFolios.Click += new System.EventHandler(this.solicitarFolios_Click);
             // 
             // groupBox5
             // 
@@ -434,6 +437,7 @@
             this.Listado_BHE_Emitidas_Recibidas.TabIndex = 9;
             this.Listado_BHE_Emitidas_Recibidas.Text = "Listado BHE";
             this.Listado_BHE_Emitidas_Recibidas.UseVisualStyleBackColor = true;
+            this.Listado_BHE_Emitidas_Recibidas.Click += new System.EventHandler(this.Listado_BHE_Emitidas_Recibidas_Click);
             // 
             // obtenerPdf_Emitidas_Recibidas
             // 
@@ -443,6 +447,7 @@
             this.obtenerPdf_Emitidas_Recibidas.TabIndex = 8;
             this.obtenerPdf_Emitidas_Recibidas.Text = "Obtener PDF BHE";
             this.obtenerPdf_Emitidas_Recibidas.UseVisualStyleBackColor = true;
+            this.obtenerPdf_Emitidas_Recibidas.Click += new System.EventHandler(this.obtenerPdf_Emitidas_Recibidas_Click);
             // 
             // groupBox6
             // 
@@ -492,12 +497,6 @@
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
             // Configuracion
             // 
             this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
@@ -505,6 +504,12 @@
             this.Configuracion.Size = new System.Drawing.Size(115, 24);
             this.Configuracion.Text = "Configuración";
             this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // Main
             // 

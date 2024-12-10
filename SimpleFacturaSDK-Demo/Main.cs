@@ -133,14 +133,45 @@ namespace SimpleFacturaSDK_Demo
             formulario.Show();
         }
 
-        private void datosEmpresa_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void FoliosDisponibles_Click(object sender, EventArgs e)
         {
             ConsultaFoliosDisponibles formulario = new ConsultaFoliosDisponibles();
+            formulario.Show();
+        }
+
+        private void solicitarFolios_Click(object sender, EventArgs e)
+        {
+            SolicitarFolios formulario = new SolicitarFolios();
+            formulario.Show();
+        }
+
+        private void consultarFolios_Click(object sender, EventArgs e)
+        {
+            ConsultarFolios formulario = new ConsultarFolios();
+            formulario.Show();
+        }
+
+        private void FoliosSinUso_Click(object sender, EventArgs e)
+        {
+            FoliosSinUso formulario = new FoliosSinUso();
+            formulario.Show();
+        }
+        private void datosEmpresa_Click(object sender, EventArgs e)
+        {
+            DatosEmpresa formulario = new DatosEmpresa();
+            formulario.Show();
+        }
+
+        private void obtenerPdf_Emitidas_Recibidas_Click(object sender, EventArgs e)
+        {
+            ObtenerPdfBhe_Emitida_Recibida formulario = new ObtenerPdfBhe_Emitida_Recibida();
+            formulario.Show();
+        }
+
+        private void Listado_BHE_Emitidas_Recibidas_Click(object sender, EventArgs e)
+        {
+            ListadoBhe_Emitida_Recibida formulario = new ListadoBhe_Emitida_Recibida();
             formulario.Show();
         }
     }
