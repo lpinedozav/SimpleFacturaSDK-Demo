@@ -69,8 +69,8 @@
             this.agregar_productos = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
@@ -352,6 +352,7 @@
             this.listarClientes.TabIndex = 1;
             this.listarClientes.Text = "Listar Clientes";
             this.listarClientes.UseVisualStyleBackColor = true;
+            this.listarClientes.Click += new System.EventHandler(this.listarClientes_Click);
             // 
             // agregarClientes
             // 
@@ -489,6 +490,12 @@
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
             // Configuracion
             // 
             this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
@@ -496,12 +503,6 @@
             this.Configuracion.Size = new System.Drawing.Size(115, 24);
             this.Configuracion.Text = "Configuración";
             this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // Main
             // 
