@@ -1,5 +1,6 @@
 ﻿using SDKSimpleFactura;
 using SDKSimpleFactura.Enum;
+using SDKSimpleFactura.Helpers;
 using SDKSimpleFactura.Models.Request;
 using SDKSimpleFactura.Models.Response;
 using SimpleFacturaSDK_Demo.Helpers;
@@ -18,19 +19,21 @@ namespace SimpleFacturaSDK_Demo
             InitializeComponent();
             _appSettings = AppSettings.Current;
             cliente = SimpleClientSingleton.Instance;
+            EnumHelper.LlenarComboBoxConEnum<TipoImpuesto.TipoImpuestoEnum>(comboBoxImpuesto);
         }
 
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
+            var randomText = StringHelper.GenerateRandomString(6);
             //Credenciales
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             //Productos
-            textNombre.Text = "ProductoTest1";
-            textCodigoBarra.Text = "productotest1";
+            textNombre.Text = randomText;
+            textCodigoBarra.Text = randomText;
             numericPrecio.Value = 50;
-            EnumHelper.LlenarComboBoxConEnum<TipoImpuesto.TipoImpuestoEnum>(comboBoxImpuesto);
-
+            textUnidadMedida.Text = "un";
+            comboBoxImpuesto.SelectedIndex = 1;
         }
 
         private async void generarAgregarProducto_Click(object sender, EventArgs e)
@@ -50,7 +53,7 @@ namespace SimpleFacturaSDK_Demo
                     {
                         Nombre = textNombre.Text,
                         CodigoBarra = textCodigoBarra.Text,
-                        UnidadMedida = "un",
+                        UnidadMedida = textUnidadMedida.Text,
                         Precio = (double)numericPrecio.Value,
                         TieneImpuestos = false,
                         Impuestos = new List<int> { (int)EnumHelper.ObtenerValorSeleccionado<TipoImpuesto.TipoImpuestoEnum>(comboBoxImpuesto) }
