@@ -262,6 +262,12 @@
     <Compile Include="ConsultaFoliosDisponibles.Designer.cs">
       <DependentUpon>ConsultaFoliosDisponibles.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarFolios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarFolios.Designer.cs">
+      <DependentUpon>ConsultarFolios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detalles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,12 @@
     </Compile>
     <Compile Include="FacturacionMasiva.Designer.cs">
       <DependentUpon>FacturacionMasiva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoliosSinUso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoliosSinUso.Designer.cs">
+      <DependentUpon>FoliosSinUso.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\FormattingHelper.cs" />
@@ -368,6 +380,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleFacturaClient.cs" />
+    <Compile Include="SolicitarFolios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolicitarFolios.Designer.cs">
+      <DependentUpon>SolicitarFolios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Acuse.resx">
       <DependentUpon>Acuse.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +407,9 @@
     <EmbeddedResource Include="ConsultaFoliosDisponibles.resx">
       <DependentUpon>ConsultaFoliosDisponibles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarFolios.resx">
+      <DependentUpon>ConsultarFolios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Detalles.resx">
       <DependentUpon>Detalles.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacturacionMasiva.resx">
       <DependentUpon>FacturacionMasiva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoliosSinUso.resx">
+      <DependentUpon>FoliosSinUso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoDteEmitidos_Recibidos.resx">
       <DependentUpon>ListadoDteEmitidos_Recibidos.cs</DependentUpon>
@@ -447,6 +471,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SolicitarFolios.resx">
+      <DependentUpon>SolicitarFolios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
