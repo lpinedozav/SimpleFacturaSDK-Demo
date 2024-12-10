@@ -13,8 +13,8 @@ namespace SimpleFacturaSDK_Demo
         private SimpleFacturaClient cliente;
         public ConciliarEmitidos_Recibidos()
         {
-            InitializeComponent();
             _appSettings = AppSettings.Current;
+            InitializeComponent();
         }
 
         private void ConciliarEmitidos_Load(object sender, EventArgs e)
