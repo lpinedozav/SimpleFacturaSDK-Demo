@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
-            this.generarListarClientes = new System.Windows.Forms.Button();
             this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RutCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,36 +48,36 @@
             this.Comuna = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dirPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DirFact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generarListarClientes = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.SuspendLayout();
             // 
             // textRutEmisor
             // 
-            this.textRutEmisor.Location = new System.Drawing.Point(97, 11);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textRutEmisor.Location = new System.Drawing.Point(73, 9);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(185, 22);
+            this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 28;
             this.textRutEmisor.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 16);
+            this.label2.Location = new System.Drawing.Point(8, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 29;
             this.label2.Text = "Rut Emisor:";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
-            this.groupBox3.Location = new System.Drawing.Point(12, 48);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(9, 39);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(705, 272);
+            this.groupBox3.Size = new System.Drawing.Size(529, 221);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Clientes";
@@ -104,29 +103,12 @@
             this.Comuna,
             this.dirPart,
             this.DirFact});
-            this.gridResultados.Location = new System.Drawing.Point(7, 16);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.gridResultados.Location = new System.Drawing.Point(5, 13);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(687, 238);
+            this.gridResultados.Size = new System.Drawing.Size(515, 193);
             this.gridResultados.TabIndex = 0;
-            // 
-            // generarListarClientes
-            // 
-            this.generarListarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarListarClientes.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarListarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarListarClientes.Location = new System.Drawing.Point(616, 326);
-            this.generarListarClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.generarListarClientes.Name = "generarListarClientes";
-            this.generarListarClientes.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
-            this.generarListarClientes.Size = new System.Drawing.Size(101, 34);
-            this.generarListarClientes.TabIndex = 27;
-            this.generarListarClientes.Text = "Generar";
-            this.generarListarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarListarClientes.UseVisualStyleBackColor = true;
-            this.generarListarClientes.Click += new System.EventHandler(this.generarListarClientes_Click);
             // 
             // Activo
             // 
@@ -244,23 +226,38 @@
             this.DirFact.ReadOnly = true;
             this.DirFact.Width = 105;
             // 
+            // generarListarClientes
+            // 
+            this.generarListarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarListarClientes.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarListarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarListarClientes.Location = new System.Drawing.Point(462, 265);
+            this.generarListarClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarListarClientes.Name = "generarListarClientes";
+            this.generarListarClientes.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarListarClientes.Size = new System.Drawing.Size(76, 28);
+            this.generarListarClientes.TabIndex = 27;
+            this.generarListarClientes.Text = "Generar";
+            this.generarListarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarListarClientes.UseVisualStyleBackColor = true;
+            this.generarListarClientes.Click += new System.EventHandler(this.generarListarClientes_Click);
+            // 
             // ListarClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 368);
+            this.ClientSize = new System.Drawing.Size(546, 299);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.textRutEmisor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.generarListarClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListarClientes";
+            this.Text = "Listar Clientes";
             this.Load += new System.EventHandler(this.ListarClientes_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();

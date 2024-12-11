@@ -254,7 +254,7 @@
             this.MinimizeBox = false;
             this.Name = "ObtenerSobreXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ObtenerSobreXML";
+            this.Text = "Obtener Sobre XML";
             this.Load += new System.EventHandler(this.ObtenerSobreXML_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
