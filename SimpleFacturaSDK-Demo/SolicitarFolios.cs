@@ -1,6 +1,5 @@
 ﻿using SDKSimpleFactura;
 using SDKSimpleFactura.Models.Request;
-using SDKSimpleFactura.Models.Response;
 using SimpleFacturaSDK_Demo.Helpers;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,6 @@ namespace SimpleFacturaSDK_Demo
     {
         private AppSettings _appSettings;
         private SimpleFacturaClient cliente;
-        private TimbrajeApiEnt list;
 
         public SolicitarFolios()
         {
