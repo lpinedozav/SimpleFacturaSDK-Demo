@@ -1,15 +1,8 @@
 ﻿using SDKSimpleFactura;
 using SimpleFacturaSDK_Demo.Helpers;
 using System;
-
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SDKSimpleFactura.Models.Response;
 using static SDKSimpleFactura.Enum.TipoDTE;
 using static SDKSimpleFactura.Enum.Ambiente;
 using SimpleFacturaSDK_Demo.Models;
@@ -21,7 +14,6 @@ namespace SimpleFacturaSDK_Demo
     {
         private AppSettings _appSettings;
         private SimpleFacturaClient cliente;
-        private SolicitudFoliosRequest solicitudFoliosRequest;
         public FoliosSinUso()
         {
             InitializeComponent();
@@ -59,22 +51,17 @@ namespace SimpleFacturaSDK_Demo
                 if (tipodte_Folio.SelectedItem is ComboBoxItem selectedItem)
                 {
                     var tipoDte = (int)selectedItem.Value;
-
-                    // Aquí llamas a tu método para obtener los folios sin uso.
-                    // Ejemplo (ajústalo a tu SDK y endpoint real):
                     var request = new SolicitudFoliosRequest
                     {
                         RutEmpresa = textRutEmisor.Text,
                         TipoDTE = tipoDte,
                         Ambiente = (int)ambienteSeleccionado
                     };
-
-                    // Supongamos que la respuesta es algo así:
                     var response = await cliente.Folio.FoliosSinUsoAsync(request);
 
                     if (response.Status == 200)
                     {
-                        var listaFoliosSinUso = response.Data; // Debe ser una lista de objetos con Cantidad, Desde, Hasta.
+                        var listaFoliosSinUso = response.Data; 
 
                         if (listaFoliosSinUso == null || !listaFoliosSinUso.Any())
                         {
@@ -83,8 +70,6 @@ namespace SimpleFacturaSDK_Demo
                             gridResultados.Columns.Clear();
                             return;
                         }
-
-                        // Asigna la lista al DataSource del grid
                         gridResultados.DataSource = null;
                         gridResultados.DataSource = listaFoliosSinUso;
                     }
