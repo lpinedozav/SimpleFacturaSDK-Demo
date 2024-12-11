@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.tipodte_oDTE = new System.Windows.Forms.ComboBox();
+            this.tipodte_Folio = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.radioCertificacion);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tipodte_oDTE);
+            this.groupBox1.Controls.Add(this.tipodte_Folio);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(11, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -119,15 +119,15 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Tipo DTE:";
             // 
-            // tipodte_oDTE
+            // tipodte_Folio
             // 
-            this.tipodte_oDTE.FormattingEnabled = true;
-            this.tipodte_oDTE.Location = new System.Drawing.Point(83, 54);
-            this.tipodte_oDTE.Margin = new System.Windows.Forms.Padding(2);
-            this.tipodte_oDTE.Name = "tipodte_oDTE";
-            this.tipodte_oDTE.Size = new System.Drawing.Size(141, 21);
-            this.tipodte_oDTE.TabIndex = 20;
-            this.tipodte_oDTE.TabStop = false;
+            this.tipodte_Folio.FormattingEnabled = true;
+            this.tipodte_Folio.Location = new System.Drawing.Point(83, 54);
+            this.tipodte_Folio.Margin = new System.Windows.Forms.Padding(2);
+            this.tipodte_Folio.Name = "tipodte_Folio";
+            this.tipodte_Folio.Size = new System.Drawing.Size(141, 21);
+            this.tipodte_Folio.TabIndex = 20;
+            this.tipodte_Folio.TabStop = false;
             // 
             // label3
             // 
@@ -170,6 +170,7 @@
             // 
             // Cantidad
             // 
+            this.Cantidad.DataPropertyName = "Cantidad";
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
@@ -177,6 +178,7 @@
             // 
             // desde
             // 
+            this.desde.DataPropertyName = "Desde";
             this.desde.HeaderText = "Desde";
             this.desde.Name = "desde";
             this.desde.ReadOnly = true;
@@ -184,6 +186,7 @@
             // 
             // hasta
             // 
+            this.hasta.DataPropertyName = "Hasta";
             this.hasta.HeaderText = "Hasta";
             this.hasta.Name = "hasta";
             this.hasta.ReadOnly = true;
@@ -203,6 +206,7 @@
             this.generarConsultaFolios.Text = "Generar";
             this.generarConsultaFolios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarConsultaFolios.UseVisualStyleBackColor = true;
+            this.generarConsultaFolios.Click += new System.EventHandler(this.generarConsultaFolios_Click);
             // 
             // FoliosSinUso
             // 
@@ -217,6 +221,7 @@
             this.Name = "FoliosSinUso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folios Sin Uso";
+            this.Load += new System.EventHandler(this.FoliosSinUso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -233,13 +238,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox tipodte_oDTE;
+        private System.Windows.Forms.ComboBox tipodte_Folio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridResultados;
+        private System.Windows.Forms.Button generarConsultaFolios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn desde;
         private System.Windows.Forms.DataGridViewTextBoxColumn hasta;
-        private System.Windows.Forms.Button generarConsultaFolios;
     }
 }
