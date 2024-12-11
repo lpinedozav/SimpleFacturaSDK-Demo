@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarProductos));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
+            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.impuestos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textNombreSucursal = new System.Windows.Forms.TextBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.generarListadoProductos = new System.Windows.Forms.Button();
-            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.impuestos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -50,11 +50,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
-            this.groupBox3.Location = new System.Drawing.Point(15, 165);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(11, 134);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(558, 352);
+            this.groupBox3.Size = new System.Drawing.Size(418, 286);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Productos";
@@ -72,80 +70,12 @@
             this.gridPrecio,
             this.exento,
             this.impuestos});
-            this.gridResultados.Location = new System.Drawing.Point(7, 16);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.gridResultados.Location = new System.Drawing.Point(5, 13);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(543, 328);
+            this.gridResultados.Size = new System.Drawing.Size(407, 266);
             this.gridResultados.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textNombreSucursal);
-            this.groupBox1.Controls.Add(this.textRutEmisor);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(550, 126);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Credenciales";
-            // 
-            // textNombreSucursal
-            // 
-            this.textNombreSucursal.Location = new System.Drawing.Point(124, 68);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textNombreSucursal.Name = "textNombreSucursal";
-            this.textNombreSucursal.Size = new System.Drawing.Size(420, 22);
-            this.textNombreSucursal.TabIndex = 0;
-            this.textNombreSucursal.TabStop = false;
-            // 
-            // textRutEmisor
-            // 
-            this.textRutEmisor.Location = new System.Drawing.Point(124, 28);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(420, 22);
-            this.textRutEmisor.TabIndex = 0;
-            this.textRutEmisor.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre sucursal:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Rut Emisor:";
-            // 
-            // generarListadoProductos
-            // 
-            this.generarListadoProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarListadoProductos.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarListadoProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarListadoProductos.Location = new System.Drawing.Point(472, 523);
-            this.generarListadoProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.generarListadoProductos.Name = "generarListadoProductos";
-            this.generarListadoProductos.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
-            this.generarListadoProductos.Size = new System.Drawing.Size(101, 34);
-            this.generarListadoProductos.TabIndex = 24;
-            this.generarListadoProductos.Text = "Generar";
-            this.generarListadoProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarListadoProductos.UseVisualStyleBackColor = true;
-            this.generarListadoProductos.Click += new System.EventHandler(this.generarListadoProductos_Click);
             // 
             // gridNombreProducto
             // 
@@ -189,22 +119,90 @@
             this.impuestos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.impuestos.Width = 120;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textNombreSucursal);
+            this.groupBox1.Controls.Add(this.textRutEmisor);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(11, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(412, 102);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Credenciales";
+            // 
+            // textNombreSucursal
+            // 
+            this.textNombreSucursal.Location = new System.Drawing.Point(93, 55);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Name = "textNombreSucursal";
+            this.textNombreSucursal.Size = new System.Drawing.Size(316, 20);
+            this.textNombreSucursal.TabIndex = 0;
+            this.textNombreSucursal.TabStop = false;
+            // 
+            // textRutEmisor
+            // 
+            this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Name = "textRutEmisor";
+            this.textRutEmisor.Size = new System.Drawing.Size(316, 20);
+            this.textRutEmisor.TabIndex = 0;
+            this.textRutEmisor.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 59);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre sucursal:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Rut Emisor:";
+            // 
+            // generarListadoProductos
+            // 
+            this.generarListadoProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarListadoProductos.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarListadoProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarListadoProductos.Location = new System.Drawing.Point(354, 425);
+            this.generarListadoProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarListadoProductos.Name = "generarListadoProductos";
+            this.generarListadoProductos.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarListadoProductos.Size = new System.Drawing.Size(76, 28);
+            this.generarListadoProductos.TabIndex = 24;
+            this.generarListadoProductos.Text = "Generar";
+            this.generarListadoProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarListadoProductos.UseVisualStyleBackColor = true;
+            this.generarListadoProductos.Click += new System.EventHandler(this.generarListadoProductos_Click);
+            // 
             // ListarProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 566);
+            this.ClientSize = new System.Drawing.Size(437, 460);
             this.Controls.Add(this.generarListadoProductos);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListarProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListarProductos";
+            this.Text = "Listar Productos";
             this.Load += new System.EventHandler(this.ListarProductos_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();

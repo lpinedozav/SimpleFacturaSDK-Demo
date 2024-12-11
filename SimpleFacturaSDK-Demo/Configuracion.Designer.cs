@@ -75,12 +75,12 @@
             // 
             this.guardar.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guardar.Location = new System.Drawing.Point(490, 311);
-            this.guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guardar.Location = new System.Drawing.Point(483, 311);
+            this.guardar.Margin = new System.Windows.Forms.Padding(2);
             this.guardar.Name = "guardar";
             this.guardar.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.guardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guardar.Size = new System.Drawing.Size(66, 33);
+            this.guardar.Size = new System.Drawing.Size(73, 33);
             this.guardar.TabIndex = 1;
             this.guardar.Text = "Guardar";
             this.guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -111,7 +111,7 @@
             // textpassword
             // 
             this.textpassword.Location = new System.Drawing.Point(82, 54);
-            this.textpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textpassword.Margin = new System.Windows.Forms.Padding(2);
             this.textpassword.Name = "textpassword";
             this.textpassword.Size = new System.Drawing.Size(164, 20);
             this.textpassword.TabIndex = 4;
@@ -119,7 +119,7 @@
             // textusername
             // 
             this.textusername.Location = new System.Drawing.Point(82, 32);
-            this.textusername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textusername.Margin = new System.Windows.Forms.Padding(2);
             this.textusername.Name = "textusername";
             this.textusername.Size = new System.Drawing.Size(164, 20);
             this.textusername.TabIndex = 5;
@@ -127,7 +127,7 @@
             // textbaseurl
             // 
             this.textbaseurl.Location = new System.Drawing.Point(82, 80);
-            this.textbaseurl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textbaseurl.Margin = new System.Windows.Forms.Padding(2);
             this.textbaseurl.Name = "textbaseurl";
             this.textbaseurl.Size = new System.Drawing.Size(164, 20);
             this.textbaseurl.TabIndex = 7;
@@ -152,9 +152,9 @@
             this.groupBox1.Controls.Add(this.textusername);
             this.groupBox1.Controls.Add(this.textpassword);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(268, 135);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -171,9 +171,9 @@
             this.groupBox2.Controls.Add(this.textEmail);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(293, 10);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(268, 135);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -182,7 +182,7 @@
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(100, 108);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(164, 20);
             this.textNombreSucursal.TabIndex = 14;
@@ -190,7 +190,7 @@
             // textRutContribuyente
             // 
             this.textRutContribuyente.Location = new System.Drawing.Point(100, 80);
-            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2);
             this.textRutContribuyente.Name = "textRutContribuyente";
             this.textRutContribuyente.Size = new System.Drawing.Size(164, 20);
             this.textRutContribuyente.TabIndex = 13;
@@ -198,7 +198,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(100, 53);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(164, 20);
             this.textRutEmisor.TabIndex = 12;
@@ -236,7 +236,7 @@
             // textEmail
             // 
             this.textEmail.Location = new System.Drawing.Point(100, 30);
-            this.textEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(164, 20);
             this.textEmail.TabIndex = 8;
@@ -272,9 +272,9 @@
             this.groupBox3.Controls.Add(this.textEmisor);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(9, 158);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(547, 149);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
@@ -283,7 +283,7 @@
             // numericAzteco
             // 
             this.numericAzteco.Location = new System.Drawing.Point(344, 13);
-            this.numericAzteco.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericAzteco.Margin = new System.Windows.Forms.Padding(2);
             this.numericAzteco.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -296,7 +296,7 @@
             // textCiudad
             // 
             this.textCiudad.Location = new System.Drawing.Point(343, 89);
-            this.textCiudad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCiudad.Margin = new System.Windows.Forms.Padding(2);
             this.textCiudad.Name = "textCiudad";
             this.textCiudad.Size = new System.Drawing.Size(172, 20);
             this.textCiudad.TabIndex = 30;
@@ -304,7 +304,7 @@
             // textComuna
             // 
             this.textComuna.Location = new System.Drawing.Point(343, 60);
-            this.textComuna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textComuna.Margin = new System.Windows.Forms.Padding(2);
             this.textComuna.Name = "textComuna";
             this.textComuna.Size = new System.Drawing.Size(172, 20);
             this.textComuna.TabIndex = 29;
@@ -312,7 +312,7 @@
             // textDireccion
             // 
             this.textDireccion.Location = new System.Drawing.Point(343, 35);
-            this.textDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.textDireccion.Name = "textDireccion";
             this.textDireccion.Size = new System.Drawing.Size(172, 20);
             this.textDireccion.TabIndex = 28;
@@ -320,7 +320,7 @@
             // textTelefono
             // 
             this.textTelefono.Location = new System.Drawing.Point(74, 113);
-            this.textTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(172, 20);
             this.textTelefono.TabIndex = 27;
@@ -328,7 +328,7 @@
             // textCorreo
             // 
             this.textCorreo.Location = new System.Drawing.Point(74, 89);
-            this.textCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.textCorreo.Name = "textCorreo";
             this.textCorreo.Size = new System.Drawing.Size(172, 20);
             this.textCorreo.TabIndex = 26;
@@ -336,7 +336,7 @@
             // textGiro
             // 
             this.textGiro.Location = new System.Drawing.Point(74, 62);
-            this.textGiro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textGiro.Margin = new System.Windows.Forms.Padding(2);
             this.textGiro.Name = "textGiro";
             this.textGiro.Size = new System.Drawing.Size(172, 20);
             this.textGiro.TabIndex = 25;
@@ -344,7 +344,7 @@
             // textRazonsocial
             // 
             this.textRazonsocial.Location = new System.Drawing.Point(74, 35);
-            this.textRazonsocial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRazonsocial.Margin = new System.Windows.Forms.Padding(2);
             this.textRazonsocial.Name = "textRazonsocial";
             this.textRazonsocial.Size = new System.Drawing.Size(172, 20);
             this.textRazonsocial.TabIndex = 24;
@@ -432,7 +432,7 @@
             // textEmisor
             // 
             this.textEmisor.Location = new System.Drawing.Point(74, 12);
-            this.textEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textEmisor.Name = "textEmisor";
             this.textEmisor.Size = new System.Drawing.Size(172, 20);
             this.textEmisor.TabIndex = 8;
@@ -458,12 +458,12 @@
             this.Controls.Add(this.guardar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Configuracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Configuracion";
+            this.Text = "Configuración";
             this.Load += new System.EventHandler(this.Configuracion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoBhe_Emitida_Recibida));
             this.radioButton_recibidoListado = new System.Windows.Forms.RadioButton();
             this.radioButton_emitidoListado = new System.Windows.Forms.RadioButton();
@@ -50,6 +50,11 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridTotales = new System.Windows.Forms.DataGridView();
+            this.TotalHonorarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MontoBruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MontoLiquido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridReceptor = new System.Windows.Forms.DataGridView();
             this.RutReceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,11 +74,6 @@
             this.codigoBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionAnulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalHonorarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MontoBruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MontoLiquido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oListado)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -296,6 +296,51 @@
             this.dataGridTotales.Size = new System.Drawing.Size(454, 111);
             this.dataGridTotales.TabIndex = 0;
             // 
+            // TotalHonorarios
+            // 
+            this.TotalHonorarios.DataPropertyName = "TotalHonorarios";
+            this.TotalHonorarios.HeaderText = "Total Honorarios";
+            this.TotalHonorarios.MinimumWidth = 6;
+            this.TotalHonorarios.Name = "TotalHonorarios";
+            this.TotalHonorarios.ReadOnly = true;
+            this.TotalHonorarios.Width = 140;
+            // 
+            // MontoBruto
+            // 
+            this.MontoBruto.DataPropertyName = "MontoBruto";
+            this.MontoBruto.HeaderText = "Monto Bruto";
+            this.MontoBruto.MinimumWidth = 6;
+            this.MontoBruto.Name = "MontoBruto";
+            this.MontoBruto.ReadOnly = true;
+            this.MontoBruto.Width = 97;
+            // 
+            // MontoLiquido
+            // 
+            this.MontoLiquido.DataPropertyName = "MontoLiquido";
+            dataGridViewCellStyle1.Format = "N0";
+            this.MontoLiquido.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MontoLiquido.HeaderText = "Monto Liquido";
+            this.MontoLiquido.MinimumWidth = 6;
+            this.MontoLiquido.Name = "MontoLiquido";
+            this.MontoLiquido.ReadOnly = true;
+            this.MontoLiquido.Width = 97;
+            // 
+            // pagado
+            // 
+            this.pagado.DataPropertyName = "pagado";
+            this.pagado.HeaderText = "Pagado";
+            this.pagado.Name = "pagado";
+            this.pagado.ReadOnly = true;
+            this.pagado.Width = 87;
+            // 
+            // retenido
+            // 
+            this.retenido.DataPropertyName = "retenido";
+            this.retenido.HeaderText = "Retenido";
+            this.retenido.Name = "retenido";
+            this.retenido.ReadOnly = true;
+            this.retenido.Width = 87;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridReceptor);
@@ -506,56 +551,11 @@
             this.descripcionAnulacion.ReadOnly = true;
             this.descripcionAnulacion.Width = 150;
             // 
-            // TotalHonorarios
-            // 
-            this.TotalHonorarios.DataPropertyName = "TotalHonorarios";
-            this.TotalHonorarios.HeaderText = "Total Honorarios";
-            this.TotalHonorarios.MinimumWidth = 6;
-            this.TotalHonorarios.Name = "TotalHonorarios";
-            this.TotalHonorarios.ReadOnly = true;
-            this.TotalHonorarios.Width = 140;
-            // 
-            // MontoBruto
-            // 
-            this.MontoBruto.DataPropertyName = "MontoBruto";
-            this.MontoBruto.HeaderText = "Monto Bruto";
-            this.MontoBruto.MinimumWidth = 6;
-            this.MontoBruto.Name = "MontoBruto";
-            this.MontoBruto.ReadOnly = true;
-            this.MontoBruto.Width = 97;
-            // 
-            // MontoLiquido
-            // 
-            this.MontoLiquido.DataPropertyName = "MontoLiquido";
-            dataGridViewCellStyle1.Format = "N0";
-            this.MontoLiquido.DefaultCellStyle = dataGridViewCellStyle1;
-            this.MontoLiquido.HeaderText = "Monto Liquido";
-            this.MontoLiquido.MinimumWidth = 6;
-            this.MontoLiquido.Name = "MontoLiquido";
-            this.MontoLiquido.ReadOnly = true;
-            this.MontoLiquido.Width = 97;
-            // 
-            // pagado
-            // 
-            this.pagado.DataPropertyName = "pagado";
-            this.pagado.HeaderText = "Pagado";
-            this.pagado.Name = "pagado";
-            this.pagado.ReadOnly = true;
-            this.pagado.Width = 87;
-            // 
-            // retenido
-            // 
-            this.retenido.DataPropertyName = "retenido";
-            this.retenido.HeaderText = "Retenido";
-            this.retenido.Name = "retenido";
-            this.retenido.ReadOnly = true;
-            this.retenido.Width = 87;
-            // 
             // ListadoBhe_Emitida_Recibida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 766);
+            this.ClientSize = new System.Drawing.Size(511, 766);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.generarListadoBHE);
             this.Controls.Add(this.radioButton_recibidoListado);
