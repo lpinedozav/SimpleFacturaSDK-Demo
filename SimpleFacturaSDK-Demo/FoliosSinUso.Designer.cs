@@ -35,14 +35,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.tipodte_oDTE = new System.Windows.Forms.ComboBox();
+            this.tipodte_Folio = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
-            this.generarConsultaFolios = new System.Windows.Forms.Button();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generarConsultaFolios = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.radioCertificacion);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tipodte_oDTE);
+            this.groupBox1.Controls.Add(this.tipodte_Folio);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(11, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -119,15 +119,15 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Tipo DTE:";
             // 
-            // tipodte_oDTE
+            // tipodte_Folio
             // 
-            this.tipodte_oDTE.FormattingEnabled = true;
-            this.tipodte_oDTE.Location = new System.Drawing.Point(83, 54);
-            this.tipodte_oDTE.Margin = new System.Windows.Forms.Padding(2);
-            this.tipodte_oDTE.Name = "tipodte_oDTE";
-            this.tipodte_oDTE.Size = new System.Drawing.Size(141, 21);
-            this.tipodte_oDTE.TabIndex = 20;
-            this.tipodte_oDTE.TabStop = false;
+            this.tipodte_Folio.FormattingEnabled = true;
+            this.tipodte_Folio.Location = new System.Drawing.Point(83, 54);
+            this.tipodte_Folio.Margin = new System.Windows.Forms.Padding(2);
+            this.tipodte_Folio.Name = "tipodte_Folio";
+            this.tipodte_Folio.Size = new System.Drawing.Size(141, 21);
+            this.tipodte_Folio.TabIndex = 20;
+            this.tipodte_Folio.TabStop = false;
             // 
             // label3
             // 
@@ -168,21 +168,6 @@
             this.gridResultados.Size = new System.Drawing.Size(230, 171);
             this.gridResultados.TabIndex = 0;
             // 
-            // generarConsultaFolios
-            // 
-            this.generarConsultaFolios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generarConsultaFolios.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
-            this.generarConsultaFolios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarConsultaFolios.Location = new System.Drawing.Point(183, 329);
-            this.generarConsultaFolios.Margin = new System.Windows.Forms.Padding(2);
-            this.generarConsultaFolios.Name = "generarConsultaFolios";
-            this.generarConsultaFolios.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarConsultaFolios.Size = new System.Drawing.Size(76, 28);
-            this.generarConsultaFolios.TabIndex = 33;
-            this.generarConsultaFolios.Text = "Generar";
-            this.generarConsultaFolios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.generarConsultaFolios.UseVisualStyleBackColor = true;
-            // 
             // Cantidad
             // 
             this.Cantidad.DataPropertyName = "Cantidad";
@@ -207,6 +192,22 @@
             this.hasta.ReadOnly = true;
             this.hasta.Width = 60;
             // 
+            // generarConsultaFolios
+            // 
+            this.generarConsultaFolios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarConsultaFolios.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
+            this.generarConsultaFolios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generarConsultaFolios.Location = new System.Drawing.Point(183, 329);
+            this.generarConsultaFolios.Margin = new System.Windows.Forms.Padding(2);
+            this.generarConsultaFolios.Name = "generarConsultaFolios";
+            this.generarConsultaFolios.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarConsultaFolios.Size = new System.Drawing.Size(76, 28);
+            this.generarConsultaFolios.TabIndex = 33;
+            this.generarConsultaFolios.Text = "Generar";
+            this.generarConsultaFolios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.generarConsultaFolios.UseVisualStyleBackColor = true;
+            this.generarConsultaFolios.Click += new System.EventHandler(this.generarConsultaFolios_Click);
+            // 
             // FoliosSinUso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +221,7 @@
             this.Name = "FoliosSinUso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folios Sin Uso";
+            this.Load += new System.EventHandler(this.FoliosSinUso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -236,7 +238,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox tipodte_oDTE;
+        private System.Windows.Forms.ComboBox tipodte_Folio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridResultados;
