@@ -1,10 +1,12 @@
 ﻿using SDKSimpleFactura;
 using SDKSimpleFactura.Models.Request;
+using SDKSimpleFactura.Models;
 using SimpleFacturaSDK_Demo.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.TipoDTE;
+using SimpleFacturaSDK_Demo.Models;
 
 namespace SimpleFacturaSDK_Demo
 {
