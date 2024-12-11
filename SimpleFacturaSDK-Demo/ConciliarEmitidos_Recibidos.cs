@@ -38,9 +38,16 @@ namespace SimpleFacturaSDK_Demo
                 var anio = (int)textAnio.Value;
 
                 // Perform the asynchronous API call
-                var response = await cliente.Facturacion.ConsolidadoEmitidosAsync(request, mes, anio);
-
-                if (response.Status == 400 || response.Status == 500)
+                Response<string> response;
+                if (radio_Bton_emitidoConciliar.Checked) 
+                { 
+                    response = await cliente.Facturacion.ConciliarEmitidosAsync(request, mes, anio); 
+                }
+                else
+                {
+                    response = await cliente.Proveedores.ConciliarRecibidosAsync(request, mes, anio); 
+                }
+                if (response.Status != 200)
                 {
                     MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
