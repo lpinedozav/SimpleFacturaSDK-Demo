@@ -358,6 +358,7 @@
     <Compile Include="Models\ComboBoxItem.cs" />
     <Compile Include="Models\Credenciales.cs" />
     <Compile Include="Helpers\LoadingHelper.cs" />
+    <Compile Include="Models\PropiedadValor.cs" />
     <Compile Include="Models\SDKSettings.cs" />
     <Compile Include="ObtenerDTE.cs">
       <SubType>Form</SubType>
