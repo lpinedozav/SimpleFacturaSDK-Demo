@@ -288,7 +288,7 @@ namespace SimpleFacturaSDK_Demo
             this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(171, 73);
+            this.textDocumentacion.Size = new System.Drawing.Size(172, 73);
             this.textDocumentacion.TabIndex = 20;
             this.textDocumentacion.Text = "Este endpoint permite generar y descargar archivo en formato PDF, correspondiente" +
     " a DTE emitido en portal SimpleFactura.";
