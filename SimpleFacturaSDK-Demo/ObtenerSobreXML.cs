@@ -28,14 +28,9 @@ namespace SimpleFacturaSDK_Demo
             tipodte_oSXML.SelectedIndex = 3;
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
-
-        private void cancelarSobre_Xml_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private async void generarSXML_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarSXML);
             try
             {
                 AmbienteEnum ambienteSeleccionado;
@@ -124,6 +119,11 @@ namespace SimpleFacturaSDK_Demo
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarSXML);
             }
         }
     }

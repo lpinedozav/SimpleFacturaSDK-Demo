@@ -30,6 +30,7 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarConsultaFolios_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarConsultaFolios);
             try
             {
                 AmbienteEnum ambienteSeleccionado;
@@ -82,6 +83,11 @@ namespace SimpleFacturaSDK_Demo
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarConsultaFolios);
             }
         }
     }

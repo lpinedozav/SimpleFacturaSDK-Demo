@@ -25,6 +25,7 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarListado_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarListado);
             try
             {
                 var request = new Credenciales();
@@ -56,8 +57,12 @@ namespace SimpleFacturaSDK_Demo
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarListado);
             }
         }
 

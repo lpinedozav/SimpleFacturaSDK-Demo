@@ -42,6 +42,7 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarListadoBHE_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarListadoBHE);
             try
             {
                 var request = new ListaBHERequest
@@ -173,6 +174,11 @@ namespace SimpleFacturaSDK_Demo
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarListadoBHE);
             }
         }
 

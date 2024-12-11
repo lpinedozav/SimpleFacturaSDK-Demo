@@ -30,6 +30,7 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarDatosEmpresa_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarDatosEmpresa);
             try
             {
                 var request = new Credenciales();
@@ -60,6 +61,11 @@ namespace SimpleFacturaSDK_Demo
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarDatosEmpresa);
             }
         }
 

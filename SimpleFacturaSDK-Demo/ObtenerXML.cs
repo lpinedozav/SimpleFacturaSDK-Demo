@@ -33,13 +33,9 @@ namespace SimpleFacturaSDK_Demo
             ChangeUI();
         }
 
-        private void cancelarXml_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private async void generarXml_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarXml);
             try
             {
                 AmbienteEnum ambienteSeleccionado;
@@ -121,6 +117,11 @@ namespace SimpleFacturaSDK_Demo
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarXml);
             }
         }
 

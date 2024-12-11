@@ -41,6 +41,7 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarpdf_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarpdf);
             try
             {
                 Response<byte[]> response;
@@ -122,6 +123,11 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Manejo de errores si es necesario
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarpdf);
             }
         }
         private void radioButton_recibidoPdf_CheckedChanged_1(object sender, EventArgs e)

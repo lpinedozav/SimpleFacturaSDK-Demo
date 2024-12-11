@@ -34,10 +34,9 @@ namespace SimpleFacturaSDK_Demo
         }
         private async void generarPdf_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarpdf);
             try
             {
-                
-
                 AmbienteEnum ambienteSeleccionado;
 
                 if (radioCertificacion.Checked)
@@ -137,6 +136,11 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Manejo de errores si es necesario
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarpdf);
             }
         }
 

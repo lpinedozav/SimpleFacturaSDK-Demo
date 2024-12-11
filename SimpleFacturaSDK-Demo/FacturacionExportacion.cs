@@ -117,117 +117,131 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarExporta_Click(object sender, EventArgs e)
         {
-            var exportacion = new RequestDTE
+            Loading.ShowLoading(generarExporta);
+
+            try
             {
-                Exportaciones = new Exportaciones
+                var exportacion = new RequestDTE
                 {
-                    Encabezado = new Encabezado
+                    Exportaciones = new Exportaciones
                     {
-                        IdDoc = new IdentificacionDTE(),
-                        Emisor = new Emisor(),
-                        Receptor = new Receptor
+                        Encabezado = new Encabezado
                         {
-                            Extranjero = new Extranjero()
-                        },
-                        Transporte = new Transporte
-                        {
-                            Aduana = new Aduana
+                            IdDoc = new IdentificacionDTE(),
+                            Emisor = new Emisor(),
+                            Receptor = new Receptor
                             {
-                                TipoBultos = new List<TipoBulto>()
-                            }
+                                Extranjero = new Extranjero()
+                            },
+                            Transporte = new Transporte
+                            {
+                                Aduana = new Aduana
+                                {
+                                    TipoBultos = new List<TipoBulto>()
+                                }
+                            },
+                            Totales = new Totales(),
+                            OtraMoneda = new OtraMoneda()
                         },
-                        Totales = new Totales(),
-                        OtraMoneda = new OtraMoneda()
+                        Detalle = new List<DetalleExportacion>()
                     },
-                    Detalle = new List<DetalleExportacion>()
-                },
-                Observaciones = "NOTA AL PIE DE PAGINA"
-            };
-            var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
-            var formaPago = comboBoxFormaPago.SelectedItem as ComboBoxItem;
-            var sucursal = "Casa Matriz";
-            exportacion.Exportaciones.Encabezado.IdDoc.TipoDTE = (DTEType)tipoDte.Value;
-            exportacion.Exportaciones.Encabezado.IdDoc.FchEmis = fechaEmision.Value;
-            exportacion.Exportaciones.Encabezado.IdDoc.FmaPago = (FormaPago.FormaPagoEnum)formaPago.Value;
-            exportacion.Exportaciones.Encabezado.IdDoc.FchVenc = fechaVencimiento.Value;
-            //exportacion.Exportaciones.Encabezado.IdDoc.Folio = (long)numericFolio.Value;
-            //Emisor
-            exportacion.Exportaciones.Encabezado.Emisor.RUTEmisor = textRUTEmisor.Text;
-            exportacion.Exportaciones.Encabezado.Emisor.RznSoc = razonSocial_Emisor.Text;
-            exportacion.Exportaciones.Encabezado.Emisor.GiroEmis = textGiroEmisor.Text;
-            exportacion.Exportaciones.Encabezado.Emisor.Telefono = new List<string> { textTelefonEmisor.Text };
-            exportacion.Exportaciones.Encabezado.Emisor.CorreoEmisor = correo_emisor.Text;
-            exportacion.Exportaciones.Encabezado.Emisor.Acteco = new List<int> { int.Parse(textActividadEconomica.Text) };
-            exportacion.Exportaciones.Encabezado.Emisor.DirOrigen = textDireccionEmisor.Text;
-            exportacion.Exportaciones.Encabezado.Emisor.CmnaOrigen = textComunaEmisor.Text;
-            exportacion.Exportaciones.Encabezado.Emisor.CiudadOrigen = textCiudadEmisor.Text;
+                    Observaciones = "NOTA AL PIE DE PAGINA"
+                };
+                var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
+                var formaPago = comboBoxFormaPago.SelectedItem as ComboBoxItem;
+                var sucursal = "Casa Matriz";
+                exportacion.Exportaciones.Encabezado.IdDoc.TipoDTE = (DTEType)tipoDte.Value;
+                exportacion.Exportaciones.Encabezado.IdDoc.FchEmis = fechaEmision.Value;
+                exportacion.Exportaciones.Encabezado.IdDoc.FmaPago = (FormaPago.FormaPagoEnum)formaPago.Value;
+                exportacion.Exportaciones.Encabezado.IdDoc.FchVenc = fechaVencimiento.Value;
+                //exportacion.Exportaciones.Encabezado.IdDoc.Folio = (long)numericFolio.Value;
+                //Emisor
+                exportacion.Exportaciones.Encabezado.Emisor.RUTEmisor = textRUTEmisor.Text;
+                exportacion.Exportaciones.Encabezado.Emisor.RznSoc = razonSocial_Emisor.Text;
+                exportacion.Exportaciones.Encabezado.Emisor.GiroEmis = textGiroEmisor.Text;
+                exportacion.Exportaciones.Encabezado.Emisor.Telefono = new List<string> { textTelefonEmisor.Text };
+                exportacion.Exportaciones.Encabezado.Emisor.CorreoEmisor = correo_emisor.Text;
+                exportacion.Exportaciones.Encabezado.Emisor.Acteco = new List<int> { int.Parse(textActividadEconomica.Text) };
+                exportacion.Exportaciones.Encabezado.Emisor.DirOrigen = textDireccionEmisor.Text;
+                exportacion.Exportaciones.Encabezado.Emisor.CmnaOrigen = textComunaEmisor.Text;
+                exportacion.Exportaciones.Encabezado.Emisor.CiudadOrigen = textCiudadEmisor.Text;
 
-            //Receptor
-            var nacionalidad = comboBoxNacionalidad.SelectedItem as ComboBoxItem;
-            exportacion.Exportaciones.Encabezado.Receptor.RUTRecep = textRutReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.RznSocRecep = textRznReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.GiroRecep = textGiroReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.CorreoRecep = textCorreoReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.DirRecep = textGiroReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.CmnaRecep = textCmnReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.CiudadRecep = textCiudadReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.Extranjero.NumId = textIdReceptor.Text;
-            exportacion.Exportaciones.Encabezado.Receptor.Extranjero.Nacionalidad = (CodigosAduana.Paises)nacionalidad.Value;
+                //Receptor
+                var nacionalidad = comboBoxNacionalidad.SelectedItem as ComboBoxItem;
+                exportacion.Exportaciones.Encabezado.Receptor.RUTRecep = textRutReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.RznSocRecep = textRznReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.GiroRecep = textGiroReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.CorreoRecep = textCorreoReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.DirRecep = textGiroReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.CmnaRecep = textCmnReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.CiudadRecep = textCiudadReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.Extranjero.NumId = textIdReceptor.Text;
+                exportacion.Exportaciones.Encabezado.Receptor.Extranjero.Nacionalidad = (CodigosAduana.Paises)nacionalidad.Value;
 
-            //Aduana
-            var modalidadVenta = comboBoxModalidad.SelectedItem as ComboBoxItem;
-            var clausulaCompraVenta = comboBoxClausula.SelectedItem as ComboBoxItem;
-            var viaTransporte = comboBoxViaTransporte.SelectedItem as ComboBoxItem;
-            var puertoEmbarque = comboBoxPuertoEmbarque.SelectedItem as ComboBoxItem;
-            var puertoDesembarque = comboBoxPuertoDesembarque.SelectedItem as ComboBoxItem;
-            var unidadMedidaTara = comboUnidadMedidaTara.SelectedItem as ComboBoxItem;
-            var pesoBruto = comboBoxPesoBruto.SelectedItem as ComboBoxItem;
-            var pesoNeto = comboBoxPesoNeto.SelectedItem as ComboBoxItem;
-            var paisDestino = comboPaisDestino.SelectedItem as ComboBoxItem;
-            var paisReceptor = comboBoxPaisReceptor.SelectedItem as ComboBoxItem;
+                //Aduana
+                var modalidadVenta = comboBoxModalidad.SelectedItem as ComboBoxItem;
+                var clausulaCompraVenta = comboBoxClausula.SelectedItem as ComboBoxItem;
+                var viaTransporte = comboBoxViaTransporte.SelectedItem as ComboBoxItem;
+                var puertoEmbarque = comboBoxPuertoEmbarque.SelectedItem as ComboBoxItem;
+                var puertoDesembarque = comboBoxPuertoDesembarque.SelectedItem as ComboBoxItem;
+                var unidadMedidaTara = comboUnidadMedidaTara.SelectedItem as ComboBoxItem;
+                var pesoBruto = comboBoxPesoBruto.SelectedItem as ComboBoxItem;
+                var pesoNeto = comboBoxPesoNeto.SelectedItem as ComboBoxItem;
+                var paisDestino = comboPaisDestino.SelectedItem as ComboBoxItem;
+                var paisReceptor = comboBoxPaisReceptor.SelectedItem as ComboBoxItem;
 
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodModVenta = (CodigosAduana.ModalidadVenta)modalidadVenta.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodClauVenta = (CodigosAduana.ClausulaCompraVenta)clausulaCompraVenta.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.TotClauVenta = double.Parse(textClausula.Text);
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodViaTransp = (CodigosAduana.ViasdeTransporte)viaTransporte.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPtoEmbarque = (CodigosAduana.Puertos)puertoEmbarque.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPtoDesemb = (CodigosAduana.Puertos)puertoDesembarque.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.Tara = (int)numericTara.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodUnidMedTara = (CodigosAduana.UnidadMedida)unidadMedidaTara.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.PesoBruto = (int)numericPesoBruto.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodUnidPesoBruto = (CodigosAduana.UnidadMedida)pesoBruto.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.PesoNeto = (int)numericPesoNeto.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodUnidPesoNeto = (CodigosAduana.UnidadMedida)pesoNeto.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.TotBultos = int.Parse(textTotalBulto.Text);
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.MntFlete = int.Parse(numericFlete.Text);
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.MntSeguro = int.Parse(numericSeguro.Text);
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPaisRecep = (CodigosAduana.Paises)paisReceptor.Value;
-            exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPaisDestin = (CodigosAduana.Paises)paisDestino.Value;
-            //?faltatipobulto
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodModVenta = (CodigosAduana.ModalidadVenta)modalidadVenta.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodClauVenta = (CodigosAduana.ClausulaCompraVenta)clausulaCompraVenta.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.TotClauVenta = double.Parse(textClausula.Text);
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodViaTransp = (CodigosAduana.ViasdeTransporte)viaTransporte.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPtoEmbarque = (CodigosAduana.Puertos)puertoEmbarque.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPtoDesemb = (CodigosAduana.Puertos)puertoDesembarque.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.Tara = (int)numericTara.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodUnidMedTara = (CodigosAduana.UnidadMedida)unidadMedidaTara.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.PesoBruto = (int)numericPesoBruto.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodUnidPesoBruto = (CodigosAduana.UnidadMedida)pesoBruto.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.PesoNeto = (int)numericPesoNeto.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodUnidPesoNeto = (CodigosAduana.UnidadMedida)pesoNeto.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.TotBultos = int.Parse(textTotalBulto.Text);
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.MntFlete = int.Parse(numericFlete.Text);
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.MntSeguro = int.Parse(numericSeguro.Text);
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPaisRecep = (CodigosAduana.Paises)paisReceptor.Value;
+                exportacion.Exportaciones.Encabezado.Transporte.Aduana.CodPaisDestin = (CodigosAduana.Paises)paisDestino.Value;
+                //?faltatipobulto
 
-            //Otra moneda
-            var tipoMoneda = comboBoxTipoMoneda.SelectedItem as ComboBoxItem;
-            exportacion.Exportaciones.Encabezado.OtraMoneda.TpoMoneda = (CodigosAduana.Moneda)tipoMoneda.Value;
-            exportacion.Exportaciones.Encabezado.OtraMoneda.TpoCambio = double.Parse(textTipoCambio.Text);
-            exportacion.Exportaciones.Encabezado.OtraMoneda.MntExeOtrMnda = double.Parse(textMontoExento.Text);
-            exportacion.Exportaciones.Encabezado.OtraMoneda.MntTotOtrMnda = double.Parse(textMontoTotal.Text);
+                //Otra moneda
+                var tipoMoneda = comboBoxTipoMoneda.SelectedItem as ComboBoxItem;
+                exportacion.Exportaciones.Encabezado.OtraMoneda.TpoMoneda = (CodigosAduana.Moneda)tipoMoneda.Value;
+                exportacion.Exportaciones.Encabezado.OtraMoneda.TpoCambio = double.Parse(textTipoCambio.Text);
+                exportacion.Exportaciones.Encabezado.OtraMoneda.MntExeOtrMnda = double.Parse(textMontoExento.Text);
+                exportacion.Exportaciones.Encabezado.OtraMoneda.MntTotOtrMnda = double.Parse(textMontoTotal.Text);
 
 
-            //Totales
-            var tpoMonedaTotal = comboBoxTipoMonedaTotal.SelectedItem as ComboBoxItem;
+                //Totales
+                var tpoMonedaTotal = comboBoxTipoMonedaTotal.SelectedItem as ComboBoxItem;
 
-            exportacion.Exportaciones.Encabezado.Totales.TpoMoneda = (CodigosAduana.Moneda)tpoMonedaTotal.Value;
-            exportacion.Exportaciones.Encabezado.Totales.MntExe = int.Parse(textExento.Text);
-            exportacion.Exportaciones.Encabezado.Totales.MntTotal = int.Parse(textTotal.Text);
+                exportacion.Exportaciones.Encabezado.Totales.TpoMoneda = (CodigosAduana.Moneda)tpoMonedaTotal.Value;
+                exportacion.Exportaciones.Encabezado.Totales.MntExe = int.Parse(textExento.Text);
+                exportacion.Exportaciones.Encabezado.Totales.MntTotal = int.Parse(textTotal.Text);
 
-            var response = await cliente.Facturacion.FacturacionIndividualV2ExportacionAsync(sucursal, exportacion);
-            if (response.Status == 400 || response.Status == 500)
-            {
-                MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var response = await cliente.Facturacion.FacturacionIndividualV2ExportacionAsync(sucursal, exportacion);
+                if (response.Status == 400 || response.Status == 500)
+                {
+                    MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarExporta);
             }
         }
     }
