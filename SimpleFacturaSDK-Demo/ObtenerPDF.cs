@@ -5,6 +5,7 @@ using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
@@ -30,8 +31,11 @@ namespace SimpleFacturaSDK_Demo
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             textRutContribuyente.Text = _appSettings.Credenciales.RutContribuyente;
+
             ChangeUI();
         }
+
+     
         private async void generarPdf_Click(object sender, EventArgs e)
         {
             Loading.ShowLoading(generarpdf);

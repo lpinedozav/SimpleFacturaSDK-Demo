@@ -49,9 +49,12 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf = new System.Windows.Forms.Button();
             this.radioButton_recibidoPdf = new System.Windows.Forms.RadioButton();
             this.radioButton_emitidoPdf = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -235,7 +238,7 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(202, 277);
+            this.generarpdf.Location = new System.Drawing.Point(203, 277);
             this.generarpdf.Margin = new System.Windows.Forms.Padding(2);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
@@ -270,11 +273,32 @@ namespace SimpleFacturaSDK_Demo
             this.radioButton_emitidoPdf.UseVisualStyleBackColor = true;
             this.radioButton_emitidoPdf.CheckedChanged += new System.EventHandler(this.radioButton_emitidoPdf_CheckedChanged);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textDocumentacion);
+            this.groupBox3.Location = new System.Drawing.Point(11, 278);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(184, 98);
+            this.groupBox3.TabIndex = 40;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Documentación";
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(171, 73);
+            this.textDocumentacion.TabIndex = 20;
+            this.textDocumentacion.Text = "Este endpoint permite generar y descargar archivo en formato PDF, correspondiente" +
+    " a DTE emitido en portal SimpleFactura.";
+            // 
             // ObtenerPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 311);
+            this.ClientSize = new System.Drawing.Size(290, 384);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.radioButton_recibidoPdf);
             this.Controls.Add(this.radioButton_emitidoPdf);
             this.Controls.Add(this.generarpdf);
@@ -294,6 +318,8 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +346,7 @@ namespace SimpleFacturaSDK_Demo
         private System.Windows.Forms.RadioButton radioButton_emitidoPdf;
         private System.Windows.Forms.TextBox textNombreSucursal;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }
