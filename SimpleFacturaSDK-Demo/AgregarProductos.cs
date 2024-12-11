@@ -38,6 +38,7 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarAgregarProducto_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarAgregarProducto);
             try
             {
                 Response<List<ProductoEnt>> response;
@@ -72,6 +73,11 @@ namespace SimpleFacturaSDK_Demo
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarAgregarProducto);
             }
         }
     }

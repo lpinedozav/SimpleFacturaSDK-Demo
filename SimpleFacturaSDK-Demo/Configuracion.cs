@@ -43,6 +43,7 @@ namespace SimpleFacturaSDK_Demo
 
         private void guardar_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(guardar);
             // Validar que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(textusername.Text) ||
                 string.IsNullOrWhiteSpace(textpassword.Text) ||
@@ -77,6 +78,7 @@ namespace SimpleFacturaSDK_Demo
 
             MessageBox.Show("Configuración guardada exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+            Loading.HideLoading(guardar);
         }
 
         private void cancelar_Click(object sender, EventArgs e)

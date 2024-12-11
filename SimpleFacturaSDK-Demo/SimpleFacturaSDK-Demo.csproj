@@ -357,7 +357,7 @@
     <Compile Include="Models\AppSettings.cs" />
     <Compile Include="Models\ComboBoxItem.cs" />
     <Compile Include="Models\Credenciales.cs" />
-    <Compile Include="Models\LoadingHelper.cs" />
+    <Compile Include="Helpers\LoadingHelper.cs" />
     <Compile Include="Models\SDKSettings.cs" />
     <Compile Include="ObtenerDTE.cs">
       <SubType>Form</SubType>
@@ -521,7 +521,6 @@
     <None Include="Resources\cruzar1.png" />
     <Content Include="Resources\Guardar_32.png" />
     <Content Include="Resources\loader_16x16.gif" />
-    <Content Include="Resources\floader_16x16.gif" />
     <Content Include="Resources\log.ico" />
     <Content Include="Resources\View.png" />
   </ItemGroup>
