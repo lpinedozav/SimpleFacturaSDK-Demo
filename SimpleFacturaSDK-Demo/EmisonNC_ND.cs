@@ -56,8 +56,8 @@ namespace SimpleFacturaSDK_Demo
                 1,
                 "test",
                 1,
-                FormattingHelper.FormatearPrecio(200),
-                FormattingHelper.FormatearPrecio(200)
+                200,
+                200
                 );
             //Referencias
             gridReferencias.Rows.Add(
@@ -65,8 +65,8 @@ namespace SimpleFacturaSDK_Demo
                 "34",
                 "367",
                 DateTime.Parse("2022-12-06").ToString("dd/MM/yyyy"),
-                3,
-                "Corrige Monto DTE: test"
+                "Corrige Monto DTE: test",
+                3
                 );
             //Totales
             textMontoExento.Text = "200";
@@ -120,7 +120,7 @@ namespace SimpleFacturaSDK_Demo
                 request.Documento.Encabezado.Receptor.RznSocRecep = textRznReceptor.Text;
                 request.Documento.Encabezado.Receptor.GiroRecep = textGiroReceptor.Text;
                 request.Documento.Encabezado.Receptor.CorreoRecep = textCorreoReceptor.Text;
-                request.Documento.Encabezado.Receptor.DirRecep = textGiroReceptor.Text;
+                request.Documento.Encabezado.Receptor.DirRecep = textDirReceptor.Text;
                 request.Documento.Encabezado.Receptor.CmnaRecep = textCmnReceptor.Text;
                 request.Documento.Encabezado.Receptor.CiudadRecep = textCiudadReceptor.Text;
 
@@ -136,7 +136,7 @@ namespace SimpleFacturaSDK_Demo
                             NroLinDet = Convert.ToInt32(row.Cells["gridNroLinea"].Value),
                             IndExe = (IndicadorFacturacionExencionEnum)Convert.ToInt32(row.Cells["gridIndExe"].Value),
                             NmbItem = row.Cells["gridNombreProducto"].Value?.ToString() ?? string.Empty,
-                            QtyItem = Convert.ToInt32(row.Cells["gridCantidadProducto"].Value),
+                            QtyItem = Convert.ToDouble(row.Cells["gridCantidadProducto"].Value),
                             PrcItem = Convert.ToDouble(row.Cells["gridPrecio"].Value),
                             MontoItem = Convert.ToInt32(row.Cells["gridMonto"].Value)
                         };

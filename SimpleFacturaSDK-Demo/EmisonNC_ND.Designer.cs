@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmisonNC_ND));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericFolio = new System.Windows.Forms.NumericUpDown();
@@ -72,12 +72,6 @@
             this.montoNeto = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.gridProductos = new System.Windows.Forms.DataGridView();
-            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridIndExe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textRznReceptor = new System.Windows.Forms.TextBox();
             this.textCiudadReceptor = new System.Windows.Forms.TextBox();
@@ -107,6 +101,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textSucursal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.gridNroLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridIndExe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -481,7 +481,7 @@
             // montoTotal
             // 
             this.montoTotal.AutoSize = true;
-            this.montoTotal.Location = new System.Drawing.Point(218, 36);
+            this.montoTotal.Location = new System.Drawing.Point(219, 33);
             this.montoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.montoTotal.Name = "montoTotal";
             this.montoTotal.Size = new System.Drawing.Size(75, 16);
@@ -490,10 +490,10 @@
             // 
             // textMontoExento
             // 
-            this.textMontoExento.Location = new System.Drawing.Point(95, 30);
+            this.textMontoExento.Location = new System.Drawing.Point(103, 30);
             this.textMontoExento.Margin = new System.Windows.Forms.Padding(4);
             this.textMontoExento.Name = "textMontoExento";
-            this.textMontoExento.Size = new System.Drawing.Size(116, 22);
+            this.textMontoExento.Size = new System.Drawing.Size(111, 22);
             this.textMontoExento.TabIndex = 4;
             this.textMontoExento.TabStop = false;
             // 
@@ -542,66 +542,6 @@
             this.gridProductos.Size = new System.Drawing.Size(797, 121);
             this.gridProductos.TabIndex = 0;
             this.gridProductos.TabStop = false;
-            // 
-            // gridNroLinea
-            // 
-            this.gridNroLinea.DataPropertyName = "NroLinDet";
-            dataGridViewCellStyle1.Format = "N0";
-            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridNroLinea.HeaderText = "NroLinDet";
-            this.gridNroLinea.MinimumWidth = 6;
-            this.gridNroLinea.Name = "gridNroLinea";
-            this.gridNroLinea.ReadOnly = true;
-            this.gridNroLinea.Width = 65;
-            // 
-            // gridIndExe
-            // 
-            this.gridIndExe.DataPropertyName = "indexe";
-            this.gridIndExe.HeaderText = "IndExe";
-            this.gridIndExe.MinimumWidth = 6;
-            this.gridIndExe.Name = "gridIndExe";
-            this.gridIndExe.ReadOnly = true;
-            this.gridIndExe.Width = 60;
-            // 
-            // gridNombreProducto
-            // 
-            this.gridNombreProducto.DataPropertyName = "Nombre";
-            this.gridNombreProducto.HeaderText = "Nombre";
-            this.gridNombreProducto.MinimumWidth = 6;
-            this.gridNombreProducto.Name = "gridNombreProducto";
-            this.gridNombreProducto.ReadOnly = true;
-            this.gridNombreProducto.Width = 210;
-            // 
-            // gridCantidadProducto
-            // 
-            this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle2.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridCantidadProducto.HeaderText = "Cantidad";
-            this.gridCantidadProducto.MinimumWidth = 6;
-            this.gridCantidadProducto.Name = "gridCantidadProducto";
-            this.gridCantidadProducto.ReadOnly = true;
-            this.gridCantidadProducto.Width = 60;
-            // 
-            // gridPrecio
-            // 
-            this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle3.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridPrecio.HeaderText = "Precio";
-            this.gridPrecio.MinimumWidth = 6;
-            this.gridPrecio.Name = "gridPrecio";
-            this.gridPrecio.ReadOnly = true;
-            this.gridPrecio.Width = 70;
-            // 
-            // gridMonto
-            // 
-            this.gridMonto.DataPropertyName = "Monto";
-            this.gridMonto.HeaderText = "Monto";
-            this.gridMonto.MinimumWidth = 6;
-            this.gridMonto.Name = "gridMonto";
-            this.gridMonto.ReadOnly = true;
-            this.gridMonto.Width = 80;
             // 
             // groupBox7
             // 
@@ -888,11 +828,11 @@
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.textSucursal);
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Location = new System.Drawing.Point(439, 814);
+            this.groupBox6.Location = new System.Drawing.Point(457, 814);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(405, 79);
+            this.groupBox6.Size = new System.Drawing.Size(387, 79);
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros";
@@ -901,7 +841,7 @@
             // 
             this.comboBoxMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMotivo.FormattingEnabled = true;
-            this.comboBoxMotivo.Location = new System.Drawing.Point(271, 30);
+            this.comboBoxMotivo.Location = new System.Drawing.Point(255, 26);
             this.comboBoxMotivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMotivo.Name = "comboBoxMotivo";
             this.comboBoxMotivo.Size = new System.Drawing.Size(127, 24);
@@ -911,7 +851,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(214, 33);
+            this.label11.Location = new System.Drawing.Point(198, 35);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 16);
@@ -920,7 +860,7 @@
             // 
             // textSucursal
             // 
-            this.textSucursal.Location = new System.Drawing.Point(68, 30);
+            this.textSucursal.Location = new System.Drawing.Point(73, 28);
             this.textSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.textSucursal.Name = "textSucursal";
             this.textSucursal.Size = new System.Drawing.Size(116, 22);
@@ -930,12 +870,72 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 33);
+            this.label12.Location = new System.Drawing.Point(3, 33);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 16);
             this.label12.TabIndex = 3;
             this.label12.Text = "Sucursal:";
+            // 
+            // gridNroLinea
+            // 
+            this.gridNroLinea.DataPropertyName = "gridNroLinea";
+            dataGridViewCellStyle1.Format = "N0";
+            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridNroLinea.HeaderText = "NroLinDet";
+            this.gridNroLinea.MinimumWidth = 6;
+            this.gridNroLinea.Name = "gridNroLinea";
+            this.gridNroLinea.ReadOnly = true;
+            this.gridNroLinea.Width = 65;
+            // 
+            // gridIndExe
+            // 
+            this.gridIndExe.DataPropertyName = "gridIndExe";
+            this.gridIndExe.HeaderText = "IndExe";
+            this.gridIndExe.MinimumWidth = 6;
+            this.gridIndExe.Name = "gridIndExe";
+            this.gridIndExe.ReadOnly = true;
+            this.gridIndExe.Width = 60;
+            // 
+            // gridNombreProducto
+            // 
+            this.gridNombreProducto.DataPropertyName = "gridNombreProducto";
+            this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
+            this.gridNombreProducto.Name = "gridNombreProducto";
+            this.gridNombreProducto.ReadOnly = true;
+            this.gridNombreProducto.Width = 210;
+            // 
+            // gridCantidadProducto
+            // 
+            this.gridCantidadProducto.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle2.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
+            this.gridCantidadProducto.Name = "gridCantidadProducto";
+            this.gridCantidadProducto.ReadOnly = true;
+            this.gridCantidadProducto.Width = 60;
+            // 
+            // gridPrecio
+            // 
+            this.gridPrecio.DataPropertyName = "gridPrecio";
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
+            this.gridPrecio.Name = "gridPrecio";
+            this.gridPrecio.ReadOnly = true;
+            this.gridPrecio.Width = 70;
+            // 
+            // gridMonto
+            // 
+            this.gridMonto.DataPropertyName = "gridMonto";
+            this.gridMonto.HeaderText = "Monto";
+            this.gridMonto.MinimumWidth = 6;
+            this.gridMonto.Name = "gridMonto";
+            this.gridMonto.ReadOnly = true;
+            this.gridMonto.Width = 80;
             // 
             // EmisonNC_ND
             // 
@@ -1035,12 +1035,6 @@
         private System.Windows.Forms.TextBox textActividadEconomica;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericFolio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridIndExe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridMonto;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.ComboBox comboBoxMotivo;
         private System.Windows.Forms.Label label11;
@@ -1052,5 +1046,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gridRefFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridRefRazon;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridRefCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridIndExe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridMonto;
     }
 }
