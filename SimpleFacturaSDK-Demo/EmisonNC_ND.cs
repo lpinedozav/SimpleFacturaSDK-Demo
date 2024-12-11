@@ -29,7 +29,7 @@ namespace SimpleFacturaSDK_Demo
             //Identificacion
             comboBoxCodigoTipoDTE.SelectedIndex = 1; // nota credito electronica
             comboBoxFormaPago.SelectedIndex = 1;
-            numericFolio.Value = 1804;
+            numericFolio.Value = 0;
             fechaEmision.Value = DateTime.Parse("2022-12-05");
             fechaVencimiento.Value = DateTime.Now.AddMonths(6);
             //Datos emisor
