@@ -27,11 +27,14 @@ namespace SimpleFacturaSDK_Demo
             cliente = SimpleClientSingleton.Instance;
             textRut.Text = _appSettings.Credenciales.RutEmisor;
             dataGridConsolidado.CellContentClick += dataGridConsolidado_CellContentClick; // Asocia el evento al DataGridView
+            dataGridConsolidado.CellFormatting += dataGridConsolidado_CellFormatting;
 
             string descripcion =
                  "Este endpoint proporciona un consolidado de ventas desde el portal SimpleFactura. A través de una solicitud, el usuario puede obtener datos en formato JSON, especificando el RUT del emisor y un rango de fechas para filtrar los resultados. ";
 
             textDocumentacion.Text = descripcion;
+
+            dataGridConsolidado.RowHeadersWidth = 20;
         }
 
         private async void generarConsolidadoV_Click(object sender, EventArgs e)
@@ -132,11 +135,25 @@ namespace SimpleFacturaSDK_Demo
                     }
                 }
             }
-
-            // Ajustar el ancho de las columnas automáticamente
-            dataGridConsolidado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridConsolidado.AllowUserToAddRows = false;
         }
+
+        private void dataGridConsolidado_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica si es una de las columnas que deseas formatear
+            if (dataGridConsolidado.Columns[e.ColumnIndex].Name == "totalneto" ||
+                dataGridConsolidado.Columns[e.ColumnIndex].Name == "totalexento" ||
+                dataGridConsolidado.Columns[e.ColumnIndex].Name == "totaliva" ||
+                dataGridConsolidado.Columns[e.ColumnIndex].Name == "total")
+            {
+                if (e.Value != null && decimal.TryParse(e.Value.ToString(), out decimal valor))
+                {
+                    // Aplica el formato utilizando el helper
+                    e.Value = FormattingHelper.FormatearPrecio(valor);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
 
         private void dataGridConsolidado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
