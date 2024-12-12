@@ -53,10 +53,14 @@
             this.totaliva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalle = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabelConsolidado = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConsolidado)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -314,11 +318,43 @@
             this.detalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.detalle.Width = 70;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.linkLabelConsolidado);
+            this.groupBox4.Controls.Add(this.textDocumentacion);
+            this.groupBox4.Location = new System.Drawing.Point(12, 529);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(697, 95);
+            this.groupBox4.TabIndex = 53;
+            this.groupBox4.TabStop = false;
+            // 
+            // linkLabelConsolidado
+            // 
+            this.linkLabelConsolidado.AutoSize = true;
+            this.linkLabelConsolidado.Location = new System.Drawing.Point(12, -2);
+            this.linkLabelConsolidado.Name = "linkLabelConsolidado";
+            this.linkLabelConsolidado.Size = new System.Drawing.Size(101, 16);
+            this.linkLabelConsolidado.TabIndex = 41;
+            this.linkLabelConsolidado.TabStop = true;
+            this.linkLabelConsolidado.Text = "Documentación";
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
+            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(681, 64);
+            this.textDocumentacion.TabIndex = 20;
+            // 
             // ConsolidadoVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 590);
+            this.ClientSize = new System.Drawing.Size(849, 630);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.generarConsolidadoV);
             this.Controls.Add(this.groupBox2);
@@ -338,6 +374,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConsolidado)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -367,5 +405,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totaliva;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewButtonColumn detalle;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabelConsolidado;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }

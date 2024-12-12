@@ -5,6 +5,7 @@ using SimpleFacturaSDK_Demo.Models;
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.TipoDTE;
@@ -35,6 +36,12 @@ namespace SimpleFacturaSDK_Demo
             checkXML.Checked = true;
             checkPDF.Checked = true;
             textComentario.Text = "ESTO ES UN COMENTARIO";
+
+            string descripcion =
+                 "permite a los usuarios enviar Documentos Tributarios Electrónicos (DTE) por correo electrónico en formato XML, PDF o ambos." +
+                 "Para ello, es necesario especificar la empresa que emitió el documento, el tipo de DTE y su folio correspodiente.";
+
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarEM_Click(object sender, EventArgs e)
@@ -78,6 +85,25 @@ namespace SimpleFacturaSDK_Demo
                 // Ocultar el indicador de carga
                 Loading.HideLoading(textRespuesta);
             }           
+        }
+
+        private void linkLabelEnvioMail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#261356ab-6b1f-4e2e-8cfa-bbd655a5d96f";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

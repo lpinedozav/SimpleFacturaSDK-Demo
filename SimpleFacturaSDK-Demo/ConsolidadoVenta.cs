@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
 using SimpleFacturaSDK_Demo.Helpers;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -26,6 +27,11 @@ namespace SimpleFacturaSDK_Demo
             cliente = SimpleClientSingleton.Instance;
             textRut.Text = _appSettings.Credenciales.RutEmisor;
             dataGridConsolidado.CellContentClick += dataGridConsolidado_CellContentClick; // Asocia el evento al DataGridView
+
+            string descripcion =
+                 "Este endpoint proporciona un consolidado de ventas desde el portal SimpleFactura. A través de una solicitud, el usuario puede obtener datos en formato JSON, especificando el RUT del emisor y un rango de fechas para filtrar los resultados. ";
+
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarConsolidadoV_Click(object sender, EventArgs e)
@@ -155,6 +161,11 @@ namespace SimpleFacturaSDK_Demo
             Detalles detallesForm = new Detalles();
             detallesForm.SetDetalles(detalles);
             detallesForm.ShowDialog();
+        }
+
+        private void linkLabelConsolidado_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

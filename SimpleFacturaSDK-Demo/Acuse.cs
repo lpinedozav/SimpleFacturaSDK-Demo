@@ -3,6 +3,7 @@ using SDKSimpleFactura.Enum;
 using SDKSimpleFactura.Models.Request;
 using SimpleFacturaSDK_Demo.Helpers;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
 using static SDKSimpleFactura.Enum.TipoDTE;
@@ -30,6 +31,11 @@ namespace SimpleFacturaSDK_Demo
             textRutContribuyente.Text = _appSettings.Credenciales.RutContribuyente;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             numericFolio.Value = 4117;
+
+            string descripcion =
+                "Permite dar acuse de recibo a documentos recibidos de proveedores.";
+
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarAcuse_Click(object sender, EventArgs e)
@@ -88,6 +94,25 @@ namespace SimpleFacturaSDK_Demo
                 Loading.HideLoading(generarAcuse);
             }
 
+        }
+
+        private void linkLabelAcuse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#b6f2fb90-10e1-4bf0-a9cb-615ae9b4343d";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
