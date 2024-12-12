@@ -13,6 +13,7 @@ namespace SimpleFacturaSDK_Demo
             {
                 lock (_lock)
                 {
+
                     if (_instance == null)
                     {
                         // El SDK leerá automáticamente las variables de entorno establecidas
@@ -20,6 +21,13 @@ namespace SimpleFacturaSDK_Demo
                     }
                     return _instance;
                 }
+            }
+        }
+        public static void ResetClient()
+        {
+            lock (_lock)
+            {
+                _instance = new SimpleFacturaClient(); // Crear una nueva instancia con las credenciales actualizadas
             }
         }
     }

@@ -75,6 +75,14 @@ namespace SimpleFacturaSDK_Demo
 
             // Guardar los cambios en appsettings.json
             _appSettings.Save();
+            try
+            {
+                SimpleClientSingleton.ResetClient();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             MessageBox.Show("Configuración guardada exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
