@@ -55,6 +55,18 @@ namespace SimpleFacturaSDK_Demo
                     {
                         gridResultados.Columns["ProductoId"].Visible = false;
                     }
+                    gridResultados.CellFormatting += (s, args) =>
+                    {
+                        if (gridResultados.Columns[args.ColumnIndex].Name == "Precio" && args.Value != null)
+                        {
+                            if (decimal.TryParse(args.Value.ToString(), out decimal precio))
+                            {
+                                args.Value = FormattingHelper.FormatearPrecio(precio);
+                                args.FormattingApplied = true;
+                            }
+                        }
+                    };
+
 
                     ConfigurarColumnasBotones();
                 }
