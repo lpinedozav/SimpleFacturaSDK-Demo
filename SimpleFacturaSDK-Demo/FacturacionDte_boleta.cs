@@ -58,6 +58,25 @@ namespace SimpleFacturaSDK_Demo
             textMontoTotal.Text = "200";
 
             textSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+
+            gridProductos.CellFormatting += dataGridConsolidado_CellFormatting;
+        }
+
+        private void dataGridConsolidado_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica si es una de las columnas que deseas formatear
+            if (gridProductos.Columns[e.ColumnIndex].Name == "Cantidad" ||
+                gridProductos.Columns[e.ColumnIndex].Name == "Precio" ||
+                gridProductos.Columns[e.ColumnIndex].Name == "Monto" ||
+                gridProductos.Columns[e.ColumnIndex].Name == "total")
+            {
+                if (e.Value != null && decimal.TryParse(e.Value.ToString(), out decimal valor))
+                {
+                    // Aplica el formato utilizando el helper
+                    e.Value = FormattingHelper.FormatearPrecio(valor);
+                    e.FormattingApplied = true;
+                }
+            }
         }
 
         private void UpdateUIBasedOnSelection()

@@ -46,6 +46,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.linkLabelDTE = new System.Windows.Forms.LinkLabel();
             this.textDocumentacion = new System.Windows.Forms.TextBox();
+            this.Propiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -60,7 +62,7 @@
             this.consultarDTE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.consultarDTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.consultarDTE.Location = new System.Drawing.Point(435, 680);
-            this.consultarDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.consultarDTE.Margin = new System.Windows.Forms.Padding(2);
             this.consultarDTE.Name = "consultarDTE";
             this.consultarDTE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.consultarDTE.Size = new System.Drawing.Size(76, 28);
@@ -80,9 +82,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(9, 77);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(502, 83);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
@@ -92,11 +94,11 @@
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(184, 54);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
@@ -104,19 +106,19 @@
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(94, 54);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
             this.radioCertificacion.TabStop = true;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // tipodte_oDTE
             // 
             this.tipodte_oDTE.FormattingEnabled = true;
             this.tipodte_oDTE.Location = new System.Drawing.Point(355, 18);
-            this.tipodte_oDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipodte_oDTE.Margin = new System.Windows.Forms.Padding(2);
             this.tipodte_oDTE.Name = "tipodte_oDTE";
             this.tipodte_oDTE.Size = new System.Drawing.Size(141, 21);
             this.tipodte_oDTE.TabIndex = 15;
@@ -125,7 +127,7 @@
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(85, 18);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.folio_oPDF.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -149,7 +151,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Codigo TipoDTE:";
+            this.label5.Text = "Código TipoDTE:";
             // 
             // label3
             // 
@@ -176,9 +178,9 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(502, 63);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -187,7 +189,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(264, 20);
             this.textRutEmisor.TabIndex = 2;
@@ -206,9 +208,13 @@
             // gridResultado
             // 
             this.gridResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridResultado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Propiedad,
+            this.Valor});
             this.gridResultado.Location = new System.Drawing.Point(9, 164);
-            this.gridResultado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridResultado.Margin = new System.Windows.Forms.Padding(2);
             this.gridResultado.Name = "gridResultado";
+            this.gridResultado.RowHeadersVisible = false;
             this.gridResultado.RowHeadersWidth = 51;
             this.gridResultado.RowTemplate.Height = 24;
             this.gridResultado.Size = new System.Drawing.Size(501, 219);
@@ -218,7 +224,7 @@
             // 
             this.gridDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDetalles.Location = new System.Drawing.Point(9, 388);
-            this.gridDetalles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridDetalles.Margin = new System.Windows.Forms.Padding(2);
             this.gridDetalles.Name = "gridDetalles";
             this.gridDetalles.RowHeadersWidth = 51;
             this.gridDetalles.RowTemplate.Height = 24;
@@ -256,6 +262,18 @@
             this.textDocumentacion.TabIndex = 20;
             this.textDocumentacion.Text = resources.GetString("textDocumentacion.Text");
             // 
+            // Propiedad
+            // 
+            this.Propiedad.HeaderText = "Propiedad";
+            this.Propiedad.Name = "Propiedad";
+            this.Propiedad.Width = 247;
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.Width = 247;
+            // 
             // ObtenerDTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +287,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ObtenerDTE";
@@ -307,5 +325,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.LinkLabel linkLabelDTE;
         private System.Windows.Forms.TextBox textDocumentacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Propiedad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
     }
 }

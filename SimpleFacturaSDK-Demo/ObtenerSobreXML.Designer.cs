@@ -64,9 +64,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(9, 78);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(376, 127);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
@@ -77,9 +77,9 @@
             this.groupBox4.Controls.Add(this.radioAlReceptor);
             this.groupBox4.Controls.Add(this.radioAlSII);
             this.groupBox4.Location = new System.Drawing.Point(204, 68);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(158, 43);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
@@ -89,7 +89,7 @@
             // 
             this.radioAlReceptor.AutoSize = true;
             this.radioAlReceptor.Location = new System.Drawing.Point(78, 17);
-            this.radioAlReceptor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioAlReceptor.Margin = new System.Windows.Forms.Padding(2);
             this.radioAlReceptor.Name = "radioAlReceptor";
             this.radioAlReceptor.Size = new System.Drawing.Size(81, 17);
             this.radioAlReceptor.TabIndex = 20;
@@ -101,7 +101,7 @@
             this.radioAlSII.AutoSize = true;
             this.radioAlSII.Checked = true;
             this.radioAlSII.Location = new System.Drawing.Point(4, 17);
-            this.radioAlSII.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioAlSII.Margin = new System.Windows.Forms.Padding(2);
             this.radioAlSII.Name = "radioAlSII";
             this.radioAlSII.Size = new System.Drawing.Size(50, 17);
             this.radioAlSII.TabIndex = 19;
@@ -114,9 +114,9 @@
             this.groupBox3.Controls.Add(this.radioProduccion);
             this.groupBox3.Controls.Add(this.radioCertificacion);
             this.groupBox3.Location = new System.Drawing.Point(7, 68);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(179, 43);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
@@ -126,11 +126,11 @@
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(97, 17);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
@@ -138,19 +138,19 @@
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(7, 17);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
             this.radioCertificacion.TabStop = true;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // tipodte_oSXML
             // 
             this.tipodte_oSXML.FormattingEnabled = true;
             this.tipodte_oSXML.Location = new System.Drawing.Point(92, 44);
-            this.tipodte_oSXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipodte_oSXML.Margin = new System.Windows.Forms.Padding(2);
             this.tipodte_oSXML.Name = "tipodte_oSXML";
             this.tipodte_oSXML.Size = new System.Drawing.Size(265, 21);
             this.tipodte_oSXML.TabIndex = 15;
@@ -159,7 +159,7 @@
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(93, 18);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.folio_oPDF.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -183,7 +183,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Codigo TipoDTE:";
+            this.label5.Text = "Código TipoDTE:";
             // 
             // label4
             // 
@@ -200,9 +200,9 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(376, 63);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
@@ -211,7 +211,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(264, 20);
             this.textRutEmisor.TabIndex = 2;
@@ -232,13 +232,13 @@
             this.generarSXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarSXML.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarSXML.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarSXML.Location = new System.Drawing.Point(309, 277);
-            this.generarSXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarSXML.Location = new System.Drawing.Point(309, 270);
+            this.generarSXML.Margin = new System.Windows.Forms.Padding(2);
             this.generarSXML.Name = "generarSXML";
             this.generarSXML.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarSXML.Size = new System.Drawing.Size(76, 28);
+            this.generarSXML.Size = new System.Drawing.Size(75, 35);
             this.generarSXML.TabIndex = 1;
-            this.generarSXML.Text = "Generar";
+            this.generarSXML.Text = "Obtener";
             this.generarSXML.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarSXML.UseVisualStyleBackColor = true;
             this.generarSXML.Click += new System.EventHandler(this.generarSXML_Click);
@@ -285,7 +285,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ObtenerSobreXML";

@@ -65,13 +65,13 @@
             this.generarXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarXml.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarXml.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarXml.Location = new System.Drawing.Point(200, 354);
-            this.generarXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarXml.Location = new System.Drawing.Point(201, 347);
+            this.generarXml.Margin = new System.Windows.Forms.Padding(2);
             this.generarXml.Name = "generarXml";
             this.generarXml.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarXml.Size = new System.Drawing.Size(76, 28);
+            this.generarXml.Size = new System.Drawing.Size(75, 35);
             this.generarXml.TabIndex = 1;
-            this.generarXml.Text = "Generar";
+            this.generarXml.Text = "Obtener";
             this.generarXml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarXml.UseVisualStyleBackColor = true;
             this.generarXml.Click += new System.EventHandler(this.generarXml_Click);
@@ -86,9 +86,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(9, 159);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(266, 110);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -98,11 +98,11 @@
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(184, 76);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
@@ -110,19 +110,19 @@
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(94, 76);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
             this.radioCertificacion.TabStop = true;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // tipodte_oXML
             // 
             this.tipodte_oXML.FormattingEnabled = true;
             this.tipodte_oXML.Location = new System.Drawing.Point(92, 43);
-            this.tipodte_oXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipodte_oXML.Margin = new System.Windows.Forms.Padding(2);
             this.tipodte_oXML.Name = "tipodte_oXML";
             this.tipodte_oXML.Size = new System.Drawing.Size(141, 21);
             this.tipodte_oXML.TabIndex = 15;
@@ -131,7 +131,7 @@
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(93, 15);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.folio_oPDF.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -155,7 +155,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Codigo TipoDTE:";
+            this.label5.Text = "Código TipoDTE:";
             // 
             // label3
             // 
@@ -182,9 +182,9 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(11, 36);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(266, 83);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -193,7 +193,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(164, 20);
             this.textRutEmisor.TabIndex = 2;
@@ -212,7 +212,7 @@
             // radio_Bton_recibidoXml
             // 
             this.radio_Bton_recibidoXml.Location = new System.Drawing.Point(86, 11);
-            this.radio_Bton_recibidoXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio_Bton_recibidoXml.Margin = new System.Windows.Forms.Padding(2);
             this.radio_Bton_recibidoXml.Name = "radio_Bton_recibidoXml";
             this.radio_Bton_recibidoXml.Size = new System.Drawing.Size(69, 15);
             this.radio_Bton_recibidoXml.TabIndex = 41;
@@ -224,7 +224,7 @@
             // 
             this.radioButton_emitidoXml.Checked = true;
             this.radioButton_emitidoXml.Location = new System.Drawing.Point(11, 11);
-            this.radioButton_emitidoXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton_emitidoXml.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_emitidoXml.Name = "radioButton_emitidoXml";
             this.radioButton_emitidoXml.Size = new System.Drawing.Size(69, 15);
             this.radioButton_emitidoXml.TabIndex = 40;
@@ -242,9 +242,9 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Location = new System.Drawing.Point(9, 34);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(267, 115);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -253,7 +253,7 @@
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(95, 83);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 3;
@@ -272,7 +272,7 @@
             // textRutContribuyente
             // 
             this.textRutContribuyente.Location = new System.Drawing.Point(96, 53);
-            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2);
             this.textRutContribuyente.Name = "textRutContribuyente";
             this.textRutContribuyente.Size = new System.Drawing.Size(140, 20);
             this.textRutContribuyente.TabIndex = 0;
@@ -281,7 +281,7 @@
             // textRutE
             // 
             this.textRutE.Location = new System.Drawing.Point(96, 23);
-            this.textRutE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutE.Margin = new System.Windows.Forms.Padding(2);
             this.textRutE.Name = "textRutE";
             this.textRutE.Size = new System.Drawing.Size(140, 20);
             this.textRutE.TabIndex = 0;
@@ -353,7 +353,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ObtenerXML";

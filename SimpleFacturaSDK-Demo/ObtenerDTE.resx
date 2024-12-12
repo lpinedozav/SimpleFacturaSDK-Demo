@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Propiedad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Valor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="textDocumentacion.Text" xml:space="preserve">
     <value>permite obtener informacion detallada de un DTE en particular emitido en portal,El reporte incluye datos cono: estado de acuse por parte del receptor del DTE, estado en el SII, track ID del envio del DTE, totales de DTE, detalles de los productos/servicios, referencias, entre otros.</value>
   </data>

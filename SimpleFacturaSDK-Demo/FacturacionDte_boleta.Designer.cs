@@ -143,7 +143,7 @@
             this.generarFacturacioDte_Boleta.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarFacturacioDte_Boleta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(545, 703);
-            this.generarFacturacioDte_Boleta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarFacturacioDte_Boleta.Margin = new System.Windows.Forms.Padding(2);
             this.generarFacturacioDte_Boleta.Name = "generarFacturacioDte_Boleta";
             this.generarFacturacioDte_Boleta.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarFacturacioDte_Boleta.Size = new System.Drawing.Size(88, 28);
@@ -238,7 +238,7 @@
             // textCmnReceptor
             // 
             this.textCmnReceptor.BackColor = System.Drawing.SystemColors.Info;
-            this.textCmnReceptor.Location = new System.Drawing.Point(454, 82);
+            this.textCmnReceptor.Location = new System.Drawing.Point(454, 84);
             this.textCmnReceptor.Name = "textCmnReceptor";
             this.textCmnReceptor.Size = new System.Drawing.Size(153, 20);
             this.textCmnReceptor.TabIndex = 22;
@@ -246,7 +246,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(403, 87);
+            this.label29.Location = new System.Drawing.Point(403, 88);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 13);
             this.label29.TabIndex = 21;
@@ -494,7 +494,7 @@
             // ciudad
             // 
             this.ciudad.AutoSize = true;
-            this.ciudad.Location = new System.Drawing.Point(5, 83);
+            this.ciudad.Location = new System.Drawing.Point(5, 87);
             this.ciudad.Name = "ciudad";
             this.ciudad.Size = new System.Drawing.Size(43, 13);
             this.ciudad.TabIndex = 33;
@@ -503,7 +503,7 @@
             // textDireccionEmisor
             // 
             this.textDireccionEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textDireccionEmisor.Location = new System.Drawing.Point(266, 86);
+            this.textDireccionEmisor.Location = new System.Drawing.Point(266, 83);
             this.textDireccionEmisor.Name = "textDireccionEmisor";
             this.textDireccionEmisor.Size = new System.Drawing.Size(134, 20);
             this.textDireccionEmisor.TabIndex = 26;
@@ -511,7 +511,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(195, 86);
+            this.label8.Location = new System.Drawing.Point(195, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 25;
@@ -572,7 +572,7 @@
             // textComunaEmisor
             // 
             this.textComunaEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textComunaEmisor.Location = new System.Drawing.Point(453, 87);
+            this.textComunaEmisor.Location = new System.Drawing.Point(453, 84);
             this.textComunaEmisor.Name = "textComunaEmisor";
             this.textComunaEmisor.Size = new System.Drawing.Size(153, 20);
             this.textComunaEmisor.TabIndex = 22;
@@ -588,7 +588,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(403, 90);
+            this.label9.Location = new System.Drawing.Point(403, 87);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 21;
@@ -633,9 +633,9 @@
             this.groupBox8.Controls.Add(this.tipoDte);
             this.groupBox8.Controls.Add(this.label2);
             this.groupBox8.Location = new System.Drawing.Point(8, 49);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(624, 87);
             this.groupBox8.TabIndex = 42;
             this.groupBox8.TabStop = false;
@@ -646,7 +646,7 @@
             this.comboIndService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboIndService.FormattingEnabled = true;
             this.comboIndService.Location = new System.Drawing.Point(81, 46);
-            this.comboIndService.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboIndService.Margin = new System.Windows.Forms.Padding(2);
             this.comboIndService.Name = "comboIndService";
             this.comboIndService.Size = new System.Drawing.Size(146, 21);
             this.comboIndService.TabIndex = 35;
@@ -665,7 +665,7 @@
             // 
             this.fechaEmision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaEmision.Location = new System.Drawing.Point(519, 17);
-            this.fechaEmision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaEmision.Margin = new System.Windows.Forms.Padding(2);
             this.fechaEmision.Name = "fechaEmision";
             this.fechaEmision.Size = new System.Drawing.Size(95, 20);
             this.fechaEmision.TabIndex = 33;
@@ -675,7 +675,7 @@
             this.comboBoxFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFormaPago.FormattingEnabled = true;
             this.comboBoxFormaPago.Location = new System.Drawing.Point(336, 46);
-            this.comboBoxFormaPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxFormaPago.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFormaPago.Name = "comboBoxFormaPago";
             this.comboBoxFormaPago.Size = new System.Drawing.Size(92, 21);
             this.comboBoxFormaPago.TabIndex = 29;
@@ -704,7 +704,7 @@
             // 
             this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
             this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(81, 17);
-            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
             this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(146, 21);
             this.comboBoxCodigoTipoDTE.TabIndex = 25;
@@ -713,7 +713,7 @@
             // 
             this.fechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaVencimiento.Location = new System.Drawing.Point(336, 18);
-            this.fechaVencimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaVencimiento.Margin = new System.Windows.Forms.Padding(2);
             this.fechaVencimiento.Name = "fechaVencimiento";
             this.fechaVencimiento.Size = new System.Drawing.Size(92, 20);
             this.fechaVencimiento.TabIndex = 31;
@@ -741,7 +741,7 @@
             // BoletasRadioButton
             // 
             this.BoletasRadioButton.Location = new System.Drawing.Point(91, 16);
-            this.BoletasRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BoletasRadioButton.Margin = new System.Windows.Forms.Padding(2);
             this.BoletasRadioButton.Name = "BoletasRadioButton";
             this.BoletasRadioButton.Size = new System.Drawing.Size(69, 15);
             this.BoletasRadioButton.TabIndex = 37;
@@ -753,7 +753,7 @@
             // 
             this.DteRadioButton.Checked = true;
             this.DteRadioButton.Location = new System.Drawing.Point(16, 16);
-            this.DteRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DteRadioButton.Margin = new System.Windows.Forms.Padding(2);
             this.DteRadioButton.Name = "DteRadioButton";
             this.DteRadioButton.Size = new System.Drawing.Size(69, 15);
             this.DteRadioButton.TabIndex = 36;
@@ -809,7 +809,7 @@
             this.Controls.Add(this.groupBox8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FacturacionDte_boleta";

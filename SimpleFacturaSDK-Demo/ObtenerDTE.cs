@@ -159,25 +159,39 @@ namespace SimpleFacturaSDK_Demo
                         EliminarColumnasSinDatos(detalles);
                     }
                 }
-                if(prop.Name == "Referencias")
+                else if (prop.Name == "Referencias")
                 {
                     var referencias = valor as List<ReferenciaDte>;
                     if (referencias != null && referencias.Count > 0)
-                        // Agregar una entrada para "Detalles" con un botón en la columna "Valor"
+                    {
                         propiedades.Add(new PropiedadValor
                         {
                             Propiedad = prop.Name,
                             Valor = "Ver Referencias"
                         });
-                    propiedades.Add(new PropiedadValor
+                    }
+                    else
                     {
-                        Propiedad = prop.Name,
-                        Valor = "Sin Referencias"
-                    });
+                        propiedades.Add(new PropiedadValor
+                        {
+                            Propiedad = prop.Name,
+                            Valor = "Sin Referencias"
+                        });
+                    }
                 }
                 else
                 {
-                    string valorStr = valor.ToString();
+                    // Aplicar formato si el valor es de tipo int, long o decimal
+                    string valorStr;
+
+                    if (valor is int || valor is long || valor is decimal)
+                    {
+                        valorStr = FormattingHelper.FormatearPrecio(Convert.ToDecimal(valor));
+                    }
+                    else
+                    {
+                        valorStr = valor.ToString();
+                    }
 
                     propiedades.Add(new PropiedadValor
                     {
@@ -189,6 +203,7 @@ namespace SimpleFacturaSDK_Demo
 
             return propiedades;
         }
+
         private void EliminarColumnasSinDatos<T>(List<T> detalles)
         {
             foreach (DataGridViewColumn column in gridDetalles.Columns)
@@ -232,6 +247,8 @@ namespace SimpleFacturaSDK_Demo
                 }
             }
         }
+
+
 
         private void MostrarDetallesEnOtraTabla(List<ReferenciaDte> referencias)
         {

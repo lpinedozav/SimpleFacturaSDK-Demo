@@ -67,9 +67,9 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(11, 38);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(267, 115);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -78,7 +78,7 @@ namespace SimpleFacturaSDK_Demo
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(99, 83);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace SimpleFacturaSDK_Demo
             // textRutContribuyente
             // 
             this.textRutContribuyente.Location = new System.Drawing.Point(98, 53);
-            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2);
             this.textRutContribuyente.Name = "textRutContribuyente";
             this.textRutContribuyente.Size = new System.Drawing.Size(140, 20);
             this.textRutContribuyente.TabIndex = 0;
@@ -106,7 +106,7 @@ namespace SimpleFacturaSDK_Demo
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(98, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 0;
@@ -142,9 +142,9 @@ namespace SimpleFacturaSDK_Demo
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(11, 167);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(267, 106);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -154,11 +154,11 @@ namespace SimpleFacturaSDK_Demo
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(184, 76);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 0;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
@@ -166,12 +166,12 @@ namespace SimpleFacturaSDK_Demo
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(94, 76);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 0;
             this.radioCertificacion.TabStop = true;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // tipodte_oPDF
@@ -179,7 +179,7 @@ namespace SimpleFacturaSDK_Demo
             this.tipodte_oPDF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipodte_oPDF.FormattingEnabled = true;
             this.tipodte_oPDF.Location = new System.Drawing.Point(92, 43);
-            this.tipodte_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipodte_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.tipodte_oPDF.Name = "tipodte_oPDF";
             this.tipodte_oPDF.Size = new System.Drawing.Size(164, 21);
             this.tipodte_oPDF.TabIndex = 0;
@@ -188,7 +188,7 @@ namespace SimpleFacturaSDK_Demo
             // folio_oPDF
             // 
             this.folio_oPDF.Location = new System.Drawing.Point(93, 16);
-            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.folio_oPDF.Margin = new System.Windows.Forms.Padding(2);
             this.folio_oPDF.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -212,7 +212,7 @@ namespace SimpleFacturaSDK_Demo
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Codigo TipoDTE:";
+            this.label5.Text = "Código TipoDTE:";
             // 
             // label3
             // 
@@ -239,13 +239,13 @@ namespace SimpleFacturaSDK_Demo
             this.generarpdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarpdf.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarpdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarpdf.Location = new System.Drawing.Point(202, 360);
-            this.generarpdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarpdf.Location = new System.Drawing.Point(203, 353);
+            this.generarpdf.Margin = new System.Windows.Forms.Padding(2);
             this.generarpdf.Name = "generarpdf";
             this.generarpdf.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarpdf.Size = new System.Drawing.Size(76, 28);
+            this.generarpdf.Size = new System.Drawing.Size(75, 35);
             this.generarpdf.TabIndex = 1;
-            this.generarpdf.Text = "Generar";
+            this.generarpdf.Text = "Obtener";
             this.generarpdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarpdf.UseVisualStyleBackColor = true;
             this.generarpdf.Click += new System.EventHandler(this.generarPdf_Click);
@@ -253,7 +253,7 @@ namespace SimpleFacturaSDK_Demo
             // radioButton_recibidoPdf
             // 
             this.radioButton_recibidoPdf.Location = new System.Drawing.Point(86, 11);
-            this.radioButton_recibidoPdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton_recibidoPdf.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_recibidoPdf.Name = "radioButton_recibidoPdf";
             this.radioButton_recibidoPdf.Size = new System.Drawing.Size(69, 15);
             this.radioButton_recibidoPdf.TabIndex = 39;
@@ -265,7 +265,7 @@ namespace SimpleFacturaSDK_Demo
             // 
             this.radioButton_emitidoPdf.Checked = true;
             this.radioButton_emitidoPdf.Location = new System.Drawing.Point(11, 11);
-            this.radioButton_emitidoPdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton_emitidoPdf.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_emitidoPdf.Name = "radioButton_emitidoPdf";
             this.radioButton_emitidoPdf.Size = new System.Drawing.Size(69, 15);
             this.radioButton_emitidoPdf.TabIndex = 38;
@@ -319,7 +319,7 @@ namespace SimpleFacturaSDK_Demo
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ObtenerPDF";
