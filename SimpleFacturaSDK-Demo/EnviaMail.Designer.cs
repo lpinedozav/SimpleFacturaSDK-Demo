@@ -77,9 +77,9 @@
             this.groupBox2.Controls.Add(this.folio);
             this.groupBox2.Controls.Add(this.RutEmpresa);
             this.groupBox2.Location = new System.Drawing.Point(9, 10);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(224, 260);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
@@ -89,7 +89,7 @@
             // 
             this.checkPDF.AutoSize = true;
             this.checkPDF.Location = new System.Drawing.Point(73, 226);
-            this.checkPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkPDF.Margin = new System.Windows.Forms.Padding(2);
             this.checkPDF.Name = "checkPDF";
             this.checkPDF.Size = new System.Drawing.Size(47, 17);
             this.checkPDF.TabIndex = 34;
@@ -101,7 +101,7 @@
             // 
             this.checkXML.AutoSize = true;
             this.checkXML.Location = new System.Drawing.Point(7, 226);
-            this.checkXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkXML.Margin = new System.Windows.Forms.Padding(2);
             this.checkXML.Name = "checkXML";
             this.checkXML.Size = new System.Drawing.Size(48, 17);
             this.checkXML.TabIndex = 33;
@@ -112,7 +112,7 @@
             // textComentario
             // 
             this.textComentario.Location = new System.Drawing.Point(73, 195);
-            this.textComentario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textComentario.Margin = new System.Windows.Forms.Padding(2);
             this.textComentario.Name = "textComentario";
             this.textComentario.Size = new System.Drawing.Size(141, 20);
             this.textComentario.TabIndex = 32;
@@ -121,7 +121,7 @@
             // comentario
             // 
             this.comentario.AutoSize = true;
-            this.comentario.Location = new System.Drawing.Point(4, 195);
+            this.comentario.Location = new System.Drawing.Point(4, 198);
             this.comentario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.comentario.Name = "comentario";
             this.comentario.Size = new System.Drawing.Size(63, 13);
@@ -131,7 +131,7 @@
             // textCC
             // 
             this.textCC.Location = new System.Drawing.Point(73, 135);
-            this.textCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCC.Margin = new System.Windows.Forms.Padding(2);
             this.textCC.Name = "textCC";
             this.textCC.Size = new System.Drawing.Size(141, 20);
             this.textCC.TabIndex = 30;
@@ -140,7 +140,7 @@
             // cc
             // 
             this.cc.AutoSize = true;
-            this.cc.Location = new System.Drawing.Point(4, 135);
+            this.cc.Location = new System.Drawing.Point(4, 140);
             this.cc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cc.Name = "cc";
             this.cc.Size = new System.Drawing.Size(23, 13);
@@ -150,7 +150,7 @@
             // textCCO
             // 
             this.textCCO.Location = new System.Drawing.Point(73, 164);
-            this.textCCO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCCO.Margin = new System.Windows.Forms.Padding(2);
             this.textCCO.Name = "textCCO";
             this.textCCO.Size = new System.Drawing.Size(141, 20);
             this.textCCO.TabIndex = 28;
@@ -159,7 +159,7 @@
             // cco
             // 
             this.cco.AutoSize = true;
-            this.cco.Location = new System.Drawing.Point(4, 164);
+            this.cco.Location = new System.Drawing.Point(4, 167);
             this.cco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cco.Name = "cco";
             this.cco.Size = new System.Drawing.Size(29, 13);
@@ -169,7 +169,7 @@
             // textPara
             // 
             this.textPara.Location = new System.Drawing.Point(73, 112);
-            this.textPara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textPara.Margin = new System.Windows.Forms.Padding(2);
             this.textPara.Name = "textPara";
             this.textPara.Size = new System.Drawing.Size(141, 20);
             this.textPara.TabIndex = 26;
@@ -178,7 +178,7 @@
             // para
             // 
             this.para.AutoSize = true;
-            this.para.Location = new System.Drawing.Point(4, 112);
+            this.para.Location = new System.Drawing.Point(4, 114);
             this.para.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.para.Name = "para";
             this.para.Size = new System.Drawing.Size(32, 13);
@@ -188,7 +188,7 @@
             // numericFolio
             // 
             this.numericFolio.Location = new System.Drawing.Point(73, 54);
-            this.numericFolio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericFolio.Margin = new System.Windows.Forms.Padding(2);
             this.numericFolio.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -208,7 +208,7 @@
             // 
             this.comboxTipoDte.FormattingEnabled = true;
             this.comboxTipoDte.Location = new System.Drawing.Point(73, 83);
-            this.comboxTipoDte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboxTipoDte.Margin = new System.Windows.Forms.Padding(2);
             this.comboxTipoDte.Name = "comboxTipoDte";
             this.comboxTipoDte.Size = new System.Drawing.Size(141, 21);
             this.comboxTipoDte.TabIndex = 23;
@@ -217,7 +217,7 @@
             // TipoDte
             // 
             this.TipoDte.AutoSize = true;
-            this.TipoDte.Location = new System.Drawing.Point(4, 85);
+            this.TipoDte.Location = new System.Drawing.Point(4, 87);
             this.TipoDte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TipoDte.Name = "TipoDte";
             this.TipoDte.Size = new System.Drawing.Size(56, 13);
@@ -226,8 +226,8 @@
             // 
             // textRutEmpresa
             // 
-            this.textRutEmpresa.Location = new System.Drawing.Point(73, 28);
-            this.textRutEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmpresa.Location = new System.Drawing.Point(73, 27);
+            this.textRutEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmpresa.Name = "textRutEmpresa";
             this.textRutEmpresa.Size = new System.Drawing.Size(141, 20);
             this.textRutEmpresa.TabIndex = 20;
@@ -236,7 +236,7 @@
             // folio
             // 
             this.folio.AutoSize = true;
-            this.folio.Location = new System.Drawing.Point(4, 56);
+            this.folio.Location = new System.Drawing.Point(4, 58);
             this.folio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.folio.Name = "folio";
             this.folio.Size = new System.Drawing.Size(32, 13);
@@ -246,7 +246,7 @@
             // RutEmpresa
             // 
             this.RutEmpresa.AutoSize = true;
-            this.RutEmpresa.Location = new System.Drawing.Point(4, 28);
+            this.RutEmpresa.Location = new System.Drawing.Point(4, 29);
             this.RutEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RutEmpresa.Name = "RutEmpresa";
             this.RutEmpresa.Size = new System.Drawing.Size(71, 13);
@@ -258,13 +258,13 @@
             this.generarEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarEM.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarEM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarEM.Location = new System.Drawing.Point(515, 324);
-            this.generarEM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarEM.Location = new System.Drawing.Point(516, 317);
+            this.generarEM.Margin = new System.Windows.Forms.Padding(2);
             this.generarEM.Name = "generarEM";
             this.generarEM.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarEM.Size = new System.Drawing.Size(76, 28);
+            this.generarEM.Size = new System.Drawing.Size(75, 35);
             this.generarEM.TabIndex = 1;
-            this.generarEM.Text = "Generar";
+            this.generarEM.Text = "Ejecutar";
             this.generarEM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarEM.UseVisualStyleBackColor = true;
             this.generarEM.Click += new System.EventHandler(this.generarEM_Click);
@@ -328,7 +328,7 @@
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EnviarMail";

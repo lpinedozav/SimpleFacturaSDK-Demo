@@ -136,9 +136,9 @@
             this.groupBox1.Controls.Add(this.comboBoxCodigoTipoDTE);
             this.groupBox1.Controls.Add(this.tipoDte);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(624, 87);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
@@ -148,7 +148,7 @@
             // 
             this.numericFolio.BackColor = System.Drawing.SystemColors.Info;
             this.numericFolio.Location = new System.Drawing.Point(479, 24);
-            this.numericFolio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericFolio.Margin = new System.Windows.Forms.Padding(2);
             this.numericFolio.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -173,9 +173,9 @@
             // 
             this.fechaEmision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaEmision.Location = new System.Drawing.Point(320, 51);
-            this.fechaEmision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaEmision.Margin = new System.Windows.Forms.Padding(2);
             this.fechaEmision.Name = "fechaEmision";
-            this.fechaEmision.Size = new System.Drawing.Size(95, 20);
+            this.fechaEmision.Size = new System.Drawing.Size(112, 20);
             this.fechaEmision.TabIndex = 33;
             this.fechaEmision.TabStop = false;
             // 
@@ -193,9 +193,9 @@
             // 
             this.fechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaVencimiento.Location = new System.Drawing.Point(115, 52);
-            this.fechaVencimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaVencimiento.Margin = new System.Windows.Forms.Padding(2);
             this.fechaVencimiento.Name = "fechaVencimiento";
-            this.fechaVencimiento.Size = new System.Drawing.Size(92, 20);
+            this.fechaVencimiento.Size = new System.Drawing.Size(112, 20);
             this.fechaVencimiento.TabIndex = 31;
             this.fechaVencimiento.TabStop = false;
             // 
@@ -214,7 +214,7 @@
             this.comboBoxFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFormaPago.FormattingEnabled = true;
             this.comboBoxFormaPago.Location = new System.Drawing.Point(320, 23);
-            this.comboBoxFormaPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxFormaPago.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFormaPago.Name = "comboBoxFormaPago";
             this.comboBoxFormaPago.Size = new System.Drawing.Size(112, 21);
             this.comboBoxFormaPago.TabIndex = 29;
@@ -234,9 +234,9 @@
             // 
             this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
             this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(64, 22);
-            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
-            this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(173, 21);
+            this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(163, 21);
             this.comboBoxCodigoTipoDTE.TabIndex = 25;
             this.comboBoxCodigoTipoDTE.TabStop = false;
             // 
@@ -307,7 +307,7 @@
             // ciudad
             // 
             this.ciudad.AutoSize = true;
-            this.ciudad.Location = new System.Drawing.Point(5, 83);
+            this.ciudad.Location = new System.Drawing.Point(5, 87);
             this.ciudad.Name = "ciudad";
             this.ciudad.Size = new System.Drawing.Size(43, 13);
             this.ciudad.TabIndex = 33;
@@ -546,7 +546,7 @@
             this.gridNombreProducto.MinimumWidth = 6;
             this.gridNombreProducto.Name = "gridNombreProducto";
             this.gridNombreProducto.ReadOnly = true;
-            this.gridNombreProducto.Width = 210;
+            this.gridNombreProducto.Width = 220;
             // 
             // gridCantidadProducto
             // 
@@ -659,7 +659,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 54);
+            this.label28.Location = new System.Drawing.Point(6, 56);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(41, 13);
             this.label28.TabIndex = 29;
@@ -812,7 +812,7 @@
             this.gridRefRazon.MinimumWidth = 6;
             this.gridRefRazon.Name = "gridRefRazon";
             this.gridRefRazon.ReadOnly = true;
-            this.gridRefRazon.Width = 105;
+            this.gridRefRazon.Width = 115;
             // 
             // gridRefCodigo
             // 
@@ -825,16 +825,16 @@
             // 
             // generarNcNd
             // 
-            this.generarNcNd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarNcNd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.generarNcNd.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarNcNd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarNcNd.Location = new System.Drawing.Point(545, 783);
-            this.generarNcNd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarNcNd.Location = new System.Drawing.Point(558, 775);
+            this.generarNcNd.Margin = new System.Windows.Forms.Padding(2);
             this.generarNcNd.Name = "generarNcNd";
             this.generarNcNd.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarNcNd.Size = new System.Drawing.Size(88, 28);
+            this.generarNcNd.Size = new System.Drawing.Size(75, 35);
             this.generarNcNd.TabIndex = 1;
-            this.generarNcNd.Text = "Generar";
+            this.generarNcNd.Text = "Ejecutar";
             this.generarNcNd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarNcNd.UseVisualStyleBackColor = true;
             this.generarNcNd.Click += new System.EventHandler(this.generarNcNd_Click);
@@ -856,8 +856,8 @@
             // 
             this.comboBoxMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMotivo.FormattingEnabled = true;
-            this.comboBoxMotivo.Location = new System.Drawing.Point(191, 21);
-            this.comboBoxMotivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMotivo.Location = new System.Drawing.Point(191, 24);
+            this.comboBoxMotivo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMotivo.Name = "comboBoxMotivo";
             this.comboBoxMotivo.Size = new System.Drawing.Size(96, 21);
             this.comboBoxMotivo.TabIndex = 36;
@@ -895,7 +895,7 @@
             this.groupBox8.Controls.Add(this.textDocumentacion);
             this.groupBox8.Location = new System.Drawing.Point(12, 730);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(516, 81);
+            this.groupBox8.Size = new System.Drawing.Size(531, 81);
             this.groupBox8.TabIndex = 52;
             this.groupBox8.TabStop = false;
             // 
@@ -913,10 +913,10 @@
             // 
             // textDocumentacion
             // 
-            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
+            this.textDocumentacion.Location = new System.Drawing.Point(8, 19);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(505, 51);
+            this.textDocumentacion.Size = new System.Drawing.Size(515, 51);
             this.textDocumentacion.TabIndex = 20;
             // 
             // EmisonNC_ND
@@ -935,7 +935,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EmisonNC_ND";
@@ -1025,20 +1025,20 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textSucursal;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefNroLin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefTipoDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefFolio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefRazon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefCodigo;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.LinkLabel linkLabelEmisioNC_ND;
+        private System.Windows.Forms.TextBox textDocumentacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridNroLinea;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridIndExe;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridNombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridCantidadProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridMonto;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.LinkLabel linkLabelEmisioNC_ND;
-        private System.Windows.Forms.TextBox textDocumentacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefNroLin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefTipoDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefFolio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefRazon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridRefCodigo;
     }
 }

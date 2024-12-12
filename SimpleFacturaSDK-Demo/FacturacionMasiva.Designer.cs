@@ -122,7 +122,7 @@
             // 
             // txtRutaArchivo
             // 
-            this.txtRutaArchivo.Location = new System.Drawing.Point(93, 251);
+            this.txtRutaArchivo.Location = new System.Drawing.Point(93, 245);
             this.txtRutaArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtRutaArchivo.Name = "txtRutaArchivo";
             this.txtRutaArchivo.Size = new System.Drawing.Size(361, 20);
@@ -131,7 +131,7 @@
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(11, 249);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(11, 243);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(77, 24);
             this.btnSeleccionarArchivo.TabIndex = 27;
@@ -146,16 +146,16 @@
             // 
             // generarMasiva
             // 
-            this.generarMasiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarMasiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.generarMasiva.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarMasiva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarMasiva.Location = new System.Drawing.Point(458, 248);
+            this.generarMasiva.Location = new System.Drawing.Point(471, 238);
             this.generarMasiva.Margin = new System.Windows.Forms.Padding(2);
             this.generarMasiva.Name = "generarMasiva";
             this.generarMasiva.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarMasiva.Size = new System.Drawing.Size(88, 28);
+            this.generarMasiva.Size = new System.Drawing.Size(75, 35);
             this.generarMasiva.TabIndex = 1;
-            this.generarMasiva.Text = "Generar";
+            this.generarMasiva.Text = "Ejecutar";
             this.generarMasiva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarMasiva.UseVisualStyleBackColor = true;
             this.generarMasiva.Click += new System.EventHandler(this.generarMasiva_Click);
@@ -166,7 +166,7 @@
             this.groupBox4.Controls.Add(this.textDocumentacion);
             this.groupBox4.Location = new System.Drawing.Point(11, 114);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(247, 128);
+            this.groupBox4.Size = new System.Drawing.Size(247, 119);
             this.groupBox4.TabIndex = 51;
             this.groupBox4.TabStop = false;
             // 
@@ -187,14 +187,14 @@
             this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(231, 100);
+            this.textDocumentacion.Size = new System.Drawing.Size(231, 92);
             this.textDocumentacion.TabIndex = 20;
             // 
             // FacturacionMasiva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 286);
+            this.ClientSize = new System.Drawing.Size(558, 279);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.generarMasiva);
             this.Controls.Add(this.btnSeleccionarArchivo);

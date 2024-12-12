@@ -182,7 +182,7 @@
             // 
             // textRutEmisor
             // 
-            this.textRutEmisor.Location = new System.Drawing.Point(93, 19);
+            this.textRutEmisor.Location = new System.Drawing.Point(93, 20);
             this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(164, 20);

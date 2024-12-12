@@ -59,16 +59,17 @@ namespace SimpleFacturaSDK_Demo
 
             textSucursal.Text = _appSettings.Credenciales.NombreSucursal;
 
-            gridProductos.CellFormatting += dataGridConsolidado_CellFormatting;
+            gridProductos.CellFormatting += dataGridFacturacion_CellFormatting;
         }
 
-        private void dataGridConsolidado_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dataGridFacturacion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // Verifica si es una de las columnas que deseas formatear
             if (gridProductos.Columns[e.ColumnIndex].Name == "Cantidad" ||
                 gridProductos.Columns[e.ColumnIndex].Name == "Precio" ||
                 gridProductos.Columns[e.ColumnIndex].Name == "Monto" ||
-                gridProductos.Columns[e.ColumnIndex].Name == "total")
+                textMontoExento.Name == "MontoExento" ||
+                textMontoTotal.Name == "MontoTotal")
             {
                 if (e.Value != null && decimal.TryParse(e.Value.ToString(), out decimal valor))
                 {

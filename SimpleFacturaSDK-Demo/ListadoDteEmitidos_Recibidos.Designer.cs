@@ -294,9 +294,9 @@
             this.groupBox2.Controls.Add(this.ambientelabel);
             this.groupBox2.Controls.Add(this.desde);
             this.groupBox2.Location = new System.Drawing.Point(11, 131);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(287, 185);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
@@ -306,7 +306,7 @@
             // 
             this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
             this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(94, 48);
-            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
             this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(141, 21);
             this.comboBoxCodigoTipoDTE.TabIndex = 23;
@@ -315,7 +315,7 @@
             // numericFolio
             // 
             this.numericFolio.Location = new System.Drawing.Point(94, 22);
-            this.numericFolio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericFolio.Margin = new System.Windows.Forms.Padding(2);
             this.numericFolio.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -355,7 +355,7 @@
             // 
             this.dateTimeHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeHasta.Location = new System.Drawing.Point(93, 107);
-            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeHasta.Name = "dateTimeHasta";
             this.dateTimeHasta.Size = new System.Drawing.Size(142, 20);
             this.dateTimeHasta.TabIndex = 19;
@@ -365,7 +365,7 @@
             // 
             this.dateTimeDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeDesde.Location = new System.Drawing.Point(93, 76);
-            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDesde.Name = "dateTimeDesde";
             this.dateTimeDesde.Size = new System.Drawing.Size(142, 20);
             this.dateTimeDesde.TabIndex = 18;
@@ -375,22 +375,22 @@
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(182, 141);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Location = new System.Drawing.Point(94, 141);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // hasta
@@ -430,9 +430,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(11, 37);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(287, 89);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
@@ -441,7 +441,7 @@
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(93, 53);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(181, 20);
             this.textNombreSucursal.TabIndex = 3;
@@ -450,7 +450,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(181, 20);
             this.textRutEmisor.TabIndex = 2;
@@ -481,13 +481,13 @@
             this.generarListaDTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarListaDTE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarListaDTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarListaDTE.Location = new System.Drawing.Point(678, 389);
-            this.generarListaDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarListaDTE.Location = new System.Drawing.Point(679, 382);
+            this.generarListaDTE.Margin = new System.Windows.Forms.Padding(2);
             this.generarListaDTE.Name = "generarListaDTE";
             this.generarListaDTE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarListaDTE.Size = new System.Drawing.Size(76, 28);
+            this.generarListaDTE.Size = new System.Drawing.Size(75, 35);
             this.generarListaDTE.TabIndex = 1;
-            this.generarListaDTE.Text = "Generar";
+            this.generarListaDTE.Text = "Listar";
             this.generarListaDTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarListaDTE.UseVisualStyleBackColor = true;
             this.generarListaDTE.Click += new System.EventHandler(this.generarListaDTE_Click);
@@ -495,7 +495,7 @@
             // radio_Bton_recibidoListado
             // 
             this.radio_Bton_recibidoListado.Location = new System.Drawing.Point(86, 11);
-            this.radio_Bton_recibidoListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio_Bton_recibidoListado.Margin = new System.Windows.Forms.Padding(2);
             this.radio_Bton_recibidoListado.Name = "radio_Bton_recibidoListado";
             this.radio_Bton_recibidoListado.Size = new System.Drawing.Size(69, 15);
             this.radio_Bton_recibidoListado.TabIndex = 41;
@@ -507,7 +507,7 @@
             // 
             this.radio_Bton_emitidoListado.Checked = true;
             this.radio_Bton_emitidoListado.Location = new System.Drawing.Point(11, 11);
-            this.radio_Bton_emitidoListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio_Bton_emitidoListado.Margin = new System.Windows.Forms.Padding(2);
             this.radio_Bton_emitidoListado.Name = "radio_Bton_emitidoListado";
             this.radio_Bton_emitidoListado.Size = new System.Drawing.Size(69, 15);
             this.radio_Bton_emitidoListado.TabIndex = 40;
@@ -560,7 +560,7 @@
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListadoDteEmitidos_Recibidos";

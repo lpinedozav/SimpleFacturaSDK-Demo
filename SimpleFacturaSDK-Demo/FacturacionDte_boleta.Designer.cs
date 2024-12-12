@@ -139,16 +139,16 @@
             // 
             // generarFacturacioDte_Boleta
             // 
-            this.generarFacturacioDte_Boleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarFacturacioDte_Boleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.generarFacturacioDte_Boleta.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarFacturacioDte_Boleta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(545, 703);
+            this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(558, 703);
             this.generarFacturacioDte_Boleta.Margin = new System.Windows.Forms.Padding(2);
             this.generarFacturacioDte_Boleta.Name = "generarFacturacioDte_Boleta";
             this.generarFacturacioDte_Boleta.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarFacturacioDte_Boleta.Size = new System.Drawing.Size(88, 28);
+            this.generarFacturacioDte_Boleta.Size = new System.Drawing.Size(75, 35);
             this.generarFacturacioDte_Boleta.TabIndex = 49;
-            this.generarFacturacioDte_Boleta.Text = "Generar";
+            this.generarFacturacioDte_Boleta.Text = "Ejecutar";
             this.generarFacturacioDte_Boleta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarFacturacioDte_Boleta.UseVisualStyleBackColor = true;
             this.generarFacturacioDte_Boleta.Click += new System.EventHandler(this.generarFacturacioDte_Boleta_Click);
@@ -796,7 +796,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 735);
+            this.ClientSize = new System.Drawing.Size(639, 744);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.BoletasRadioButton);
             this.Controls.Add(this.DteRadioButton);

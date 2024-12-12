@@ -37,6 +37,7 @@ namespace SimpleFacturaSDK_Demo
 
             // Asociar el evento CellContentClick
             gridResultados.CellContentClick += gridResultados_CellContentClick;
+            gridResultados.CellFormatting += dataGridListado_CellFormatting;
         }
 
         private async void generarListaDTE_Click(object sender, EventArgs e)
@@ -117,6 +118,23 @@ namespace SimpleFacturaSDK_Demo
                 Loading.HideLoading(generarListaDTE);
             }
         }
+
+        private void dataGridListado_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica si es una de las columnas que deseas formatear
+            if (gridResultados.Columns[e.ColumnIndex].Name == "neto" ||
+                gridResultados.Columns[e.ColumnIndex].Name == "iva" ||
+                gridResultados.Columns[e.ColumnIndex].Name == "total")
+            {
+                if (e.Value != null && decimal.TryParse(e.Value.ToString(), out decimal valor))
+                {
+                    // Aplica el formato utilizando el helper
+                    e.Value = FormattingHelper.FormatearPrecio(valor);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
         private void RemoverColumnasVacias()
         {
             // Recorremos las columnas de derecha a izquierda para poder eliminarlas sin problemas
