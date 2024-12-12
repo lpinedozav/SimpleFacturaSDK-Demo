@@ -37,22 +37,22 @@
             // 
             this.dataGridViewDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDetalles.Location = new System.Drawing.Point(10, 6);
-            this.dataGridViewDetalles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDetalles.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDetalles.Name = "dataGridViewDetalles";
             this.dataGridViewDetalles.RowHeadersWidth = 51;
             this.dataGridViewDetalles.RowTemplate.Height = 24;
-            this.dataGridViewDetalles.Size = new System.Drawing.Size(448, 264);
+            this.dataGridViewDetalles.Size = new System.Drawing.Size(525, 264);
             this.dataGridViewDetalles.TabIndex = 0;
             // 
             // Detalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 280);
+            this.ClientSize = new System.Drawing.Size(546, 283);
             this.Controls.Add(this.dataGridViewDetalles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Detalles";

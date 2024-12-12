@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoBhe_Emitida_Recibida));
             this.radioButton_recibidoListado = new System.Windows.Forms.RadioButton();
@@ -57,26 +57,26 @@
             this.retenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridReceptor = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridEmisor = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gridOtros = new System.Windows.Forms.DataGridView();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RutReceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComunaReceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DireccionReceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Region = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridEmisor = new System.Windows.Forms.DataGridView();
-            this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gridOtros = new System.Windows.Forms.DataGridView();
             this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionAnulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textDocumentacion = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oListado)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -93,10 +93,10 @@
             // 
             // radioButton_recibidoListado
             // 
-            this.radioButton_recibidoListado.Location = new System.Drawing.Point(115, 11);
-            this.radioButton_recibidoListado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_recibidoListado.Location = new System.Drawing.Point(86, 9);
+            this.radioButton_recibidoListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton_recibidoListado.Name = "radioButton_recibidoListado";
-            this.radioButton_recibidoListado.Size = new System.Drawing.Size(92, 18);
+            this.radioButton_recibidoListado.Size = new System.Drawing.Size(69, 15);
             this.radioButton_recibidoListado.TabIndex = 45;
             this.radioButton_recibidoListado.Text = "Recibido";
             this.radioButton_recibidoListado.UseVisualStyleBackColor = true;
@@ -105,10 +105,10 @@
             // radioButton_emitidoListado
             // 
             this.radioButton_emitidoListado.Checked = true;
-            this.radioButton_emitidoListado.Location = new System.Drawing.Point(15, 11);
-            this.radioButton_emitidoListado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_emitidoListado.Location = new System.Drawing.Point(11, 9);
+            this.radioButton_emitidoListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton_emitidoListado.Name = "radioButton_emitidoListado";
-            this.radioButton_emitidoListado.Size = new System.Drawing.Size(92, 18);
+            this.radioButton_emitidoListado.Size = new System.Drawing.Size(69, 15);
             this.radioButton_emitidoListado.TabIndex = 44;
             this.radioButton_emitidoListado.TabStop = true;
             this.radioButton_emitidoListado.Text = "Emitido";
@@ -127,11 +127,11 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(11, 34);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(655, 150);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(577, 122);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Consulta";
@@ -139,10 +139,10 @@
             // dateTimeHasta
             // 
             this.dateTimeHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeHasta.Location = new System.Drawing.Point(409, 66);
-            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimeHasta.Location = new System.Drawing.Point(307, 54);
+            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeHasta.Name = "dateTimeHasta";
-            this.dateTimeHasta.Size = new System.Drawing.Size(132, 22);
+            this.dateTimeHasta.Size = new System.Drawing.Size(100, 20);
             this.dateTimeHasta.TabIndex = 23;
             this.dateTimeHasta.TabStop = false;
             this.dateTimeHasta.Value = new System.DateTime(2024, 11, 11, 0, 0, 0, 0);
@@ -150,10 +150,10 @@
             // dateTimeDesde
             // 
             this.dateTimeDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeDesde.Location = new System.Drawing.Point(409, 33);
-            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimeDesde.Location = new System.Drawing.Point(307, 27);
+            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeDesde.Name = "dateTimeDesde";
-            this.dateTimeDesde.Size = new System.Drawing.Size(129, 22);
+            this.dateTimeDesde.Size = new System.Drawing.Size(98, 20);
             this.dateTimeDesde.TabIndex = 22;
             this.dateTimeDesde.TabStop = false;
             this.dateTimeDesde.Value = new System.DateTime(2024, 9, 3, 0, 0, 0, 0);
@@ -161,77 +161,82 @@
             // hasta
             // 
             this.hasta.AutoSize = true;
-            this.hasta.Location = new System.Drawing.Point(335, 73);
+            this.hasta.Location = new System.Drawing.Point(251, 59);
+            this.hasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hasta.Name = "hasta";
-            this.hasta.Size = new System.Drawing.Size(46, 16);
+            this.hasta.Size = new System.Drawing.Size(38, 13);
             this.hasta.TabIndex = 21;
             this.hasta.Text = "Hasta:";
             // 
             // desde
             // 
             this.desde.AutoSize = true;
-            this.desde.Location = new System.Drawing.Point(335, 38);
+            this.desde.Location = new System.Drawing.Point(251, 31);
+            this.desde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.desde.Name = "desde";
-            this.desde.Size = new System.Drawing.Size(51, 16);
+            this.desde.Size = new System.Drawing.Size(41, 13);
             this.desde.TabIndex = 20;
             this.desde.Text = "Desde:";
             // 
             // folio_oListado
             // 
-            this.folio_oListado.Location = new System.Drawing.Point(133, 101);
-            this.folio_oListado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.folio_oListado.Location = new System.Drawing.Point(100, 82);
+            this.folio_oListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.folio_oListado.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.folio_oListado.Name = "folio_oListado";
-            this.folio_oListado.Size = new System.Drawing.Size(188, 22);
+            this.folio_oListado.Size = new System.Drawing.Size(141, 20);
             this.folio_oListado.TabIndex = 6;
             this.folio_oListado.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 105);
+            this.label4.Location = new System.Drawing.Point(6, 85);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Folio:";
             // 
             // textNombreSucursal
             // 
-            this.textNombreSucursal.Location = new System.Drawing.Point(135, 66);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textNombreSucursal.Location = new System.Drawing.Point(101, 54);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textNombreSucursal.Name = "textNombreSucursal";
-            this.textNombreSucursal.Size = new System.Drawing.Size(185, 22);
+            this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 5;
             this.textNombreSucursal.TabStop = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 70);
+            this.label6.Location = new System.Drawing.Point(6, 57);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 16);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Nombre sucursal:";
             // 
             // textRutEmisor
             // 
-            this.textRutEmisor.Location = new System.Drawing.Point(133, 33);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textRutEmisor.Location = new System.Drawing.Point(100, 27);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(185, 22);
+            this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 0;
             this.textRutEmisor.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 39);
+            this.label1.Location = new System.Drawing.Point(6, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut Emisor:";
             // 
@@ -240,13 +245,13 @@
             this.generarListadoBHE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarListadoBHE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarListadoBHE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarListadoBHE.Location = new System.Drawing.Point(568, 976);
-            this.generarListadoBHE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generarListadoBHE.Location = new System.Drawing.Point(513, 785);
+            this.generarListadoBHE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.generarListadoBHE.Name = "generarListadoBHE";
-            this.generarListadoBHE.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
-            this.generarListadoBHE.Size = new System.Drawing.Size(101, 34);
+            this.generarListadoBHE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarListadoBHE.Size = new System.Drawing.Size(75, 35);
             this.generarListadoBHE.TabIndex = 46;
-            this.generarListadoBHE.Text = "Generar";
+            this.generarListadoBHE.Text = "Listar";
             this.generarListadoBHE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarListadoBHE.UseVisualStyleBackColor = true;
             this.generarListadoBHE.Click += new System.EventHandler(this.generarListadoBHE_Click);
@@ -257,11 +262,9 @@
             this.groupBox6.Controls.Add(this.groupBox4);
             this.groupBox6.Controls.Add(this.groupBox2);
             this.groupBox6.Controls.Add(this.groupBox3);
-            this.groupBox6.Location = new System.Drawing.Point(15, 198);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Location = new System.Drawing.Point(11, 161);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox6.Size = new System.Drawing.Size(655, 698);
+            this.groupBox6.Size = new System.Drawing.Size(577, 567);
             this.groupBox6.TabIndex = 51;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resultado";
@@ -269,11 +272,9 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.dataGridTotales);
-            this.groupBox5.Location = new System.Drawing.Point(13, 358);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Location = new System.Drawing.Point(10, 291);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox5.Size = new System.Drawing.Size(627, 160);
+            this.groupBox5.Size = new System.Drawing.Size(561, 130);
             this.groupBox5.TabIndex = 54;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Totales";
@@ -292,12 +293,11 @@
             this.MontoLiquido,
             this.pagado,
             this.retenido});
-            this.dataGridTotales.Location = new System.Drawing.Point(9, 16);
-            this.dataGridTotales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridTotales.Location = new System.Drawing.Point(7, 13);
             this.dataGridTotales.Name = "dataGridTotales";
             this.dataGridTotales.ReadOnly = true;
-            this.dataGridTotales.RowHeadersWidth = 25;
-            this.dataGridTotales.Size = new System.Drawing.Size(605, 137);
+            this.dataGridTotales.RowHeadersWidth = 20;
+            this.dataGridTotales.Size = new System.Drawing.Size(549, 111);
             this.dataGridTotales.TabIndex = 0;
             // 
             // TotalHonorarios
@@ -350,11 +350,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridReceptor);
-            this.groupBox4.Location = new System.Drawing.Point(12, 191);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Location = new System.Drawing.Point(9, 155);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(627, 160);
+            this.groupBox4.Size = new System.Drawing.Size(562, 130);
             this.groupBox4.TabIndex = 53;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Receptor";
@@ -373,69 +371,19 @@
             this.Nombre,
             this.DireccionReceptor,
             this.Region});
-            this.dataGridReceptor.Location = new System.Drawing.Point(9, 16);
-            this.dataGridReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridReceptor.Location = new System.Drawing.Point(7, 13);
             this.dataGridReceptor.Name = "dataGridReceptor";
             this.dataGridReceptor.ReadOnly = true;
-            this.dataGridReceptor.RowHeadersWidth = 25;
-            this.dataGridReceptor.Size = new System.Drawing.Size(605, 137);
+            this.dataGridReceptor.RowHeadersWidth = 20;
+            this.dataGridReceptor.Size = new System.Drawing.Size(549, 111);
             this.dataGridReceptor.TabIndex = 0;
-            // 
-            // RutReceptor
-            // 
-            this.RutReceptor.DataPropertyName = "RutReceptor";
-            this.RutReceptor.HeaderText = "Rut";
-            this.RutReceptor.MinimumWidth = 6;
-            this.RutReceptor.Name = "RutReceptor";
-            this.RutReceptor.ReadOnly = true;
-            this.RutReceptor.Width = 75;
-            // 
-            // ComunaReceptor
-            // 
-            this.ComunaReceptor.DataPropertyName = "ComunaReceptor";
-            this.ComunaReceptor.HeaderText = "Comuna";
-            this.ComunaReceptor.MinimumWidth = 6;
-            this.ComunaReceptor.Name = "ComunaReceptor";
-            this.ComunaReceptor.ReadOnly = true;
-            this.ComunaReceptor.Width = 97;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            dataGridViewCellStyle2.Format = "N0";
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
-            // 
-            // DireccionReceptor
-            // 
-            this.DireccionReceptor.DataPropertyName = "DireccionReceptor";
-            this.DireccionReceptor.HeaderText = "Dirección";
-            this.DireccionReceptor.MinimumWidth = 6;
-            this.DireccionReceptor.Name = "DireccionReceptor";
-            this.DireccionReceptor.ReadOnly = true;
-            this.DireccionReceptor.Width = 90;
-            // 
-            // Region
-            // 
-            this.Region.DataPropertyName = "Region";
-            this.Region.HeaderText = "Región";
-            this.Region.MinimumWidth = 6;
-            this.Region.Name = "Region";
-            this.Region.ReadOnly = true;
-            this.Region.Width = 120;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridEmisor);
-            this.groupBox2.Location = new System.Drawing.Point(12, 23);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(9, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(627, 160);
+            this.groupBox2.Size = new System.Drawing.Size(562, 130);
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Emisor";
@@ -452,13 +400,73 @@
             this.Rut,
             this.direccion,
             this.razonSocial});
-            this.dataGridEmisor.Location = new System.Drawing.Point(9, 16);
-            this.dataGridEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridEmisor.Location = new System.Drawing.Point(7, 13);
             this.dataGridEmisor.Name = "dataGridEmisor";
             this.dataGridEmisor.ReadOnly = true;
-            this.dataGridEmisor.RowHeadersWidth = 25;
-            this.dataGridEmisor.Size = new System.Drawing.Size(605, 137);
+            this.dataGridEmisor.RowHeadersWidth = 20;
+            this.dataGridEmisor.Size = new System.Drawing.Size(549, 111);
             this.dataGridEmisor.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.gridOtros);
+            this.groupBox3.Location = new System.Drawing.Point(9, 427);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(562, 130);
+            this.groupBox3.TabIndex = 51;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Otros";
+            // 
+            // gridOtros
+            // 
+            this.gridOtros.AllowUserToAddRows = false;
+            this.gridOtros.AllowUserToDeleteRows = false;
+            this.gridOtros.AllowUserToResizeColumns = false;
+            this.gridOtros.AllowUserToResizeRows = false;
+            this.gridOtros.ColumnHeadersHeight = 29;
+            this.gridOtros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridOtros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.folio,
+            this.fechaEmision,
+            this.codigoBarra,
+            this.estado,
+            this.descripcionAnulacion});
+            this.gridOtros.Location = new System.Drawing.Point(7, 13);
+            this.gridOtros.Name = "gridOtros";
+            this.gridOtros.ReadOnly = true;
+            this.gridOtros.RowHeadersWidth = 20;
+            this.gridOtros.Size = new System.Drawing.Size(549, 111);
+            this.gridOtros.TabIndex = 0;
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(275, 60);
+            this.textDocumentacion.TabIndex = 20;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.linkLabel1);
+            this.groupBox7.Controls.Add(this.textDocumentacion);
+            this.groupBox7.Location = new System.Drawing.Point(11, 734);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(286, 86);
+            this.groupBox7.TabIndex = 52;
+            this.groupBox7.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(9, -2);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(82, 13);
+            this.linkLabel1.TabIndex = 41;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Documentación";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Rut
             // 
@@ -480,6 +488,7 @@
             // 
             // razonSocial
             // 
+            this.razonSocial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.razonSocial.DataPropertyName = "RazonSocial";
             dataGridViewCellStyle3.Format = "N0";
             this.razonSocial.DefaultCellStyle = dataGridViewCellStyle3;
@@ -487,41 +496,53 @@
             this.razonSocial.MinimumWidth = 6;
             this.razonSocial.Name = "razonSocial";
             this.razonSocial.ReadOnly = true;
-            this.razonSocial.Width = 170;
             // 
-            // groupBox3
+            // RutReceptor
             // 
-            this.groupBox3.Controls.Add(this.gridOtros);
-            this.groupBox3.Location = new System.Drawing.Point(12, 526);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(627, 160);
-            this.groupBox3.TabIndex = 51;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Otros";
+            this.RutReceptor.DataPropertyName = "RutReceptor";
+            this.RutReceptor.HeaderText = "Rut";
+            this.RutReceptor.MinimumWidth = 6;
+            this.RutReceptor.Name = "RutReceptor";
+            this.RutReceptor.ReadOnly = true;
+            this.RutReceptor.Width = 75;
             // 
-            // gridOtros
+            // ComunaReceptor
             // 
-            this.gridOtros.AllowUserToAddRows = false;
-            this.gridOtros.AllowUserToDeleteRows = false;
-            this.gridOtros.AllowUserToResizeColumns = false;
-            this.gridOtros.AllowUserToResizeRows = false;
-            this.gridOtros.ColumnHeadersHeight = 29;
-            this.gridOtros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gridOtros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.folio,
-            this.fechaEmision,
-            this.codigoBarra,
-            this.estado,
-            this.descripcionAnulacion});
-            this.gridOtros.Location = new System.Drawing.Point(9, 16);
-            this.gridOtros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gridOtros.Name = "gridOtros";
-            this.gridOtros.ReadOnly = true;
-            this.gridOtros.RowHeadersWidth = 25;
-            this.gridOtros.Size = new System.Drawing.Size(605, 137);
-            this.gridOtros.TabIndex = 0;
+            this.ComunaReceptor.DataPropertyName = "ComunaReceptor";
+            this.ComunaReceptor.HeaderText = "Comuna";
+            this.ComunaReceptor.MinimumWidth = 6;
+            this.ComunaReceptor.Name = "ComunaReceptor";
+            this.ComunaReceptor.ReadOnly = true;
+            this.ComunaReceptor.Width = 97;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "Nombre";
+            dataGridViewCellStyle2.Format = "N0";
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // DireccionReceptor
+            // 
+            this.DireccionReceptor.DataPropertyName = "DireccionReceptor";
+            this.DireccionReceptor.HeaderText = "Dirección";
+            this.DireccionReceptor.MinimumWidth = 6;
+            this.DireccionReceptor.Name = "DireccionReceptor";
+            this.DireccionReceptor.ReadOnly = true;
+            this.DireccionReceptor.Width = 90;
+            // 
+            // Region
+            // 
+            this.Region.DataPropertyName = "Region";
+            this.Region.HeaderText = "Región";
+            this.Region.MinimumWidth = 6;
+            this.Region.Name = "Region";
+            this.Region.ReadOnly = true;
+            this.Region.Width = 120;
             // 
             // folio
             // 
@@ -543,6 +564,7 @@
             // 
             // codigoBarra
             // 
+            this.codigoBarra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.codigoBarra.DataPropertyName = "codigoBarra";
             dataGridViewCellStyle4.Format = "N0";
             this.codigoBarra.DefaultCellStyle = dataGridViewCellStyle4;
@@ -550,7 +572,6 @@
             this.codigoBarra.MinimumWidth = 6;
             this.codigoBarra.Name = "codigoBarra";
             this.codigoBarra.ReadOnly = true;
-            this.codigoBarra.Width = 90;
             // 
             // estado
             // 
@@ -570,43 +591,11 @@
             this.descripcionAnulacion.ReadOnly = true;
             this.descripcionAnulacion.Width = 150;
             // 
-            // textDocumentacion
-            // 
-            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
-            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
-            this.textDocumentacion.Multiline = true;
-            this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(365, 73);
-            this.textDocumentacion.TabIndex = 20;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.linkLabel1);
-            this.groupBox7.Controls.Add(this.textDocumentacion);
-            this.groupBox7.Location = new System.Drawing.Point(15, 904);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(381, 106);
-            this.groupBox7.TabIndex = 52;
-            this.groupBox7.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, -2);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(101, 16);
-            this.linkLabel1.TabIndex = 41;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Documentación";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // ListadoBhe_Emitida_Recibida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 1013);
+            this.ClientSize = new System.Drawing.Size(599, 823);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.generarListadoBHE);
@@ -615,7 +604,6 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListadoBhe_Emitida_Recibida";
@@ -665,6 +653,14 @@
         private System.Windows.Forms.DataGridView dataGridEmisor;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridOtros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalHonorarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MontoBruto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MontoLiquido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pagado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn retenido;
+        private System.Windows.Forms.TextBox textDocumentacion;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rut;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn razonSocial;
@@ -673,18 +669,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn DireccionReceptor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Region;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalHonorarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MontoBruto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MontoLiquido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pagado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn retenido;
         private System.Windows.Forms.DataGridViewTextBoxColumn folio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaEmision;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoBarra;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionAnulacion;
-        private System.Windows.Forms.TextBox textDocumentacion;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
