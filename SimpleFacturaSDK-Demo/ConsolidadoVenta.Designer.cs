@@ -73,11 +73,11 @@
             this.groupBox2.Controls.Add(this.hasta);
             this.groupBox2.Controls.Add(this.ambiente);
             this.groupBox2.Controls.Add(this.desde);
-            this.groupBox2.Location = new System.Drawing.Point(12, 101);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(9, 82);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(821, 79);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(616, 64);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Otros";
@@ -85,10 +85,10 @@
             // dateTimeHasta
             // 
             this.dateTimeHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeHasta.Location = new System.Drawing.Point(317, 33);
-            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimeHasta.Location = new System.Drawing.Point(238, 27);
+            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeHasta.Name = "dateTimeHasta";
-            this.dateTimeHasta.Size = new System.Drawing.Size(132, 22);
+            this.dateTimeHasta.Size = new System.Drawing.Size(100, 20);
             this.dateTimeHasta.TabIndex = 19;
             this.dateTimeHasta.TabStop = false;
             this.dateTimeHasta.Value = new System.DateTime(2023, 10, 30, 10, 23, 0, 0);
@@ -96,10 +96,10 @@
             // dateTimeDesde
             // 
             this.dateTimeDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeDesde.Location = new System.Drawing.Point(77, 33);
-            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimeDesde.Location = new System.Drawing.Point(58, 27);
+            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeDesde.Name = "dateTimeDesde";
-            this.dateTimeDesde.Size = new System.Drawing.Size(129, 22);
+            this.dateTimeDesde.Size = new System.Drawing.Size(98, 20);
             this.dateTimeDesde.TabIndex = 18;
             this.dateTimeDesde.TabStop = false;
             this.dateTimeDesde.Value = new System.DateTime(2023, 10, 25, 10, 23, 0, 0);
@@ -107,10 +107,10 @@
             // radioProduccion
             // 
             this.radioProduccion.AutoSize = true;
-            this.radioProduccion.Location = new System.Drawing.Point(716, 32);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioProduccion.Location = new System.Drawing.Point(537, 26);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioProduccion.Name = "radioProduccion";
-            this.radioProduccion.Size = new System.Drawing.Size(96, 20);
+            this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
             this.radioProduccion.Text = "Produccion";
             this.radioProduccion.UseVisualStyleBackColor = true;
@@ -119,10 +119,10 @@
             // 
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
-            this.radioCertificacion.Location = new System.Drawing.Point(596, 32);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioCertificacion.Location = new System.Drawing.Point(447, 26);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioCertificacion.Name = "radioCertificacion";
-            this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
+            this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
             this.radioCertificacion.TabStop = true;
             this.radioCertificacion.Text = "Certificacion";
@@ -130,36 +130,39 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(9, 162);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox5.Location = new System.Drawing.Point(7, 132);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(413, 22);
+            this.textBox5.Size = new System.Drawing.Size(311, 20);
             this.textBox5.TabIndex = 9;
             // 
             // hasta
             // 
             this.hasta.AutoSize = true;
-            this.hasta.Location = new System.Drawing.Point(243, 36);
+            this.hasta.Location = new System.Drawing.Point(182, 29);
+            this.hasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hasta.Name = "hasta";
-            this.hasta.Size = new System.Drawing.Size(46, 16);
+            this.hasta.Size = new System.Drawing.Size(38, 13);
             this.hasta.TabIndex = 8;
             this.hasta.Text = "Hasta:";
             // 
             // ambiente
             // 
             this.ambiente.AutoSize = true;
-            this.ambiente.Location = new System.Drawing.Point(493, 34);
+            this.ambiente.Location = new System.Drawing.Point(370, 28);
+            this.ambiente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ambiente.Name = "ambiente";
-            this.ambiente.Size = new System.Drawing.Size(67, 16);
+            this.ambiente.Size = new System.Drawing.Size(54, 13);
             this.ambiente.TabIndex = 5;
             this.ambiente.Text = "Ambiente:";
             // 
             // desde
             // 
             this.desde.AutoSize = true;
-            this.desde.Location = new System.Drawing.Point(5, 34);
+            this.desde.Location = new System.Drawing.Point(4, 28);
+            this.desde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.desde.Name = "desde";
-            this.desde.Size = new System.Drawing.Size(51, 16);
+            this.desde.Size = new System.Drawing.Size(41, 13);
             this.desde.TabIndex = 4;
             this.desde.Text = "Desde:";
             // 
@@ -167,30 +170,31 @@
             // 
             this.groupBox1.Controls.Add(this.textRut);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(9, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(821, 78);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(616, 63);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
             // 
             // textRut
             // 
-            this.textRut.Location = new System.Drawing.Point(100, 30);
-            this.textRut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textRut.Location = new System.Drawing.Point(75, 24);
+            this.textRut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textRut.Name = "textRut";
-            this.textRut.Size = new System.Drawing.Size(216, 22);
+            this.textRut.Size = new System.Drawing.Size(163, 20);
             this.textRut.TabIndex = 2;
             this.textRut.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 32);
+            this.label1.Location = new System.Drawing.Point(4, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut Emisor:";
             // 
@@ -199,11 +203,11 @@
             this.generarConsolidadoV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarConsolidadoV.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarConsolidadoV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarConsolidadoV.Location = new System.Drawing.Point(731, 543);
-            this.generarConsolidadoV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generarConsolidadoV.Location = new System.Drawing.Point(549, 479);
+            this.generarConsolidadoV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.generarConsolidadoV.Name = "generarConsolidadoV";
-            this.generarConsolidadoV.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
-            this.generarConsolidadoV.Size = new System.Drawing.Size(101, 34);
+            this.generarConsolidadoV.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarConsolidadoV.Size = new System.Drawing.Size(76, 28);
             this.generarConsolidadoV.TabIndex = 1;
             this.generarConsolidadoV.Text = "Generar";
             this.generarConsolidadoV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -213,11 +217,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridConsolidado);
-            this.groupBox3.Location = new System.Drawing.Point(12, 197);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(9, 160);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(821, 324);
+            this.groupBox3.Size = new System.Drawing.Size(616, 263);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado";
@@ -235,12 +237,12 @@
             this.totaliva,
             this.total,
             this.detalle});
-            this.dataGridConsolidado.Location = new System.Drawing.Point(9, 32);
-            this.dataGridConsolidado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridConsolidado.Location = new System.Drawing.Point(7, 26);
+            this.dataGridConsolidado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridConsolidado.Name = "dataGridConsolidado";
             this.dataGridConsolidado.RowHeadersWidth = 51;
             this.dataGridConsolidado.RowTemplate.Height = 24;
-            this.dataGridConsolidado.Size = new System.Drawing.Size(803, 277);
+            this.dataGridConsolidado.Size = new System.Drawing.Size(602, 225);
             this.dataGridConsolidado.TabIndex = 17;
             // 
             // fecha
@@ -322,38 +324,36 @@
             // 
             this.groupBox4.Controls.Add(this.linkLabelConsolidado);
             this.groupBox4.Controls.Add(this.textDocumentacion);
-            this.groupBox4.Location = new System.Drawing.Point(12, 529);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(9, 430);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(697, 95);
+            this.groupBox4.Size = new System.Drawing.Size(523, 77);
             this.groupBox4.TabIndex = 53;
             this.groupBox4.TabStop = false;
             // 
             // linkLabelConsolidado
             // 
             this.linkLabelConsolidado.AutoSize = true;
-            this.linkLabelConsolidado.Location = new System.Drawing.Point(12, -2);
+            this.linkLabelConsolidado.Location = new System.Drawing.Point(9, -2);
+            this.linkLabelConsolidado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelConsolidado.Name = "linkLabelConsolidado";
-            this.linkLabelConsolidado.Size = new System.Drawing.Size(101, 16);
+            this.linkLabelConsolidado.Size = new System.Drawing.Size(82, 13);
             this.linkLabelConsolidado.TabIndex = 41;
             this.linkLabelConsolidado.TabStop = true;
             this.linkLabelConsolidado.Text = "Documentación";
             // 
             // textDocumentacion
             // 
-            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
-            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(681, 64);
+            this.textDocumentacion.Size = new System.Drawing.Size(512, 53);
             this.textDocumentacion.TabIndex = 20;
             // 
             // ConsolidadoVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 630);
+            this.ClientSize = new System.Drawing.Size(637, 512);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.generarConsolidadoV);
@@ -361,7 +361,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsolidadoVenta";

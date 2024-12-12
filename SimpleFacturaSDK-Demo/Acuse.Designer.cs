@@ -321,7 +321,7 @@
             this.generarAcuse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarAcuse.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarAcuse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarAcuse.Location = new System.Drawing.Point(178, 345);
+            this.generarAcuse.Location = new System.Drawing.Point(177, 404);
             this.generarAcuse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.generarAcuse.Name = "generarAcuse";
             this.generarAcuse.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
@@ -338,7 +338,7 @@
             this.groupBox4.Controls.Add(this.textDocumentacion);
             this.groupBox4.Location = new System.Drawing.Point(9, 347);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(164, 135);
+            this.groupBox4.Size = new System.Drawing.Size(164, 85);
             this.groupBox4.TabIndex = 52;
             this.groupBox4.TabStop = false;
             // 
@@ -359,14 +359,14 @@
             this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(150, 110);
+            this.textDocumentacion.Size = new System.Drawing.Size(150, 58);
             this.textDocumentacion.TabIndex = 20;
             // 
             // Acuse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 491);
+            this.ClientSize = new System.Drawing.Size(262, 439);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.generarAcuse);
             this.Controls.Add(this.groupBox3);
