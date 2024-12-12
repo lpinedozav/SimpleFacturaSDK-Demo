@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using SimpleFacturaSDK_Demo.Helpers;
 using System.Collections.Generic;
 using SDKSimpleFactura.Models.Request;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -25,6 +26,7 @@ namespace SimpleFacturaSDK_Demo
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+            textDocumentacion.Text = "Documentacion de listar";
             gridResultados.CellContentClick += dataGridProductos_CellContentClick;
         }
 
@@ -127,6 +129,23 @@ namespace SimpleFacturaSDK_Demo
             Detalles detallesForm = new Detalles();
             detallesForm.SetDetalles(impuestos, "Impuestos");
             detallesForm.ShowDialog();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocListProducts = "https://documentacion.simplefactura.cl/#47940f71-b51e-4e46-b8d6-37499c1af38e";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocListProducts,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

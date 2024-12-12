@@ -6,6 +6,8 @@ using SDKSimpleFactura.Models.Response;
 using SimpleFacturaSDK_Demo.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
@@ -34,6 +36,7 @@ namespace SimpleFacturaSDK_Demo
             numericPrecio.Value = 50;
             textUnidadMedida.Text = "un";
             comboBoxImpuesto.SelectedIndex = 1;
+            textDocumentacion.Text = "Documentacion de agregar";
         }
 
         private async void generarAgregarProducto_Click(object sender, EventArgs e)
@@ -78,6 +81,23 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarAgregarProducto);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocAddProducts = "https://documentacion.simplefactura.cl/#097b4421-4e06-4ae8-88a5-9974d4c72b3d";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocAddProducts,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

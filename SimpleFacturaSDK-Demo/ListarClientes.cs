@@ -1,6 +1,7 @@
 ﻿using SDKSimpleFactura;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
@@ -19,6 +20,7 @@ namespace SimpleFacturaSDK_Demo
         private void ListarClientes_Load(object sender, EventArgs e)
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            textDocumentacion.Text = "listar clientes";
         }
 
         private async void generarListarClientes_Click(object sender, EventArgs e)
@@ -52,6 +54,23 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarListarClientes);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocListClients = "https://documentacion.simplefactura.cl/#81f3ee6a-acb4-4dca-92d3-88ae9e5c7f72";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocListClients,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

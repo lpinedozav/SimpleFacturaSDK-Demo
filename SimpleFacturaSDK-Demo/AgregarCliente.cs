@@ -5,6 +5,7 @@ using SDKSimpleFactura.Models.Response;
 using SimpleFacturaSDK_Demo.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace SimpleFacturaSDK_Demo
@@ -35,6 +36,8 @@ namespace SimpleFacturaSDK_Demo
             textDireccionFacCliente.Text = "correo 1";
             textDireccionParCliente.Text = "correo 2";
             textGiroCliente.Text = "Giro 1";
+
+            textDocumentacion.Text = "agregar cliente";
         }
 
         private async void generarAgregarCliente_Click(object sender, EventArgs e)
@@ -81,6 +84,23 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarAgregarCliente);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocAddClients = "https://documentacion.simplefactura.cl/#568f6d35-1818-4121-bfc4-4823dd38c4e9";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocAddClients,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
