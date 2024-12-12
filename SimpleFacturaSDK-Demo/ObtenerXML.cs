@@ -137,16 +137,50 @@ namespace SimpleFacturaSDK_Demo
         }
         private void ChangeUI()
         {
-            if (radioButton_emitidoXml.Checked) { textRutContribuyente.Enabled = false; textNombreSucursal.Enabled = true; folio_oPDF.Value = 4117; }
-            if (radio_Bton_recibidoXml.Checked) { textNombreSucursal.Enabled = false; textRutContribuyente.Enabled = true; textRutContribuyente.Text = "76269769-6"; folio_oPDF.Value = 4405; }
+            if (radioButton_emitidoXml.Checked)
+            {
+                textRutContribuyente.Enabled = false;
+                textNombreSucursal.Enabled = true;
+                folio_oPDF.Value = 4117;
+
+                // Cambiar el texto de la documentación para "emitido XML"
+                textDocumentacion.Text = "permite generar y descargar archivo XML, correspondiente a DTE emitido en portal SimpleFactura.";
+            }
+            else if (radio_Bton_recibidoXml.Checked)
+            {
+                textNombreSucursal.Enabled = false;
+                textRutContribuyente.Enabled = true;
+                textRutContribuyente.Text = "76269769-6";
+                folio_oPDF.Value = 4405;
+
+                // Cambiar el texto de la documentación para "recibido XML"
+                textDocumentacion.Text = "Permite obtener el XML(base64) de un DTE recibido. Es importante señalar que sólo se entregará el XML si este se encuentra en la casilla intercambio@chilesystems.com";
+            }
         }
 
         private void linkLabelXml_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            // Definir las URLs para emitido y recibido
+            string urlEmitidoXml = "https://documentacion.simplefactura.cl/#4527ab77-ae8a-4427-aeab-aed8db42026c";
+            string urlRecibidoXml = "https://documentacion.simplefactura.cl/#e70aed3b-a062-4aaf-9fac-011021f31987"; // Cambia a la URL correspondiente
 
-            string url = "https://documentacion.simplefactura.cl/#4527ab77-ae8a-4427-aeab-aed8db42026c";
+            // Determinar cuál URL usar en función del RadioButton seleccionado
+            string url;
+            if (radioButton_emitidoXml.Checked)
+            {
+                url = urlEmitidoXml;
+            }
+            else if (radio_Bton_recibidoXml.Checked)
+            {
+                url = urlRecibidoXml;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una opción antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            // Abrir la URL en el navegador predeterminado
+            // Intentar abrir la URL en el navegador predeterminado
             try
             {
                 Process.Start(new ProcessStartInfo
@@ -160,5 +194,6 @@ namespace SimpleFacturaSDK_Demo
                 MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

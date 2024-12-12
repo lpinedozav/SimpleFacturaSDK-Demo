@@ -158,16 +158,51 @@ namespace SimpleFacturaSDK_Demo
         }
         private void ChangeUI()
         {
-            if (radioButton_emitidoPdf.Checked) { textRutContribuyente.Enabled = false; textNombreSucursal.Enabled = true; folio_oPDF.Value = 4117; }
-            if (radioButton_recibidoPdf.Checked) { textNombreSucursal.Enabled = false; textRutContribuyente.Enabled = true; folio_oPDF.Value = 2232; }
+            if (radioButton_emitidoPdf.Checked)
+            {
+                textRutContribuyente.Enabled = false;
+                textNombreSucursal.Enabled = true;
+                folio_oPDF.Value = 4117;
+
+    
+                textDocumentacion.Text = "Este endpoint permite generar y descargar archivo en formato PDF correspondiente a un DTE emitido en el portal SimpleFactura.";
+            }
+            else if (radioButton_recibidoPdf.Checked)
+            {
+                textNombreSucursal.Enabled = false;
+                textRutContribuyente.Enabled = true;
+                folio_oPDF.Value = 2232;
+
+                // Cambiar el texto de la documentación para "recibido"
+                textDocumentacion.Text = "Este endpoint Permite obtener el XML de un DTE recibido. Es importante señalar que sólo se entregará el PDF si este se encuentra en la casilla intercambio@chilesystems.com";
+            }
         }
+
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // URL que deseas abrir
-            string url = "https://documentacion.simplefactura.cl/#8f1ee83a-289e-41a9-b1b2-ee32bab1ee15";
+            // Definir las URLs para cada estado
+            string urlEmitido = "https://documentacion.simplefactura.cl/#8f1ee83a-289e-41a9-b1b2-ee32bab1ee15";
+            string urlRecibido = "https://documentacion.simplefactura.cl/#36f5c8d4-61cb-4af8-870b-52f5f48304f1"; // Cambia a la URL correspondiente
 
-            // Abrir la URL en el navegador predeterminado
+            // Determinar cuál URL usar en función del RadioButton seleccionado
+            string url;
+            if (radioButton_emitidoPdf.Checked)
+            {
+                url = urlEmitido;
+            }
+            else if (radioButton_recibidoPdf.Checked)
+            {
+                url = urlRecibido;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una opción antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Intentar abrir la URL en el navegador predeterminado
             try
             {
                 Process.Start(new ProcessStartInfo

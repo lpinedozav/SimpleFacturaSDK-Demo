@@ -308,7 +308,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(246, 117);
+            this.groupBox4.Size = new System.Drawing.Size(246, 133);
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
             // 
@@ -329,7 +329,7 @@
             this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(230, 83);
+            this.textDocumentacion.Size = new System.Drawing.Size(230, 102);
             this.textDocumentacion.TabIndex = 20;
             this.textDocumentacion.Text = "permite generar y descargar archivo XML, correspondiente a DTE emitido en portal " +
     "SimpleFactura.";
@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 474);
+            this.ClientSize = new System.Drawing.Size(387, 483);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.radio_Bton_recibidoXml);
