@@ -43,6 +43,11 @@ namespace SimpleFacturaSDK_Demo
 
                     gridResultados.DataSource = null;
                     gridResultados.DataSource = list;
+                    gridResultados.Columns["ReceptorId"].Visible = false;
+                    gridResultados.Columns["EmisorId"].Visible = false;
+                    gridResultados.Columns["Rut"].Visible = false;
+                    gridResultados.Columns["Dv"].Visible = false;
+
 
                 }
             }
@@ -52,7 +57,6 @@ namespace SimpleFacturaSDK_Demo
             }
             finally
             {
-                // Ocultar el indicador de carga
                 Loading.HideLoading(generarListarClientes);
             }
         }
