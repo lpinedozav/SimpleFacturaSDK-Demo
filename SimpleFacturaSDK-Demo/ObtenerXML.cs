@@ -4,6 +4,7 @@ using SDKSimpleFactura.Models.Response;
 using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -138,6 +139,26 @@ namespace SimpleFacturaSDK_Demo
         {
             if (radioButton_emitidoXml.Checked) { textRutContribuyente.Enabled = false; textNombreSucursal.Enabled = true; folio_oPDF.Value = 4117; }
             if (radio_Bton_recibidoXml.Checked) { textNombreSucursal.Enabled = false; textRutContribuyente.Enabled = true; textRutContribuyente.Text = "76269769-6"; folio_oPDF.Value = 4405; }
+        }
+
+        private void linkLabelXml_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            string url = "https://documentacion.simplefactura.cl/#4527ab77-ae8a-4427-aeab-aed8db42026c";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

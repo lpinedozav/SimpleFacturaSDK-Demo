@@ -5,6 +5,7 @@ using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
@@ -244,6 +245,25 @@ namespace SimpleFacturaSDK_Demo
             Detalles detallesForm = new Detalles();
             detallesForm.SetDetalles(referencias, "Referencias");
             detallesForm.ShowDialog();
+        }
+
+        private void linkLabelDTE_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#ed2fe5e8-1fcb-4339-927d-cdc379628950";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }    
 }

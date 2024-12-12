@@ -43,11 +43,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gridResultado = new System.Windows.Forms.DataGridView();
             this.gridDetalles = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.linkLabelDTE = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridDetalles)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // consultarDTE
@@ -55,13 +59,13 @@
             this.consultarDTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultarDTE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.consultarDTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.consultarDTE.Location = new System.Drawing.Point(580, 752);
+            this.consultarDTE.Location = new System.Drawing.Point(579, 754);
             this.consultarDTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.consultarDTE.Name = "consultarDTE";
             this.consultarDTE.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
             this.consultarDTE.Size = new System.Drawing.Size(101, 34);
             this.consultarDTE.TabIndex = 1;
-            this.consultarDTE.Text = "Consultar";
+            this.consultarDTE.Text = "Generar";
             this.consultarDTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.consultarDTE.UseVisualStyleBackColor = true;
             this.consultarDTE.Click += new System.EventHandler(this.consultarDTE_Click);
@@ -216,11 +220,45 @@
             this.gridDetalles.Size = new System.Drawing.Size(668, 270);
             this.gridDetalles.TabIndex = 17;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.linkLabelDTE);
+            this.groupBox5.Controls.Add(this.textDocumentacion);
+            this.groupBox5.Location = new System.Drawing.Point(12, 754);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Size = new System.Drawing.Size(561, 117);
+            this.groupBox5.TabIndex = 44;
+            this.groupBox5.TabStop = false;
+            // 
+            // linkLabelDTE
+            // 
+            this.linkLabelDTE.AutoSize = true;
+            this.linkLabelDTE.Location = new System.Drawing.Point(12, -2);
+            this.linkLabelDTE.Name = "linkLabelDTE";
+            this.linkLabelDTE.Size = new System.Drawing.Size(101, 16);
+            this.linkLabelDTE.TabIndex = 41;
+            this.linkLabelDTE.TabStop = true;
+            this.linkLabelDTE.Text = "Documentación";
+            this.linkLabelDTE.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDTE_LinkClicked);
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
+            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(545, 86);
+            this.textDocumentacion.TabIndex = 20;
+            this.textDocumentacion.Text = resources.GetString("textDocumentacion.Text");
+            // 
             // ObtenerDTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 794);
+            this.ClientSize = new System.Drawing.Size(692, 880);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gridDetalles);
             this.Controls.Add(this.gridResultado);
             this.Controls.Add(this.consultarDTE);
@@ -242,6 +280,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridDetalles)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +301,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView gridResultado;
         private System.Windows.Forms.DataGridView gridDetalles;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.LinkLabel linkLabelDTE;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }
