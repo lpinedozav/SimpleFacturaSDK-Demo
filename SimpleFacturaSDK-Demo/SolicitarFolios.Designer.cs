@@ -32,6 +32,8 @@
             this.generarSolicitarFolio = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
+            this.Propiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textNombreSucursal = new System.Windows.Forms.TextBox();
             this.textRutEmisor = new System.Windows.Forms.TextBox();
@@ -42,13 +44,15 @@
             this.comboBoxCodigoTipoDTE = new System.Windows.Forms.ComboBox();
             this.TipoDte = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Propiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // generarSolicitarFolio
@@ -56,7 +60,7 @@
             this.generarSolicitarFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarSolicitarFolio.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarSolicitarFolio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarSolicitarFolio.Location = new System.Drawing.Point(319, 492);
+            this.generarSolicitarFolio.Location = new System.Drawing.Point(319, 587);
             this.generarSolicitarFolio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.generarSolicitarFolio.Name = "generarSolicitarFolio";
             this.generarSolicitarFolio.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
@@ -97,6 +101,24 @@
             this.gridResultados.RowHeadersWidth = 25;
             this.gridResultados.Size = new System.Drawing.Size(390, 247);
             this.gridResultados.TabIndex = 0;
+            // 
+            // Propiedad
+            // 
+            this.Propiedad.DataPropertyName = "Propiedad";
+            this.Propiedad.HeaderText = "Propiedad";
+            this.Propiedad.MinimumWidth = 6;
+            this.Propiedad.Name = "Propiedad";
+            this.Propiedad.ReadOnly = true;
+            this.Propiedad.Width = 125;
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "Valor";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.MinimumWidth = 6;
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            this.Valor.Width = 125;
             // 
             // groupBox1
             // 
@@ -211,29 +233,44 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Cantidad:";
             // 
-            // Propiedad
+            // textDocumentacion
             // 
-            this.Propiedad.DataPropertyName = "Propiedad";
-            this.Propiedad.HeaderText = "Propiedad";
-            this.Propiedad.MinimumWidth = 6;
-            this.Propiedad.Name = "Propiedad";
-            this.Propiedad.ReadOnly = true;
-            this.Propiedad.Width = 125;
+            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
+            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(228, 104);
+            this.textDocumentacion.TabIndex = 20;
             // 
-            // Valor
+            // groupBox4
             // 
-            this.Valor.DataPropertyName = "Valor";
-            this.Valor.HeaderText = "Valor";
-            this.Valor.MinimumWidth = 6;
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
-            this.Valor.Width = 125;
+            this.groupBox4.Controls.Add(this.linkLabel1);
+            this.groupBox4.Controls.Add(this.textDocumentacion);
+            this.groupBox4.Location = new System.Drawing.Point(15, 494);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(245, 135);
+            this.groupBox4.TabIndex = 41;
+            this.groupBox4.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, -2);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(101, 16);
+            this.linkLabel1.TabIndex = 41;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Documentación";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // SolicitarFolios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 534);
+            this.ClientSize = new System.Drawing.Size(433, 632);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.generarSolicitarFolio);
             this.Controls.Add(this.groupBox3);
@@ -254,6 +291,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +314,8 @@
         private System.Windows.Forms.NumericUpDown numericCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Propiedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.TextBox textDocumentacion;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

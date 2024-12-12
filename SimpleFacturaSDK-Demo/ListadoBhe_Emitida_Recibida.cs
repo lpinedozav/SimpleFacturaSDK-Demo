@@ -1,6 +1,7 @@
 ﻿using SDKSimpleFactura;
 using SDKSimpleFactura.Models.Request;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -194,7 +195,14 @@ namespace SimpleFacturaSDK_Demo
 
         private void ChangeUI()
         {
-            // Ajustes de interfaz según el estado Emitido/Recibido
+            if (radioButton_emitidoListado.Checked)
+            {
+                textDocumentacion.Text = "Permite generar lista detallada de DTE emitidos desde una empresa emisora hacia una empresa receptora (o proveedor en caso de Factura de Compra).";
+            }
+            if (radioButton_recibidoListado.Checked)
+            {
+                textDocumentacion.Text = "Permite generar lista detallada de DTE emitidos desde una empresa emisora hacia una empresa receptora (o proveedor en caso de Factura de Compra).";
+            }
         }
 
         private void LimpiarDataGrids()
@@ -226,6 +234,43 @@ namespace SimpleFacturaSDK_Demo
                 }
                 // Si todas las celdas de esta columna están vacías, la ocultamos
                 if (allEmpty) col.Visible = false;
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Definir las URLs para cada estado
+            string urlEmitido = "https://documentacion.simplefactura.cl/#c5a0567a-a84e-45ff-b45e-de63e7a604d3";
+            string urlRecibido = "https://documentacion.simplefactura.cl/#310a0c9b-6031-463d-9c28-1790570bf826"; // Cambia a la URL correspondiente
+
+            // Determinar cuál URL usar en función del RadioButton seleccionado
+            string url;
+            if (radioButton_emitidoListado.Checked)
+            {
+                url = urlEmitido;
+            }
+            else if (radioButton_recibidoListado.Checked)
+            {
+                url = urlRecibido;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una opción antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Intentar abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

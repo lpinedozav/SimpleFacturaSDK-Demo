@@ -7,6 +7,7 @@ using System.Linq;
 using System.Collections.Generic;
 using SDKSimpleFactura.Models.Response;
 using SDKSimpleFactura.Models.Request;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -26,6 +27,7 @@ namespace SimpleFacturaSDK_Demo
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             gridResultados.CellContentClick += dataGridDatosEmpresa_CellContentClick;
+            textDocumentacion.Text = "Permite obtener los datos de una empresa registrada en SimpleFactura y que haya sido asignada al usuario que realiza la consulta.";
         }
 
         private async void generarDatosEmpresa_Click(object sender, EventArgs e)
@@ -94,5 +96,21 @@ namespace SimpleFacturaSDK_Demo
             detallesForm.ShowDialog();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocDatosEmpresa = "https://documentacion.simplefactura.cl/#f1b3658a-916f-4f6c-a96e-c2e0639128c3";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocDatosEmpresa,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

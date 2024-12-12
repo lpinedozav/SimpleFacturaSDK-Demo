@@ -7,6 +7,7 @@ using static SDKSimpleFactura.Enum.TipoDTE;
 using static SDKSimpleFactura.Enum.Ambiente;
 using SimpleFacturaSDK_Demo.Models;
 using SDKSimpleFactura.Models.Request;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -26,6 +27,7 @@ namespace SimpleFacturaSDK_Demo
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             tipodte_Folio.SelectedIndex = 3;
+            textDocumentacion.Text = "Consulta los folios disponibles en el portal, a la empresa emisora indicada en Json.";
         }
 
         private async void generarConsultaFolios_Click(object sender, EventArgs e)
@@ -88,6 +90,23 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarConsultaFolios);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocFolioSinUso = "https://documentacion.simplefactura.cl/#81e62ff5-a1e1-4daa-a553-6fa241c378e7";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocFolioSinUso,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
