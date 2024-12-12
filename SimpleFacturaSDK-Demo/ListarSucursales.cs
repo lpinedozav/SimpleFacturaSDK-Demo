@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -21,6 +22,7 @@ namespace SimpleFacturaSDK_Demo
         private void ListarSucursales_Load(object sender, EventArgs e)
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
+            textDocumentacion.Text = "listar sucursales";
         }
 
         private async void generarListado_Click(object sender, EventArgs e)
@@ -66,5 +68,21 @@ namespace SimpleFacturaSDK_Demo
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocListarSucursales = "https://documentacion.simplefactura.cl/#a81a89a8-bade-4a6a-bc7f-e862d0d7b86a";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocListarSucursales,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
