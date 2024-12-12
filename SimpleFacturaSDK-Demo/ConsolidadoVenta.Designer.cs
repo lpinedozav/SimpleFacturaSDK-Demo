@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsolidadoVenta));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimeHasta = new System.Windows.Forms.DateTimePicker();
@@ -44,6 +45,9 @@
             this.generarConsolidadoV = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridConsolidado = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabelConsolidado = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipodte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emitidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +57,6 @@
             this.totaliva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalle = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.linkLabelConsolidado = new System.Windows.Forms.LinkLabel();
-            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -66,18 +67,16 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dateTimeHasta);
-            this.groupBox2.Controls.Add(this.dateTimeDesde);
             this.groupBox2.Controls.Add(this.radioProduccion);
             this.groupBox2.Controls.Add(this.radioCertificacion);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.hasta);
             this.groupBox2.Controls.Add(this.ambiente);
-            this.groupBox2.Controls.Add(this.desde);
             this.groupBox2.Location = new System.Drawing.Point(9, 82);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(616, 64);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(685, 64);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Otros";
@@ -86,7 +85,7 @@
             // 
             this.dateTimeHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeHasta.Location = new System.Drawing.Point(238, 27);
-            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeHasta.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeHasta.Name = "dateTimeHasta";
             this.dateTimeHasta.Size = new System.Drawing.Size(100, 20);
             this.dateTimeHasta.TabIndex = 19;
@@ -96,8 +95,8 @@
             // dateTimeDesde
             // 
             this.dateTimeDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeDesde.Location = new System.Drawing.Point(58, 27);
-            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeDesde.Location = new System.Drawing.Point(214, 26);
+            this.dateTimeDesde.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDesde.Name = "dateTimeDesde";
             this.dateTimeDesde.Size = new System.Drawing.Size(98, 20);
             this.dateTimeDesde.TabIndex = 18;
@@ -107,31 +106,31 @@
             // radioProduccion
             // 
             this.radioProduccion.AutoSize = true;
-            this.radioProduccion.Location = new System.Drawing.Point(537, 26);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Location = new System.Drawing.Point(528, 26);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
-            this.radioCertificacion.Location = new System.Drawing.Point(447, 26);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Location = new System.Drawing.Point(438, 26);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
             this.radioCertificacion.TabStop = true;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(7, 132);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(311, 20);
             this.textBox5.TabIndex = 9;
@@ -159,7 +158,7 @@
             // desde
             // 
             this.desde.AutoSize = true;
-            this.desde.Location = new System.Drawing.Point(4, 28);
+            this.desde.Location = new System.Drawing.Point(160, 27);
             this.desde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.desde.Name = "desde";
             this.desde.Size = new System.Drawing.Size(41, 13);
@@ -169,12 +168,14 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textRut);
+            this.groupBox1.Controls.Add(this.dateTimeDesde);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.desde);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(616, 63);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(685, 63);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
@@ -182,9 +183,9 @@
             // textRut
             // 
             this.textRut.Location = new System.Drawing.Point(75, 24);
-            this.textRut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRut.Margin = new System.Windows.Forms.Padding(2);
             this.textRut.Name = "textRut";
-            this.textRut.Size = new System.Drawing.Size(163, 20);
+            this.textRut.Size = new System.Drawing.Size(81, 20);
             this.textRut.TabIndex = 2;
             this.textRut.TabStop = false;
             // 
@@ -203,13 +204,13 @@
             this.generarConsolidadoV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarConsolidadoV.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarConsolidadoV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarConsolidadoV.Location = new System.Drawing.Point(549, 479);
-            this.generarConsolidadoV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarConsolidadoV.Location = new System.Drawing.Point(619, 458);
+            this.generarConsolidadoV.Margin = new System.Windows.Forms.Padding(2);
             this.generarConsolidadoV.Name = "generarConsolidadoV";
             this.generarConsolidadoV.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarConsolidadoV.Size = new System.Drawing.Size(76, 28);
+            this.generarConsolidadoV.Size = new System.Drawing.Size(75, 35);
             this.generarConsolidadoV.TabIndex = 1;
-            this.generarConsolidadoV.Text = "Generar";
+            this.generarConsolidadoV.Text = "Ejecutar";
             this.generarConsolidadoV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarConsolidadoV.UseVisualStyleBackColor = true;
             this.generarConsolidadoV.Click += new System.EventHandler(this.generarConsolidadoV_Click);
@@ -219,13 +220,14 @@
             this.groupBox3.Controls.Add(this.dataGridConsolidado);
             this.groupBox3.Location = new System.Drawing.Point(9, 160);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(616, 263);
+            this.groupBox3.Size = new System.Drawing.Size(685, 263);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado";
             // 
             // dataGridConsolidado
             // 
+            this.dataGridConsolidado.AllowUserToAddRows = false;
             this.dataGridConsolidado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridConsolidado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fecha,
@@ -238,87 +240,20 @@
             this.total,
             this.detalle});
             this.dataGridConsolidado.Location = new System.Drawing.Point(7, 26);
-            this.dataGridConsolidado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridConsolidado.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridConsolidado.Name = "dataGridConsolidado";
-            this.dataGridConsolidado.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridConsolidado.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridConsolidado.RowHeadersWidth = 20;
             this.dataGridConsolidado.RowTemplate.Height = 24;
-            this.dataGridConsolidado.Size = new System.Drawing.Size(602, 225);
+            this.dataGridConsolidado.Size = new System.Drawing.Size(671, 225);
             this.dataGridConsolidado.TabIndex = 17;
-            // 
-            // fecha
-            // 
-            this.fecha.DataPropertyName = "Fecha";
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.MinimumWidth = 6;
-            this.fecha.Name = "fecha";
-            this.fecha.Width = 64;
-            // 
-            // tipodte
-            // 
-            this.tipodte.DataPropertyName = "TiposDTE";
-            this.tipodte.HeaderText = "Tipos DTE";
-            this.tipodte.MinimumWidth = 6;
-            this.tipodte.Name = "tipodte";
-            this.tipodte.Width = 82;
-            // 
-            // emitidos
-            // 
-            this.emitidos.DataPropertyName = "Emitidos";
-            this.emitidos.HeaderText = "Emitidos";
-            this.emitidos.MinimumWidth = 6;
-            this.emitidos.Name = "emitidos";
-            this.emitidos.Width = 52;
-            // 
-            // anulados
-            // 
-            this.anulados.DataPropertyName = "Anulados";
-            this.anulados.HeaderText = "Anulados";
-            this.anulados.MinimumWidth = 6;
-            this.anulados.Name = "anulados";
-            this.anulados.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.anulados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.anulados.Width = 54;
-            // 
-            // totalneto
-            // 
-            this.totalneto.DataPropertyName = "TotalNeto";
-            this.totalneto.HeaderText = "Total Neto";
-            this.totalneto.MinimumWidth = 6;
-            this.totalneto.Name = "totalneto";
-            this.totalneto.Width = 55;
-            // 
-            // totalexento
-            // 
-            this.totalexento.DataPropertyName = "TotalExento";
-            this.totalexento.HeaderText = "Total Exento";
-            this.totalexento.MinimumWidth = 6;
-            this.totalexento.Name = "totalexento";
-            this.totalexento.Width = 53;
-            // 
-            // totaliva
-            // 
-            this.totaliva.DataPropertyName = "TotalIva";
-            this.totaliva.HeaderText = "Total Iva";
-            this.totaliva.MinimumWidth = 6;
-            this.totaliva.Name = "totaliva";
-            this.totaliva.Width = 55;
-            // 
-            // total
-            // 
-            this.total.DataPropertyName = "Total";
-            this.total.HeaderText = "Total";
-            this.total.MinimumWidth = 6;
-            this.total.Name = "total";
-            this.total.Width = 55;
-            // 
-            // detalle
-            // 
-            this.detalle.HeaderText = "Detalle";
-            this.detalle.MinimumWidth = 6;
-            this.detalle.Name = "detalle";
-            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.detalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.detalle.Width = 70;
             // 
             // groupBox4
             // 
@@ -326,7 +261,7 @@
             this.groupBox4.Controls.Add(this.textDocumentacion);
             this.groupBox4.Location = new System.Drawing.Point(9, 430);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(523, 77);
+            this.groupBox4.Size = new System.Drawing.Size(607, 63);
             this.groupBox4.TabIndex = 53;
             this.groupBox4.TabStop = false;
             // 
@@ -346,14 +281,88 @@
             this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(512, 53);
+            this.textDocumentacion.Size = new System.Drawing.Size(595, 35);
             this.textDocumentacion.TabIndex = 20;
+            // 
+            // fecha
+            // 
+            this.fecha.DataPropertyName = "fecha";
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.MinimumWidth = 6;
+            this.fecha.Name = "fecha";
+            this.fecha.Width = 64;
+            // 
+            // tipodte
+            // 
+            this.tipodte.DataPropertyName = "tiposDTE";
+            this.tipodte.HeaderText = "Tipos DTE";
+            this.tipodte.MinimumWidth = 6;
+            this.tipodte.Name = "tipodte";
+            this.tipodte.Width = 92;
+            // 
+            // emitidos
+            // 
+            this.emitidos.DataPropertyName = "emitidos";
+            this.emitidos.HeaderText = "Emitidos";
+            this.emitidos.MinimumWidth = 6;
+            this.emitidos.Name = "emitidos";
+            this.emitidos.Width = 52;
+            // 
+            // anulados
+            // 
+            this.anulados.DataPropertyName = "anulados";
+            this.anulados.HeaderText = "Anulados";
+            this.anulados.MinimumWidth = 6;
+            this.anulados.Name = "anulados";
+            this.anulados.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.anulados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.anulados.Width = 54;
+            // 
+            // totalneto
+            // 
+            this.totalneto.DataPropertyName = "totalNeto";
+            this.totalneto.HeaderText = "Total Neto";
+            this.totalneto.Name = "totalneto";
+            this.totalneto.Width = 85;
+            // 
+            // totalexento
+            // 
+            this.totalexento.DataPropertyName = "totalExento";
+            this.totalexento.HeaderText = "Total Exento";
+            this.totalexento.MinimumWidth = 6;
+            this.totalexento.Name = "totalexento";
+            this.totalexento.Width = 95;
+            // 
+            // totaliva
+            // 
+            this.totaliva.DataPropertyName = "totalIva";
+            this.totaliva.HeaderText = "Total Iva";
+            this.totaliva.MinimumWidth = 6;
+            this.totaliva.Name = "totaliva";
+            this.totaliva.Width = 55;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Total";
+            this.total.MinimumWidth = 6;
+            this.total.Name = "total";
+            this.total.Width = 75;
+            // 
+            // detalle
+            // 
+            this.detalle.HeaderText = "Detalle";
+            this.detalle.MinimumWidth = 6;
+            this.detalle.Name = "detalle";
+            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.detalle.Width = 70;
             // 
             // ConsolidadoVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 512);
+            this.ClientSize = new System.Drawing.Size(716, 512);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.generarConsolidadoV);
@@ -361,7 +370,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsolidadoVenta";
@@ -396,6 +405,9 @@
         private System.Windows.Forms.DateTimePicker dateTimeDesde;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridConsolidado;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabelConsolidado;
+        private System.Windows.Forms.TextBox textDocumentacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipodte;
         private System.Windows.Forms.DataGridViewTextBoxColumn emitidos;
@@ -405,8 +417,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totaliva;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewButtonColumn detalle;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.LinkLabel linkLabelConsolidado;
-        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }

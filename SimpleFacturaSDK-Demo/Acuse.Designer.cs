@@ -72,9 +72,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(11, 128);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(242, 100);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -84,11 +84,11 @@
             // 
             this.radioProduccion.AutoSize = true;
             this.radioProduccion.Location = new System.Drawing.Point(161, 74);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2);
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 20;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
@@ -96,12 +96,12 @@
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
             this.radioCertificacion.Location = new System.Drawing.Point(81, 74);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2);
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 19;
             this.radioCertificacion.TabStop = true;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // label9
@@ -119,7 +119,7 @@
             this.comboBoxCodigoTipoDTE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
             this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(92, 44);
-            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
             this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(141, 21);
             this.comboBoxCodigoTipoDTE.TabIndex = 0;
@@ -128,7 +128,7 @@
             // numericFolio
             // 
             this.numericFolio.Location = new System.Drawing.Point(93, 18);
-            this.numericFolio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericFolio.Margin = new System.Windows.Forms.Padding(2);
             this.numericFolio.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -152,7 +152,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Codigo TipoDTE:";
+            this.label5.Text = "Código TipoDTE:";
             // 
             // label4
             // 
@@ -173,9 +173,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(11, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(242, 113);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -194,7 +194,7 @@
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(92, 78);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 2;
@@ -203,7 +203,7 @@
             // textRutContribuyente
             // 
             this.textRutContribuyente.Location = new System.Drawing.Point(93, 50);
-            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutContribuyente.Margin = new System.Windows.Forms.Padding(2);
             this.textRutContribuyente.Name = "textRutContribuyente";
             this.textRutContribuyente.Size = new System.Drawing.Size(140, 20);
             this.textRutContribuyente.TabIndex = 0;
@@ -212,7 +212,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 0;
@@ -247,9 +247,9 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(11, 231);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(242, 111);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
@@ -258,7 +258,7 @@
             // TextComentario
             // 
             this.TextComentario.Location = new System.Drawing.Point(93, 70);
-            this.TextComentario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextComentario.Margin = new System.Windows.Forms.Padding(2);
             this.TextComentario.Name = "TextComentario";
             this.TextComentario.Size = new System.Drawing.Size(140, 20);
             this.TextComentario.TabIndex = 2;
@@ -269,7 +269,7 @@
             this.comboBoxRespuesta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRespuesta.FormattingEnabled = true;
             this.comboBoxRespuesta.Location = new System.Drawing.Point(92, 16);
-            this.comboBoxRespuesta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRespuesta.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRespuesta.Name = "comboBoxRespuesta";
             this.comboBoxRespuesta.Size = new System.Drawing.Size(141, 21);
             this.comboBoxRespuesta.TabIndex = 10;
@@ -290,7 +290,7 @@
             this.comboBoxTipoRechazo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipoRechazo.FormattingEnabled = true;
             this.comboBoxTipoRechazo.Location = new System.Drawing.Point(92, 44);
-            this.comboBoxTipoRechazo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTipoRechazo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTipoRechazo.Name = "comboBoxTipoRechazo";
             this.comboBoxTipoRechazo.Size = new System.Drawing.Size(141, 21);
             this.comboBoxTipoRechazo.TabIndex = 0;
@@ -322,12 +322,12 @@
             this.generarAcuse.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarAcuse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generarAcuse.Location = new System.Drawing.Point(177, 404);
-            this.generarAcuse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarAcuse.Margin = new System.Windows.Forms.Padding(2);
             this.generarAcuse.Name = "generarAcuse";
             this.generarAcuse.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarAcuse.Size = new System.Drawing.Size(76, 28);
             this.generarAcuse.TabIndex = 1;
-            this.generarAcuse.Text = "Generar";
+            this.generarAcuse.Text = "Ejecutar";
             this.generarAcuse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarAcuse.UseVisualStyleBackColor = true;
             this.generarAcuse.Click += new System.EventHandler(this.generarAcuse_Click);

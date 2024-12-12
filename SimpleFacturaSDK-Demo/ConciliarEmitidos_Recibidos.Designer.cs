@@ -56,9 +56,9 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.labelRutEmisor);
             this.groupBox1.Location = new System.Drawing.Point(9, 37);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(240, 54);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -67,7 +67,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(73, 20);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(161, 20);
             this.textRutEmisor.TabIndex = 2;
@@ -89,12 +89,12 @@
             this.generarEmitidos.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarEmitidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generarEmitidos.Location = new System.Drawing.Point(531, 264);
-            this.generarEmitidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarEmitidos.Margin = new System.Windows.Forms.Padding(2);
             this.generarEmitidos.Name = "generarEmitidos";
             this.generarEmitidos.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarEmitidos.Size = new System.Drawing.Size(76, 28);
             this.generarEmitidos.TabIndex = 1;
-            this.generarEmitidos.Text = "Generar";
+            this.generarEmitidos.Text = "Ejecutar";
             this.generarEmitidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarEmitidos.UseVisualStyleBackColor = true;
             this.generarEmitidos.Click += new System.EventHandler(this.generarEmitidos_Click);
@@ -120,7 +120,7 @@
             // textMes
             // 
             this.textMes.Location = new System.Drawing.Point(82, 97);
-            this.textMes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textMes.Margin = new System.Windows.Forms.Padding(2);
             this.textMes.Maximum = new decimal(new int[] {
             12,
             0,
@@ -134,7 +134,7 @@
             // textAnio
             // 
             this.textAnio.Location = new System.Drawing.Point(82, 123);
-            this.textAnio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textAnio.Margin = new System.Windows.Forms.Padding(2);
             this.textAnio.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -168,7 +168,7 @@
             // radio_Bton_recibidoConciliar
             // 
             this.radio_Bton_recibidoConciliar.Location = new System.Drawing.Point(84, 11);
-            this.radio_Bton_recibidoConciliar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio_Bton_recibidoConciliar.Margin = new System.Windows.Forms.Padding(2);
             this.radio_Bton_recibidoConciliar.Name = "radio_Bton_recibidoConciliar";
             this.radio_Bton_recibidoConciliar.Size = new System.Drawing.Size(69, 15);
             this.radio_Bton_recibidoConciliar.TabIndex = 41;
@@ -180,7 +180,7 @@
             // 
             this.radio_Bton_emitidoConciliar.Checked = true;
             this.radio_Bton_emitidoConciliar.Location = new System.Drawing.Point(9, 11);
-            this.radio_Bton_emitidoConciliar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio_Bton_emitidoConciliar.Margin = new System.Windows.Forms.Padding(2);
             this.radio_Bton_emitidoConciliar.Name = "radio_Bton_emitidoConciliar";
             this.radio_Bton_emitidoConciliar.Size = new System.Drawing.Size(69, 15);
             this.radio_Bton_emitidoConciliar.TabIndex = 40;
@@ -236,7 +236,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConciliarEmitidos_Recibidos";
