@@ -97,6 +97,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BoletasRadioButton = new System.Windows.Forms.RadioButton();
             this.DteRadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabelFacturacionDTe_Boletas = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -104,27 +107,28 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.textSucursal);
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Location = new System.Drawing.Point(465, 692);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Location = new System.Drawing.Point(434, 780);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox6.Size = new System.Drawing.Size(211, 79);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(409, 79);
             this.groupBox6.TabIndex = 46;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros";
             // 
             // textSucursal
             // 
-            this.textSucursal.Location = new System.Drawing.Point(81, 28);
-            this.textSucursal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textSucursal.Location = new System.Drawing.Point(109, 30);
+            this.textSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.textSucursal.Name = "textSucursal";
-            this.textSucursal.Size = new System.Drawing.Size(116, 22);
+            this.textSucursal.Size = new System.Drawing.Size(285, 22);
             this.textSucursal.TabIndex = 4;
             // 
             // label12
@@ -142,7 +146,7 @@
             this.generarFacturacioDte_Boleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarFacturacioDte_Boleta.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarFacturacioDte_Boleta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(721, 736);
+            this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(723, 863);
             this.generarFacturacioDte_Boleta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.generarFacturacioDte_Boleta.Name = "generarFacturacioDte_Boleta";
             this.generarFacturacioDte_Boleta.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
@@ -170,9 +174,9 @@
             this.groupBox7.Controls.Add(this.label32);
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Location = new System.Drawing.Point(13, 361);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(829, 155);
             this.groupBox7.TabIndex = 44;
             this.groupBox7.TabStop = false;
@@ -182,7 +186,7 @@
             // 
             this.textRznReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textRznReceptor.Location = new System.Drawing.Point(356, 30);
-            this.textRznReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRznReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textRznReceptor.Name = "textRznReceptor";
             this.textRznReceptor.Size = new System.Drawing.Size(452, 22);
             this.textRznReceptor.TabIndex = 35;
@@ -191,7 +195,7 @@
             // 
             this.textCiudadReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textCiudadReceptor.Location = new System.Drawing.Point(71, 101);
-            this.textCiudadReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCiudadReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCiudadReceptor.Name = "textCiudadReceptor";
             this.textCiudadReceptor.Size = new System.Drawing.Size(185, 22);
             this.textCiudadReceptor.TabIndex = 34;
@@ -210,7 +214,7 @@
             // 
             this.textDirReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textDirReceptor.Location = new System.Drawing.Point(356, 103);
-            this.textDirReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDirReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textDirReceptor.Name = "textDirReceptor";
             this.textDirReceptor.Size = new System.Drawing.Size(177, 22);
             this.textDirReceptor.TabIndex = 26;
@@ -229,7 +233,7 @@
             // 
             this.textCorreoReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textCorreoReceptor.Location = new System.Drawing.Point(71, 64);
-            this.textCorreoReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCorreoReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCorreoReceptor.Name = "textCorreoReceptor";
             this.textCorreoReceptor.Size = new System.Drawing.Size(185, 22);
             this.textCorreoReceptor.TabIndex = 30;
@@ -248,7 +252,7 @@
             // 
             this.textCmnReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textCmnReceptor.Location = new System.Drawing.Point(605, 101);
-            this.textCmnReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCmnReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCmnReceptor.Name = "textCmnReceptor";
             this.textCmnReceptor.Size = new System.Drawing.Size(203, 22);
             this.textCmnReceptor.TabIndex = 22;
@@ -267,7 +271,7 @@
             // 
             this.textGiroReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textGiroReceptor.Location = new System.Drawing.Point(356, 64);
-            this.textGiroReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textGiroReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textGiroReceptor.Name = "textGiroReceptor";
             this.textGiroReceptor.Size = new System.Drawing.Size(452, 22);
             this.textGiroReceptor.TabIndex = 24;
@@ -286,7 +290,7 @@
             // 
             this.textRutReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textRutReceptor.Location = new System.Drawing.Point(71, 30);
-            this.textRutReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRutReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textRutReceptor.Name = "textRutReceptor";
             this.textRutReceptor.Size = new System.Drawing.Size(185, 22);
             this.textRutReceptor.TabIndex = 4;
@@ -315,9 +319,9 @@
             // 
             this.groupBox5.Controls.Add(this.gridProductos);
             this.groupBox5.Location = new System.Drawing.Point(15, 527);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(828, 158);
             this.groupBox5.TabIndex = 47;
             this.groupBox5.TabStop = false;
@@ -340,7 +344,7 @@
             this.gridPrecio,
             this.gridMonto});
             this.gridProductos.Location = new System.Drawing.Point(11, 23);
-            this.gridProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridProductos.Margin = new System.Windows.Forms.Padding(4);
             this.gridProductos.Name = "gridProductos";
             this.gridProductos.ReadOnly = true;
             this.gridProductos.RowHeadersWidth = 25;
@@ -420,27 +424,27 @@
             this.groupBox2.Controls.Add(this.montoTotal);
             this.groupBox2.Controls.Add(this.textMontoExento);
             this.groupBox2.Controls.Add(this.montoNeto);
-            this.groupBox2.Location = new System.Drawing.Point(11, 692);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(432, 693);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(447, 79);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(411, 79);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
             // 
             // textMontoTotal
             // 
-            this.textMontoTotal.Location = new System.Drawing.Point(319, 30);
-            this.textMontoTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textMontoTotal.Location = new System.Drawing.Point(305, 30);
+            this.textMontoTotal.Margin = new System.Windows.Forms.Padding(4);
             this.textMontoTotal.Name = "textMontoTotal";
-            this.textMontoTotal.Size = new System.Drawing.Size(115, 22);
+            this.textMontoTotal.Size = new System.Drawing.Size(92, 22);
             this.textMontoTotal.TabIndex = 26;
             // 
             // montoTotal
             // 
             this.montoTotal.AutoSize = true;
-            this.montoTotal.Location = new System.Drawing.Point(232, 36);
+            this.montoTotal.Location = new System.Drawing.Point(220, 36);
             this.montoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.montoTotal.Name = "montoTotal";
             this.montoTotal.Size = new System.Drawing.Size(75, 16);
@@ -450,15 +454,15 @@
             // textMontoExento
             // 
             this.textMontoExento.Location = new System.Drawing.Point(111, 30);
-            this.textMontoExento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textMontoExento.Margin = new System.Windows.Forms.Padding(4);
             this.textMontoExento.Name = "textMontoExento";
-            this.textMontoExento.Size = new System.Drawing.Size(116, 22);
+            this.textMontoExento.Size = new System.Drawing.Size(102, 22);
             this.textMontoExento.TabIndex = 4;
             // 
             // montoNeto
             // 
             this.montoNeto.AutoSize = true;
-            this.montoNeto.Location = new System.Drawing.Point(8, 33);
+            this.montoNeto.Location = new System.Drawing.Point(10, 33);
             this.montoNeto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.montoNeto.Name = "montoNeto";
             this.montoNeto.Size = new System.Drawing.Size(90, 16);
@@ -486,9 +490,9 @@
             this.groupBox3.Controls.Add(this.textRUTEmisor);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(15, 174);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(828, 180);
             this.groupBox3.TabIndex = 43;
             this.groupBox3.TabStop = false;
@@ -498,7 +502,7 @@
             // 
             this.textActividadEconomica.BackColor = System.Drawing.SystemColors.Info;
             this.textActividadEconomica.Location = new System.Drawing.Point(417, 142);
-            this.textActividadEconomica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textActividadEconomica.Margin = new System.Windows.Forms.Padding(4);
             this.textActividadEconomica.Name = "textActividadEconomica";
             this.textActividadEconomica.Size = new System.Drawing.Size(115, 22);
             this.textActividadEconomica.TabIndex = 36;
@@ -507,7 +511,7 @@
             // 
             this.razonSocial_Emisor.BackColor = System.Drawing.SystemColors.Info;
             this.razonSocial_Emisor.Location = new System.Drawing.Point(355, 31);
-            this.razonSocial_Emisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.razonSocial_Emisor.Margin = new System.Windows.Forms.Padding(4);
             this.razonSocial_Emisor.Name = "razonSocial_Emisor";
             this.razonSocial_Emisor.Size = new System.Drawing.Size(452, 22);
             this.razonSocial_Emisor.TabIndex = 35;
@@ -516,7 +520,7 @@
             // 
             this.textCiudadEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textCiudadEmisor.Location = new System.Drawing.Point(79, 102);
-            this.textCiudadEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCiudadEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textCiudadEmisor.Name = "textCiudadEmisor";
             this.textCiudadEmisor.Size = new System.Drawing.Size(176, 22);
             this.textCiudadEmisor.TabIndex = 34;
@@ -535,7 +539,7 @@
             // 
             this.textDireccionEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textDireccionEmisor.Location = new System.Drawing.Point(355, 106);
-            this.textDireccionEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDireccionEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textDireccionEmisor.Name = "textDireccionEmisor";
             this.textDireccionEmisor.Size = new System.Drawing.Size(177, 22);
             this.textDireccionEmisor.TabIndex = 26;
@@ -564,7 +568,7 @@
             // 
             this.textTelefonEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textTelefonEmisor.Location = new System.Drawing.Point(79, 140);
-            this.textTelefonEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTelefonEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textTelefonEmisor.Name = "textTelefonEmisor";
             this.textTelefonEmisor.Size = new System.Drawing.Size(176, 22);
             this.textTelefonEmisor.TabIndex = 28;
@@ -573,7 +577,7 @@
             // 
             this.correo_emisor.BackColor = System.Drawing.SystemColors.Info;
             this.correo_emisor.Location = new System.Drawing.Point(79, 66);
-            this.correo_emisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.correo_emisor.Margin = new System.Windows.Forms.Padding(4);
             this.correo_emisor.Name = "correo_emisor";
             this.correo_emisor.Size = new System.Drawing.Size(176, 22);
             this.correo_emisor.TabIndex = 30;
@@ -612,7 +616,7 @@
             // 
             this.textComunaEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textComunaEmisor.Location = new System.Drawing.Point(604, 107);
-            this.textComunaEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textComunaEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textComunaEmisor.Name = "textComunaEmisor";
             this.textComunaEmisor.Size = new System.Drawing.Size(203, 22);
             this.textComunaEmisor.TabIndex = 22;
@@ -621,7 +625,7 @@
             // 
             this.textGiroEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textGiroEmisor.Location = new System.Drawing.Point(355, 65);
-            this.textGiroEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textGiroEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textGiroEmisor.Name = "textGiroEmisor";
             this.textGiroEmisor.Size = new System.Drawing.Size(452, 22);
             this.textGiroEmisor.TabIndex = 24;
@@ -650,7 +654,7 @@
             // 
             this.textRUTEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textRUTEmisor.Location = new System.Drawing.Point(79, 30);
-            this.textRUTEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRUTEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textRUTEmisor.Name = "textRUTEmisor";
             this.textRUTEmisor.Size = new System.Drawing.Size(176, 22);
             this.textRUTEmisor.TabIndex = 4;
@@ -802,11 +806,44 @@
             this.DteRadioButton.UseVisualStyleBackColor = true;
             this.DteRadioButton.CheckedChanged += new System.EventHandler(this.DteRadioButton_CheckedChanged);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.linkLabelFacturacionDTe_Boletas);
+            this.groupBox4.Controls.Add(this.textDocumentacion);
+            this.groupBox4.Location = new System.Drawing.Point(15, 693);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(409, 166);
+            this.groupBox4.TabIndex = 50;
+            this.groupBox4.TabStop = false;
+            // 
+            // linkLabelFacturacionDTe_Boletas
+            // 
+            this.linkLabelFacturacionDTe_Boletas.AutoSize = true;
+            this.linkLabelFacturacionDTe_Boletas.Location = new System.Drawing.Point(12, -2);
+            this.linkLabelFacturacionDTe_Boletas.Name = "linkLabelFacturacionDTe_Boletas";
+            this.linkLabelFacturacionDTe_Boletas.Size = new System.Drawing.Size(101, 16);
+            this.linkLabelFacturacionDTe_Boletas.TabIndex = 41;
+            this.linkLabelFacturacionDTe_Boletas.TabStop = true;
+            this.linkLabelFacturacionDTe_Boletas.Text = "Documentación";
+            this.linkLabelFacturacionDTe_Boletas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFacturacionDTe_Boletas_LinkClicked);
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
+            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(393, 135);
+            this.textDocumentacion.TabIndex = 20;
+            // 
             // FacturacionDte_boleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 783);
+            this.ClientSize = new System.Drawing.Size(852, 905);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.BoletasRadioButton);
             this.Controls.Add(this.DteRadioButton);
             this.Controls.Add(this.groupBox6);
@@ -837,6 +874,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -908,5 +947,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridMonto;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabelFacturacionDTe_Boletas;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }

@@ -9,6 +9,7 @@ using SDKSimpleFactura.Enum;
 using SDKSimpleFactura.Models.Request;
 using System.Collections.Generic;
 using SimpleFacturaSDK_Demo.Models;
+using System.Diagnostics;
 namespace SimpleFacturaSDK_Demo
 {
     public partial class EmisonNC_ND : Form
@@ -74,6 +75,11 @@ namespace SimpleFacturaSDK_Demo
             //Otros
             comboBoxMotivo.SelectedIndex = 6;
             textSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+
+            string descripcion =
+                  "Este endpoint solicita al portal de SimpleFactura emitir Nota Debito y Nota de Crédito," +
+                  "La particularidad de este endpoint es que utiliza como nombre de parametros los mismo que se pueden encontrar en las etiquetas de un archivo XML correspondiente a un DTE emitido.";
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarNcNd_Click(object sender, EventArgs e)
@@ -177,6 +183,25 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarNcNd);
+            }
+        }
+
+        private void linkLabelEmisioNC_ND_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#7f4a70c0-5a36-4c96-be0b-2f6057feddd6";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

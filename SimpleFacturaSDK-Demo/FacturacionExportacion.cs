@@ -6,6 +6,7 @@ using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.FormaPago;
@@ -105,14 +106,12 @@ namespace SimpleFacturaSDK_Demo
                 FormattingHelper.FormatearPrecio(1000),
                 FormattingHelper.FormatearPrecio(1000)
                 );
-            //Bulto
-            gridBulto.Rows.Add(
-                "1-2",
-                75,
-                "30",
-                "1-3",
-                "CONTENEDOR"
-                );
+
+            string descripcion =
+                  "Este endpoint solicita al portal de SimpleFactura emitir DTE Exportación," +
+                  "La particularidad de este endpoint es que utiliza como nombre las mismas etiquetas que se pueden encontrar en un archivo XML de un DTE." +
+                  "Los valores de los Items en documentos de exportación siempre deben ser exentos de IVA.";
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarExporta_Click(object sender, EventArgs e)
@@ -242,6 +241,26 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarExporta);
+            }
+        }
+
+        private void linkLabelFacturacionExportacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            string url = "https://documentacion.simplefactura.cl/#e80d2452-02cd-4b16-91e3-28f34a864f0c";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
