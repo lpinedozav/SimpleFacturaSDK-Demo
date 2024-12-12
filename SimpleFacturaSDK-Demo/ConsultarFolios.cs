@@ -2,9 +2,11 @@
 using SDKSimpleFactura.Models.Request;
 using SimpleFacturaSDK_Demo.Helpers;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
 using static SDKSimpleFactura.Enum.TipoDTE;
+using static System.Net.WebRequestMethods;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -26,6 +28,7 @@ namespace SimpleFacturaSDK_Demo
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             comboBoxCodigoTipoDTE.SelectedIndex = 3;
             radioCertificacion.Checked = true;
+            textDocumentacion.Text = "consultar folios";
         }
 
         private async void generarConsultaFolios_Click(object sender, EventArgs e)
@@ -86,6 +89,23 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarConsultaFolios);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocConsultarFolios = "https://documentacion.simplefactura.cl/#e65dabf9-08c3-4906-94d7-8105e4fc1fae";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocConsultarFolios,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

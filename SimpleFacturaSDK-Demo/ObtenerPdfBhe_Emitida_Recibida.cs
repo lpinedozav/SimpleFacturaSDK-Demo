@@ -142,9 +142,55 @@ namespace SimpleFacturaSDK_Demo
 
         private void ChangeUI()
         {
-            if (radioButton_emitidoPdf.Checked) { textRutContribuyente.Enabled = true; folio_oPDF_BHE.Value = 15; }
-            if (radioButton_recibidoPdf.Checked) { textRutContribuyente.Enabled = false; folio_oPDF_BHE.Value = 1; }
+            if (radioButton_emitidoPdf.Checked) 
+            { 
+                textRutContribuyente.Enabled = true; 
+                folio_oPDF_BHE.Value = 15;
+                textDocumentacion.Text = " emitida";
+            }
+            if (radioButton_recibidoPdf.Checked) 
+            {
+                textRutContribuyente.Enabled = false; 
+                folio_oPDF_BHE.Value = 1;
+                textDocumentacion.Text = "recibida";
+            }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Definir las URLs para cada estado
+            string urlEmitido = "https://documentacion.simplefactura.cl/#e5dbda3c-498f-4f67-88c7-cac9f4cfa0c6";
+            string urlRecibido = "https://documentacion.simplefactura.cl/#fc67fa40-a741-471e-8e4c-f50348d2029c"; // Cambia a la URL correspondiente
+
+            // Determinar cuál URL usar en función del RadioButton seleccionado
+            string url;
+            if (radioButton_emitidoPdf.Checked)
+            {
+                url = urlEmitido;
+            }
+            else if (radioButton_recibidoPdf.Checked)
+            {
+                url = urlRecibido;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una opción antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Intentar abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

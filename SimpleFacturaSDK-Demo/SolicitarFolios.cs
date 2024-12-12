@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.TipoDTE;
 using SimpleFacturaSDK_Demo.Models;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -29,6 +30,7 @@ namespace SimpleFacturaSDK_Demo
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             comboBoxCodigoTipoDTE.SelectedIndex = 3;
             numericCantidad.Value = 1;
+            textDocumentacion.Text = "solicitar folios";
         }
 
         private async void generarSolicitarFolio_Click(object sender, EventArgs e)
@@ -124,6 +126,23 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarSolicitarFolio);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string urlDocSolicitarFolios = "https://documentacion.simplefactura.cl/#01c4964a-518c-4536-b329-3c858f0c13e4";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = urlDocSolicitarFolios,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
