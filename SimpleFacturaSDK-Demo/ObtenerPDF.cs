@@ -161,5 +161,25 @@ namespace SimpleFacturaSDK_Demo
             if (radioButton_emitidoPdf.Checked) { textRutContribuyente.Enabled = false; textNombreSucursal.Enabled = true; folio_oPDF.Value = 4117; }
             if (radioButton_recibidoPdf.Checked) { textNombreSucursal.Enabled = false; textRutContribuyente.Enabled = true; folio_oPDF.Value = 2232; }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // URL que deseas abrir
+            string url = "https://documentacion.simplefactura.cl/#8f1ee83a-289e-41a9-b1b2-ee32bab1ee15";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
