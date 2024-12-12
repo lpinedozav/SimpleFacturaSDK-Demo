@@ -55,9 +55,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(11, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(248, 96);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -66,7 +66,7 @@
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(93, 52);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 0;
@@ -75,7 +75,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(93, 19);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 0;
@@ -122,16 +122,16 @@
             // 
             // txtRutaArchivo
             // 
-            this.txtRutaArchivo.Location = new System.Drawing.Point(86, 119);
-            this.txtRutaArchivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRutaArchivo.Location = new System.Drawing.Point(93, 251);
+            this.txtRutaArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtRutaArchivo.Name = "txtRutaArchivo";
-            this.txtRutaArchivo.Size = new System.Drawing.Size(173, 20);
+            this.txtRutaArchivo.Size = new System.Drawing.Size(361, 20);
             this.txtRutaArchivo.TabIndex = 2;
             this.txtRutaArchivo.TabStop = false;
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(11, 117);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(11, 249);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(77, 24);
             this.btnSeleccionarArchivo.TabIndex = 27;
@@ -150,7 +150,7 @@
             this.generarMasiva.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarMasiva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generarMasiva.Location = new System.Drawing.Point(458, 248);
-            this.generarMasiva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarMasiva.Margin = new System.Windows.Forms.Padding(2);
             this.generarMasiva.Name = "generarMasiva";
             this.generarMasiva.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarMasiva.Size = new System.Drawing.Size(88, 28);
@@ -164,7 +164,7 @@
             // 
             this.groupBox4.Controls.Add(this.linkLabelFacturacionMasiva);
             this.groupBox4.Controls.Add(this.textDocumentacion);
-            this.groupBox4.Location = new System.Drawing.Point(11, 148);
+            this.groupBox4.Location = new System.Drawing.Point(11, 114);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(247, 128);
             this.groupBox4.TabIndex = 51;
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 284);
+            this.ClientSize = new System.Drawing.Size(558, 286);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.generarMasiva);
             this.Controls.Add(this.btnSeleccionarArchivo);

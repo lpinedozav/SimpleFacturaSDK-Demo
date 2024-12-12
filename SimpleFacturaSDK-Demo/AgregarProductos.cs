@@ -26,13 +26,32 @@ namespace SimpleFacturaSDK_Demo
 
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
-            var randomText = StringHelper.GenerateRandomString(6);
-            //Credenciales
+            // Arrays de productos y códigos de barras
+            string[] productos = new string[20]
+            {
+                "Coca-Cola", "Pepsi", "Lays", "Doritos", "Nutella",
+                "Pringles", "KitKat", "Snickers", "Red Bull", "Heineken",
+                "Colgate", "Dove Soap", "Head & Shoulders", "Gillette Razor", "Nivea Cream",
+                "Oreo", "M&Ms", "Twix", "Lipton Tea", "Sprite"
+            };
+
+            long[] codigosDeBarras = new long[20]
+            {
+                123456789012, 234567890123, 345678901234, 456789012345, 567890123456,
+                678901234567, 789012345678, 890123456789, 901234567890, 112233445566,
+                223344556677, 334455667788, 445566778899, 556677889900, 667788990011,
+                778899001122, 889900112233, 990011223344, 101112131415, 121314151617
+            };
+
+            // Seleccionar un producto y código de barra aleatorios
+            Random random = new Random();
+            int index = random.Next(0, productos.Length);
+
+            // Asignar valores al formulario
+            textNombre.Text = productos[index];
+            textCodigoBarra.Text = codigosDeBarras[index].ToString();
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
-            //Productos
-            textNombre.Text = randomText;
-            textCodigoBarra.Text = randomText;
             numericPrecio.Value = 50;
             textUnidadMedida.Text = "un";
             comboBoxImpuesto.SelectedIndex = 1;
