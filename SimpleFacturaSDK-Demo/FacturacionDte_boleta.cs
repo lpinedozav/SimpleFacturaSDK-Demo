@@ -9,6 +9,7 @@ using SDKSimpleFactura.Enum;
 using SDKSimpleFactura.Models.Request;
 using System.Collections.Generic;
 using SimpleFacturaSDK_Demo.Models;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -83,6 +84,15 @@ namespace SimpleFacturaSDK_Demo
                 textActividadEconomica.Enabled = true;
                 textTelefonEmisor.Enabled = true;
                 textGiroReceptor.Enabled = true;
+
+                string descripcion =
+                  "Permite generar Documentos Tributarios Electrónicos (DTE) directamente a través del portal SimpleFactura." +
+                  "El documento que puede emitir es Facturas" +
+                  "Los valores de productos/servicios para Factura no incluyen IVA, son Netos." +
+                  "Para Boletas los valores son brutos, IVA incluido.";
+                textDocumentacion.Text = descripcion;
+
+
             }
             else if (BoletasRadioButton.Checked)
             {
@@ -104,6 +114,13 @@ namespace SimpleFacturaSDK_Demo
                 textActividadEconomica.Enabled = false;
                 textTelefonEmisor.Enabled = false;
                 textGiroReceptor.Enabled = false;
+
+                string descripcion =
+                  "Permite generar Documentos Tributarios Electrónicos (DTE) directamente a través del portal SimpleFactura." +
+                  "El documento que puede emitir es Boletas Electrónicas (39-41)." +
+                  "Los valores de productos/servicios para Factura no incluyen IVA, son Netos." +
+                  "Para Boletas los valores son brutos, IVA incluido.";
+                textDocumentacion.Text = descripcion;
             }
         }
         private void DteRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -232,6 +249,43 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(generarFacturacioDte_Boleta);
+            }
+        }
+
+        private void linkLabelFacturacionDTe_Boletas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Definir las URLs para emitido y recibido
+            string DteRadioButtonUrl = "https://documentacion.simplefactura.cl/#9f9c17ba-9951-4b4a-8786-0ea79d1bb252";
+            string BoletasRadioButtonUrl = "https://documentacion.simplefactura.cl/#77d4a642-561c-443b-b8ee-1182edd612b3"; // Cambia a la URL correspondiente
+
+            // Determinar cuál URL usar en función del RadioButton seleccionado
+            string url;
+            if (DteRadioButton.Checked)
+            {
+                url = DteRadioButtonUrl;
+            }
+            else if (BoletasRadioButton.Checked)
+            {
+                url = BoletasRadioButtonUrl;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una opción antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Intentar abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

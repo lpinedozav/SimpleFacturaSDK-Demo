@@ -6,6 +6,7 @@ using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
 using static SDKSimpleFactura.Enum.TipoDTE;
@@ -202,6 +203,11 @@ namespace SimpleFacturaSDK_Demo
                 comboBoxCodigoTipoDTE.SelectedIndex = 3;
                 radioCertificacion.Checked = true;
                 radioProduccion.Checked = false;
+
+                string descripcion =
+                  "Permite generar lista detallada de DTE emitidos desde una empresa emisora hacia una empresa receptora (o proveedor en caso de Factura de Compra)," +
+                  "Es posible generar un listado por tipo de DTE, obtener el detalle de un folio en particular y un listado del total de DTE emitidos.";
+                textDocumentacion.Text = descripcion;
             }
             if (radio_Bton_recibidoListado.Checked)
             {
@@ -211,6 +217,48 @@ namespace SimpleFacturaSDK_Demo
                 comboBoxCodigoTipoDTE.SelectedIndex = 0;
                 radioCertificacion.Checked = false;
                 radioProduccion.Checked = true;
+
+                string descripcion =
+                  "Permite generar lista detallada de DTE recibidos desde un proveedor (\"rutContribuyente\") hacia nuestra empresa (\"rutEmisor\")," +
+                  "Es posible generar un listado por tipo de DTE, obtener el detalle de un folio en particular y un listado del total de DTE recibidos.";
+                textDocumentacion.Text = descripcion;
+            }
+        }
+
+        private void linkLabelListado_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Definir las URLs para emitido y recibido
+            string radio_Bton_emitidoListadoUrl = "https://documentacion.simplefactura.cl/#3056548a-3dca-4ccc-9e1c-aa0198668bbe";
+            string radio_Bton_recibidoListadoUrl = "https://documentacion.simplefactura.cl/#0b7dbd72-6a3f-4228-b1d1-ae827944946c"; // Cambia a la URL correspondiente
+
+            // Determinar cuál URL usar en función del RadioButton seleccionado
+            string url;
+            if (radio_Bton_recibidoListado.Checked)
+            {
+                url = radio_Bton_emitidoListadoUrl;
+            }
+            else if (radio_Bton_emitidoListado.Checked)
+            {
+                url = radio_Bton_recibidoListadoUrl;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una opción antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Intentar abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

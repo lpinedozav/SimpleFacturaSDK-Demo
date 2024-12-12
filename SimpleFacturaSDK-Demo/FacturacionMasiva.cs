@@ -1,6 +1,7 @@
 ﻿using SDKSimpleFactura;
 using SDKSimpleFactura.Models.Facturacion;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -41,6 +42,11 @@ namespace SimpleFacturaSDK_Demo
             string projectDirectory = Path.Combine(baseDirectory, @"..\..\"); // Subir al nivel raíz del proyecto
             string filePath = Path.Combine(projectDirectory, "Files", "ejemplo_carga_masiva_nacional.csv");
             txtRutaArchivo.Text = filePath;
+            string descripcion =
+                 "El endpoint de Facturación Masiva le brinda la posibilidad de realizar la emisión de múltiples Documentos Tributarios Electrónicos (DTEs) de manera eficiente y sencilla," +
+                 " utilizando un archivo CSV que contiene los datos necesarios para generar dichos documentos.";
+
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarMasiva_Click(object sender, EventArgs e)
@@ -75,6 +81,25 @@ namespace SimpleFacturaSDK_Demo
             {
                 // Ocultar el indicador de carga
                 Loading.HideLoading(textRespuesta);
+            }
+        }
+
+        private void linkLabelFacturacionMasiva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#aa06de6b-dd1d-4b63-812e-e08f703c9c58";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

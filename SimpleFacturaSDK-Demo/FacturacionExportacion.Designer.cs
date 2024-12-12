@@ -31,18 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturacionExportacion));
             this.generarExporta = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.gridBulto = new System.Windows.Forms.DataGridView();
-            this.ColumnIdContainer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCodTpoBultos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnCantBultos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSello = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEmisorSello = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.comboBoxNacionalidad = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -151,8 +141,9 @@
             this.comboBoxTipoMoneda = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBulto)).BeginInit();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabelFacturacionExportacion = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).BeginInit();
@@ -166,6 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericPesoNeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTara)).BeginInit();
             this.groupBox8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // generarExporta
@@ -182,91 +174,6 @@
             this.generarExporta.Text = "Generar";
             this.generarExporta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarExporta.Click += new System.EventHandler(this.generarExporta_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.gridBulto);
-            this.groupBox4.Location = new System.Drawing.Point(1037, 442);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(577, 162);
-            this.groupBox4.TabIndex = 47;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tipo Bulto";
-            // 
-            // gridBulto
-            // 
-            this.gridBulto.AllowUserToAddRows = false;
-            this.gridBulto.AllowUserToDeleteRows = false;
-            this.gridBulto.AllowUserToResizeColumns = false;
-            this.gridBulto.AllowUserToResizeRows = false;
-            this.gridBulto.ColumnHeadersHeight = 29;
-            this.gridBulto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gridBulto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnIdContainer,
-            this.ColumnCodTpoBultos,
-            this.columnCantBultos,
-            this.ColumnSello,
-            this.ColumnEmisorSello});
-            this.gridBulto.Location = new System.Drawing.Point(9, 23);
-            this.gridBulto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gridBulto.Name = "gridBulto";
-            this.gridBulto.ReadOnly = true;
-            this.gridBulto.RowHeadersWidth = 25;
-            this.gridBulto.Size = new System.Drawing.Size(547, 121);
-            this.gridBulto.TabIndex = 0;
-            // 
-            // ColumnIdContainer
-            // 
-            this.ColumnIdContainer.DataPropertyName = "IdContainer";
-            dataGridViewCellStyle1.Format = "N1";
-            this.ColumnIdContainer.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColumnIdContainer.HeaderText = "Id Container";
-            this.ColumnIdContainer.MinimumWidth = 6;
-            this.ColumnIdContainer.Name = "ColumnIdContainer";
-            this.ColumnIdContainer.ReadOnly = true;
-            this.ColumnIdContainer.Width = 70;
-            // 
-            // ColumnCodTpoBultos
-            // 
-            this.ColumnCodTpoBultos.DataPropertyName = "CodTpoBultos";
-            dataGridViewCellStyle2.Format = "N0";
-            this.ColumnCodTpoBultos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColumnCodTpoBultos.HeaderText = "Cód Tipo Bultos";
-            this.ColumnCodTpoBultos.MinimumWidth = 6;
-            this.ColumnCodTpoBultos.Name = "ColumnCodTpoBultos";
-            this.ColumnCodTpoBultos.ReadOnly = true;
-            this.ColumnCodTpoBultos.Width = 90;
-            // 
-            // columnCantBultos
-            // 
-            this.columnCantBultos.DataPropertyName = "CantBultos";
-            this.columnCantBultos.HeaderText = "Cantidad Bultos";
-            this.columnCantBultos.MinimumWidth = 6;
-            this.columnCantBultos.Name = "columnCantBultos";
-            this.columnCantBultos.ReadOnly = true;
-            this.columnCantBultos.Width = 90;
-            // 
-            // ColumnSello
-            // 
-            this.ColumnSello.DataPropertyName = "Sello";
-            dataGridViewCellStyle3.Format = "N0";
-            this.ColumnSello.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColumnSello.HeaderText = "Sello";
-            this.ColumnSello.MinimumWidth = 6;
-            this.ColumnSello.Name = "ColumnSello";
-            this.ColumnSello.ReadOnly = true;
-            this.ColumnSello.Width = 40;
-            // 
-            // ColumnEmisorSello
-            // 
-            this.ColumnEmisorSello.DataPropertyName = "EmisorSello";
-            this.ColumnEmisorSello.HeaderText = "Emisor Sello";
-            this.ColumnEmisorSello.MinimumWidth = 6;
-            this.ColumnEmisorSello.Name = "ColumnEmisorSello";
-            this.ColumnEmisorSello.ReadOnly = true;
-            this.ColumnEmisorSello.Width = 80;
             // 
             // groupBox7
             // 
@@ -289,9 +196,9 @@
             this.groupBox7.Controls.Add(this.label32);
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Location = new System.Drawing.Point(15, 290);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(1013, 144);
             this.groupBox7.TabIndex = 44;
             this.groupBox7.TabStop = false;
@@ -322,7 +229,7 @@
             // 
             this.textIdReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textIdReceptor.Location = new System.Drawing.Point(864, 32);
-            this.textIdReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textIdReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textIdReceptor.Name = "textIdReceptor";
             this.textIdReceptor.Size = new System.Drawing.Size(143, 22);
             this.textIdReceptor.TabIndex = 37;
@@ -342,7 +249,7 @@
             // 
             this.textRznReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textRznReceptor.Location = new System.Drawing.Point(356, 30);
-            this.textRznReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRznReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textRznReceptor.Name = "textRznReceptor";
             this.textRznReceptor.Size = new System.Drawing.Size(412, 22);
             this.textRznReceptor.TabIndex = 35;
@@ -352,7 +259,7 @@
             // 
             this.textCiudadReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textCiudadReceptor.Location = new System.Drawing.Point(71, 101);
-            this.textCiudadReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCiudadReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCiudadReceptor.Name = "textCiudadReceptor";
             this.textCiudadReceptor.Size = new System.Drawing.Size(185, 22);
             this.textCiudadReceptor.TabIndex = 34;
@@ -372,7 +279,7 @@
             // 
             this.textDirReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textDirReceptor.Location = new System.Drawing.Point(356, 102);
-            this.textDirReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDirReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textDirReceptor.Name = "textDirReceptor";
             this.textDirReceptor.Size = new System.Drawing.Size(177, 22);
             this.textDirReceptor.TabIndex = 26;
@@ -392,7 +299,7 @@
             // 
             this.textCorreoReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textCorreoReceptor.Location = new System.Drawing.Point(71, 64);
-            this.textCorreoReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCorreoReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCorreoReceptor.Name = "textCorreoReceptor";
             this.textCorreoReceptor.Size = new System.Drawing.Size(185, 22);
             this.textCorreoReceptor.TabIndex = 30;
@@ -412,7 +319,7 @@
             // 
             this.textCmnReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textCmnReceptor.Location = new System.Drawing.Point(605, 102);
-            this.textCmnReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCmnReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textCmnReceptor.Name = "textCmnReceptor";
             this.textCmnReceptor.Size = new System.Drawing.Size(163, 22);
             this.textCmnReceptor.TabIndex = 22;
@@ -432,7 +339,7 @@
             // 
             this.textGiroReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textGiroReceptor.Location = new System.Drawing.Point(356, 64);
-            this.textGiroReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textGiroReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textGiroReceptor.Name = "textGiroReceptor";
             this.textGiroReceptor.Size = new System.Drawing.Size(412, 22);
             this.textGiroReceptor.TabIndex = 24;
@@ -452,7 +359,7 @@
             // 
             this.textRutReceptor.BackColor = System.Drawing.SystemColors.Info;
             this.textRutReceptor.Location = new System.Drawing.Point(71, 30);
-            this.textRutReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRutReceptor.Margin = new System.Windows.Forms.Padding(4);
             this.textRutReceptor.Name = "textRutReceptor";
             this.textRutReceptor.Size = new System.Drawing.Size(185, 22);
             this.textRutReceptor.TabIndex = 4;
@@ -482,9 +389,9 @@
             // 
             this.groupBox5.Controls.Add(this.gridProductos);
             this.groupBox5.Location = new System.Drawing.Point(15, 442);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(1013, 158);
             this.groupBox5.TabIndex = 46;
             this.groupBox5.TabStop = false;
@@ -508,7 +415,7 @@
             this.gridPrecio,
             this.Monto});
             this.gridProductos.Location = new System.Drawing.Point(11, 23);
-            this.gridProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridProductos.Margin = new System.Windows.Forms.Padding(4);
             this.gridProductos.Name = "gridProductos";
             this.gridProductos.ReadOnly = true;
             this.gridProductos.RowHeadersWidth = 25;
@@ -518,8 +425,8 @@
             // gridNroLinea
             // 
             this.gridNroLinea.DataPropertyName = "NroLinDet";
-            dataGridViewCellStyle4.Format = "N0";
-            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "N0";
+            this.gridNroLinea.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridNroLinea.HeaderText = "NroLinDet";
             this.gridNroLinea.MinimumWidth = 6;
             this.gridNroLinea.Name = "gridNroLinea";
@@ -555,8 +462,8 @@
             // gridCantidadProducto
             // 
             this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle5.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridCantidadProducto.HeaderText = "Cantidad";
             this.gridCantidadProducto.MinimumWidth = 6;
             this.gridCantidadProducto.Name = "gridCantidadProducto";
@@ -575,8 +482,8 @@
             // gridPrecio
             // 
             this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle6.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridPrecio.HeaderText = "Precio";
             this.gridPrecio.MinimumWidth = 6;
             this.gridPrecio.Name = "gridPrecio";
@@ -601,9 +508,9 @@
             this.groupBox2.Controls.Add(this.exento);
             this.groupBox2.Controls.Add(this.TpoMoneda);
             this.groupBox2.Location = new System.Drawing.Point(1508, 290);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(265, 144);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
@@ -623,7 +530,7 @@
             // textTotal
             // 
             this.textTotal.Location = new System.Drawing.Point(104, 65);
-            this.textTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTotal.Margin = new System.Windows.Forms.Padding(4);
             this.textTotal.Name = "textTotal";
             this.textTotal.Size = new System.Drawing.Size(139, 22);
             this.textTotal.TabIndex = 26;
@@ -642,7 +549,7 @@
             // textExento
             // 
             this.textExento.Location = new System.Drawing.Point(104, 101);
-            this.textExento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textExento.Margin = new System.Windows.Forms.Padding(4);
             this.textExento.Name = "textExento";
             this.textExento.Size = new System.Drawing.Size(139, 22);
             this.textExento.TabIndex = 18;
@@ -689,9 +596,9 @@
             this.groupBox3.Controls.Add(this.textRUTEmisor);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(15, 103);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(1015, 180);
             this.groupBox3.TabIndex = 43;
             this.groupBox3.TabStop = false;
@@ -701,7 +608,7 @@
             // 
             this.textActividadEconomica.BackColor = System.Drawing.SystemColors.Info;
             this.textActividadEconomica.Location = new System.Drawing.Point(880, 32);
-            this.textActividadEconomica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textActividadEconomica.Margin = new System.Windows.Forms.Padding(4);
             this.textActividadEconomica.Name = "textActividadEconomica";
             this.textActividadEconomica.Size = new System.Drawing.Size(127, 22);
             this.textActividadEconomica.TabIndex = 36;
@@ -711,7 +618,7 @@
             // 
             this.razonSocial_Emisor.BackColor = System.Drawing.SystemColors.Info;
             this.razonSocial_Emisor.Location = new System.Drawing.Point(355, 31);
-            this.razonSocial_Emisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.razonSocial_Emisor.Margin = new System.Windows.Forms.Padding(4);
             this.razonSocial_Emisor.Name = "razonSocial_Emisor";
             this.razonSocial_Emisor.Size = new System.Drawing.Size(413, 22);
             this.razonSocial_Emisor.TabIndex = 35;
@@ -721,7 +628,7 @@
             // 
             this.textCiudadEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textCiudadEmisor.Location = new System.Drawing.Point(79, 102);
-            this.textCiudadEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCiudadEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textCiudadEmisor.Name = "textCiudadEmisor";
             this.textCiudadEmisor.Size = new System.Drawing.Size(176, 22);
             this.textCiudadEmisor.TabIndex = 34;
@@ -741,7 +648,7 @@
             // 
             this.textDireccionEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textDireccionEmisor.Location = new System.Drawing.Point(355, 106);
-            this.textDireccionEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDireccionEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textDireccionEmisor.Name = "textDireccionEmisor";
             this.textDireccionEmisor.Size = new System.Drawing.Size(177, 22);
             this.textDireccionEmisor.TabIndex = 26;
@@ -771,7 +678,7 @@
             // 
             this.textTelefonEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textTelefonEmisor.Location = new System.Drawing.Point(880, 65);
-            this.textTelefonEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTelefonEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textTelefonEmisor.Name = "textTelefonEmisor";
             this.textTelefonEmisor.Size = new System.Drawing.Size(127, 22);
             this.textTelefonEmisor.TabIndex = 28;
@@ -781,7 +688,7 @@
             // 
             this.correo_emisor.BackColor = System.Drawing.SystemColors.Info;
             this.correo_emisor.Location = new System.Drawing.Point(79, 66);
-            this.correo_emisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.correo_emisor.Margin = new System.Windows.Forms.Padding(4);
             this.correo_emisor.Name = "correo_emisor";
             this.correo_emisor.Size = new System.Drawing.Size(176, 22);
             this.correo_emisor.TabIndex = 30;
@@ -821,7 +728,7 @@
             // 
             this.textComunaEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textComunaEmisor.Location = new System.Drawing.Point(604, 107);
-            this.textComunaEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textComunaEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textComunaEmisor.Name = "textComunaEmisor";
             this.textComunaEmisor.Size = new System.Drawing.Size(164, 22);
             this.textComunaEmisor.TabIndex = 22;
@@ -831,7 +738,7 @@
             // 
             this.textGiroEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textGiroEmisor.Location = new System.Drawing.Point(355, 65);
-            this.textGiroEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textGiroEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textGiroEmisor.Name = "textGiroEmisor";
             this.textGiroEmisor.Size = new System.Drawing.Size(413, 22);
             this.textGiroEmisor.TabIndex = 24;
@@ -861,7 +768,7 @@
             // 
             this.textRUTEmisor.BackColor = System.Drawing.SystemColors.Info;
             this.textRUTEmisor.Location = new System.Drawing.Point(79, 30);
-            this.textRUTEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRUTEmisor.Margin = new System.Windows.Forms.Padding(4);
             this.textRUTEmisor.Name = "textRUTEmisor";
             this.textRUTEmisor.Size = new System.Drawing.Size(176, 22);
             this.textRUTEmisor.TabIndex = 4;
@@ -1010,9 +917,9 @@
             this.groupBox6.Controls.Add(this.comboBoxModalidad);
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Location = new System.Drawing.Point(1037, 14);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(737, 270);
             this.groupBox6.TabIndex = 44;
             this.groupBox6.TabStop = false;
@@ -1021,7 +928,7 @@
             // numericPesoBruto
             // 
             this.numericPesoBruto.Location = new System.Drawing.Point(660, 187);
-            this.numericPesoBruto.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.numericPesoBruto.Margin = new System.Windows.Forms.Padding(5);
             this.numericPesoBruto.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1040,7 +947,7 @@
             // textTotalBulto
             // 
             this.textTotalBulto.Location = new System.Drawing.Point(141, 187);
-            this.textTotalBulto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTotalBulto.Margin = new System.Windows.Forms.Padding(4);
             this.textTotalBulto.Name = "textTotalBulto";
             this.textTotalBulto.Size = new System.Drawing.Size(139, 22);
             this.textTotalBulto.TabIndex = 62;
@@ -1059,7 +966,7 @@
             // numericFlete
             // 
             this.numericFlete.Location = new System.Drawing.Point(660, 25);
-            this.numericFlete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.numericFlete.Margin = new System.Windows.Forms.Padding(5);
             this.numericFlete.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1131,7 +1038,7 @@
             // numericSeguro
             // 
             this.numericSeguro.Location = new System.Drawing.Point(660, 65);
-            this.numericSeguro.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.numericSeguro.Margin = new System.Windows.Forms.Padding(5);
             this.numericSeguro.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1170,7 +1077,7 @@
             // numericPesoNeto
             // 
             this.numericPesoNeto.Location = new System.Drawing.Point(659, 103);
-            this.numericPesoNeto.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.numericPesoNeto.Margin = new System.Windows.Forms.Padding(5);
             this.numericPesoNeto.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1324,7 +1231,7 @@
             // numericTara
             // 
             this.numericTara.Location = new System.Drawing.Point(659, 144);
-            this.numericTara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericTara.Margin = new System.Windows.Forms.Padding(4);
             this.numericTara.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1353,7 +1260,7 @@
             // textClausula
             // 
             this.textClausula.Location = new System.Drawing.Point(141, 64);
-            this.textClausula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textClausula.Margin = new System.Windows.Forms.Padding(4);
             this.textClausula.Name = "textClausula";
             this.textClausula.Size = new System.Drawing.Size(139, 22);
             this.textClausula.TabIndex = 28;
@@ -1433,7 +1340,7 @@
             // textMontoExento
             // 
             this.textMontoExento.Location = new System.Drawing.Point(113, 68);
-            this.textMontoExento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textMontoExento.Margin = new System.Windows.Forms.Padding(4);
             this.textMontoExento.Name = "textMontoExento";
             this.textMontoExento.Size = new System.Drawing.Size(117, 22);
             this.textMontoExento.TabIndex = 68;
@@ -1452,7 +1359,7 @@
             // textMontoTotal
             // 
             this.textMontoTotal.Location = new System.Drawing.Point(329, 65);
-            this.textMontoTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textMontoTotal.Margin = new System.Windows.Forms.Padding(4);
             this.textMontoTotal.Name = "textMontoTotal";
             this.textMontoTotal.Size = new System.Drawing.Size(117, 22);
             this.textMontoTotal.TabIndex = 66;
@@ -1471,7 +1378,7 @@
             // textTipoCambio
             // 
             this.textTipoCambio.Location = new System.Drawing.Point(335, 27);
-            this.textTipoCambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTipoCambio.Margin = new System.Windows.Forms.Padding(4);
             this.textTipoCambio.Name = "textTipoCambio";
             this.textTipoCambio.Size = new System.Drawing.Size(112, 22);
             this.textTipoCambio.TabIndex = 64;
@@ -1506,15 +1413,47 @@
             this.label18.TabIndex = 24;
             this.label18.Text = "Tipo Moneda:";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.linkLabelFacturacionExportacion);
+            this.groupBox4.Controls.Add(this.textDocumentacion);
+            this.groupBox4.Location = new System.Drawing.Point(1037, 443);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(592, 157);
+            this.groupBox4.TabIndex = 52;
+            this.groupBox4.TabStop = false;
+            // 
+            // linkLabelFacturacionExportacion
+            // 
+            this.linkLabelFacturacionExportacion.AutoSize = true;
+            this.linkLabelFacturacionExportacion.Location = new System.Drawing.Point(12, -2);
+            this.linkLabelFacturacionExportacion.Name = "linkLabelFacturacionExportacion";
+            this.linkLabelFacturacionExportacion.Size = new System.Drawing.Size(101, 16);
+            this.linkLabelFacturacionExportacion.TabIndex = 41;
+            this.linkLabelFacturacionExportacion.TabStop = true;
+            this.linkLabelFacturacionExportacion.Text = "Documentación";
+            this.linkLabelFacturacionExportacion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFacturacionExportacion_LinkClicked);
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
+            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(576, 122);
+            this.textDocumentacion.TabIndex = 20;
+            // 
             // FacturacionExportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1789, 612);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.generarExporta);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox2);
@@ -1522,15 +1461,13 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FacturacionExportacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturación Exportación";
             this.Load += new System.EventHandler(this.FacturacionExportacion_Load);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridBulto)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1550,6 +1487,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericTara)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1557,7 +1496,6 @@
         #endregion
 
         private System.Windows.Forms.Button generarExporta;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textRznReceptor;
         private System.Windows.Forms.TextBox textCiudadReceptor;
@@ -1666,11 +1604,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn umedida;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridView gridBulto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIdContainer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodTpoBultos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnCantBultos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSello;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmisorSello;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabelFacturacionExportacion;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }
