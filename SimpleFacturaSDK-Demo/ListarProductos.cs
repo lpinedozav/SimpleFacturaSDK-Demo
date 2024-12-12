@@ -6,6 +6,7 @@ using SimpleFacturaSDK_Demo.Helpers;
 using System.Collections.Generic;
 using SDKSimpleFactura.Models.Request;
 using System.Diagnostics;
+using System.Linq;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -49,8 +50,11 @@ namespace SimpleFacturaSDK_Demo
                 {
                     list = response.Data;
 
-                    gridResultados.DataSource = null;
                     gridResultados.DataSource = list;
+                    if (gridResultados.Columns["ProductoId"] != null)
+                    {
+                        gridResultados.Columns["ProductoId"].Visible = false;
+                    }
 
                     ConfigurarColumnasBotones();
                 }

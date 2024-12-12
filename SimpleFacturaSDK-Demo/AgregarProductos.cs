@@ -54,6 +54,7 @@ namespace SimpleFacturaSDK_Demo
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             numericPrecio.Value = 50;
             textUnidadMedida.Text = "un";
+            checkBoxImpuesto.Checked = true;
             comboBoxImpuesto.SelectedIndex = 1;
             textDocumentacion.Text = "Permite agregar productos nuevos al emisor y sucursal indicados en Json.";
         }
@@ -71,6 +72,8 @@ namespace SimpleFacturaSDK_Demo
                 };
                 request.Credenciales.RutEmisor = textRutEmisor.Text;
                 request.Credenciales.NombreSucursal = textNombreSucursal.Text;
+                int number = 0;
+                if (checkBoxImpuesto.Checked) number = (int)EnumHelper.ObtenerValorSeleccionado<TipoImpuesto.TipoImpuestoEnum>(comboBoxImpuesto);
                 request.Productos.Add(
                     new NuevoProductoExternoRequest()
                     {
@@ -79,7 +82,7 @@ namespace SimpleFacturaSDK_Demo
                         UnidadMedida = textUnidadMedida.Text,
                         Precio = (double)numericPrecio.Value,
                         TieneImpuestos = false,
-                        Impuestos = new List<int> { (int)EnumHelper.ObtenerValorSeleccionado<TipoImpuesto.TipoImpuestoEnum>(comboBoxImpuesto) }
+                        Impuestos = new List<int> { number }
                     }
                 );
                 response = await cliente.Productos.AgregarProductosAsync(request);
@@ -118,6 +121,16 @@ namespace SimpleFacturaSDK_Demo
             {
                 MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void checkBoxImpuesto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxImpuesto.Checked)
+            {
+                comboBoxImpuesto.Enabled = false;
+                return;
+            }
+            comboBoxImpuesto.Enabled = true;
         }
     }
 }
