@@ -37,7 +37,7 @@ namespace SimpleFacturaSDK_Demo
             textDireccionParCliente.Text = "correo 2";
             textGiroCliente.Text = "Giro 1";
 
-            textDocumentacion.Text = "agregar cliente";
+            textDocumentacion.Text = "Permite agregar un nuevo cliente a la Empresa Emisora indicada en JSON.";
         }
 
         private async void generarAgregarCliente_Click(object sender, EventArgs e)

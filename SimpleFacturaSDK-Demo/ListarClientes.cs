@@ -20,7 +20,7 @@ namespace SimpleFacturaSDK_Demo
         private void ListarClientes_Load(object sender, EventArgs e)
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
-            textDocumentacion.Text = "listar clientes";
+            textDocumentacion.Text = "Permite generar listado de Clientes, de acuerdo a rut de Emisor indicado en Json.";
         }
 
         private async void generarListarClientes_Click(object sender, EventArgs e)

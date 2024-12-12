@@ -22,7 +22,7 @@ namespace SimpleFacturaSDK_Demo
         private void ListarSucursales_Load(object sender, EventArgs e)
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
-            textDocumentacion.Text = "listar sucursales";
+            textDocumentacion.Text = "Permite generar listado de Sucursales, de acuerdo a rut de Emisor indicado en Json.";
         }
 
         private async void generarListado_Click(object sender, EventArgs e)

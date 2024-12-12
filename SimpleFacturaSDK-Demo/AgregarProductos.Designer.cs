@@ -119,9 +119,9 @@
             this.groupBox2.Controls.Add(this.textNombre);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(343, 14);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(691, 108);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
@@ -130,7 +130,7 @@
             // textUnidadMedida
             // 
             this.textUnidadMedida.Location = new System.Drawing.Point(371, 68);
-            this.textUnidadMedida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textUnidadMedida.Margin = new System.Windows.Forms.Padding(4);
             this.textUnidadMedida.Name = "textUnidadMedida";
             this.textUnidadMedida.Size = new System.Drawing.Size(172, 22);
             this.textUnidadMedida.TabIndex = 26;
@@ -158,7 +158,7 @@
             // textCodigoBarra
             // 
             this.textCodigoBarra.Location = new System.Drawing.Point(371, 31);
-            this.textCodigoBarra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCodigoBarra.Margin = new System.Windows.Forms.Padding(4);
             this.textCodigoBarra.Name = "textCodigoBarra";
             this.textCodigoBarra.Size = new System.Drawing.Size(172, 22);
             this.textCodigoBarra.TabIndex = 20;
@@ -175,7 +175,7 @@
             // numericPrecio
             // 
             this.numericPrecio.Location = new System.Drawing.Point(607, 31);
-            this.numericPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.numericPrecio.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -213,7 +213,7 @@
             // textNombre
             // 
             this.textNombre.Location = new System.Drawing.Point(84, 31);
-            this.textNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNombre.Margin = new System.Windows.Forms.Padding(4);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(172, 22);
             this.textNombre.TabIndex = 2;
@@ -252,7 +252,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(871, 90);
+            this.groupBox3.Size = new System.Drawing.Size(458, 90);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             // 
@@ -273,10 +273,8 @@
             this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(854, 58);
+            this.textDocumentacion.Size = new System.Drawing.Size(442, 58);
             this.textDocumentacion.TabIndex = 20;
-            this.textDocumentacion.Text = "Este endpoint permite generar y descargar archivo en formato PDF, correspondiente" +
-    " a DTE emitido en portal SimpleFactura.";
             // 
             // AgregarProductos
             // 
@@ -289,7 +287,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarProductos";

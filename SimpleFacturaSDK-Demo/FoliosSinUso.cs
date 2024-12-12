@@ -27,7 +27,7 @@ namespace SimpleFacturaSDK_Demo
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             tipodte_Folio.SelectedIndex = 3;
-            textDocumentacion.Text = "folios sin uso";
+            textDocumentacion.Text = "Consulta los folios disponibles en el portal, a la empresa emisora indicada en Json.";
         }
 
         private async void generarConsultaFolios_Click(object sender, EventArgs e)

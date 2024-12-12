@@ -36,7 +36,7 @@ namespace SimpleFacturaSDK_Demo
             numericPrecio.Value = 50;
             textUnidadMedida.Text = "un";
             comboBoxImpuesto.SelectedIndex = 1;
-            textDocumentacion.Text = "Documentacion de agregar";
+            textDocumentacion.Text = "Permite agregar productos nuevos al emisor y sucursal indicados en Json.";
         }
 
         private async void generarAgregarProducto_Click(object sender, EventArgs e)

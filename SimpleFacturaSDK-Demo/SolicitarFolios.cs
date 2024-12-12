@@ -30,7 +30,7 @@ namespace SimpleFacturaSDK_Demo
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             comboBoxCodigoTipoDTE.SelectedIndex = 3;
             numericCantidad.Value = 1;
-            textDocumentacion.Text = "solicitar folios";
+            textDocumentacion.Text = "Permite solicitar y agregar nuevos folios en el portal, a la empresa emisora indicada en Json.";
         }
 
         private async void generarSolicitarFolio_Click(object sender, EventArgs e)

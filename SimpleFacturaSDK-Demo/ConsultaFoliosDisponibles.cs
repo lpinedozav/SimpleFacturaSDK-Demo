@@ -27,7 +27,7 @@ namespace SimpleFacturaSDK_Demo
             comboBoxCodigoTipoDTE.SelectedIndex = 3;
             radioCertificacion.Checked = true;
             radioProduccion.Checked = false;
-            textDocumentacion.Text = "consultar folios disp";
+            textDocumentacion.Text = "Permite a los usuarios de SimpleFactura consultar la cantidad de folios disponibles a solicitar para un tipo específico de Documento Tributario Electrónico (DTE) ante el Servicio de Impuestos Internos (SII). Es importante mencionar que la disponibilidad de estos folios es gestión directa del SII y no del sistema.";
         }
 
         private async void generarConsultaFolios_Click(object sender, EventArgs e)

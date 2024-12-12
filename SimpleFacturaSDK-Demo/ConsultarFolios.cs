@@ -28,7 +28,7 @@ namespace SimpleFacturaSDK_Demo
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
             comboBoxCodigoTipoDTE.SelectedIndex = 3;
             radioCertificacion.Checked = true;
-            textDocumentacion.Text = "consultar folios";
+            textDocumentacion.Text = "Consulta los folios disponibles en el portal, a la empresa emisora indicada en Json.";
         }
 
         private async void generarConsultaFolios_Click(object sender, EventArgs e)

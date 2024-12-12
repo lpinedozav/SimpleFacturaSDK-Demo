@@ -146,13 +146,13 @@ namespace SimpleFacturaSDK_Demo
             { 
                 textRutContribuyente.Enabled = true; 
                 folio_oPDF_BHE.Value = 15;
-                textDocumentacion.Text = " emitida";
+                textDocumentacion.Text = "Permite generar y descargar archivo en formato PDF, correspondiente a Boleta Honorarios Electrónica emitida en portal SimpleFactura, de acuerdo a los parámetros indicados en JSON.";
             }
             if (radioButton_recibidoPdf.Checked) 
             {
                 textRutContribuyente.Enabled = false; 
                 folio_oPDF_BHE.Value = 1;
-                textDocumentacion.Text = "recibida";
+                textDocumentacion.Text = "Permite generar y descargar archivo en formato PDF, correspondiente a Boleta Honorarios Electrónica recibida en portal SimpleFactura, de acuerdo a los parámetros indicados en JSON.";
             }
         }
 

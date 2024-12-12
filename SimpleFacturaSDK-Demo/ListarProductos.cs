@@ -26,7 +26,7 @@ namespace SimpleFacturaSDK_Demo
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             textNombreSucursal.Text = _appSettings.Credenciales.NombreSucursal;
-            textDocumentacion.Text = "Documentacion de listar";
+            textDocumentacion.Text = "Permite generar listado de Productos, de acuerdo a Emisor y Sucursal indicados en Json.";
             gridResultados.CellContentClick += dataGridProductos_CellContentClick;
         }
 

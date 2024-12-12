@@ -27,7 +27,7 @@ namespace SimpleFacturaSDK_Demo
         {
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
             gridResultados.CellContentClick += dataGridDatosEmpresa_CellContentClick;
-            textDocumentacion.Text = "datos empresa";
+            textDocumentacion.Text = "Permite obtener los datos de una empresa registrada en SimpleFactura y que haya sido asignada al usuario que realiza la consulta.";
         }
 
         private async void generarDatosEmpresa_Click(object sender, EventArgs e)

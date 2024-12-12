@@ -197,11 +197,11 @@ namespace SimpleFacturaSDK_Demo
         {
             if (radioButton_emitidoListado.Checked)
             {
-                textDocumentacion.Text = "emitido";
+                textDocumentacion.Text = "Permite generar lista detallada de DTE emitidos desde una empresa emisora hacia una empresa receptora (o proveedor en caso de Factura de Compra).";
             }
             if (radioButton_recibidoListado.Checked)
             {
-                textDocumentacion.Text = "recibido";
+                textDocumentacion.Text = "Permite generar lista detallada de DTE emitidos desde una empresa emisora hacia una empresa receptora (o proveedor en caso de Factura de Compra).";
             }
         }
 
