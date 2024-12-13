@@ -61,12 +61,12 @@
             this.generarSolicitarFolio.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarSolicitarFolio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.generarSolicitarFolio.Location = new System.Drawing.Point(239, 477);
-            this.generarSolicitarFolio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generarSolicitarFolio.Margin = new System.Windows.Forms.Padding(2);
             this.generarSolicitarFolio.Name = "generarSolicitarFolio";
             this.generarSolicitarFolio.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarSolicitarFolio.Size = new System.Drawing.Size(76, 28);
             this.generarSolicitarFolio.TabIndex = 28;
-            this.generarSolicitarFolio.Text = "Generar";
+            this.generarSolicitarFolio.Text = "Ejecutar";
             this.generarSolicitarFolio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarSolicitarFolio.UseVisualStyleBackColor = true;
             this.generarSolicitarFolio.Click += new System.EventHandler(this.generarSolicitarFolio_Click);
@@ -124,9 +124,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(11, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(304, 78);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
@@ -135,7 +135,7 @@
             // textNombreSucursal
             // 
             this.textNombreSucursal.Location = new System.Drawing.Point(109, 47);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2);
             this.textNombreSucursal.Name = "textNombreSucursal";
             this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 0;
@@ -144,7 +144,7 @@
             // textRutEmisor
             // 
             this.textRutEmisor.Location = new System.Drawing.Point(109, 19);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmisor.Name = "textRutEmisor";
             this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 0;
@@ -177,9 +177,9 @@
             this.groupBox2.Controls.Add(this.TipoDte);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(11, 93);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(304, 78);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
@@ -188,7 +188,7 @@
             // numericCantidad
             // 
             this.numericCantidad.Location = new System.Drawing.Point(107, 20);
-            this.numericCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.numericCantidad.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -208,7 +208,7 @@
             // 
             this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
             this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(107, 48);
-            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
             this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(141, 21);
             this.comboBoxCodigoTipoDTE.TabIndex = 25;
