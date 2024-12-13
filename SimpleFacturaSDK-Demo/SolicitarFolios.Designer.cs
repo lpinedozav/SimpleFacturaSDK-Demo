@@ -60,11 +60,11 @@
             this.generarSolicitarFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarSolicitarFolio.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarSolicitarFolio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarSolicitarFolio.Location = new System.Drawing.Point(319, 587);
-            this.generarSolicitarFolio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generarSolicitarFolio.Location = new System.Drawing.Point(239, 477);
+            this.generarSolicitarFolio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.generarSolicitarFolio.Name = "generarSolicitarFolio";
-            this.generarSolicitarFolio.Padding = new System.Windows.Forms.Padding(3, 2, 0, 0);
-            this.generarSolicitarFolio.Size = new System.Drawing.Size(101, 34);
+            this.generarSolicitarFolio.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+            this.generarSolicitarFolio.Size = new System.Drawing.Size(76, 28);
             this.generarSolicitarFolio.TabIndex = 28;
             this.generarSolicitarFolio.Text = "Generar";
             this.generarSolicitarFolio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -74,11 +74,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
-            this.groupBox3.Location = new System.Drawing.Point(15, 216);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(11, 176);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(405, 270);
+            this.groupBox3.Size = new System.Drawing.Size(304, 219);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de respuesta";
@@ -94,12 +92,11 @@
             this.gridResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Propiedad,
             this.Valor});
-            this.gridResultados.Location = new System.Drawing.Point(7, 16);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.gridResultados.Location = new System.Drawing.Point(5, 13);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
-            this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(390, 247);
+            this.gridResultados.RowHeadersWidth = 20;
+            this.gridResultados.Size = new System.Drawing.Size(292, 201);
             this.gridResultados.TabIndex = 0;
             // 
             // Propiedad
@@ -126,48 +123,50 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(11, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(406, 96);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(304, 78);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Credenciales";
             // 
             // textNombreSucursal
             // 
-            this.textNombreSucursal.Location = new System.Drawing.Point(145, 58);
-            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textNombreSucursal.Location = new System.Drawing.Point(109, 47);
+            this.textNombreSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textNombreSucursal.Name = "textNombreSucursal";
-            this.textNombreSucursal.Size = new System.Drawing.Size(185, 22);
+            this.textNombreSucursal.Size = new System.Drawing.Size(140, 20);
             this.textNombreSucursal.TabIndex = 0;
             this.textNombreSucursal.TabStop = false;
             // 
             // textRutEmisor
             // 
-            this.textRutEmisor.Location = new System.Drawing.Point(145, 23);
-            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textRutEmisor.Location = new System.Drawing.Point(109, 19);
+            this.textRutEmisor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textRutEmisor.Name = "textRutEmisor";
-            this.textRutEmisor.Size = new System.Drawing.Size(185, 22);
+            this.textRutEmisor.Size = new System.Drawing.Size(140, 20);
             this.textRutEmisor.TabIndex = 0;
             this.textRutEmisor.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 62);
+            this.label2.Location = new System.Drawing.Point(12, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre sucursal:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 31);
+            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rut Emisor:";
             // 
@@ -177,26 +176,26 @@
             this.groupBox2.Controls.Add(this.comboBoxCodigoTipoDTE);
             this.groupBox2.Controls.Add(this.TipoDte);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(15, 114);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(11, 93);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(406, 96);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(304, 78);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Otros";
             // 
             // numericCantidad
             // 
-            this.numericCantidad.Location = new System.Drawing.Point(143, 25);
-            this.numericCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericCantidad.Location = new System.Drawing.Point(107, 20);
+            this.numericCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericCantidad.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numericCantidad.Name = "numericCantidad";
-            this.numericCantidad.Size = new System.Drawing.Size(187, 22);
+            this.numericCantidad.Size = new System.Drawing.Size(140, 20);
             this.numericCantidad.TabIndex = 26;
             this.numericCantidad.TabStop = false;
             this.numericCantidad.Value = new decimal(new int[] {
@@ -208,58 +207,58 @@
             // comboBoxCodigoTipoDTE
             // 
             this.comboBoxCodigoTipoDTE.FormattingEnabled = true;
-            this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(143, 59);
-            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCodigoTipoDTE.Location = new System.Drawing.Point(107, 48);
+            this.comboBoxCodigoTipoDTE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCodigoTipoDTE.Name = "comboBoxCodigoTipoDTE";
-            this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(187, 24);
+            this.comboBoxCodigoTipoDTE.Size = new System.Drawing.Size(141, 21);
             this.comboBoxCodigoTipoDTE.TabIndex = 25;
             this.comboBoxCodigoTipoDTE.TabStop = false;
             // 
             // TipoDte
             // 
             this.TipoDte.AutoSize = true;
-            this.TipoDte.Location = new System.Drawing.Point(16, 62);
+            this.TipoDte.Location = new System.Drawing.Point(12, 50);
+            this.TipoDte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TipoDte.Name = "TipoDte";
-            this.TipoDte.Size = new System.Drawing.Size(69, 16);
+            this.TipoDte.Size = new System.Drawing.Size(56, 13);
             this.TipoDte.TabIndex = 24;
             this.TipoDte.Text = "Tipo DTE:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 27);
+            this.label4.Location = new System.Drawing.Point(12, 22);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Cantidad:";
             // 
             // textDocumentacion
             // 
-            this.textDocumentacion.Location = new System.Drawing.Point(8, 23);
-            this.textDocumentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
             this.textDocumentacion.Multiline = true;
             this.textDocumentacion.Name = "textDocumentacion";
-            this.textDocumentacion.Size = new System.Drawing.Size(228, 104);
+            this.textDocumentacion.Size = new System.Drawing.Size(172, 85);
             this.textDocumentacion.TabIndex = 20;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.linkLabel1);
             this.groupBox4.Controls.Add(this.textDocumentacion);
-            this.groupBox4.Location = new System.Drawing.Point(15, 494);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(11, 401);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(245, 135);
+            this.groupBox4.Size = new System.Drawing.Size(184, 110);
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, -2);
+            this.linkLabel1.Location = new System.Drawing.Point(9, -2);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(101, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(82, 13);
             this.linkLabel1.TabIndex = 41;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Documentación";
@@ -267,9 +266,9 @@
             // 
             // SolicitarFolios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 632);
+            this.ClientSize = new System.Drawing.Size(325, 514);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.generarSolicitarFolio);
@@ -277,7 +276,6 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SolicitarFolios";
