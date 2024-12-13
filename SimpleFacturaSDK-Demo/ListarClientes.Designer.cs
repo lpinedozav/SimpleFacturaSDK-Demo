@@ -219,7 +219,7 @@
             this.generarListarClientes.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.generarListarClientes.Size = new System.Drawing.Size(75, 35);
             this.generarListarClientes.TabIndex = 27;
-            this.generarListarClientes.Text = "Generar";
+            this.generarListarClientes.Text = "Listar";
             this.generarListarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarListarClientes.UseVisualStyleBackColor = true;
             this.generarListarClientes.Click += new System.EventHandler(this.generarListarClientes_Click);

@@ -42,12 +42,12 @@
             this.textRutEmisor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gridResultado = new System.Windows.Forms.DataGridView();
+            this.Propiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridDetalles = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.linkLabelDTE = new System.Windows.Forms.LinkLabel();
             this.textDocumentacion = new System.Windows.Forms.TextBox();
-            this.Propiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folio_oPDF)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -67,7 +67,7 @@
             this.consultarDTE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
             this.consultarDTE.Size = new System.Drawing.Size(76, 28);
             this.consultarDTE.TabIndex = 1;
-            this.consultarDTE.Text = "Generar";
+            this.consultarDTE.Text = "Obtener";
             this.consultarDTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.consultarDTE.UseVisualStyleBackColor = true;
             this.consultarDTE.Click += new System.EventHandler(this.consultarDTE_Click);
@@ -220,6 +220,18 @@
             this.gridResultado.Size = new System.Drawing.Size(501, 219);
             this.gridResultado.TabIndex = 16;
             // 
+            // Propiedad
+            // 
+            this.Propiedad.HeaderText = "Propiedad";
+            this.Propiedad.Name = "Propiedad";
+            this.Propiedad.Width = 247;
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.Width = 247;
+            // 
             // gridDetalles
             // 
             this.gridDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -261,18 +273,6 @@
             this.textDocumentacion.Size = new System.Drawing.Size(410, 71);
             this.textDocumentacion.TabIndex = 20;
             this.textDocumentacion.Text = resources.GetString("textDocumentacion.Text");
-            // 
-            // Propiedad
-            // 
-            this.Propiedad.HeaderText = "Propiedad";
-            this.Propiedad.Name = "Propiedad";
-            this.Propiedad.Width = 247;
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            this.Valor.Width = 247;
             // 
             // ObtenerDTE
             // 
