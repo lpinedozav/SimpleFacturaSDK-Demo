@@ -174,5 +174,11 @@ namespace SimpleFacturaSDK_Demo
             ListadoBhe_Emitida_Recibida formulario = new ListadoBhe_Emitida_Recibida();
             formulario.Show();
         }
+
+        private void button_obtener_trazas_Click(object sender, EventArgs e)
+        {
+            ObtenerTrazasEmitidas_Recibidas formulario = new ObtenerTrazasEmitidas_Recibidas();
+            formulario.Show();
+        }
     }
 }

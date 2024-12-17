@@ -139,8 +139,8 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SDKSimpleFactura, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SDKSimpleFactura.1.0.4\lib\netstandard2.0\SDKSimpleFactura.dll</HintPath>
+    <Reference Include="SDKSimpleFactura, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SDKSimpleFactura.1.0.5\lib\netstandard2.0\SDKSimpleFactura.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -390,6 +390,12 @@
     <Compile Include="ObtenerTimbre.Designer.cs">
       <DependentUpon>ObtenerTimbre.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObtenerTrazasEmitidas_Recibidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObtenerTrazasEmitidas_Recibidas.Designer.cs">
+      <DependentUpon>ObtenerTrazasEmitidas_Recibidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObtenerXML.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -485,6 +491,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ObtenerTimbre.resx">
       <DependentUpon>ObtenerTimbre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObtenerTrazasEmitidas_Recibidas.resx">
+      <DependentUpon>ObtenerTrazasEmitidas_Recibidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObtenerXML.resx">
       <DependentUpon>ObtenerXML.cs</DependentUpon>

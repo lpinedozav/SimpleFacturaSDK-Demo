@@ -71,6 +71,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button_obtener_trazas = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.item_facturacion.SuspendLayout();
             this.otros.SuspendLayout();
@@ -110,6 +111,7 @@
             // 
             // otros
             // 
+            this.otros.Controls.Add(this.button_obtener_trazas);
             this.otros.Controls.Add(this.conciliar_emitidos_Recibidos);
             this.otros.Controls.Add(this.Acuse);
             this.otros.Controls.Add(this.envio_mail);
@@ -511,6 +513,16 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // button_obtener_trazas
+            // 
+            this.button_obtener_trazas.Location = new System.Drawing.Point(15, 203);
+            this.button_obtener_trazas.Name = "button_obtener_trazas";
+            this.button_obtener_trazas.Size = new System.Drawing.Size(164, 38);
+            this.button_obtener_trazas.TabIndex = 14;
+            this.button_obtener_trazas.Text = "Obtener trazas";
+            this.button_obtener_trazas.UseVisualStyleBackColor = true;
+            this.button_obtener_trazas.Click += new System.EventHandler(this.button_obtener_trazas_Click);
+            // 
             // Main
             // 
             this.ClientSize = new System.Drawing.Size(644, 369);
@@ -611,6 +623,7 @@
         private System.Windows.Forms.Button datosEmpresa;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button ListarSucursales;
+        private System.Windows.Forms.Button button_obtener_trazas;
     }
 }
 
