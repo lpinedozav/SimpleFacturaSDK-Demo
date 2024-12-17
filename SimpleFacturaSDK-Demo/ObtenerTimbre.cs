@@ -3,6 +3,7 @@ using SDKSimpleFactura.Models.Facturacion;
 using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -36,6 +37,7 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarTimbre_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarTimbre);
             try
             {
                 AmbienteEnum ambienteSeleccionado;
@@ -121,6 +123,30 @@ namespace SimpleFacturaSDK_Demo
             catch(Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarTimbre);
+            }
+        }
+
+        private void linkLabelTimbre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#0ff665d2-a74b-4182-9551-2408ea51c25e";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

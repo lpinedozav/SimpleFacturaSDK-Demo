@@ -1,6 +1,6 @@
 ﻿namespace SimpleFacturaSDK_Demo
 {
-    partial class ListadoDteEmitidos
+    partial class ListadoDteEmitidos_Recibidos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoDteEmitidos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoDteEmitidos_Recibidos));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridResultados = new System.Windows.Forms.DataGridView();
+            this.ambiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folioreutilizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipodte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoacuse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechadte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonsocialreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rutreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trackid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exento = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalles = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxCodigoTipoDTE = new System.Windows.Forms.ComboBox();
             this.numericFolio = new System.Windows.Forms.NumericUpDown();
@@ -49,34 +66,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.generarListaDTE = new System.Windows.Forms.Button();
-            this.ambiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folioreutilizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipodte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoacuse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechadte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razonsocialreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rutreceptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trackid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadosii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.neto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalles = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.radio_Bton_recibidoListado = new System.Windows.Forms.RadioButton();
+            this.radio_Bton_emitidoListado = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabelListado = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.gridResultados);
-            this.groupBox3.Location = new System.Drawing.Point(314, 12);
+            this.groupBox3.Location = new System.Drawing.Point(310, 37);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(444, 280);
             this.groupBox3.TabIndex = 23;
@@ -112,9 +118,167 @@
             this.gridResultados.Location = new System.Drawing.Point(6, 25);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
+            this.gridResultados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.gridResultados.RowHeadersWidth = 25;
             this.gridResultados.Size = new System.Drawing.Size(431, 248);
             this.gridResultados.TabIndex = 0;
+            // 
+            // ambiente
+            // 
+            this.ambiente.DataPropertyName = "Ambiente";
+            this.ambiente.HeaderText = "Ambiente";
+            this.ambiente.MinimumWidth = 6;
+            this.ambiente.Name = "ambiente";
+            this.ambiente.ReadOnly = true;
+            this.ambiente.Width = 70;
+            // 
+            // folioreutilizado
+            // 
+            this.folioreutilizado.DataPropertyName = "FolioReutilizado";
+            this.folioreutilizado.HeaderText = "Folio reutilizado";
+            this.folioreutilizado.MinimumWidth = 6;
+            this.folioreutilizado.Name = "folioreutilizado";
+            this.folioreutilizado.ReadOnly = true;
+            this.folioreutilizado.Width = 90;
+            // 
+            // importado
+            // 
+            this.importado.DataPropertyName = "Importado";
+            this.importado.HeaderText = "Importado";
+            this.importado.MinimumWidth = 6;
+            this.importado.Name = "importado";
+            this.importado.ReadOnly = true;
+            this.importado.Width = 60;
+            // 
+            // codigosii
+            // 
+            this.codigosii.DataPropertyName = "CodigoSii";
+            this.codigosii.HeaderText = "Codigo Sii";
+            this.codigosii.MinimumWidth = 6;
+            this.codigosii.Name = "codigosii";
+            this.codigosii.ReadOnly = true;
+            this.codigosii.Width = 60;
+            // 
+            // tipodte
+            // 
+            this.tipodte.DataPropertyName = "TipoDTE";
+            this.tipodte.HeaderText = "Tipo dte";
+            this.tipodte.MinimumWidth = 6;
+            this.tipodte.Name = "tipodte";
+            this.tipodte.ReadOnly = true;
+            this.tipodte.Width = 125;
+            // 
+            // estadoacuse
+            // 
+            this.estadoacuse.DataPropertyName = "EstadoAcuse";
+            this.estadoacuse.HeaderText = "Estado acuse";
+            this.estadoacuse.MinimumWidth = 6;
+            this.estadoacuse.Name = "estadoacuse";
+            this.estadoacuse.ReadOnly = true;
+            this.estadoacuse.Width = 80;
+            // 
+            // fechadte
+            // 
+            this.fechadte.DataPropertyName = "FechaDTE";
+            this.fechadte.HeaderText = "Fecha dte";
+            this.fechadte.MinimumWidth = 6;
+            this.fechadte.Name = "fechadte";
+            this.fechadte.ReadOnly = true;
+            this.fechadte.Width = 65;
+            // 
+            // folio
+            // 
+            this.folio.DataPropertyName = "Folio";
+            this.folio.HeaderText = "Folio";
+            this.folio.MinimumWidth = 6;
+            this.folio.Name = "folio";
+            this.folio.ReadOnly = true;
+            this.folio.Width = 45;
+            // 
+            // razonsocialreceptor
+            // 
+            this.razonsocialreceptor.DataPropertyName = "RazonSocialReceptor";
+            this.razonsocialreceptor.HeaderText = "Razon social receptor";
+            this.razonsocialreceptor.MinimumWidth = 6;
+            this.razonsocialreceptor.Name = "razonsocialreceptor";
+            this.razonsocialreceptor.ReadOnly = true;
+            this.razonsocialreceptor.Width = 125;
+            // 
+            // rutreceptor
+            // 
+            this.rutreceptor.DataPropertyName = "RutReceptor";
+            this.rutreceptor.HeaderText = "Rut receptor";
+            this.rutreceptor.MinimumWidth = 6;
+            this.rutreceptor.Name = "rutreceptor";
+            this.rutreceptor.ReadOnly = true;
+            this.rutreceptor.Width = 75;
+            // 
+            // trackid
+            // 
+            this.trackid.DataPropertyName = "TrackId";
+            this.trackid.HeaderText = "Track id";
+            this.trackid.MinimumWidth = 6;
+            this.trackid.Name = "trackid";
+            this.trackid.ReadOnly = true;
+            this.trackid.Width = 75;
+            // 
+            // estadosii
+            // 
+            this.estadosii.DataPropertyName = "EstadoSii";
+            this.estadosii.HeaderText = "Estado Sii";
+            this.estadosii.MinimumWidth = 6;
+            this.estadosii.Name = "estadosii";
+            this.estadosii.ReadOnly = true;
+            this.estadosii.Width = 125;
+            // 
+            // neto
+            // 
+            this.neto.DataPropertyName = "Neto";
+            this.neto.HeaderText = "Neto";
+            this.neto.MinimumWidth = 6;
+            this.neto.Name = "neto";
+            this.neto.ReadOnly = true;
+            this.neto.Width = 65;
+            // 
+            // exento
+            // 
+            this.exento.DataPropertyName = "Exento";
+            this.exento.HeaderText = "Exento";
+            this.exento.MinimumWidth = 6;
+            this.exento.Name = "exento";
+            this.exento.ReadOnly = true;
+            this.exento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.exento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.exento.Width = 65;
+            // 
+            // iva
+            // 
+            this.iva.DataPropertyName = "Iva";
+            this.iva.HeaderText = "Iva";
+            this.iva.MinimumWidth = 6;
+            this.iva.Name = "iva";
+            this.iva.ReadOnly = true;
+            this.iva.Width = 65;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "Total";
+            this.total.HeaderText = "Total";
+            this.total.MinimumWidth = 6;
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 65;
+            // 
+            // detalles
+            // 
+            this.detalles.DataPropertyName = "Detalles";
+            this.detalles.HeaderText = "Detalles";
+            this.detalles.MinimumWidth = 6;
+            this.detalles.Name = "detalles";
+            this.detalles.ReadOnly = true;
+            this.detalles.Text = "Ver detalles";
+            this.detalles.UseColumnTextForButtonValue = true;
+            this.detalles.Width = 85;
             // 
             // groupBox2
             // 
@@ -129,7 +293,7 @@
             this.groupBox2.Controls.Add(this.hasta);
             this.groupBox2.Controls.Add(this.ambientelabel);
             this.groupBox2.Controls.Add(this.desde);
-            this.groupBox2.Location = new System.Drawing.Point(15, 106);
+            this.groupBox2.Location = new System.Drawing.Point(11, 131);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -215,7 +379,7 @@
             this.radioProduccion.Name = "radioProduccion";
             this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 17;
-            this.radioProduccion.Text = "Produccion";
+            this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
@@ -226,7 +390,7 @@
             this.radioCertificacion.Name = "radioCertificacion";
             this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 16;
-            this.radioCertificacion.Text = "Certificacion";
+            this.radioCertificacion.Text = "Certificación";
             this.radioCertificacion.UseVisualStyleBackColor = true;
             // 
             // hasta
@@ -265,7 +429,7 @@
             this.groupBox1.Controls.Add(this.textRutEmisor);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 12);
+            this.groupBox1.Location = new System.Drawing.Point(11, 37);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -317,158 +481,79 @@
             this.generarListaDTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarListaDTE.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarListaDTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarListaDTE.Location = new System.Drawing.Point(675, 291);
+            this.generarListaDTE.Location = new System.Drawing.Point(679, 382);
             this.generarListaDTE.Margin = new System.Windows.Forms.Padding(2);
             this.generarListaDTE.Name = "generarListaDTE";
             this.generarListaDTE.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarListaDTE.Size = new System.Drawing.Size(76, 28);
+            this.generarListaDTE.Size = new System.Drawing.Size(75, 35);
             this.generarListaDTE.TabIndex = 1;
-            this.generarListaDTE.Text = "Generar";
+            this.generarListaDTE.Text = "Listar";
             this.generarListaDTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarListaDTE.UseVisualStyleBackColor = true;
             this.generarListaDTE.Click += new System.EventHandler(this.generarListaDTE_Click);
             // 
-            // ambiente
+            // radio_Bton_recibidoListado
             // 
-            this.ambiente.HeaderText = "Ambiente";
-            this.ambiente.MinimumWidth = 6;
-            this.ambiente.Name = "ambiente";
-            this.ambiente.ReadOnly = true;
-            this.ambiente.Width = 70;
+            this.radio_Bton_recibidoListado.Location = new System.Drawing.Point(86, 11);
+            this.radio_Bton_recibidoListado.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_recibidoListado.Name = "radio_Bton_recibidoListado";
+            this.radio_Bton_recibidoListado.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_recibidoListado.TabIndex = 41;
+            this.radio_Bton_recibidoListado.Text = "Recibido";
+            this.radio_Bton_recibidoListado.UseVisualStyleBackColor = true;
+            this.radio_Bton_recibidoListado.CheckedChanged += new System.EventHandler(this.radio_Bton_recibidoListado_CheckedChanged);
             // 
-            // folioreutilizado
+            // radio_Bton_emitidoListado
             // 
-            this.folioreutilizado.HeaderText = "Folio reutilizado";
-            this.folioreutilizado.MinimumWidth = 6;
-            this.folioreutilizado.Name = "folioreutilizado";
-            this.folioreutilizado.ReadOnly = true;
-            this.folioreutilizado.Width = 90;
+            this.radio_Bton_emitidoListado.Checked = true;
+            this.radio_Bton_emitidoListado.Location = new System.Drawing.Point(11, 11);
+            this.radio_Bton_emitidoListado.Margin = new System.Windows.Forms.Padding(2);
+            this.radio_Bton_emitidoListado.Name = "radio_Bton_emitidoListado";
+            this.radio_Bton_emitidoListado.Size = new System.Drawing.Size(69, 15);
+            this.radio_Bton_emitidoListado.TabIndex = 40;
+            this.radio_Bton_emitidoListado.TabStop = true;
+            this.radio_Bton_emitidoListado.Text = "Emitido";
+            this.radio_Bton_emitidoListado.UseVisualStyleBackColor = true;
+            this.radio_Bton_emitidoListado.CheckedChanged += new System.EventHandler(this.radio_Bton_emitidoListado_CheckedChanged);
             // 
-            // importado
+            // groupBox4
             // 
-            this.importado.HeaderText = "Importado";
-            this.importado.MinimumWidth = 6;
-            this.importado.Name = "importado";
-            this.importado.ReadOnly = true;
-            this.importado.Width = 60;
+            this.groupBox4.Controls.Add(this.linkLabelListado);
+            this.groupBox4.Controls.Add(this.textDocumentacion);
+            this.groupBox4.Location = new System.Drawing.Point(11, 324);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(650, 93);
+            this.groupBox4.TabIndex = 51;
+            this.groupBox4.TabStop = false;
             // 
-            // codigosii
+            // linkLabelListado
             // 
-            this.codigosii.HeaderText = "Codigo Sii";
-            this.codigosii.MinimumWidth = 6;
-            this.codigosii.Name = "codigosii";
-            this.codigosii.ReadOnly = true;
-            this.codigosii.Width = 60;
+            this.linkLabelListado.AutoSize = true;
+            this.linkLabelListado.Location = new System.Drawing.Point(9, -2);
+            this.linkLabelListado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelListado.Name = "linkLabelListado";
+            this.linkLabelListado.Size = new System.Drawing.Size(82, 13);
+            this.linkLabelListado.TabIndex = 41;
+            this.linkLabelListado.TabStop = true;
+            this.linkLabelListado.Text = "Documentación";
+            this.linkLabelListado.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelListado_LinkClicked);
             // 
-            // tipodte
+            // textDocumentacion
             // 
-            this.tipodte.HeaderText = "Tipo dte";
-            this.tipodte.MinimumWidth = 6;
-            this.tipodte.Name = "tipodte";
-            this.tipodte.ReadOnly = true;
-            this.tipodte.Width = 125;
+            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(639, 63);
+            this.textDocumentacion.TabIndex = 20;
             // 
-            // estadoacuse
-            // 
-            this.estadoacuse.HeaderText = "Estado acuse";
-            this.estadoacuse.MinimumWidth = 6;
-            this.estadoacuse.Name = "estadoacuse";
-            this.estadoacuse.ReadOnly = true;
-            this.estadoacuse.Width = 80;
-            // 
-            // fechadte
-            // 
-            this.fechadte.HeaderText = "Fecha dte";
-            this.fechadte.MinimumWidth = 6;
-            this.fechadte.Name = "fechadte";
-            this.fechadte.ReadOnly = true;
-            this.fechadte.Width = 65;
-            // 
-            // folio
-            // 
-            this.folio.HeaderText = "Folio";
-            this.folio.MinimumWidth = 6;
-            this.folio.Name = "folio";
-            this.folio.ReadOnly = true;
-            this.folio.Width = 45;
-            // 
-            // razonsocialreceptor
-            // 
-            this.razonsocialreceptor.HeaderText = "Razon social receptor";
-            this.razonsocialreceptor.MinimumWidth = 6;
-            this.razonsocialreceptor.Name = "razonsocialreceptor";
-            this.razonsocialreceptor.ReadOnly = true;
-            this.razonsocialreceptor.Width = 125;
-            // 
-            // rutreceptor
-            // 
-            this.rutreceptor.HeaderText = "Rut receptor";
-            this.rutreceptor.MinimumWidth = 6;
-            this.rutreceptor.Name = "rutreceptor";
-            this.rutreceptor.ReadOnly = true;
-            this.rutreceptor.Width = 75;
-            // 
-            // trackid
-            // 
-            this.trackid.HeaderText = "Track id";
-            this.trackid.MinimumWidth = 6;
-            this.trackid.Name = "trackid";
-            this.trackid.ReadOnly = true;
-            this.trackid.Width = 75;
-            // 
-            // estadosii
-            // 
-            this.estadosii.HeaderText = "Estado Sii";
-            this.estadosii.MinimumWidth = 6;
-            this.estadosii.Name = "estadosii";
-            this.estadosii.ReadOnly = true;
-            this.estadosii.Width = 125;
-            // 
-            // neto
-            // 
-            this.neto.HeaderText = "Neto";
-            this.neto.MinimumWidth = 6;
-            this.neto.Name = "neto";
-            this.neto.ReadOnly = true;
-            this.neto.Width = 65;
-            // 
-            // exento
-            // 
-            this.exento.HeaderText = "Exento";
-            this.exento.MinimumWidth = 6;
-            this.exento.Name = "exento";
-            this.exento.ReadOnly = true;
-            this.exento.Width = 65;
-            // 
-            // iva
-            // 
-            this.iva.HeaderText = "Iva";
-            this.iva.MinimumWidth = 6;
-            this.iva.Name = "iva";
-            this.iva.ReadOnly = true;
-            this.iva.Width = 65;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Total";
-            this.total.MinimumWidth = 6;
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            this.total.Width = 65;
-            // 
-            // detalles
-            // 
-            this.detalles.HeaderText = "Detalles";
-            this.detalles.MinimumWidth = 6;
-            this.detalles.Name = "detalles";
-            this.detalles.ReadOnly = true;
-            this.detalles.Width = 85;
-            // 
-            // ListadoDteEmitidos
+            // ListadoDteEmitidos_Recibidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 324);
+            this.ClientSize = new System.Drawing.Size(761, 425);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.radio_Bton_recibidoListado);
+            this.Controls.Add(this.radio_Bton_emitidoListado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.generarListaDTE);
@@ -478,9 +563,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ListadoDteEmitidos";
+            this.Name = "ListadoDteEmitidos_Recibidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListadoDteEmitidos";
+            this.Text = "Listado DTE Emitido/Recibido";
             this.Load += new System.EventHandler(this.ListadoDteEmitidos_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
@@ -489,6 +574,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -515,6 +602,8 @@
         private System.Windows.Forms.NumericUpDown numericFolio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton radio_Bton_recibidoListado;
+        private System.Windows.Forms.RadioButton radio_Bton_emitidoListado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ambiente;
         private System.Windows.Forms.DataGridViewTextBoxColumn folioreutilizado;
         private System.Windows.Forms.DataGridViewTextBoxColumn importado;
@@ -528,9 +617,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trackid;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadosii;
         private System.Windows.Forms.DataGridViewTextBoxColumn neto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exento;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn exento;
         private System.Windows.Forms.DataGridViewTextBoxColumn iva;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewButtonColumn detalles;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabelListado;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }

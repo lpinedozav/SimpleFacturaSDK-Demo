@@ -49,9 +49,13 @@
             this.generarEM = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textRespuesta = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabelEnvioMail = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -117,7 +121,7 @@
             // comentario
             // 
             this.comentario.AutoSize = true;
-            this.comentario.Location = new System.Drawing.Point(4, 195);
+            this.comentario.Location = new System.Drawing.Point(4, 198);
             this.comentario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.comentario.Name = "comentario";
             this.comentario.Size = new System.Drawing.Size(63, 13);
@@ -136,7 +140,7 @@
             // cc
             // 
             this.cc.AutoSize = true;
-            this.cc.Location = new System.Drawing.Point(4, 135);
+            this.cc.Location = new System.Drawing.Point(4, 140);
             this.cc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cc.Name = "cc";
             this.cc.Size = new System.Drawing.Size(23, 13);
@@ -155,7 +159,7 @@
             // cco
             // 
             this.cco.AutoSize = true;
-            this.cco.Location = new System.Drawing.Point(4, 164);
+            this.cco.Location = new System.Drawing.Point(4, 167);
             this.cco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cco.Name = "cco";
             this.cco.Size = new System.Drawing.Size(29, 13);
@@ -174,7 +178,7 @@
             // para
             // 
             this.para.AutoSize = true;
-            this.para.Location = new System.Drawing.Point(4, 112);
+            this.para.Location = new System.Drawing.Point(4, 114);
             this.para.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.para.Name = "para";
             this.para.Size = new System.Drawing.Size(32, 13);
@@ -213,7 +217,7 @@
             // TipoDte
             // 
             this.TipoDte.AutoSize = true;
-            this.TipoDte.Location = new System.Drawing.Point(4, 85);
+            this.TipoDte.Location = new System.Drawing.Point(4, 87);
             this.TipoDte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TipoDte.Name = "TipoDte";
             this.TipoDte.Size = new System.Drawing.Size(56, 13);
@@ -222,7 +226,7 @@
             // 
             // textRutEmpresa
             // 
-            this.textRutEmpresa.Location = new System.Drawing.Point(73, 28);
+            this.textRutEmpresa.Location = new System.Drawing.Point(73, 27);
             this.textRutEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.textRutEmpresa.Name = "textRutEmpresa";
             this.textRutEmpresa.Size = new System.Drawing.Size(141, 20);
@@ -232,7 +236,7 @@
             // folio
             // 
             this.folio.AutoSize = true;
-            this.folio.Location = new System.Drawing.Point(4, 56);
+            this.folio.Location = new System.Drawing.Point(4, 58);
             this.folio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.folio.Name = "folio";
             this.folio.Size = new System.Drawing.Size(32, 13);
@@ -242,7 +246,7 @@
             // RutEmpresa
             // 
             this.RutEmpresa.AutoSize = true;
-            this.RutEmpresa.Location = new System.Drawing.Point(4, 28);
+            this.RutEmpresa.Location = new System.Drawing.Point(4, 29);
             this.RutEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RutEmpresa.Name = "RutEmpresa";
             this.RutEmpresa.Size = new System.Drawing.Size(71, 13);
@@ -254,13 +258,13 @@
             this.generarEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarEM.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarEM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarEM.Location = new System.Drawing.Point(514, 280);
+            this.generarEM.Location = new System.Drawing.Point(516, 317);
             this.generarEM.Margin = new System.Windows.Forms.Padding(2);
             this.generarEM.Name = "generarEM";
             this.generarEM.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarEM.Size = new System.Drawing.Size(76, 28);
+            this.generarEM.Size = new System.Drawing.Size(75, 35);
             this.generarEM.TabIndex = 1;
-            this.generarEM.Text = "Generar";
+            this.generarEM.Text = "Ejecutar";
             this.generarEM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarEM.UseVisualStyleBackColor = true;
             this.generarEM.Click += new System.EventHandler(this.generarEM_Click);
@@ -283,11 +287,42 @@
             this.textRespuesta.Size = new System.Drawing.Size(341, 229);
             this.textRespuesta.TabIndex = 19;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.linkLabelEnvioMail);
+            this.groupBox4.Controls.Add(this.textDocumentacion);
+            this.groupBox4.Location = new System.Drawing.Point(9, 275);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(484, 77);
+            this.groupBox4.TabIndex = 52;
+            this.groupBox4.TabStop = false;
+            // 
+            // linkLabelEnvioMail
+            // 
+            this.linkLabelEnvioMail.AutoSize = true;
+            this.linkLabelEnvioMail.Location = new System.Drawing.Point(9, -2);
+            this.linkLabelEnvioMail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelEnvioMail.Name = "linkLabelEnvioMail";
+            this.linkLabelEnvioMail.Size = new System.Drawing.Size(82, 13);
+            this.linkLabelEnvioMail.TabIndex = 41;
+            this.linkLabelEnvioMail.TabStop = true;
+            this.linkLabelEnvioMail.Text = "Documentación";
+            this.linkLabelEnvioMail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEnvioMail_LinkClicked);
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(474, 53);
+            this.textDocumentacion.TabIndex = 20;
+            // 
             // EnviarMail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 318);
+            this.ClientSize = new System.Drawing.Size(600, 359);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.generarEM);
             this.Controls.Add(this.groupBox2);
@@ -305,6 +340,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -330,5 +367,8 @@
         private System.Windows.Forms.Label comentario;
         private System.Windows.Forms.TextBox textCC;
         private System.Windows.Forms.Label cc;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabelEnvioMail;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }

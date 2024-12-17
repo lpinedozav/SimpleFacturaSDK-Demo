@@ -9,6 +9,7 @@ using SDKSimpleFactura.Enum;
 using SDKSimpleFactura.Models.Request;
 using System.Collections.Generic;
 using SimpleFacturaSDK_Demo.Models;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -57,6 +58,26 @@ namespace SimpleFacturaSDK_Demo
             textMontoTotal.Text = "200";
 
             textSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+
+            gridProductos.CellFormatting += dataGridFacturacion_CellFormatting;
+        }
+
+        private void dataGridFacturacion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica si es una de las columnas que deseas formatear
+            if (gridProductos.Columns[e.ColumnIndex].Name == "Cantidad" ||
+                gridProductos.Columns[e.ColumnIndex].Name == "Precio" ||
+                gridProductos.Columns[e.ColumnIndex].Name == "Monto" ||
+                textMontoExento.Name == "MontoExento" ||
+                textMontoTotal.Name == "MontoTotal")
+            {
+                if (e.Value != null && decimal.TryParse(e.Value.ToString(), out decimal valor))
+                {
+                    // Aplica el formato utilizando el helper
+                    e.Value = FormattingHelper.FormatearPrecio(valor);
+                    e.FormattingApplied = true;
+                }
+            }
         }
 
         private void UpdateUIBasedOnSelection()
@@ -83,6 +104,15 @@ namespace SimpleFacturaSDK_Demo
                 textActividadEconomica.Enabled = true;
                 textTelefonEmisor.Enabled = true;
                 textGiroReceptor.Enabled = true;
+
+                string descripcion =
+                  "Permite generar Documentos Tributarios Electrónicos (DTE) directamente a través del portal SimpleFactura." +
+                  "El documento que puede emitir es Facturas" +
+                  "Los valores de productos/servicios para Factura no incluyen IVA, son Netos." +
+                  "Para Boletas los valores son brutos, IVA incluido.";
+                textDocumentacion.Text = descripcion;
+
+
             }
             else if (BoletasRadioButton.Checked)
             {
@@ -104,6 +134,13 @@ namespace SimpleFacturaSDK_Demo
                 textActividadEconomica.Enabled = false;
                 textTelefonEmisor.Enabled = false;
                 textGiroReceptor.Enabled = false;
+
+                string descripcion =
+                  "Permite generar Documentos Tributarios Electrónicos (DTE) directamente a través del portal SimpleFactura." +
+                  "El documento que puede emitir es Boletas Electrónicas (39-41)." +
+                  "Los valores de productos/servicios para Factura no incluyen IVA, son Netos." +
+                  "Para Boletas los valores son brutos, IVA incluido.";
+                textDocumentacion.Text = descripcion;
             }
         }
         private void DteRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -118,106 +155,157 @@ namespace SimpleFacturaSDK_Demo
 
         private async void generarFacturacioDte_Boleta_Click(object sender, EventArgs e)
         {
-            bool isBoleta = BoletasRadioButton.Checked;
+            Loading.ShowLoading(generarFacturacioDte_Boleta);
 
-            // Crear la solicitud
-            var request = new RequestDTE()
+            try
             {
-                Documento = new Documento()
+                bool isBoleta = BoletasRadioButton.Checked;
+
+                // Crear la solicitud
+                var request = new RequestDTE()
                 {
-                    Encabezado = new Encabezado()
+                    Documento = new Documento()
                     {
-                        IdDoc = new IdentificacionDTE(),
-                        Emisor = new Emisor(),
-                        Receptor = new Receptor(),
-                        Totales = new Totales()
-                    },
-                    Detalle = new List<Detalle>()
-                }
-            };
-            var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
-            request.Documento.Encabezado.IdDoc.TipoDTE = (DTEType)tipoDte.Value;
-            request.Documento.Encabezado.IdDoc.FchEmis = fechaEmision.Value;
-          
-            
-            request.Documento.Encabezado.IdDoc.FchVenc = fechaVencimiento.Value;
+                        Encabezado = new Encabezado()
+                        {
+                            IdDoc = new IdentificacionDTE(),
+                            Emisor = new Emisor(),
+                            Receptor = new Receptor(),
+                            Totales = new Totales()
+                        },
+                        Detalle = new List<Detalle>()
+                    }
+                };
+                var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
+                request.Documento.Encabezado.IdDoc.TipoDTE = (DTEType)tipoDte.Value;
+                request.Documento.Encabezado.IdDoc.FchEmis = fechaEmision.Value;
 
-            if (isBoleta)
+
+                request.Documento.Encabezado.IdDoc.FchVenc = fechaVencimiento.Value;
+
+                if (isBoleta)
+                {
+                    var IndServicio = comboIndService.SelectedItem as ComboBoxItem;
+                    request.Documento.Encabezado.IdDoc.IndServicio = (IndicadorServicio.IndicadorServicioEnum)IndServicio.Value;
+                }
+                else
+                {
+                    var formaPago = comboBoxFormaPago.SelectedItem as ComboBoxItem;
+                    request.Documento.Encabezado.IdDoc.FmaPago = (FormaPago.FormaPagoEnum)formaPago.Value;
+                }
+
+
+
+                if (isBoleta)
+                {
+                    request.Documento.Encabezado.Emisor.RznSocEmisor = razonSocial_Emisor.Text;
+                    request.Documento.Encabezado.Emisor.GiroEmisor = textGiroEmisor.Text;
+                    request.Documento.Encabezado.Emisor.GiroEmisor = textGiroEmisor.Text;
+                }
+                else
+                {
+                    request.Documento.Encabezado.Emisor.Telefono = new List<string> { textTelefonEmisor.Text };
+                    request.Documento.Encabezado.Emisor.CorreoEmisor = correo_emisor.Text;
+                    request.Documento.Encabezado.Emisor.Acteco = new List<int> { int.Parse(textActividadEconomica.Text) };
+                    request.Documento.Encabezado.Emisor.CiudadOrigen = textCiudadEmisor.Text;
+                    request.Documento.Encabezado.Emisor.RznSoc = razonSocial_Emisor.Text;
+                    request.Documento.Encabezado.Emisor.GiroEmis = textGiroEmisor.Text;
+                    request.Documento.Encabezado.Receptor.GiroRecep = textGiroReceptor.Text;
+                }
+                // Configuración de Emisor
+                request.Documento.Encabezado.Emisor.RUTEmisor = textRUTEmisor.Text;
+                request.Documento.Encabezado.Emisor.DirOrigen = textDireccionEmisor.Text;
+                request.Documento.Encabezado.Emisor.CmnaOrigen = textComunaEmisor.Text;
+
+                // Configuración de Receptor
+                request.Documento.Encabezado.Receptor.RUTRecep = textRutReceptor.Text;
+                request.Documento.Encabezado.Receptor.RznSocRecep = textRznReceptor.Text;
+                request.Documento.Encabezado.Receptor.DirRecep = textDirReceptor.Text;
+                request.Documento.Encabezado.Receptor.CmnaRecep = textCmnReceptor.Text;
+                request.Documento.Encabezado.Receptor.CiudadRecep = textCiudadReceptor.Text;
+
+                // Configuración de Totales
+                request.Documento.Encabezado.Totales.MntExe = int.Parse(textMontoExento.Text);
+                request.Documento.Encabezado.Totales.MntTotal = int.Parse(textMontoTotal.Text);
+
+                // Configuración de Detalles
+                foreach (DataGridViewRow row in gridProductos.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        var detalle = new Detalle
+                        {
+                            NroLinDet = Convert.ToInt32(row.Cells["gridNroLinea"].Value),
+                            NmbItem = row.Cells["gridNombreProducto"].Value?.ToString() ?? string.Empty,
+                            DscItem = row.Cells["Descripcion"].Value?.ToString() ?? string.Empty,
+                            QtyItem = Convert.ToInt32(row.Cells["gridCantidadProducto"].Value),
+                            UnmdItem = row.Cells["Unidad"].Value?.ToString() ?? string.Empty,
+                            PrcItem = Convert.ToDouble(row.Cells["gridPrecio"].Value),
+                            MontoItem = Convert.ToInt32(row.Cells["gridMonto"].Value)
+                        };
+                        request.Documento.Detalle.Add(detalle);
+                    }
+                }
+
+                // Enviar solicitud al cliente
+                var sucursal = textSucursal.Text;
+                var response = await cliente.Facturacion.FacturacionIndividualV2DTEAsync(sucursal, request);
+
+                // Mostrar el resultado
+                if (response.Status == 400 || response.Status == 500)
+                {
+                    MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
             {
-                var IndServicio = comboIndService.SelectedItem as ComboBoxItem;
-                request.Documento.Encabezado.IdDoc.IndServicio = (IndicadorServicio.IndicadorServicioEnum)IndServicio.Value;
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarFacturacioDte_Boleta);
+            }
+        }
+
+        private void linkLabelFacturacionDTe_Boletas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Definir las URLs para emitido y recibido
+            string DteRadioButtonUrl = "https://documentacion.simplefactura.cl/#9f9c17ba-9951-4b4a-8786-0ea79d1bb252";
+            string BoletasRadioButtonUrl = "https://documentacion.simplefactura.cl/#77d4a642-561c-443b-b8ee-1182edd612b3"; // Cambia a la URL correspondiente
+
+            // Determinar cuál URL usar en función del RadioButton seleccionado
+            string url;
+            if (DteRadioButton.Checked)
+            {
+                url = DteRadioButtonUrl;
+            }
+            else if (BoletasRadioButton.Checked)
+            {
+                url = BoletasRadioButtonUrl;
             }
             else
             {
-                var formaPago = comboBoxFormaPago.SelectedItem as ComboBoxItem;
-                request.Documento.Encabezado.IdDoc.FmaPago = (FormaPago.FormaPagoEnum)formaPago.Value;
+                MessageBox.Show("Selecciona una opción antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            
-
-            if (isBoleta)
+            // Intentar abrir la URL en el navegador predeterminado
+            try
             {
-                request.Documento.Encabezado.Emisor.RznSocEmisor = razonSocial_Emisor.Text;
-                request.Documento.Encabezado.Emisor.GiroEmisor = textGiroEmisor.Text;
-                request.Documento.Encabezado.Emisor.GiroEmisor = textGiroEmisor.Text;
-            }
-            else 
-            {
-                request.Documento.Encabezado.Emisor.Telefono = new List<string> { textTelefonEmisor.Text };
-                request.Documento.Encabezado.Emisor.CorreoEmisor = correo_emisor.Text;
-                request.Documento.Encabezado.Emisor.Acteco = new List<int> { int.Parse(textActividadEconomica.Text) };
-                request.Documento.Encabezado.Emisor.CiudadOrigen = textCiudadEmisor.Text;
-                request.Documento.Encabezado.Emisor.RznSoc = razonSocial_Emisor.Text;
-                request.Documento.Encabezado.Emisor.GiroEmis = textGiroEmisor.Text;
-                request.Documento.Encabezado.Receptor.GiroRecep = textGiroReceptor.Text;
-            }
-            // Configuración de Emisor
-            request.Documento.Encabezado.Emisor.RUTEmisor = textRUTEmisor.Text;
-            request.Documento.Encabezado.Emisor.DirOrigen = textDireccionEmisor.Text;
-            request.Documento.Encabezado.Emisor.CmnaOrigen = textComunaEmisor.Text;
-
-            // Configuración de Receptor
-            request.Documento.Encabezado.Receptor.RUTRecep = textRutReceptor.Text;
-            request.Documento.Encabezado.Receptor.RznSocRecep = textRznReceptor.Text;
-            request.Documento.Encabezado.Receptor.DirRecep = textDirReceptor.Text;
-            request.Documento.Encabezado.Receptor.CmnaRecep = textCmnReceptor.Text;
-            request.Documento.Encabezado.Receptor.CiudadRecep = textCiudadReceptor.Text;
-
-            // Configuración de Totales
-            request.Documento.Encabezado.Totales.MntExe = int.Parse(textMontoExento.Text);
-            request.Documento.Encabezado.Totales.MntTotal = int.Parse(textMontoTotal.Text);
-
-            // Configuración de Detalles
-            foreach (DataGridViewRow row in gridProductos.Rows)
-            {
-                if (!row.IsNewRow)
+                Process.Start(new ProcessStartInfo
                 {
-                    var detalle = new Detalle
-                    {
-                        NroLinDet = Convert.ToInt32(row.Cells["gridNroLinea"].Value),
-                        NmbItem = row.Cells["gridNombreProducto"].Value?.ToString() ?? string.Empty,
-                        DscItem = row.Cells["Descripcion"].Value?.ToString() ?? string.Empty,
-                        QtyItem = Convert.ToInt32(row.Cells["gridCantidadProducto"].Value),
-                        UnmdItem = row.Cells["Unidad"].Value?.ToString() ?? string.Empty,
-                        PrcItem = Convert.ToDouble(row.Cells["gridPrecio"].Value),
-                        MontoItem = Convert.ToInt32(row.Cells["gridMonto"].Value)
-                    };
-                    request.Documento.Detalle.Add(detalle);
-                }
+                    FileName = url,
+                    UseShellExecute = true
+                });
             }
-
-            // Enviar solicitud al cliente
-            var sucursal = textSucursal.Text;
-            var response = await cliente.Facturacion.FacturacionIndividualV2DTEAsync(sucursal, request);
-
-            // Mostrar el resultado
-            if (response.Status == 400 || response.Status == 500)
+            catch (Exception ex)
             {
-                MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

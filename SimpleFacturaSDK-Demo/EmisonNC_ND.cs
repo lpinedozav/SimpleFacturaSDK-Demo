@@ -9,6 +9,7 @@ using SDKSimpleFactura.Enum;
 using SDKSimpleFactura.Models.Request;
 using System.Collections.Generic;
 using SimpleFacturaSDK_Demo.Models;
+using System.Diagnostics;
 namespace SimpleFacturaSDK_Demo
 {
     public partial class EmisonNC_ND : Form
@@ -29,7 +30,7 @@ namespace SimpleFacturaSDK_Demo
             //Identificacion
             comboBoxCodigoTipoDTE.SelectedIndex = 1; // nota credito electronica
             comboBoxFormaPago.SelectedIndex = 1;
-            numericFolio.Value = 1804;
+            numericFolio.Value = 0;
             fechaEmision.Value = DateTime.Parse("2022-12-05");
             fechaVencimiento.Value = DateTime.Now.AddMonths(6);
             //Datos emisor
@@ -65,8 +66,8 @@ namespace SimpleFacturaSDK_Demo
                 "34",
                 "367",
                 DateTime.Parse("2022-12-06").ToString("dd/MM/yyyy"),
-                3,
-                "Corrige Monto DTE: test"
+                "Corrige Monto DTE: test",
+                3
                 );
             //Totales
             textMontoExento.Text = "200";
@@ -74,98 +75,134 @@ namespace SimpleFacturaSDK_Demo
             //Otros
             comboBoxMotivo.SelectedIndex = 6;
             textSucursal.Text = _appSettings.Credenciales.NombreSucursal;
+
+            string descripcion =
+                  "Este endpoint solicita al portal de SimpleFactura emitir Nota Debito y Nota de Crédito," +
+                  "La particularidad de este endpoint es que utiliza como nombre de parametros los mismo que se pueden encontrar en las etiquetas de un archivo XML correspondiente a un DTE emitido.";
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarNcNd_Click(object sender, EventArgs e)
         {
-            var request = new RequestDTE()
+            Loading.ShowLoading(generarNcNd);
+            try
             {
-                Documento = new Documento()
+                var request = new RequestDTE()
                 {
-                    Encabezado = new Encabezado()
+                    Documento = new Documento()
                     {
-                        IdDoc = new IdentificacionDTE(),
-                        Emisor = new Emisor(),
-                        Receptor = new Receptor(),
-                        Totales = new Totales()
-                    },
-                    Detalle = new List<Detalle>(),
-                    Referencia = new List<Referencia>()
-                }
-            };
-            var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
-            var formaPago = comboBoxFormaPago.SelectedItem as ComboBoxItem;
-            var motivo = comboBoxMotivo.SelectedItem as ComboBoxItem;
-            var sucursal = textSucursal.Text;
-            request.Documento.Encabezado.IdDoc.TipoDTE = (DTEType)tipoDte.Value;
-            request.Documento.Encabezado.IdDoc.FchEmis = fechaEmision.Value;
-            request.Documento.Encabezado.IdDoc.FmaPago = (FormaPago.FormaPagoEnum)formaPago.Value;
-            request.Documento.Encabezado.IdDoc.FchVenc = fechaVencimiento.Value;
-            request.Documento.Encabezado.IdDoc.Folio = (long)numericFolio.Value;
+                        Encabezado = new Encabezado()
+                        {
+                            IdDoc = new IdentificacionDTE(),
+                            Emisor = new Emisor(),
+                            Receptor = new Receptor(),
+                            Totales = new Totales()
+                        },
+                        Detalle = new List<Detalle>(),
+                        Referencia = new List<Referencia>()
+                    }
+                };
+                var tipoDte = comboBoxCodigoTipoDTE.SelectedItem as ComboBoxItem;
+                var formaPago = comboBoxFormaPago.SelectedItem as ComboBoxItem;
+                var motivo = comboBoxMotivo.SelectedItem as ComboBoxItem;
+                var sucursal = textSucursal.Text;
+                request.Documento.Encabezado.IdDoc.TipoDTE = (DTEType)tipoDte.Value;
+                request.Documento.Encabezado.IdDoc.FchEmis = fechaEmision.Value;
+                request.Documento.Encabezado.IdDoc.FmaPago = (FormaPago.FormaPagoEnum)formaPago.Value;
+                request.Documento.Encabezado.IdDoc.FchVenc = fechaVencimiento.Value;
+                request.Documento.Encabezado.IdDoc.Folio = (long)numericFolio.Value;
 
-            request.Documento.Encabezado.Emisor.RUTEmisor = textRUTEmisor.Text;
-            request.Documento.Encabezado.Emisor.RznSoc = razonSocial_Emisor.Text;
-            request.Documento.Encabezado.Emisor.GiroEmis = textGiroEmisor.Text;
-            request.Documento.Encabezado.Emisor.Telefono = new List<string> { textTelefonEmisor.Text };
-            request.Documento.Encabezado.Emisor.CorreoEmisor = correo_emisor.Text;
-            request.Documento.Encabezado.Emisor.Acteco = new List<int> { int.Parse(textActividadEconomica.Text) };
-            request.Documento.Encabezado.Emisor.DirOrigen = textDireccionEmisor.Text;
-            request.Documento.Encabezado.Emisor.CmnaOrigen = textComunaEmisor.Text;
-            request.Documento.Encabezado.Emisor.CiudadOrigen = textCiudadEmisor.Text;
+                request.Documento.Encabezado.Emisor.RUTEmisor = textRUTEmisor.Text;
+                request.Documento.Encabezado.Emisor.RznSoc = razonSocial_Emisor.Text;
+                request.Documento.Encabezado.Emisor.GiroEmis = textGiroEmisor.Text;
+                request.Documento.Encabezado.Emisor.Telefono = new List<string> { textTelefonEmisor.Text };
+                request.Documento.Encabezado.Emisor.CorreoEmisor = correo_emisor.Text;
+                request.Documento.Encabezado.Emisor.Acteco = new List<int> { int.Parse(textActividadEconomica.Text) };
+                request.Documento.Encabezado.Emisor.DirOrigen = textDireccionEmisor.Text;
+                request.Documento.Encabezado.Emisor.CmnaOrigen = textComunaEmisor.Text;
+                request.Documento.Encabezado.Emisor.CiudadOrigen = textCiudadEmisor.Text;
 
-            request.Documento.Encabezado.Receptor.RUTRecep = textRutReceptor.Text;
-            request.Documento.Encabezado.Receptor.RznSocRecep = textRznReceptor.Text;
-            request.Documento.Encabezado.Receptor.GiroRecep = textGiroReceptor.Text;
-            request.Documento.Encabezado.Receptor.CorreoRecep = textCorreoReceptor.Text;
-            request.Documento.Encabezado.Receptor.DirRecep = textGiroReceptor.Text;
-            request.Documento.Encabezado.Receptor.CmnaRecep = textCmnReceptor.Text;
-            request.Documento.Encabezado.Receptor.CiudadRecep = textCiudadReceptor.Text;
+                request.Documento.Encabezado.Receptor.RUTRecep = textRutReceptor.Text;
+                request.Documento.Encabezado.Receptor.RznSocRecep = textRznReceptor.Text;
+                request.Documento.Encabezado.Receptor.GiroRecep = textGiroReceptor.Text;
+                request.Documento.Encabezado.Receptor.CorreoRecep = textCorreoReceptor.Text;
+                request.Documento.Encabezado.Receptor.DirRecep = textDirReceptor.Text;
+                request.Documento.Encabezado.Receptor.CmnaRecep = textCmnReceptor.Text;
+                request.Documento.Encabezado.Receptor.CiudadRecep = textCiudadReceptor.Text;
 
-            request.Documento.Encabezado.Totales.MntExe = int.Parse(textMontoExento.Text);
-            request.Documento.Encabezado.Totales.MntTotal = int.Parse(textMontoTotal.Text);
+                request.Documento.Encabezado.Totales.MntExe = int.Parse(textMontoExento.Text);
+                request.Documento.Encabezado.Totales.MntTotal = int.Parse(textMontoTotal.Text);
 
-            foreach (DataGridViewRow row in gridProductos.Rows)
-            {
-                if (!row.IsNewRow)
+                foreach (DataGridViewRow row in gridProductos.Rows)
                 {
-                    var detalle = new Detalle
+                    if (!row.IsNewRow)
                     {
-                        NroLinDet = Convert.ToInt32(row.Cells["gridNroLinea"].Value),
-                        IndExe = (IndicadorFacturacionExencionEnum)Convert.ToInt32(row.Cells["gridIndExe"].Value),
-                        NmbItem = row.Cells["gridNombreProducto"].Value?.ToString() ?? string.Empty,
-                        QtyItem = Convert.ToInt32(row.Cells["gridCantidadProducto"].Value),
-                        PrcItem = Convert.ToDouble(row.Cells["gridPrecio"].Value),
-                        MontoItem = Convert.ToInt32(row.Cells["gridMonto"].Value)
-                    };
-                    request.Documento.Detalle.Add(detalle);
+                        var detalle = new Detalle
+                        {
+                            NroLinDet = Convert.ToInt32(row.Cells["gridNroLinea"].Value),
+                            IndExe = (IndicadorFacturacionExencionEnum)Convert.ToInt32(row.Cells["gridIndExe"].Value),
+                            NmbItem = row.Cells["gridNombreProducto"].Value?.ToString() ?? string.Empty,
+                            QtyItem = Convert.ToDouble(row.Cells["gridCantidadProducto"].Value),
+                            PrcItem = Convert.ToDouble(row.Cells["gridPrecio"].Value),
+                            MontoItem = Convert.ToInt32(row.Cells["gridMonto"].Value)
+                        };
+                        request.Documento.Detalle.Add(detalle);
+                    }
                 }
-            }
-            foreach ( DataGridViewRow row in gridReferencias.Rows)
-            {
-                if (!row.IsNewRow)
+                foreach (DataGridViewRow row in gridReferencias.Rows)
                 {
-                    var referencia = new Referencia
+                    if (!row.IsNewRow)
                     {
-                        NroLinRef = Convert.ToInt32(row.Cells["gridRefNroLin"].Value),
-                        TpoDocRef = row.Cells["gridRefTipoDoc"].Value.ToString(),
-                        FolioRef = row.Cells["gridRefFolio"].Value.ToString(),
-                        FchRef = DateTime.Parse(row.Cells["gridRefFecha"].Value.ToString()),
-                        CodRef = (TipoReferencia.TipoReferenciaEnum)Convert.ToInt32(row.Cells["gridRefCodigo"].Value),
-                        RazonRef = row.Cells["gridRefRazon"].Value.ToString(),
-                    };
-                    request.Documento.Referencia.Add(referencia);
+                        var referencia = new Referencia
+                        {
+                            NroLinRef = Convert.ToInt32(row.Cells["gridRefNroLin"].Value),
+                            TpoDocRef = row.Cells["gridRefTipoDoc"].Value.ToString(),
+                            FolioRef = row.Cells["gridRefFolio"].Value.ToString(),
+                            FchRef = DateTime.Parse(row.Cells["gridRefFecha"].Value.ToString()),
+                            CodRef = (TipoReferencia.TipoReferenciaEnum)Convert.ToInt32(row.Cells["gridRefCodigo"].Value),
+                            RazonRef = row.Cells["gridRefRazon"].Value.ToString(),
+                        };
+                        request.Documento.Referencia.Add(referencia);
+                    }
+                }
+                var response = await cliente.Facturacion.EmisionNC_NDV2Async(sucursal, (ReasonTypeEnum)motivo.Value, request);
+                if (response.Status == 400 || response.Status == 500)
+                {
+                    MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            var response = await cliente.Facturacion.EmisionNC_NDV2Async( sucursal, (ReasonTypeEnum)motivo.Value, request);
-            if (response.Status == 400 || response.Status == 500)
+            catch (Exception ex)
             {
-                MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            finally
             {
-                MessageBox.Show(response.Message, response.Status.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarNcNd);
             }
+        }
 
+        private void linkLabelEmisioNC_ND_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#7f4a70c0-5a36-4c96-be0b-2f6057feddd6";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

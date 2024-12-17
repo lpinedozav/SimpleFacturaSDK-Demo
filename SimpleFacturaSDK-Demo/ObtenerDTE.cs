@@ -5,6 +5,7 @@ using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
@@ -35,15 +36,10 @@ namespace SimpleFacturaSDK_Demo
             textRutEmisor.Text = _appSettings.Credenciales.RutEmisor;
         }
 
-        private void cancelarDte_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void ConfigurarDataGridView()
         {
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.Columns.Clear();
+            gridResultado.AutoGenerateColumns = false;
+            gridResultado.Columns.Clear();
 
             // Columna para el nombre de la propiedad
             DataGridViewTextBoxColumn colPropiedad = new DataGridViewTextBoxColumn
@@ -53,7 +49,7 @@ namespace SimpleFacturaSDK_Demo
                 DataPropertyName = "Propiedad",
                 ReadOnly = true
             };
-            dataGridView1.Columns.Add(colPropiedad);
+            gridResultado.Columns.Add(colPropiedad);
 
             // Columna para el valor de la propiedad
             DataGridViewTextBoxColumn colValor = new DataGridViewTextBoxColumn
@@ -63,18 +59,19 @@ namespace SimpleFacturaSDK_Demo
                 DataPropertyName = "Valor",
                 ReadOnly = true
             };
-            dataGridView1.Columns.Add(colValor);
+            gridResultado.Columns.Add(colValor);
 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.RowHeadersVisible = false;
+            gridResultado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            gridResultado.RowHeadersVisible = false;
 
             // Manejar el evento CellContentClick
-            dataGridView1.CellContentClick -= dataGridView1_CellContentClick;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            gridResultado.CellContentClick -= dataGridView1_CellContentClick;
+            gridResultado.CellContentClick += dataGridView1_CellContentClick;
         }
 
         private async void consultarDTE_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(consultarDTE);
             try
             {
                 AmbienteEnum ambienteSeleccionado;
@@ -118,18 +115,23 @@ namespace SimpleFacturaSDK_Demo
 
                         // Poblar el DataGridView
                         var propiedades = ObtenerPropiedadesDteEnt(_dteEnt);
-                        dataGridView1.DataSource = propiedades;
+                        gridResultado.DataSource = propiedades;
                     }
                     else
                     {
                         MessageBox.Show("No se encontraron datos para mostrar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        dataGridView1.DataSource = null;
+                        gridResultado.DataSource = null;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(consultarDTE);
             }
         }
 
@@ -153,17 +155,43 @@ namespace SimpleFacturaSDK_Demo
                     var detalles = valor as List<DetalleDte>;
                     if (detalles != null && detalles.Count > 0)
                     {
-                        // Agregar una entrada para "Detalles" con un botón en la columna "Valor"
+                        gridDetalles.DataSource = detalles;
+                        EliminarColumnasSinDatos(detalles);
+                    }
+                }
+                else if (prop.Name == "Referencias")
+                {
+                    var referencias = valor as List<ReferenciaDte>;
+                    if (referencias != null && referencias.Count > 0)
+                    {
                         propiedades.Add(new PropiedadValor
                         {
                             Propiedad = prop.Name,
-                            Valor = "Ver Detalles"
+                            Valor = "Ver Referencias"
+                        });
+                    }
+                    else
+                    {
+                        propiedades.Add(new PropiedadValor
+                        {
+                            Propiedad = prop.Name,
+                            Valor = "Sin Referencias"
                         });
                     }
                 }
                 else
                 {
-                    string valorStr = valor.ToString();
+                    // Aplicar formato si el valor es de tipo int, long o decimal
+                    string valorStr;
+
+                    if (valor is int || valor is long || valor is decimal)
+                    {
+                        valorStr = FormattingHelper.FormatearPrecio(Convert.ToDecimal(valor));
+                    }
+                    else
+                    {
+                        valorStr = valor.ToString();
+                    }
 
                     propiedades.Add(new PropiedadValor
                     {
@@ -176,6 +204,30 @@ namespace SimpleFacturaSDK_Demo
             return propiedades;
         }
 
+        private void EliminarColumnasSinDatos<T>(List<T> detalles)
+        {
+            foreach (DataGridViewColumn column in gridDetalles.Columns)
+            {
+                bool hasData = false;
+
+                foreach (var detalle in detalles)
+                {
+                    var value = typeof(T).GetProperty(column.DataPropertyName)?.GetValue(detalle, null);
+
+                    if (value != null && !string.IsNullOrWhiteSpace(value.ToString()))
+                    {
+                        hasData = true;
+                        break;
+                    }
+                }
+
+                if (!hasData)
+                {
+                    column.Visible = false;
+                }
+            }
+        }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -183,38 +235,52 @@ namespace SimpleFacturaSDK_Demo
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 // Verificar si se hizo clic en la columna "Valor"
-                if (dataGridView1.Columns[e.ColumnIndex].Name == "Valor")
+                if (gridResultado.Columns[e.ColumnIndex].Name == "Valor")
                 {
-                    var propiedad = dataGridView1.Rows[e.RowIndex].Cells["Propiedad"].Value.ToString();
+                    var propiedad = gridResultado.Rows[e.RowIndex].Cells["Propiedad"].Value.ToString();
 
-                    if (propiedad == "Detalles")
+                    if (propiedad == "Referencias")
                     {
                         // Mostrar los detalles
-                        MostrarDetallesEnOtraTabla(_dteEnt?.Detalles);
+                        MostrarDetallesEnOtraTabla(_dteEnt?.Referencias);
                     }
                 }
             }
         }
 
-        private void MostrarDetallesEnOtraTabla(List<DetalleDte> detalles)
+
+
+        private void MostrarDetallesEnOtraTabla(List<ReferenciaDte> referencias)
         {
-            if (detalles == null || detalles.Count == 0)
+            if (referencias == null || referencias.Count == 0)
             {
-                MessageBox.Show("No hay detalles para mostrar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No hay referencias para mostrar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             // Crear y mostrar el formulario de detalles
             Detalles detallesForm = new Detalles();
-            detallesForm.SetDetalles(detalles);
+            detallesForm.SetDetalles(referencias, "Referencias");
             detallesForm.ShowDialog();
         }
-    }
 
-    // Clase auxiliar para representar las propiedades y sus valores
-    public class PropiedadValor
-    {
-        public string Propiedad { get; set; }
-        public string Valor { get; set; }
-    }
+        private void linkLabelDTE_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#ed2fe5e8-1fcb-4339-927d-cdc379628950";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }    
 }

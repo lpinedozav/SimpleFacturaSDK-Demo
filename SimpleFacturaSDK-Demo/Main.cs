@@ -69,9 +69,9 @@ namespace SimpleFacturaSDK_Demo
             formulario.Show();
         }
 
-        private void listado_dte_emitido_Click(object sender, EventArgs e)
+        private void listado_dte_emitido_Recibido_Click(object sender, EventArgs e)
         {
-            ListadoDteEmitidos formulario = new ListadoDteEmitidos();
+            ListadoDteEmitidos_Recibidos formulario = new ListadoDteEmitidos_Recibidos();
             formulario.Show();
         }
 
@@ -87,15 +87,91 @@ namespace SimpleFacturaSDK_Demo
             formulario.Show();
         }
 
-        private void conciliar_emitidos_Click(object sender, EventArgs e)
+        private void conciliar_emitidos_Recibidos_Click(object sender, EventArgs e)
         {
-            ConciliarEmitidos formulario = new ConciliarEmitidos();
+            ConciliarEmitidos_Recibidos formulario = new ConciliarEmitidos_Recibidos();
             formulario.Show();
         }
 
         private void Configuracion_Click(object sender, EventArgs e)
         {
             Configuracion formulario = new Configuracion();
+            formulario.Show();
+        }
+
+        private void Acuse_Click(object sender, EventArgs e)
+        {
+            Acuse formulario = new Acuse();
+            formulario.Show();
+        }
+
+        private void agregar_productos_Click(object sender, EventArgs e)
+        {
+            AgregarProductos formulario = new AgregarProductos();
+            formulario.Show();
+        }
+
+        private void listar_productos_Click(object sender, EventArgs e)
+        {
+            ListarProductos formulario = new ListarProductos();
+            formulario.Show();
+        }
+
+        private void agregarClientes_Click(object sender, EventArgs e)
+        {
+            AgregarCliente formulario = new AgregarCliente();
+            formulario.Show();
+        }
+        private void listarClientes_Click(object sender, EventArgs e)
+        {
+            ListarClientes formulario = new ListarClientes();
+            formulario.Show();
+        }
+        private void ListarSucursales_Click(object sender, EventArgs e)
+        {
+            ListarSucursales formulario = new ListarSucursales();
+            formulario.Show();
+        }
+
+
+        private void FoliosDisponibles_Click(object sender, EventArgs e)
+        {
+            ConsultaFoliosDisponibles formulario = new ConsultaFoliosDisponibles();
+            formulario.Show();
+        }
+
+        private void solicitarFolios_Click(object sender, EventArgs e)
+        {
+            SolicitarFolios formulario = new SolicitarFolios();
+            formulario.Show();
+        }
+
+        private void consultarFolios_Click(object sender, EventArgs e)
+        {
+            ConsultarFolios formulario = new ConsultarFolios();
+            formulario.Show();
+        }
+
+        private void FoliosSinUso_Click(object sender, EventArgs e)
+        {
+            FoliosSinUso formulario = new FoliosSinUso();
+            formulario.Show();
+        }
+        private void datosEmpresa_Click(object sender, EventArgs e)
+        {
+            DatosEmpresa formulario = new DatosEmpresa();
+            formulario.Show();
+        }
+
+        private void obtenerPdf_Emitidas_Recibidas_Click(object sender, EventArgs e)
+        {
+            ObtenerPdfBhe_Emitida_Recibida formulario = new ObtenerPdfBhe_Emitida_Recibida();
+            formulario.Show();
+        }
+
+        private void Listado_BHE_Emitidas_Recibidas_Click(object sender, EventArgs e)
+        {
+            ListadoBhe_Emitida_Recibida formulario = new ListadoBhe_Emitida_Recibida();
             formulario.Show();
         }
     }

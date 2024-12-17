@@ -2,8 +2,10 @@
 using SDKSimpleFactura.Models.Request;
 using SimpleFacturaSDK_Demo.Helpers;
 using SimpleFacturaSDK_Demo.Models;
+
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.TipoDTE;
@@ -34,10 +36,19 @@ namespace SimpleFacturaSDK_Demo
             checkXML.Checked = true;
             checkPDF.Checked = true;
             textComentario.Text = "ESTO ES UN COMENTARIO";
+
+            string descripcion =
+                 "permite a los usuarios enviar Documentos Tributarios Electrónicos (DTE) por correo electrónico en formato XML, PDF o ambos." +
+                 "Para ello, es necesario especificar la empresa que emitió el documento, el tipo de DTE y su folio correspodiente.";
+
+            textDocumentacion.Text = descripcion;
         }
 
         private async void generarEM_Click(object sender, EventArgs e)
         {
+            // Mostrar el indicador de carga en textRespuesta
+            Loading.ShowLoading(textRespuesta);
+
             try
             {
                 var request = new EnvioMailRequest()
@@ -45,6 +56,7 @@ namespace SimpleFacturaSDK_Demo
                     Dte = new DteClass(),
                     Mail = new MailClass()
                 };
+
                 request.RutEmpresa = textRutEmpresa.Text;
                 request.Dte.folio = (int)numericFolio.Value;
                 var tipoDte = comboxTipoDte.SelectedItem as ComboBoxItem;
@@ -53,24 +65,44 @@ namespace SimpleFacturaSDK_Demo
                 request.Mail.ccs = new List<string> { textCC.Text };
                 request.Mail.ccos = new List<string> { textCCO.Text };
                 request.Xml = checkXML.Checked;
-                request.Xml = checkPDF.Checked;
+                request.Pdf = checkPDF.Checked; // Aquí corrigí porque estaba duplicado `Xml`
                 request.Comments = textComentario.Text;
+
                 var response = await cliente.Facturacion.EnvioMailAsync(request);
-                if (response.Status == 400 || response.Status == 500)
-                {
-                    MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    textRespuesta.Text = $"Estado: {response.Status}\r\n" +
-                     $"Mensaje: {response.Message}\r\n" +
-                     $"Datos: {response.Data}\r\n" +
-                     $"Errores: {(response.Errors != null ? string.Join(", ", response.Errors) : "Ninguno")}\r\n";
-                }
+
+                // Mostrar la respuesta en textRespuesta
+                textRespuesta.Text = $"Estado: {response.Status}\r\n" +
+                                     $"Mensaje: {response.Message}\r\n" +
+                                     $"Datos: {response.Data}\r\n" +
+                                     $"Errores: {(response.Errors != null ? string.Join(", ", response.Errors) : "Ninguno")}\r\n";
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(textRespuesta);
+            }           
+        }
+
+        private void linkLabelEnvioMail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://documentacion.simplefactura.cl/#261356ab-6b1f-4e2e-8cfa-bbd655a5d96f";
+
+            // Abrir la URL en el navegador predeterminado
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir la URL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

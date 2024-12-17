@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using static SDKSimpleFactura.Enum.Ambiente;
+using SimpleFacturaSDK_Demo.Helpers;
+using System.Diagnostics;
 
 namespace SimpleFacturaSDK_Demo
 {
@@ -23,12 +25,21 @@ namespace SimpleFacturaSDK_Demo
         private void ConsolidadoVenta_Load(object sender, EventArgs e)
         {
             cliente = SimpleClientSingleton.Instance;
-
             textRut.Text = _appSettings.Credenciales.RutEmisor;
+            dataGridConsolidado.CellContentClick += dataGridConsolidado_CellContentClick; // Asocia el evento al DataGridView
+            dataGridConsolidado.CellFormatting += dataGridConsolidado_CellFormatting;
+
+            string descripcion =
+                 "Este endpoint proporciona un consolidado de ventas desde el portal SimpleFactura. A través de una solicitud, el usuario puede obtener datos en formato JSON, especificando el RUT del emisor y un rango de fechas para filtrar los resultados. ";
+
+            textDocumentacion.Text = descripcion;
+
+            dataGridConsolidado.RowHeadersWidth = 20;
         }
 
         private async void generarConsolidadoV_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(generarConsolidadoV);
             try
             {
                 AmbienteEnum ambienteSeleccionado;
@@ -49,13 +60,15 @@ namespace SimpleFacturaSDK_Demo
 
                 var request = new ListaDteRequest()
                 {
-                    Credenciales = new SDKSimpleFactura.Models.Facturacion.Credenciales()
+                    Credenciales = new Credenciales()
                 };
                 request.Credenciales.RutEmisor = textRut.Text;
                 request.Desde = dateTimeDesde.Value;
                 request.Hasta = dateTimeHasta.Value;
                 request.Ambiente = ambienteSeleccionado;
+
                 var response = await cliente.Facturacion.ConsolidadoVentasAsync(request);
+
                 if (response.Status == 400 || response.Status == 500)
                 {
                     MessageBox.Show(response.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -64,55 +77,95 @@ namespace SimpleFacturaSDK_Demo
                 {
                     list = response.Data;
 
-                   
-                    dataGridConsolidado.Rows.Clear();
-                    dataGridConsolidado.CellContentClick += dataGridConsolidado_CellContentClick;
-                    DataGridViewButtonCell detallesColumn = new DataGridViewButtonCell();
-                    detallesColumn.Value = "Ver Detalles";
-                    detallesColumn.UseColumnTextForButtonValue = true; // Hace que todas las celdas muestren el mismo texto en el botón
-                                                                       // Recorre cada objeto RepoteDTE en la lista
-                    dataGridConsolidado.AllowUserToAddRows = false;
+                    // Asigna la lista al DataSource del DataGridView
+                    dataGridConsolidado.DataSource = null;
+                    dataGridConsolidado.DataSource = list;
 
-                    foreach (var reporte in list)
-                    { 
-                        int rowIndex = dataGridConsolidado.Rows.Add(
-                            reporte.Fecha.ToString("dd/MM/yyyy"),
-                            reporte.TiposDTE,
-                            reporte.Emitidos,
-                            reporte.Anulados,
-                            reporte.TotalNeto,
-                            reporte.TotalExento,
-                            reporte.TotalIva,
-                            reporte.Total,
-                            detallesColumn
-                        );
-                        DataGridViewRow row = dataGridConsolidado.Rows[rowIndex];
-                        DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)row.Cells["detalle"];
-                        buttonCell.Value = "Ver Detalles";
-                    }
-
+                    // Configurar columnas adicionales (botones)
+                    ConfigurarColumnasBotones();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                // Ocultar el indicador de carga
+                Loading.HideLoading(generarConsolidadoV);
+            }
         }
+
+        private void ConfigurarColumnasBotones()
+        {
+            // Verifica si ya existe la columna "detalle"
+            if (dataGridConsolidado.Columns["detalle"] == null)
+            {
+                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
+                {
+                    Name = "detalle",
+                    HeaderText = "Detalles",
+                    Text = "Ver Detalles",
+                    UseColumnTextForButtonValue = true
+                };
+
+                dataGridConsolidado.Columns.Add(buttonColumn);
+            }
+
+            // Ajusta los estilos de las celdas según la lógica del reporte
+            foreach (DataGridViewRow row in dataGridConsolidado.Rows)
+            {
+                if (row.Cells["detalle"] is DataGridViewButtonCell buttonCell)
+                {
+                    var reporte = row.DataBoundItem as ReporteDTE;
+
+                    if (reporte?.Detalle == null || reporte.Detalle.Count == 0)
+                    {
+                        buttonCell.Value = "Sin Detalles";
+                        buttonCell.Style.ForeColor = System.Drawing.Color.Gray;
+                        buttonCell.Style.BackColor = System.Drawing.Color.LightGray;
+                        buttonCell.FlatStyle = FlatStyle.Flat;
+                    }
+                    else
+                    {
+                        buttonCell.Value = "Ver Detalles";
+                        buttonCell.Style.ForeColor = System.Drawing.Color.Black;
+                        buttonCell.Style.BackColor = System.Drawing.Color.White;
+                        buttonCell.FlatStyle = FlatStyle.Flat;
+                    }
+                }
+            }
+        }
+
+        private void dataGridConsolidado_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica si es una de las columnas que deseas formatear
+            if (dataGridConsolidado.Columns[e.ColumnIndex].Name == "totalneto" ||
+                dataGridConsolidado.Columns[e.ColumnIndex].Name == "totalexento" ||
+                dataGridConsolidado.Columns[e.ColumnIndex].Name == "totaliva" ||
+                dataGridConsolidado.Columns[e.ColumnIndex].Name == "total")
+            {
+                if (e.Value != null && decimal.TryParse(e.Value.ToString(), out decimal valor))
+                {
+                    // Aplica el formato utilizando el helper
+                    e.Value = FormattingHelper.FormatearPrecio(valor);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+
         private void dataGridConsolidado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica que el índice de columna corresponda a la columna del botón y que no sea una fila de encabezado
             if (dataGridConsolidado.Columns[e.ColumnIndex].Name == "detalle" && e.RowIndex >= 0)
             {
-                // Obtén el reporte correspondiente a la fila seleccionada
-                var reporte = list[e.RowIndex]; // Asegúrate de que 'list' esté accesible aquí
-
-                // Supongamos que 'reporte.Detalles' es una lista de DetalleDte
+                var reporte = list[e.RowIndex];
                 List<DetalleDte> detalles = reporte.Detalle;
-
-                // Llama al método para mostrar los detalles
                 MostrarDetallesEnOtraTabla(detalles);
             }
         }
+
         private void MostrarDetallesEnOtraTabla(List<DetalleDte> detalles)
         {
             if (detalles == null || detalles.Count == 0)
@@ -126,7 +179,8 @@ namespace SimpleFacturaSDK_Demo
             detallesForm.SetDetalles(detalles);
             detallesForm.ShowDialog();
         }
-        private void textRut_TextChanged(object sender, EventArgs e)
+
+        private void linkLabelConsolidado_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

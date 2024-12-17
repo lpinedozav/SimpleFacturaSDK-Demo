@@ -97,6 +97,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BoletasRadioButton = new System.Windows.Forms.RadioButton();
             this.DteRadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLabelFacturacionDTe_Boletas = new System.Windows.Forms.LinkLabel();
+            this.textDocumentacion = new System.Windows.Forms.TextBox();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -104,24 +107,25 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.textSucursal);
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Location = new System.Drawing.Point(349, 562);
+            this.groupBox6.Location = new System.Drawing.Point(326, 634);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(158, 64);
+            this.groupBox6.Size = new System.Drawing.Size(307, 64);
             this.groupBox6.TabIndex = 46;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros";
             // 
             // textSucursal
             // 
-            this.textSucursal.Location = new System.Drawing.Point(61, 23);
+            this.textSucursal.Location = new System.Drawing.Point(82, 24);
             this.textSucursal.Name = "textSucursal";
-            this.textSucursal.Size = new System.Drawing.Size(88, 20);
+            this.textSucursal.Size = new System.Drawing.Size(215, 20);
             this.textSucursal.TabIndex = 4;
             // 
             // label12
@@ -135,16 +139,16 @@
             // 
             // generarFacturacioDte_Boleta
             // 
-            this.generarFacturacioDte_Boleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generarFacturacioDte_Boleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.generarFacturacioDte_Boleta.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.Guardar_32;
             this.generarFacturacioDte_Boleta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(541, 598);
+            this.generarFacturacioDte_Boleta.Location = new System.Drawing.Point(558, 703);
             this.generarFacturacioDte_Boleta.Margin = new System.Windows.Forms.Padding(2);
             this.generarFacturacioDte_Boleta.Name = "generarFacturacioDte_Boleta";
             this.generarFacturacioDte_Boleta.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
-            this.generarFacturacioDte_Boleta.Size = new System.Drawing.Size(88, 28);
+            this.generarFacturacioDte_Boleta.Size = new System.Drawing.Size(75, 35);
             this.generarFacturacioDte_Boleta.TabIndex = 49;
-            this.generarFacturacioDte_Boleta.Text = "Generar";
+            this.generarFacturacioDte_Boleta.Text = "Ejecutar";
             this.generarFacturacioDte_Boleta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.generarFacturacioDte_Boleta.UseVisualStyleBackColor = true;
             this.generarFacturacioDte_Boleta.Click += new System.EventHandler(this.generarFacturacioDte_Boleta_Click);
@@ -208,7 +212,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(199, 90);
+            this.label26.Location = new System.Drawing.Point(200, 85);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(55, 13);
             this.label26.TabIndex = 25;
@@ -234,7 +238,7 @@
             // textCmnReceptor
             // 
             this.textCmnReceptor.BackColor = System.Drawing.SystemColors.Info;
-            this.textCmnReceptor.Location = new System.Drawing.Point(454, 85);
+            this.textCmnReceptor.Location = new System.Drawing.Point(454, 84);
             this.textCmnReceptor.Name = "textCmnReceptor";
             this.textCmnReceptor.Size = new System.Drawing.Size(153, 20);
             this.textCmnReceptor.TabIndex = 22;
@@ -242,7 +246,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(404, 89);
+            this.label29.Location = new System.Drawing.Point(403, 88);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 13);
             this.label29.TabIndex = 21;
@@ -347,6 +351,7 @@
             // Descripcion
             // 
             this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 6;
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 80;
@@ -365,6 +370,7 @@
             // Unidad
             // 
             this.Unidad.HeaderText = "Unidad";
+            this.Unidad.MinimumWidth = 6;
             this.Unidad.Name = "Unidad";
             this.Unidad.ReadOnly = true;
             this.Unidad.Width = 50;
@@ -395,24 +401,24 @@
             this.groupBox2.Controls.Add(this.montoTotal);
             this.groupBox2.Controls.Add(this.textMontoExento);
             this.groupBox2.Controls.Add(this.montoNeto);
-            this.groupBox2.Location = new System.Drawing.Point(8, 562);
+            this.groupBox2.Location = new System.Drawing.Point(324, 563);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(335, 64);
+            this.groupBox2.Size = new System.Drawing.Size(308, 64);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
             // 
             // textMontoTotal
             // 
-            this.textMontoTotal.Location = new System.Drawing.Point(239, 24);
+            this.textMontoTotal.Location = new System.Drawing.Point(229, 24);
             this.textMontoTotal.Name = "textMontoTotal";
-            this.textMontoTotal.Size = new System.Drawing.Size(87, 20);
+            this.textMontoTotal.Size = new System.Drawing.Size(70, 20);
             this.textMontoTotal.TabIndex = 26;
             // 
             // montoTotal
             // 
             this.montoTotal.AutoSize = true;
-            this.montoTotal.Location = new System.Drawing.Point(174, 29);
+            this.montoTotal.Location = new System.Drawing.Point(165, 29);
             this.montoTotal.Name = "montoTotal";
             this.montoTotal.Size = new System.Drawing.Size(63, 13);
             this.montoTotal.TabIndex = 25;
@@ -422,13 +428,13 @@
             // 
             this.textMontoExento.Location = new System.Drawing.Point(83, 24);
             this.textMontoExento.Name = "textMontoExento";
-            this.textMontoExento.Size = new System.Drawing.Size(88, 20);
+            this.textMontoExento.Size = new System.Drawing.Size(78, 20);
             this.textMontoExento.TabIndex = 4;
             // 
             // montoNeto
             // 
             this.montoNeto.AutoSize = true;
-            this.montoNeto.Location = new System.Drawing.Point(6, 27);
+            this.montoNeto.Location = new System.Drawing.Point(8, 27);
             this.montoNeto.Name = "montoNeto";
             this.montoNeto.Size = new System.Drawing.Size(75, 13);
             this.montoNeto.TabIndex = 3;
@@ -488,7 +494,7 @@
             // ciudad
             // 
             this.ciudad.AutoSize = true;
-            this.ciudad.Location = new System.Drawing.Point(5, 83);
+            this.ciudad.Location = new System.Drawing.Point(5, 87);
             this.ciudad.Name = "ciudad";
             this.ciudad.Size = new System.Drawing.Size(43, 13);
             this.ciudad.TabIndex = 33;
@@ -497,7 +503,7 @@
             // textDireccionEmisor
             // 
             this.textDireccionEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textDireccionEmisor.Location = new System.Drawing.Point(266, 86);
+            this.textDireccionEmisor.Location = new System.Drawing.Point(266, 83);
             this.textDireccionEmisor.Name = "textDireccionEmisor";
             this.textDireccionEmisor.Size = new System.Drawing.Size(134, 20);
             this.textDireccionEmisor.TabIndex = 26;
@@ -505,7 +511,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(195, 86);
+            this.label8.Location = new System.Drawing.Point(195, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 25;
@@ -566,7 +572,7 @@
             // textComunaEmisor
             // 
             this.textComunaEmisor.BackColor = System.Drawing.SystemColors.Info;
-            this.textComunaEmisor.Location = new System.Drawing.Point(453, 87);
+            this.textComunaEmisor.Location = new System.Drawing.Point(453, 84);
             this.textComunaEmisor.Name = "textComunaEmisor";
             this.textComunaEmisor.Size = new System.Drawing.Size(153, 20);
             this.textComunaEmisor.TabIndex = 22;
@@ -582,7 +588,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(403, 90);
+            this.label9.Location = new System.Drawing.Point(403, 87);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 21;
@@ -756,11 +762,42 @@
             this.DteRadioButton.UseVisualStyleBackColor = true;
             this.DteRadioButton.CheckedChanged += new System.EventHandler(this.DteRadioButton_CheckedChanged);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.linkLabelFacturacionDTe_Boletas);
+            this.groupBox4.Controls.Add(this.textDocumentacion);
+            this.groupBox4.Location = new System.Drawing.Point(11, 563);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(307, 135);
+            this.groupBox4.TabIndex = 50;
+            this.groupBox4.TabStop = false;
+            // 
+            // linkLabelFacturacionDTe_Boletas
+            // 
+            this.linkLabelFacturacionDTe_Boletas.AutoSize = true;
+            this.linkLabelFacturacionDTe_Boletas.Location = new System.Drawing.Point(9, -2);
+            this.linkLabelFacturacionDTe_Boletas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelFacturacionDTe_Boletas.Name = "linkLabelFacturacionDTe_Boletas";
+            this.linkLabelFacturacionDTe_Boletas.Size = new System.Drawing.Size(82, 13);
+            this.linkLabelFacturacionDTe_Boletas.TabIndex = 41;
+            this.linkLabelFacturacionDTe_Boletas.TabStop = true;
+            this.linkLabelFacturacionDTe_Boletas.Text = "Documentación";
+            this.linkLabelFacturacionDTe_Boletas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFacturacionDTe_Boletas_LinkClicked);
+            // 
+            // textDocumentacion
+            // 
+            this.textDocumentacion.Location = new System.Drawing.Point(6, 19);
+            this.textDocumentacion.Multiline = true;
+            this.textDocumentacion.Name = "textDocumentacion";
+            this.textDocumentacion.Size = new System.Drawing.Size(296, 110);
+            this.textDocumentacion.TabIndex = 20;
+            // 
             // FacturacionDte_boleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 636);
+            this.ClientSize = new System.Drawing.Size(639, 744);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.BoletasRadioButton);
             this.Controls.Add(this.DteRadioButton);
             this.Controls.Add(this.groupBox6);
@@ -791,6 +828,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -862,5 +901,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridMonto;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLabelFacturacionDTe_Boletas;
+        private System.Windows.Forms.TextBox textDocumentacion;
     }
 }

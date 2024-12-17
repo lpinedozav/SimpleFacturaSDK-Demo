@@ -33,14 +33,15 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.item_facturacion = new System.Windows.Forms.TabPage();
             this.otros = new System.Windows.Forms.GroupBox();
-            this.conciliar_emitidos = new System.Windows.Forms.Button();
+            this.conciliar_emitidos_Recibidos = new System.Windows.Forms.Button();
+            this.Acuse = new System.Windows.Forms.Button();
             this.envio_mail = new System.Windows.Forms.Button();
-            this.listado_dte_emitido = new System.Windows.Forms.Button();
             this.consolidado_ventas = new System.Windows.Forms.Button();
             this.emision_dte = new System.Windows.Forms.GroupBox();
             this.emision_nc_nd = new System.Windows.Forms.Button();
             this.facturacion_masiva = new System.Windows.Forms.Button();
             this.facturacion_dte = new System.Windows.Forms.Button();
+            this.listado_dte_emitido_Recibido = new System.Windows.Forms.Button();
             this.facturacion_exportacion = new System.Windows.Forms.Button();
             this.obtenerdte = new System.Windows.Forms.GroupBox();
             this.obtener_sobre_xml = new System.Windows.Forms.Button();
@@ -48,12 +49,24 @@
             this.obtener_xml = new System.Windows.Forms.Button();
             this.obtener_timbre = new System.Windows.Forms.Button();
             this.obtener_pdf = new System.Windows.Forms.Button();
-            this.item_productos = new System.Windows.Forms.TabPage();
-            this.item_proveedores = new System.Windows.Forms.TabPage();
-            this.item_clientes = new System.Windows.Forms.TabPage();
-            this.item_folios = new System.Windows.Forms.TabPage();
-            this.item_bh = new System.Windows.Forms.TabPage();
             this.item_otros = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.datosEmpresa = new System.Windows.Forms.Button();
+            this.ListarSucursales = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.listarClientes = new System.Windows.Forms.Button();
+            this.agregarClientes = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.consultarFolios = new System.Windows.Forms.Button();
+            this.FoliosSinUso = new System.Windows.Forms.Button();
+            this.FoliosDisponibles = new System.Windows.Forms.Button();
+            this.solicitarFolios = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.Listado_BHE_Emitidas_Recibidas = new System.Windows.Forms.Button();
+            this.obtenerPdf_Emitidas_Recibidas = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.listar_productos = new System.Windows.Forms.Button();
+            this.agregar_productos = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Configuracion = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,22 +76,23 @@
             this.otros.SuspendLayout();
             this.emision_dte.SuspendLayout();
             this.obtenerdte.SuspendLayout();
+            this.item_otros.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.item_facturacion);
-            this.tabControl2.Controls.Add(this.item_productos);
-            this.tabControl2.Controls.Add(this.item_proveedores);
-            this.tabControl2.Controls.Add(this.item_clientes);
-            this.tabControl2.Controls.Add(this.item_folios);
-            this.tabControl2.Controls.Add(this.item_bh);
             this.tabControl2.Controls.Add(this.item_otros);
-            this.tabControl2.Location = new System.Drawing.Point(13, 55);
+            this.tabControl2.Location = new System.Drawing.Point(12, 42);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(627, 315);
+            this.tabControl2.Size = new System.Drawing.Size(623, 311);
             this.tabControl2.TabIndex = 1;
             // 
             // item_facturacion
@@ -86,62 +100,62 @@
             this.item_facturacion.Controls.Add(this.otros);
             this.item_facturacion.Controls.Add(this.emision_dte);
             this.item_facturacion.Controls.Add(this.obtenerdte);
-            this.item_facturacion.Location = new System.Drawing.Point(4, 25);
+            this.item_facturacion.Location = new System.Drawing.Point(4, 22);
             this.item_facturacion.Name = "item_facturacion";
             this.item_facturacion.Padding = new System.Windows.Forms.Padding(3);
-            this.item_facturacion.Size = new System.Drawing.Size(619, 286);
+            this.item_facturacion.Size = new System.Drawing.Size(615, 285);
             this.item_facturacion.TabIndex = 0;
             this.item_facturacion.Text = "Facturación";
             this.item_facturacion.UseVisualStyleBackColor = true;
             // 
             // otros
             // 
-            this.otros.Controls.Add(this.conciliar_emitidos);
+            this.otros.Controls.Add(this.conciliar_emitidos_Recibidos);
+            this.otros.Controls.Add(this.Acuse);
             this.otros.Controls.Add(this.envio_mail);
-            this.otros.Controls.Add(this.listado_dte_emitido);
             this.otros.Controls.Add(this.consolidado_ventas);
-            this.otros.Location = new System.Drawing.Point(414, 15);
+            this.otros.Location = new System.Drawing.Point(412, 15);
             this.otros.Name = "otros";
-            this.otros.Size = new System.Drawing.Size(187, 254);
+            this.otros.Size = new System.Drawing.Size(191, 254);
             this.otros.TabIndex = 2;
             this.otros.TabStop = false;
             this.otros.Text = "Otros";
             // 
-            // conciliar_emitidos
+            // conciliar_emitidos_Recibidos
             // 
-            this.conciliar_emitidos.Location = new System.Drawing.Point(15, 161);
-            this.conciliar_emitidos.Name = "conciliar_emitidos";
-            this.conciliar_emitidos.Size = new System.Drawing.Size(158, 38);
-            this.conciliar_emitidos.TabIndex = 13;
-            this.conciliar_emitidos.Text = "Conciliar Emitidos";
-            this.conciliar_emitidos.UseVisualStyleBackColor = true;
-            this.conciliar_emitidos.Click += new System.EventHandler(this.conciliar_emitidos_Click);
+            this.conciliar_emitidos_Recibidos.Location = new System.Drawing.Point(15, 117);
+            this.conciliar_emitidos_Recibidos.Name = "conciliar_emitidos_Recibidos";
+            this.conciliar_emitidos_Recibidos.Size = new System.Drawing.Size(164, 38);
+            this.conciliar_emitidos_Recibidos.TabIndex = 13;
+            this.conciliar_emitidos_Recibidos.Text = "Conciliar Emitido / Recibido";
+            this.conciliar_emitidos_Recibidos.UseVisualStyleBackColor = true;
+            this.conciliar_emitidos_Recibidos.Click += new System.EventHandler(this.conciliar_emitidos_Recibidos_Click);
+            // 
+            // Acuse
+            // 
+            this.Acuse.Location = new System.Drawing.Point(15, 161);
+            this.Acuse.Name = "Acuse";
+            this.Acuse.Size = new System.Drawing.Size(164, 38);
+            this.Acuse.TabIndex = 11;
+            this.Acuse.Text = "Aceptar o Recharzar DTE";
+            this.Acuse.UseVisualStyleBackColor = true;
+            this.Acuse.Click += new System.EventHandler(this.Acuse_Click);
             // 
             // envio_mail
             // 
-            this.envio_mail.Location = new System.Drawing.Point(15, 73);
+            this.envio_mail.Location = new System.Drawing.Point(15, 27);
             this.envio_mail.Name = "envio_mail";
-            this.envio_mail.Size = new System.Drawing.Size(158, 38);
+            this.envio_mail.Size = new System.Drawing.Size(164, 38);
             this.envio_mail.TabIndex = 11;
             this.envio_mail.Text = "Envio Mail";
             this.envio_mail.UseVisualStyleBackColor = true;
             this.envio_mail.Click += new System.EventHandler(this.envio_mail_Click);
             // 
-            // listado_dte_emitido
-            // 
-            this.listado_dte_emitido.Location = new System.Drawing.Point(15, 29);
-            this.listado_dte_emitido.Name = "listado_dte_emitido";
-            this.listado_dte_emitido.Size = new System.Drawing.Size(158, 38);
-            this.listado_dte_emitido.TabIndex = 10;
-            this.listado_dte_emitido.Text = "Listado DTE Emitido";
-            this.listado_dte_emitido.UseVisualStyleBackColor = true;
-            this.listado_dte_emitido.Click += new System.EventHandler(this.listado_dte_emitido_Click);
-            // 
             // consolidado_ventas
             // 
-            this.consolidado_ventas.Location = new System.Drawing.Point(15, 117);
+            this.consolidado_ventas.Location = new System.Drawing.Point(15, 73);
             this.consolidado_ventas.Name = "consolidado_ventas";
-            this.consolidado_ventas.Size = new System.Drawing.Size(158, 38);
+            this.consolidado_ventas.Size = new System.Drawing.Size(164, 38);
             this.consolidado_ventas.TabIndex = 12;
             this.consolidado_ventas.Text = "Consolidado de ventas";
             this.consolidado_ventas.UseVisualStyleBackColor = true;
@@ -152,19 +166,20 @@
             this.emision_dte.Controls.Add(this.emision_nc_nd);
             this.emision_dte.Controls.Add(this.facturacion_masiva);
             this.emision_dte.Controls.Add(this.facturacion_dte);
+            this.emision_dte.Controls.Add(this.listado_dte_emitido_Recibido);
             this.emision_dte.Controls.Add(this.facturacion_exportacion);
-            this.emision_dte.Location = new System.Drawing.Point(209, 15);
+            this.emision_dte.Location = new System.Drawing.Point(215, 15);
             this.emision_dte.Name = "emision_dte";
-            this.emision_dte.Size = new System.Drawing.Size(187, 254);
+            this.emision_dte.Size = new System.Drawing.Size(191, 254);
             this.emision_dte.TabIndex = 1;
             this.emision_dte.TabStop = false;
             this.emision_dte.Text = "Emision DTE";
             // 
             // emision_nc_nd
             // 
-            this.emision_nc_nd.Location = new System.Drawing.Point(7, 159);
+            this.emision_nc_nd.Location = new System.Drawing.Point(14, 159);
             this.emision_nc_nd.Name = "emision_nc_nd";
-            this.emision_nc_nd.Size = new System.Drawing.Size(173, 38);
+            this.emision_nc_nd.Size = new System.Drawing.Size(164, 38);
             this.emision_nc_nd.TabIndex = 9;
             this.emision_nc_nd.Text = "Emisión NC/ND";
             this.emision_nc_nd.UseVisualStyleBackColor = true;
@@ -172,9 +187,9 @@
             // 
             // facturacion_masiva
             // 
-            this.facturacion_masiva.Location = new System.Drawing.Point(7, 115);
+            this.facturacion_masiva.Location = new System.Drawing.Point(14, 115);
             this.facturacion_masiva.Name = "facturacion_masiva";
-            this.facturacion_masiva.Size = new System.Drawing.Size(173, 38);
+            this.facturacion_masiva.Size = new System.Drawing.Size(164, 38);
             this.facturacion_masiva.TabIndex = 8;
             this.facturacion_masiva.Text = "Facturación Masiva";
             this.facturacion_masiva.UseVisualStyleBackColor = true;
@@ -182,19 +197,29 @@
             // 
             // facturacion_dte
             // 
-            this.facturacion_dte.Location = new System.Drawing.Point(7, 27);
-            this.facturacion_dte.Name = "facturacion_dte_boleta";
-            this.facturacion_dte.Size = new System.Drawing.Size(173, 38);
+            this.facturacion_dte.Location = new System.Drawing.Point(14, 27);
+            this.facturacion_dte.Name = "facturacion_dte";
+            this.facturacion_dte.Size = new System.Drawing.Size(164, 38);
             this.facturacion_dte.TabIndex = 5;
             this.facturacion_dte.Text = "Facturación DTE / Boletas";
             this.facturacion_dte.UseVisualStyleBackColor = true;
             this.facturacion_dte.Click += new System.EventHandler(this.facturacion_dte_boleta_Click);
             // 
+            // listado_dte_emitido_Recibido
+            // 
+            this.listado_dte_emitido_Recibido.Location = new System.Drawing.Point(14, 203);
+            this.listado_dte_emitido_Recibido.Name = "listado_dte_emitido_Recibido";
+            this.listado_dte_emitido_Recibido.Size = new System.Drawing.Size(164, 38);
+            this.listado_dte_emitido_Recibido.TabIndex = 10;
+            this.listado_dte_emitido_Recibido.Text = "Listado DTE Emitido / Recibido";
+            this.listado_dte_emitido_Recibido.UseVisualStyleBackColor = true;
+            this.listado_dte_emitido_Recibido.Click += new System.EventHandler(this.listado_dte_emitido_Recibido_Click);
+            // 
             // facturacion_exportacion
             // 
-            this.facturacion_exportacion.Location = new System.Drawing.Point(7, 71);
+            this.facturacion_exportacion.Location = new System.Drawing.Point(14, 71);
             this.facturacion_exportacion.Name = "facturacion_exportacion";
-            this.facturacion_exportacion.Size = new System.Drawing.Size(173, 38);
+            this.facturacion_exportacion.Size = new System.Drawing.Size(164, 38);
             this.facturacion_exportacion.TabIndex = 7;
             this.facturacion_exportacion.Text = "Facturación Exportación";
             this.facturacion_exportacion.UseVisualStyleBackColor = true;
@@ -209,7 +234,7 @@
             this.obtenerdte.Controls.Add(this.obtener_pdf);
             this.obtenerdte.Location = new System.Drawing.Point(18, 15);
             this.obtenerdte.Name = "obtenerdte";
-            this.obtenerdte.Size = new System.Drawing.Size(172, 254);
+            this.obtenerdte.Size = new System.Drawing.Size(191, 254);
             this.obtenerdte.TabIndex = 0;
             this.obtenerdte.TabStop = false;
             this.obtenerdte.Text = "Obtener DTE";
@@ -218,7 +243,7 @@
             // 
             this.obtener_sobre_xml.Location = new System.Drawing.Point(14, 203);
             this.obtener_sobre_xml.Name = "obtener_sobre_xml";
-            this.obtener_sobre_xml.Size = new System.Drawing.Size(145, 38);
+            this.obtener_sobre_xml.Size = new System.Drawing.Size(164, 38);
             this.obtener_sobre_xml.TabIndex = 4;
             this.obtener_sobre_xml.Text = "Obtener SobreXML";
             this.obtener_sobre_xml.UseVisualStyleBackColor = true;
@@ -228,7 +253,7 @@
             // 
             this.obtener_dte.Location = new System.Drawing.Point(14, 159);
             this.obtener_dte.Name = "obtener_dte";
-            this.obtener_dte.Size = new System.Drawing.Size(145, 38);
+            this.obtener_dte.Size = new System.Drawing.Size(164, 38);
             this.obtener_dte.TabIndex = 3;
             this.obtener_dte.Text = "Obtener DTE";
             this.obtener_dte.UseVisualStyleBackColor = true;
@@ -238,7 +263,7 @@
             // 
             this.obtener_xml.Location = new System.Drawing.Point(14, 115);
             this.obtener_xml.Name = "obtener_xml";
-            this.obtener_xml.Size = new System.Drawing.Size(145, 38);
+            this.obtener_xml.Size = new System.Drawing.Size(164, 38);
             this.obtener_xml.TabIndex = 2;
             this.obtener_xml.Text = "Obtener XML";
             this.obtener_xml.UseVisualStyleBackColor = true;
@@ -248,7 +273,7 @@
             // 
             this.obtener_timbre.Location = new System.Drawing.Point(14, 71);
             this.obtener_timbre.Name = "obtener_timbre";
-            this.obtener_timbre.Size = new System.Drawing.Size(145, 38);
+            this.obtener_timbre.Size = new System.Drawing.Size(164, 38);
             this.obtener_timbre.TabIndex = 1;
             this.obtener_timbre.Text = "Obtener Timbre";
             this.obtener_timbre.UseVisualStyleBackColor = true;
@@ -258,66 +283,202 @@
             // 
             this.obtener_pdf.Location = new System.Drawing.Point(14, 27);
             this.obtener_pdf.Name = "obtener_pdf";
-            this.obtener_pdf.Size = new System.Drawing.Size(145, 38);
+            this.obtener_pdf.Size = new System.Drawing.Size(164, 38);
             this.obtener_pdf.TabIndex = 0;
             this.obtener_pdf.Text = "Obtener PDF";
             this.obtener_pdf.UseVisualStyleBackColor = true;
             this.obtener_pdf.Click += new System.EventHandler(this.obtener_pdf_Click);
             // 
-            // item_productos
-            // 
-            this.item_productos.Location = new System.Drawing.Point(4, 25);
-            this.item_productos.Name = "item_productos";
-            this.item_productos.Padding = new System.Windows.Forms.Padding(3);
-            this.item_productos.Size = new System.Drawing.Size(619, 286);
-            this.item_productos.TabIndex = 1;
-            this.item_productos.Text = "Productos";
-            this.item_productos.UseVisualStyleBackColor = true;
-            // 
-            // item_proveedores
-            // 
-            this.item_proveedores.Location = new System.Drawing.Point(4, 25);
-            this.item_proveedores.Name = "item_proveedores";
-            this.item_proveedores.Size = new System.Drawing.Size(619, 286);
-            this.item_proveedores.TabIndex = 2;
-            this.item_proveedores.Text = "Proveedores";
-            this.item_proveedores.UseVisualStyleBackColor = true;
-            // 
-            // item_clientes
-            // 
-            this.item_clientes.Location = new System.Drawing.Point(4, 25);
-            this.item_clientes.Name = "item_clientes";
-            this.item_clientes.Size = new System.Drawing.Size(619, 286);
-            this.item_clientes.TabIndex = 3;
-            this.item_clientes.Text = "Clientes";
-            this.item_clientes.UseVisualStyleBackColor = true;
-            // 
-            // item_folios
-            // 
-            this.item_folios.Location = new System.Drawing.Point(4, 25);
-            this.item_folios.Name = "item_folios";
-            this.item_folios.Size = new System.Drawing.Size(619, 286);
-            this.item_folios.TabIndex = 5;
-            this.item_folios.Text = "Folios";
-            this.item_folios.UseVisualStyleBackColor = true;
-            // 
-            // item_bh
-            // 
-            this.item_bh.Location = new System.Drawing.Point(4, 25);
-            this.item_bh.Name = "item_bh";
-            this.item_bh.Size = new System.Drawing.Size(619, 286);
-            this.item_bh.TabIndex = 6;
-            this.item_bh.Text = "Boletas de honorarios";
-            this.item_bh.UseVisualStyleBackColor = true;
-            // 
             // item_otros
             // 
-            this.item_otros.Location = new System.Drawing.Point(4, 25);
+            this.item_otros.Controls.Add(this.groupBox9);
+            this.item_otros.Controls.Add(this.groupBox7);
+            this.item_otros.Controls.Add(this.groupBox4);
+            this.item_otros.Controls.Add(this.groupBox5);
+            this.item_otros.Controls.Add(this.groupBox6);
+            this.item_otros.Location = new System.Drawing.Point(4, 22);
             this.item_otros.Name = "item_otros";
-            this.item_otros.Size = new System.Drawing.Size(619, 286);
+            this.item_otros.Size = new System.Drawing.Size(615, 285);
             this.item_otros.TabIndex = 4;
             this.item_otros.Text = "Otros";
             this.item_otros.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.datosEmpresa);
+            this.groupBox9.Controls.Add(this.ListarSucursales);
+            this.groupBox9.Location = new System.Drawing.Point(212, 145);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(191, 122);
+            this.groupBox9.TabIndex = 5;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Otros";
+            // 
+            // datosEmpresa
+            // 
+            this.datosEmpresa.Location = new System.Drawing.Point(14, 67);
+            this.datosEmpresa.Name = "datosEmpresa";
+            this.datosEmpresa.Size = new System.Drawing.Size(164, 38);
+            this.datosEmpresa.TabIndex = 0;
+            this.datosEmpresa.Text = "Datos de Empresa";
+            this.datosEmpresa.UseVisualStyleBackColor = true;
+            this.datosEmpresa.Click += new System.EventHandler(this.datosEmpresa_Click);
+            // 
+            // ListarSucursales
+            // 
+            this.ListarSucursales.Location = new System.Drawing.Point(14, 23);
+            this.ListarSucursales.Name = "ListarSucursales";
+            this.ListarSucursales.Size = new System.Drawing.Size(164, 38);
+            this.ListarSucursales.TabIndex = 0;
+            this.ListarSucursales.Text = "Listado Sucursales";
+            this.ListarSucursales.UseVisualStyleBackColor = true;
+            this.ListarSucursales.Click += new System.EventHandler(this.ListarSucursales_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.listarClientes);
+            this.groupBox7.Controls.Add(this.agregarClientes);
+            this.groupBox7.Location = new System.Drawing.Point(212, 17);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(191, 122);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Clientes";
+            // 
+            // listarClientes
+            // 
+            this.listarClientes.Location = new System.Drawing.Point(13, 67);
+            this.listarClientes.Name = "listarClientes";
+            this.listarClientes.Size = new System.Drawing.Size(164, 38);
+            this.listarClientes.TabIndex = 1;
+            this.listarClientes.Text = "Listar Clientes";
+            this.listarClientes.UseVisualStyleBackColor = true;
+            this.listarClientes.Click += new System.EventHandler(this.listarClientes_Click);
+            // 
+            // agregarClientes
+            // 
+            this.agregarClientes.Location = new System.Drawing.Point(13, 23);
+            this.agregarClientes.Name = "agregarClientes";
+            this.agregarClientes.Size = new System.Drawing.Size(164, 38);
+            this.agregarClientes.TabIndex = 0;
+            this.agregarClientes.Text = "Agregar Clientes";
+            this.agregarClientes.UseVisualStyleBackColor = true;
+            this.agregarClientes.Click += new System.EventHandler(this.agregarClientes_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.consultarFolios);
+            this.groupBox4.Controls.Add(this.FoliosSinUso);
+            this.groupBox4.Controls.Add(this.FoliosDisponibles);
+            this.groupBox4.Controls.Add(this.solicitarFolios);
+            this.groupBox4.Location = new System.Drawing.Point(409, 17);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(191, 250);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Folios";
+            // 
+            // consultarFolios
+            // 
+            this.consultarFolios.Location = new System.Drawing.Point(15, 107);
+            this.consultarFolios.Name = "consultarFolios";
+            this.consultarFolios.Size = new System.Drawing.Size(164, 38);
+            this.consultarFolios.TabIndex = 13;
+            this.consultarFolios.Text = "Consultar Folios";
+            this.consultarFolios.UseVisualStyleBackColor = true;
+            this.consultarFolios.Click += new System.EventHandler(this.consultarFolios_Click);
+            // 
+            // FoliosSinUso
+            // 
+            this.FoliosSinUso.Location = new System.Drawing.Point(15, 151);
+            this.FoliosSinUso.Name = "FoliosSinUso";
+            this.FoliosSinUso.Size = new System.Drawing.Size(164, 38);
+            this.FoliosSinUso.TabIndex = 11;
+            this.FoliosSinUso.Text = "Folios Sin Uso";
+            this.FoliosSinUso.UseVisualStyleBackColor = true;
+            this.FoliosSinUso.Click += new System.EventHandler(this.FoliosSinUso_Click);
+            // 
+            // FoliosDisponibles
+            // 
+            this.FoliosDisponibles.Location = new System.Drawing.Point(15, 19);
+            this.FoliosDisponibles.Name = "FoliosDisponibles";
+            this.FoliosDisponibles.Size = new System.Drawing.Size(164, 38);
+            this.FoliosDisponibles.TabIndex = 11;
+            this.FoliosDisponibles.Text = "Consulta Folios Disponibles";
+            this.FoliosDisponibles.UseVisualStyleBackColor = true;
+            this.FoliosDisponibles.Click += new System.EventHandler(this.FoliosDisponibles_Click);
+            // 
+            // solicitarFolios
+            // 
+            this.solicitarFolios.Location = new System.Drawing.Point(15, 63);
+            this.solicitarFolios.Name = "solicitarFolios";
+            this.solicitarFolios.Size = new System.Drawing.Size(164, 38);
+            this.solicitarFolios.TabIndex = 12;
+            this.solicitarFolios.Text = "Solicitar Folios";
+            this.solicitarFolios.UseVisualStyleBackColor = true;
+            this.solicitarFolios.Click += new System.EventHandler(this.solicitarFolios_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.Listado_BHE_Emitidas_Recibidas);
+            this.groupBox5.Controls.Add(this.obtenerPdf_Emitidas_Recibidas);
+            this.groupBox5.Location = new System.Drawing.Point(15, 145);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(191, 122);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Boletas de Honorarios";
+            // 
+            // Listado_BHE_Emitidas_Recibidas
+            // 
+            this.Listado_BHE_Emitidas_Recibidas.Location = new System.Drawing.Point(14, 67);
+            this.Listado_BHE_Emitidas_Recibidas.Name = "Listado_BHE_Emitidas_Recibidas";
+            this.Listado_BHE_Emitidas_Recibidas.Size = new System.Drawing.Size(164, 38);
+            this.Listado_BHE_Emitidas_Recibidas.TabIndex = 9;
+            this.Listado_BHE_Emitidas_Recibidas.Text = "Listado BHE";
+            this.Listado_BHE_Emitidas_Recibidas.UseVisualStyleBackColor = true;
+            this.Listado_BHE_Emitidas_Recibidas.Click += new System.EventHandler(this.Listado_BHE_Emitidas_Recibidas_Click);
+            // 
+            // obtenerPdf_Emitidas_Recibidas
+            // 
+            this.obtenerPdf_Emitidas_Recibidas.Location = new System.Drawing.Point(14, 23);
+            this.obtenerPdf_Emitidas_Recibidas.Name = "obtenerPdf_Emitidas_Recibidas";
+            this.obtenerPdf_Emitidas_Recibidas.Size = new System.Drawing.Size(164, 38);
+            this.obtenerPdf_Emitidas_Recibidas.TabIndex = 8;
+            this.obtenerPdf_Emitidas_Recibidas.Text = "Obtener PDF BHE";
+            this.obtenerPdf_Emitidas_Recibidas.UseVisualStyleBackColor = true;
+            this.obtenerPdf_Emitidas_Recibidas.Click += new System.EventHandler(this.obtenerPdf_Emitidas_Recibidas_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.listar_productos);
+            this.groupBox6.Controls.Add(this.agregar_productos);
+            this.groupBox6.Location = new System.Drawing.Point(15, 17);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(191, 122);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Productos";
+            // 
+            // listar_productos
+            // 
+            this.listar_productos.Location = new System.Drawing.Point(14, 67);
+            this.listar_productos.Name = "listar_productos";
+            this.listar_productos.Size = new System.Drawing.Size(164, 38);
+            this.listar_productos.TabIndex = 1;
+            this.listar_productos.Text = "Listar Productos";
+            this.listar_productos.UseVisualStyleBackColor = true;
+            this.listar_productos.Click += new System.EventHandler(this.listar_productos_Click);
+            // 
+            // agregar_productos
+            // 
+            this.agregar_productos.Location = new System.Drawing.Point(14, 23);
+            this.agregar_productos.Name = "agregar_productos";
+            this.agregar_productos.Size = new System.Drawing.Size(164, 38);
+            this.agregar_productos.TabIndex = 0;
+            this.agregar_productos.Text = "Agregar Productos";
+            this.agregar_productos.UseVisualStyleBackColor = true;
+            this.agregar_productos.Click += new System.EventHandler(this.agregar_productos_Click);
             // 
             // contextMenuStrip1
             // 
@@ -332,7 +493,7 @@
             this.Configuracion});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(648, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(644, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -340,7 +501,7 @@
             // 
             this.Configuracion.Image = global::SimpleFacturaSDK_Demo.Properties.Resources.ConfiguracionEdit16;
             this.Configuracion.Name = "Configuracion";
-            this.Configuracion.Size = new System.Drawing.Size(136, 24);
+            this.Configuracion.Size = new System.Drawing.Size(115, 24);
             this.Configuracion.Text = "Configuración";
             this.Configuracion.Click += new System.EventHandler(this.Configuracion_Click);
             // 
@@ -352,7 +513,7 @@
             // 
             // Main
             // 
-            this.ClientSize = new System.Drawing.Size(648, 382);
+            this.ClientSize = new System.Drawing.Size(644, 369);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -368,6 +529,12 @@
             this.otros.ResumeLayout(false);
             this.emision_dte.ResumeLayout(false);
             this.obtenerdte.ResumeLayout(false);
+            this.item_otros.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -405,16 +572,11 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage item_facturacion;
-        private System.Windows.Forms.TabPage item_productos;
-        private System.Windows.Forms.TabPage item_proveedores;
-        private System.Windows.Forms.TabPage item_clientes;
         private System.Windows.Forms.TabPage item_otros;
-        private System.Windows.Forms.TabPage item_folios;
-        private System.Windows.Forms.TabPage item_bh;
         private System.Windows.Forms.GroupBox otros;
-        private System.Windows.Forms.Button conciliar_emitidos;
+        private System.Windows.Forms.Button conciliar_emitidos_Recibidos;
         private System.Windows.Forms.Button envio_mail;
-        private System.Windows.Forms.Button listado_dte_emitido;
+        private System.Windows.Forms.Button listado_dte_emitido_Recibido;
         private System.Windows.Forms.Button consolidado_ventas;
         private System.Windows.Forms.GroupBox emision_dte;
         private System.Windows.Forms.Button emision_nc_nd;
@@ -431,6 +593,24 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Configuracion;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Button Acuse;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button consultarFolios;
+        private System.Windows.Forms.Button FoliosSinUso;
+        private System.Windows.Forms.Button FoliosDisponibles;
+        private System.Windows.Forms.Button solicitarFolios;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button Listado_BHE_Emitidas_Recibidas;
+        private System.Windows.Forms.Button obtenerPdf_Emitidas_Recibidas;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button listar_productos;
+        private System.Windows.Forms.Button agregar_productos;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button listarClientes;
+        private System.Windows.Forms.Button agregarClientes;
+        private System.Windows.Forms.Button datosEmpresa;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button ListarSucursales;
     }
 }
 
