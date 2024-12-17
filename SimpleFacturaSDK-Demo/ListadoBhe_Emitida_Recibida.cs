@@ -197,11 +197,11 @@ namespace SimpleFacturaSDK_Demo
         {
             if (radioButton_emitidoListado.Checked)
             {
-                textDocumentacion.Text = "Permite generar lista detallada de DTE emitidos desde una empresa emisora hacia una empresa receptora (o proveedor en caso de Factura de Compra).";
+                textDocumentacion.Text = "Permite obtener un listado de las Boletas de Honorarios Electrónicas (BHE) emitidas registradas en el sistema SimpleFactura.";
             }
             if (radioButton_recibidoListado.Checked)
             {
-                textDocumentacion.Text = "Permite generar lista detallada de DTE emitidos desde una empresa emisora hacia una empresa receptora (o proveedor en caso de Factura de Compra).";
+                textDocumentacion.Text = "Permite obtener un listado de las Boletas de Honorarios Electrónicas (BHE) recibidas registradas en el sistema SimpleFactura.";
             }
         }
 
